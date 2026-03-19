@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trader Bruno Borges — Design System Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@400;500;600&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============================================================
+     DESIGN SYSTEM SHOWCASE — TRADER BRUNO BORGES V2
+     ============================================================ */
+
+    /* --- Reset & Base --- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0B0B0C;
+      color: #FFFFFF;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- CSS Variables (Design Tokens) --- */
+    :root {
+      /* Main Dark Colors */
+      --black-absolute: #000000;
+      --dark-base: #0B0B0C;
+      --dark-surface: #161618;
+      --dark-elevated: #222225;
+
+      /* Main Light Colors (Respiro) */
+      --light-base: #F8FAFC;
+      --light-surface: #FFFFFF;
+      --light-elevated: #F1F5F9;
+      --dark-pure: #0F172A;
+      --dark-medium: rgba(15, 23, 42, 0.6);
+
+      /* Primary Signal Colors */
+      --green-bull: #10B981;
+      --green-hover: #059669;
+      --green-dim: rgba(16, 185, 129, 0.15);
+      --green-border: rgba(16, 185, 129, 0.3);
+
+      --red-bear: #EF4444;
+      --red-hover: #DC2626;
+      --red-dim: rgba(239, 68, 68, 0.15);
+      --red-border: rgba(239, 68, 68, 0.3);
+
+      /* Secondary Brand Colors (New) */
+      --gold-premium: #D4AF37;
+      --gold-hover: #F1C40F;
+      --gold-dim: rgba(212, 175, 55, 0.15);
+      --gold-border: rgba(212, 175, 55, 0.3);
+
+      --slate-tech: #64748B;
+      --slate-hover: #475569;
+      --slate-dim: rgba(100, 116, 139, 0.15);
+
+      /* Text Colors */
+      --white: #FFFFFF;
+      --white-80: rgba(255, 255, 255, 0.8);
+      --white-60: rgba(255, 255, 255, 0.6);
+      --white-40: rgba(255, 255, 255, 0.4);
+      --white-20: rgba(255, 255, 255, 0.2);
+      --white-10: rgba(255, 255, 255, 0.1);
+
+      /* Borders */
+      --gray-border: rgba(255, 255, 255, 0.12);
+      --gray-border-dark: rgba(15, 23, 42, 0.12);
+
+      /* Typography */
+      --font-display: 'Montserrat', sans-serif;
+      --font-script: 'Dancing Script', cursive;
+      --font-body: 'Inter', sans-serif;
+
+      /* Shadows & Glows */
+      --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.5);
+      --shadow-hard: 0 8px 30px rgba(0, 0, 0, 0.8);
+      --shadow-light: 0 4px 20px rgba(15, 23, 42, 0.08);
+      /* Sombra para o tema Light */
+      --glow-green: 0 0 20px rgba(16, 185, 129, 0.4);
+      --glow-red: 0 0 20px rgba(239, 68, 68, 0.4);
+      --glow-gold: 0 0 20px rgba(212, 175, 55, 0.4);
+
+      /* Radius */
+      --radius-none: 0px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-pill: 9999px;
+    }
+
+    /* --- Layout & Sections --- */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .section-header {
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--white-40);
+      margin-bottom: 8px;
+    }
+
+    .section-header h3 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    /* Tema Light Section Header */
+    .theme-light .section-header h2 {
+      color: var(--dark-medium);
+    }
+
+    .theme-light .section-header h3 {
+      color: var(--dark-pure);
+    }
+
+    .theme-light {
+      background: var(--light-base);
+      color: var(--dark-pure);
+      border-bottom: 1px solid var(--gray-border-dark);
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media(max-width: 900px) {
+
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .gap-12 {
+      gap: 12px;
+    }
+
+    .gap-16 {
+      gap: 16px;
+    }
+
+    /* --- HEADER --- */
+    .showcase-header {
+      background: var(--dark-elevated);
+      border-bottom: 1px solid var(--gray-border);
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .showcase-header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .logo-text span {
+      color: var(--green-bull);
+    }
+
+    .showcase-title {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--white-60);
+      text-transform: uppercase;
+    }
+
+    /* --- TOC --- */
+    .toc {
+      background: var(--dark-surface);
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      margin: 40px 0;
+    }
+
+    .toc h2 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: var(--white-80);
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px 24px;
+    }
+
+    .toc a {
+      color: var(--white-60);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--green-bull);
+    }
+
+    /* --- 1. HERO PREVIEWS --- */
+    .hero-block-wrapper {
+      margin-bottom: 48px;
+    }
+
+    .hero-preview {
+      background: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 100%), var(--dark-base);
+      border: 1px solid var(--gray-border);
+      padding: 80px 40px;
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    /* Hero Light Mode */
+    .hero-preview.light-mode {
+      background: var(--light-surface);
+      border: 1px solid var(--gray-border-dark);
+      color: var(--dark-pure);
+    }
+
+    .hero-preview.light-mode .hero-title {
+      color: var(--dark-pure);
+    }
+
+    .hero-preview.light-mode .hero-sub {
+      color: var(--dark-medium);
+    }
+
+    /* Hero Lateral (Split) Mode */
+    .hero-preview.lateral-split {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      justify-content: space-between;
+      background: var(--dark-surface);
+    }
+
+    .hero-content-split {
+      padding: 60px;
+      max-width: 600px;
+      flex: 1;
+    }
+
+    .hero-image-split {
+      flex: 1;
+      min-height: 400px;
+      background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800') center/cover no-repeat;
+      position: relative;
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red-bear);
+      color: #fff;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+      transform: skewX(-10deg);
+    }
+
+    .hero-pill span {
+      transform: skewX(10deg);
+    }
+
+    .hero-pill.gold {
+      background: var(--gold-premium);
+      color: #000;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-title-script {
+      font-family: var(--font-script);
+      color: var(--green-bull);
+      font-size: 64px;
+      font-weight: 700;
+      text-transform: none;
+      display: block;
+      margin-top: -10px;
+      margin-bottom: 16px;
+      transform: rotate(-2deg);
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--white-80);
+      max-width: 500px;
+      margin-bottom: 40px;
+    }
+
+    /* --- 2. COLORS --- */
+    .color-swatch {
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .color-block {
+      height: 100px;
+    }
+
+    .color-info {
+      padding: 12px;
+      background: var(--dark-surface);
+    }
+
+    .color-name {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .color-hex {
+      font-size: 12px;
+      color: var(--white-60);
+      font-family: monospace;
+    }
+
+    .theme-light .color-swatch {
+      border-color: var(--gray-border-dark);
+    }
+
+    .theme-light .color-info {
+      background: var(--light-elevated);
+      color: var(--dark-pure);
+    }
+
+    .theme-light .color-hex {
+      color: var(--dark-medium);
+    }
+
+    /* --- 3. TYPOGRAPHY --- */
+    .type-item {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--white-10);
+    }
+
+    .type-label {
+      font-size: 11px;
+      color: var(--white-40);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .theme-light .type-item {
+      border-bottom-color: var(--gray-border-dark);
+    }
+
+    .theme-light .type-label {
+      color: var(--dark-medium);
+    }
+
+    .type-h1 {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .type-h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+
+    .type-h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .type-p {
+      font-size: 16px;
+      color: var(--white-80);
+      line-height: 1.6;
+    }
+
+    .type-script {
+      font-family: var(--font-script);
+      font-size: 40px;
+      color: var(--green-bull);
+    }
+
+    .theme-light .type-p {
+      color: var(--dark-pure);
+    }
+
+    /* --- 4. BUTTONS --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Solid Buttons */
+    .btn-green {
+      background: var(--green-bull);
+      color: #fff;
+    }
+
+    .btn-green:hover {
+      background: var(--green-hover);
+      box-shadow: var(--glow-green);
+      transform: translateY(-2px);
+    }
+
+    .btn-red {
+      background: var(--red-bear);
+      color: #fff;
+    }
+
+    .btn-red:hover {
+      background: var(--red-hover);
+      box-shadow: var(--glow-red);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold-premium);
+      color: #000;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-hover);
+      box-shadow: var(--glow-gold);
+      transform: translateY(-2px);
+    }
+
+    /* Outline / Transparent Buttons (Sem Preenchimento) */
+    .btn-outline-white {
+      background: transparent;
+      border-color: var(--white-40);
+      color: var(--white);
+    }
+
+    .btn-outline-white:hover {
+      border-color: var(--white);
+      background: var(--white-10);
+    }
+
+    .btn-outline-green {
+      background: transparent;
+      border-color: var(--green-bull);
+      color: var(--green-bull);
+    }
+
+    .btn-outline-green:hover {
+      background: var(--green-dim);
+      box-shadow: var(--glow-green);
+    }
+
+    .btn-outline-red {
+      background: transparent;
+      border-color: var(--red-bear);
+      color: var(--red-bear);
+    }
+
+    .btn-outline-red:hover {
+      background: var(--red-dim);
+      box-shadow: var(--glow-red);
+    }
+
+    .btn-outline-gold {
+      background: transparent;
+      border-color: var(--gold-premium);
+      color: var(--gold-premium);
+    }
+
+    .btn-outline-gold:hover {
+      background: var(--gold-dim);
+      box-shadow: var(--glow-gold);
+    }
+
+    .btn-ghost {
+      border-color: transparent;
+      background: transparent;
+      color: var(--green-bull);
+      padding: 8px 16px;
+    }
+
+    .btn-ghost:hover {
+      background: var(--green-dim);
+    }
+
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+
+    /* --- 5. BADGES & CHIPS --- */
+    .badge {
+      display: inline-flex;
+      padding: 4px 8px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 2px;
+    }
+
+    .badge-green {
+      background: var(--green-dim);
+      color: var(--green-bull);
+      border: 1px solid var(--green-border);
+    }
+
+    .badge-red {
+      background: var(--red-dim);
+      color: var(--red-bear);
+      border: 1px solid var(--red-border);
+    }
+
+    .badge-gold {
+      background: var(--gold-dim);
+      color: var(--gold-premium);
+      border: 1px solid var(--gold-border);
+    }
+
+    .badge-white {
+      background: var(--white-10);
+      color: var(--white);
+      border: 1px solid var(--white-20);
+    }
+
+    /* --- 6. CARDS & STATS --- */
+    .feature-card {
+      background: var(--dark-surface);
+      border: 1px solid var(--gray-border);
+      padding: 32px;
+      border-radius: var(--radius-md);
+      transition: all 0.2s;
+    }
+
+    .feature-card:hover {
+      border-color: var(--green-border);
+      box-shadow: var(--shadow-soft);
+      transform: translateY(-4px);
+    }
+
+    /* Feature Card Ghost (Outline Without Fill) */
+    .feature-card.outline {
+      background: transparent;
+      border: 1px solid var(--white-20);
+    }
+
+    .feature-card.outline:hover {
+      border-color: var(--white-60);
+      background: var(--white-10);
+    }
+
+    /* Feature Card Light */
+    .feature-card.light-mode {
+      background: var(--light-surface);
+      border: 1px solid var(--gray-border-dark);
+      color: var(--dark-pure);
+    }
+
+    .feature-card.light-mode:hover {
+      border-color: var(--green-bull);
+      box-shadow: var(--shadow-light);
+      transform: translateY(-4px);
+    }
+
+    .feature-card.light-mode .card-body {
+      color: var(--dark-medium);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--green-dim);
+      color: var(--green-bull);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      margin-bottom: 24px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .card-body {
+      font-size: 15px;
+      color: var(--white-60);
+    }
+
+    .stat-card {
+      background: var(--dark-elevated);
+      border-left: 4px solid var(--green-bull);
+      padding: 24px;
+    }
+
+    .stat-card.outline-mode {
+      background: transparent;
+      border: 1px solid var(--gray-border);
+      border-left: 4px solid var(--gold-premium);
+    }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--white-40);
+      letter-spacing: 0.1em;
+    }
+
+    /* --- 7. INPUTS --- */
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .input-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--white-80);
+    }
+
+    .input-field {
+      background: var(--black-absolute);
+      border: 1px solid var(--white-20);
+      color: var(--white);
+      padding: 16px;
+      font-size: 16px;
+      font-family: var(--font-body);
+      outline: none;
+      transition: all 0.2s;
+      border-radius: var(--radius-sm);
+    }
+
+    .input-field:focus {
+      border-color: var(--green-bull);
+      box-shadow: 0 0 0 1px var(--green-bull);
+    }
+
+    /* --- 8. FEEDBACK / TOAST --- */
+    .toast {
+      background: var(--dark-elevated);
+      border-left: 4px solid var(--green-bull);
+      padding: 16px 24px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      box-shadow: var(--shadow-hard);
+      max-width: 400px;
+    }
+
+    .toast.error {
+      border-left-color: var(--red-bear);
+    }
+
+    .toast.warning {
+      border-left-color: var(--gold-premium);
+    }
+
+    .toast-icon {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .toast-title {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .toast-desc {
+      font-size: 13px;
+      color: var(--white-60);
+    }
+
+    /* --- 9. ACCORDION / LISTS --- */
+    .list-rule {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .rule-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+    }
+
+    .rule-icon {
+      color: var(--green-bull);
+      font-weight: bold;
+      border: 1px solid var(--green-bull);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .accordion {
+      border-top: 1px solid var(--gray-border);
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .accordion-title {
+      padding: 20px 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .accordion-title span {
+      color: var(--green-bull);
+    }
+
+    .accordion-body {
+      padding-bottom: 20px;
+      color: var(--white-60);
+      font-size: 15px;
+    }
+
+    /* --- 10. TESTIMONIAL --- */
+    .testimonial {
+      background: var(--dark-surface);
+      padding: 40px;
+      position: relative;
+      border-top-right-radius: 30px;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-display);
+      font-size: 80px;
+      color: var(--white-10);
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      line-height: 1;
+      font-style: italic;
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--green-bull);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="showcase-header">
+    <div class="container showcase-header-inner">
+      <div class="logo-text">Trader <span>Bruno Borges</span></div>
+      <div class="showcase-title">Design System v2.1</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="toc">
+      <h2>Índice</h2>
+      <div class="toc-grid">
+        <a href="#hero">1. Hero Variations</a>
+        <a href="#colors">2. Secundárias & Cores</a>
+        <a href="#typography">3. Tipografia</a>
+        <a href="#buttons">4. Oultines & Botões</a>
+        <a href="#badges">5. Badges & Chips</a>
+        <a href="#cards">6. Cards & Estatísticas</a>
+        <a href="#inputs">7. Formulários</a>
+        <a href="#feedback">8. Feedback & Toasts</a>
+        <a href="#lists">9. Regras & FAQ</a>
+        <a href="#testimonials">10. Depoimentos</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. HERO PREVIEW -->
+  <section id="hero" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>01 — Demonstração</h2>
+        <h3>Hero Variations</h3>
+      </div>
+
+      <!-- Hero 1: Classic Dark -->
+      <div class="hero-block-wrapper">
+        <p style="color:var(--white-40);font-size:12px;text-transform:uppercase;margin-bottom:8px;font-weight:700;">VAR.
+          1 — Classic Dark</p>
+        <div class="hero-preview">
+          <div class="hero-pill"><span>14ª Maratona TDS</span></div>
+          <h1 class="hero-title">O sucesso vem para quem se recusa a parar.</h1>
+          <span class="hero-title-script">Seja constante </span>
+          <p class="hero-sub">Se você quer evoluir no day trade, entender price action e aplicar de verdade, a hora é
+            agora. Evento 100% online.</p>
+          <div class="flex gap-16">
+            <button class="btn btn-green">Entre para o Grupo VIP</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero 2: Image Lateral Split -->
+      <div class="hero-block-wrapper">
+        <p style="color:var(--white-40);font-size:12px;text-transform:uppercase;margin-bottom:8px;font-weight:700;">VAR.
+          2 — Split c/ Imagem</p>
+        <div class="hero-preview lateral-split">
+          <div class="hero-content-split">
+            <div class="hero-pill gold"><span>Mentoria Exclusiva</span></div>
+            <h1 class="hero-title" style="font-size:48px;">Domine o Gráfico.</h1>
+            <span class="hero-title-script" style="font-size:48px;">Sem setup milagroso.</span>
+            <p class="hero-sub" style="font-size:16px;">Abra os olhos para a pura movimentação do mercado com o Price
+              Action profissional.</p>
+            <div class="flex gap-16">
+              <button class="btn btn-gold">Garantir Vaga</button>
+              <button class="btn btn-outline-white">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="hero-image-split"></div>
+        </div>
+      </div>
+
+      <!-- Hero 3: Light Theme -->
+      <div class="hero-block-wrapper">
+        <p style="color:var(--white-40);font-size:12px;text-transform:uppercase;margin-bottom:8px;font-weight:700;">VAR.
+          3 — Tema Claro (Respiro)</p>
+        <div class="hero-preview light-mode">
+          <h1 class="hero-title">A Estratégia dos<br>1%.</h1>
+          <span class="hero-title-script" style="color:var(--dark-pure);">O resto devolve no dia seguinte.</span>
+          <p class="hero-sub">Cansado de perder o controle nas operações? Pare o sangramento hoje.</p>
+          <div class="flex gap-16">
+            <button class="btn btn-green">Começar do Zero</button>
+            <button class="btn btn-outline-green">Ver Resultados</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. COLORS -->
+  <section id="colors" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>02 — Fundamentos</h2>
+        <h3>Secondary & Colors</h3>
+      </div>
+      <p
+        style="color:var(--white-60); margin-bottom: 20px; text-transform: uppercase; font-size: 12px; font-weight: bold;">
+        Cores Primárias (Bear & Bull)</p>
+      <div class="grid grid-4" style="margin-bottom: 40px;">
+        <div class="color-swatch">
+          <div class="color-block" style="background:var(--green-bull);"></div>
+          <div class="color-info">
+            <div class="color-name">Bull Green</div>
+            <div class="color-hex">#10B981</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-block" style="background:var(--red-bear);"></div>
+          <div class="color-info">
+            <div class="color-name">Bear Red</div>
+            <div class="color-hex">#EF4444</div>
+          </div>
+        </div>
+      </div>
+
+      <p
+        style="color:var(--white-60); margin-bottom: 20px; text-transform: uppercase; font-size: 12px; font-weight: bold;">
+        Cores Secundárias *Novo*</p>
+      <div class="grid grid-4" style="margin-bottom: 40px;">
+        <div class="color-swatch">
+          <div class="color-block" style="background:var(--gold-premium);"></div>
+          <div class="color-info">
+            <div class="color-name">Gold Premium</div>
+            <div class="color-hex">#D4AF37</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-block" style="background:var(--slate-tech);"></div>
+          <div class="color-info">
+            <div class="color-name">Slate Tech</div>
+            <div class="color-hex">#64748B</div>
+          </div>
+        </div>
+      </div>
+
+      <p
+        style="color:var(--white-60); margin-bottom: 20px; text-transform: uppercase; font-size: 12px; font-weight: bold;">
+        Superfícies Dark & Light</p>
+      <div class="grid grid-4">
+        <div class="color-swatch">
+          <div class="color-block" style="background:var(--dark-base);"></div>
+          <div class="color-info">
+            <div class="color-name">Dark Base</div>
+            <div class="color-hex">#0B0B0C</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-block" style="background:var(--dark-surface);"></div>
+          <div class="color-info">
+            <div class="color-name">Dark Surface</div>
+            <div class="color-hex">#161618</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-block" style="background:var(--light-base); border-bottom: 1px solid var(--gray-border);">
+          </div>
+          <div class="color-info" style="background:var(--light-surface); color:var(--dark-pure);">
+            <div class="color-name">Light Base</div>
+            <div class="color-hex" style="color:var(--dark-medium);">#F8FAFC</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-block"
+            style="background:var(--light-surface); border-bottom: 1px solid var(--gray-border);"></div>
+          <div class="color-info" style="background:var(--light-surface); color:var(--dark-pure);">
+            <div class="color-name">Light Surface</div>
+            <div class="color-hex" style="color:var(--dark-medium);">#FFFFFF</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TYPOGRAPHY -->
+  <section id="typography" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>03 — Fundamentos</h2>
+        <h3>Tipografia</h3>
+      </div>
+      <div class="type-item">
+        <div class="type-label">H1 Display — Montserrat Black 900 All-Caps</div>
+        <div class="type-h1">A Disciplina Vence.</div>
+      </div>
+      <div class="type-item">
+        <div class="type-label">H2 Display — Montserrat ExtraBold 800 Italic All-Caps</div>
+        <div class="type-h2">Mentoria Trader de Sucesso</div>
+      </div>
+      <div class="type-item">
+        <div class="type-label">Script Accent — Dancing Script Bold</div>
+        <div class="type-script">Constância muda o jogo</div>
+      </div>
+      <div class="type-item">
+        <div class="type-label">Body Text — Inter Regular 400</div>
+        <div class="type-p">Gerenciamento de risco é inegociável. Você pode até perder dinheiro em um dia de fúria, mas
+          quem tem método fecha a semana no positivo.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. BUTTONS -->
+  <section id="buttons" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>04 — Componentes</h2>
+        <h3>Buttons & Outlines</h3>
+      </div>
+      <p style="color:var(--white-40); margin-bottom: 12px; font-size: 13px;">Preenchidos (Solid)</p>
+      <div class="flex gap-16 flex-wrap" style="align-items: center; margin-bottom: 32px;">
+        <button class="btn btn-green">Acessar Curso</button>
+        <button class="btn btn-red">Encerrar Posição</button>
+        <button class="btn btn-gold">Vip Area</button>
+      </div>
+
+      <p style="color:var(--white-40); margin-bottom: 12px; font-size: 13px;">Oultines Contornados *Novo*</p>
+      <div class="flex gap-16 flex-wrap" style="align-items: center; margin-bottom: 32px;">
+        <button class="btn btn-outline-green">Ver Resultados</button>
+        <button class="btn btn-outline-red">Cancelar Tudo</button>
+        <button class="btn btn-outline-gold">Saiba Mais</button>
+        <button class="btn btn-outline-white">Assistir Video</button>
+      </div>
+
+      <div class="flex gap-16 flex-wrap" style="align-items: center;">
+        <button class="btn btn-ghost">Link Limpo</button>
+        <button class="btn btn-green btn-sm">Tamanho Small</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BADGES -->
+  <section id="badges" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>05 — Componentes</h2>
+        <h3>Badges & Tags</h3>
+      </div>
+      <div class="flex gap-12 flex-wrap">
+        <div class="badge badge-green">Nível Avançado</div>
+        <div class="badge badge-red">Alerta</div>
+        <div class="badge badge-gold">Premium</div>
+        <div class="badge badge-white">100% Online</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CARDS -->
+  <section id="cards" class="section theme-light" style="margin-top:-1px;"> <!-- Demonstrating Light Theme Mix -->
+    <div class="container">
+      <div class="section-header">
+        <h2>06 — Layout & Blocos</h2>
+        <h3>Cards Variados</h3>
+      </div>
+
+      <p
+        style="color:var(--dark-medium); font-weight: bold; margin-bottom:20px; text-transform:uppercase; font-size:12px;">
+        Dark, Outline & Light Cards</p>
+      <div class="grid grid-3" style="margin-bottom: 40px;">
+        <!-- Dark Card -->
+        <div class="feature-card" style="background:var(--dark-surface); color:var(--white);">
+          <div class="card-icon" style="color:var(--green-bull);">↗</div>
+          <div class="card-title" style="color:var(--white);">Price Action</div>
+          <div class="card-body">Aprenda a ler os movimentos puros (Card Dark, Preenchido).</div>
+        </div>
+        <!-- Ghost/Outline Card -->
+        <div class="feature-card outline" style="color:var(--dark-pure); border-color:var(--gray-border-dark);">
+          <div class="card-icon" style="color:var(--gold-premium); background:var(--gold-dim);">⚡</div>
+          <div class="card-title">Outline Ghost</div>
+          <div class="card-body" style="color:var(--dark-medium);">Card limpo com preenchimento transparente para
+            minimizar blocos.</div>
+        </div>
+        <!-- Light Card -->
+        <div class="feature-card light-mode">
+          <div class="card-icon" style="color:var(--slate-tech); background:var(--slate-dim);">◎</div>
+          <div class="card-title">Tema Claro</div>
+          <div class="card-body">Aconchegante e limpo, excelente para leitura long-form, sem perder seriedade.</div>
+        </div>
+      </div>
+
+      <p
+        style="color:var(--dark-medium); font-weight: bold; margin-bottom:20px; text-transform:uppercase; font-size:12px;">
+        Stat Cards</p>
+      <div class="grid grid-3">
+        <div class="stat-card" style="background:var(--dark-elevated); color:var(--white);">
+          <div class="stat-num">500h</div>
+          <div class="stat-label">Conteúdo</div>
+        </div>
+        <!-- Outlined Stat Card -->
+        <div class="stat-card outline-mode" style="color:var(--dark-pure);">
+          <div class="stat-num">10k+</div>
+          <div class="stat-label" style="color:var(--dark-medium);">Alunos Formados</div>
+        </div>
+        <div class="stat-card"
+          style="border-color: var(--red-bear); background:var(--dark-elevated); color:var(--white);">
+          <div class="stat-num">0%</div>
+          <div class="stat-label">Indicadores Mágicos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. INPUTS -->
+  <section id="inputs" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>07 — Componentes</h2>
+        <h3>Formulários</h3>
+      </div>
+      <div style="max-width: 400px; background: var(--dark-surface); padding: 32px; border-radius: var(--radius-md);">
+        <div class="input-group">
+          <label class="input-label">Seu melhor E-mail</label>
+          <input type="email" class="input-field" placeholder="trader@mail.com">
+        </div>
+        <button class="btn btn-green" style="width: 100%; margin-top: 16px;">Garantir Vaga</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FEEDBACK -->
+  <section id="feedback" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>08 — Feedback</h2>
+        <h3>Toasts e Alertas</h3>
+      </div>
+      <div class="grid grid-3">
+        <div class="toast">
+          <div class="toast-icon" style="color:var(--green-bull);">&#10003;</div>
+          <div>
+            <div class="toast-title">Sucesso</div>
+            <div class="toast-desc">O link foi enviado.</div>
+          </div>
+        </div>
+        <div class="toast error">
+          <div class="toast-icon" style="color:var(--red-bear);">&#33;</div>
+          <div>
+            <div class="toast-title">Erro Crítico</div>
+            <div class="toast-desc">Verifique seus dados.</div>
+          </div>
+        </div>
+
+        <div class="toast warning">
+          <div class="toast-icon" style="color:var(--gold-premium);">⚠</div>
+          <div>
+            <div class="toast-title">Alerta VIP</div>
+            <div class="toast-desc">Últimas 5 vagas do lote.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LISTS & FAQ -->
+  <section id="lists" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>09 — Textos & Listas</h2>
+        <h3>Regras & FAQ</h3>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <h4 style="font-family: var(--font-display); text-transform:uppercase; margin-bottom: 24px;">Regras do Sorteio
+          </h4>
+          <ul class="list-rule">
+            <li class="rule-item"><span class="rule-icon">&#10003;</span> Seguir meu perfil oficial</li>
+            <li class="rule-item"><span class="rule-icon">&#10003;</span> Marcar 3 amigos nos comentários</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family: var(--font-display); text-transform:uppercase; margin-bottom: 24px;">Perguntas
+            Frequentes</h4>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-title">O minicurso é para iniciantes? <span>+</span></div>
+              <div class="accordion-body" style="display:none;">Sim, começamos do absoluto zero...</div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-title">Terei acesso vitalício? <span>+</span></div>
+              <div class="accordion-body">Abaixo o detalhe das regras e acessos.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. TESTIMONIALS -->
+  <section id="testimonials" class="section" style="border-bottom:none; margin-bottom: 40px;">
+    <div class="container">
+      <div class="section-header">
+        <h2>10 — Social Proof</h2>
+        <h3>Depoimentos</h3>
+      </div>
+      <div class="grid grid-2">
+        <div class="testimonial">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Antes eu operava por emoção. A visão operacional virou a minha chave para a
+            constância.</p>
+          <div class="testimonial-author">— Fábio R.</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-quote" style="color:var(--gold-dim);">"</div>
+          <p class="testimonial-text">Didática fantástica. Sem enrolação de Setup Mágico. Equipe profissional de
+            suporte.</p>
+          <div class="testimonial-author" style="color:var(--gold-premium);">— Marcela T., VIP Elite</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

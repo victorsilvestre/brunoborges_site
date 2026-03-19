@@ -1,0 +1,24 @@
+{
+    "hero_capture": [
+        "background_dark_blurred",
+        "headline_bold_caps",
+        "sub_headline_script_accent",
+        "primary_cta_green"
+    ],
+    "event_banner": [
+        "red_diagonal_ribbon",
+        "white_condensed_title",
+        "dark_info_block",
+        "green_footer_cta"
+    ],
+    "rules_list": [
+        "dark_card",
+        "round_green_arrow_icon",
+        "white_text_rule"
+    ],
+    "metric_showcase": [
+        "circular_neon_frame",
+        "candlestick_background_image",
+        "stat_number"
+    ]
+}

@@ -1,0 +1,115 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { FadeIn } from "./FadeIn";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
+
+export function SocialProof() {
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollRef.current) {
+            const scrollAmount = scrollRef.current.clientWidth * 0.8;
+            scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+        }
+    };
+
+    const testimonials = [
+        { text: "Antes eu operava por emoção e devolvia tudo. A visão operacional do TDS virou a minha chave para a constância. Recomendo de olhos fechados.", author: "Fábio R.", role: "Aluno TDS", color: "var(--green-bull)" },
+        { text: "Didática fantástica. Sem enrolação de Setup Mágico. Equipe profissional de suporte, o Bruno realmente se importa com o nosso aprendizado.", author: "Marcela T.", role: "VIP Elite", color: "var(--gold-premium)" },
+        { text: "O método é direto ao ponto e não fica enrolando com teorias que não funcionam na prática. Minha leitura de fluxo melhorou absurdamente.", author: "João P.", role: "Aluno TDS", color: "var(--white)" },
+        { text: "Estou há 3 anos no mercado e foi só com a mentoria TDS que consegui fechar meu primeiro mês no positivo consistente. Incrível.", author: "Ricardo M.", role: "Aluno TDS", color: "var(--green-bull)" },
+        { text: "As operações explicadas ao vivo fazem toda a diferença. O Mentor pega na sua mão e mostra o momento exato de entrar e sair.", author: "Camila S.", role: "VIP Elite", color: "var(--gold-premium)" },
+        { text: "Nunca vi um operacional tão simples e tão eficaz. O gráfico limpo ajuda muito a não travar na hora de clicar.", author: "Lucas A.", role: "Aluno TDS", color: "var(--white)" },
+        { text: "Esse curso não apenas ensina a ganhar, mas ensina a proteger o capital. Isso mudou meu jogo completamente no mini índice.", author: "Pedro H.", role: "Aluno TDS", color: "var(--green-bull)" },
+        { text: "O suporte é o melhor que já vi. O Bruno responde rápido, tira dúvidas no Telegram com uma paciência de outro mundo.", author: "Mariana L.", role: "VIP Elite", color: "var(--gold-premium)" },
+        { text: "As aulas de sábado com os alunos operando mostram a realidade nua e crua. Foi aí que minha chave para a consistência virou.", author: "Thiago C.", role: "Aluno TDS", color: "var(--white)" },
+        { text: "Eu tinha muito medo de operar depois de quebrar a banca três vezes. O Bruno me ajudou a resgatar a confiança e a perder o medo. Acompanhamento maravilhoso.", author: "Roberta D.", role: "Aluno TDS", color: "var(--green-bull)" }
+    ];
+
+    return (
+        <section className="py-32 bg-[var(--dark-elevated)] relative overflow-hidden">
+            {/* Background Orbs */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--green-bull)]/5 blur-[120px] rounded-full pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10 w-full overflow-hidden">
+
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+                    <div className="max-w-xl">
+                        <FadeIn>
+                            <h2 className="text-[var(--white-40)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
+                                10 — Resultados Reais
+                            </h2>
+                        </FadeIn>
+                        <FadeIn delay={0.1}>
+                            <h3 className="font-display font-black text-4xl md:text-6xl text-white uppercase leading-[0.9] tracking-tighter">
+                                Seja o próximo <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] to-white">case de sucesso</span>
+                            </h3>
+                        </FadeIn>
+                    </div>
+
+                    <FadeIn delay={0.2} className="flex items-center gap-4 hidden md:flex">
+                        <button onClick={() => scroll('left')} className="p-4 rounded-full border border-[var(--white-20)] hover:bg-[var(--white-10)] hover:border-[var(--white-40)] transition-colors text-white">
+                            <ChevronLeft className="w-6 h-6" />
+                        </button>
+                        <button onClick={() => scroll('right')} className="p-4 rounded-full border border-[var(--white-20)] hover:bg-[var(--white-10)] hover:border-[var(--white-40)] transition-colors text-white">
+                            <ChevronRight className="w-6 h-6" />
+                        </button>
+                    </FadeIn>
+                </div>
+
+                <FadeIn delay={0.3}>
+                    <div
+                        ref={scrollRef}
+                        className="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                    >
+                        {testimonials.map((t, idx) => (
+                            <div
+                                key={idx}
+                                className="w-[85vw] sm:w-[400px] shrink-0 snap-center sm:snap-start flex flex-col justify-between p-8 sm:p-10 rounded-[2rem] border border-[var(--white-10)] bg-[var(--dark-base)] hover:border-[var(--white-20)] transition-colors h-[400px]"
+                            >
+                                <div
+                                    className="font-display font-black text-6xl leading-none opacity-20 mb-6"
+                                    style={{ color: t.color }}
+                                >
+                                    "
+                                </div>
+
+                                <p className="text-lg md:text-xl text-[var(--white-80)] italic leading-relaxed mb-auto line-clamp-5">
+                                    {t.text}
+                                </p>
+
+                                <div className="pt-6 border-t border-[var(--white-10)] flex items-center gap-4 mt-6">
+                                    <div className="w-12 h-12 rounded-full bg-[var(--white-5)] flex items-center justify-center font-display font-bold text-xl uppercase border border-[var(--white-10)] shrink-0" style={{ color: t.color }}>
+                                        {t.author.charAt(0)}
+                                    </div>
+                                    <div className="truncate">
+                                        <div className="font-display font-bold text-base uppercase tracking-wider text-white truncate">
+                                            {t.author}
+                                        </div>
+                                        <div className="text-xs tracking-widest uppercase font-bold mt-1" style={{ color: t.color }}>
+                                            {t.role}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </FadeIn>
+
+                {/* Mobile controls */}
+                <div className="flex md:hidden items-center justify-center gap-4 mt-4">
+                    <button onClick={() => scroll('left')} className="p-4 rounded-full border border-[var(--white-20)] active:bg-[var(--white-10)] transition-colors text-white">
+                        <ChevronLeft className="w-6 h-6" />
+                    </button>
+                    <button onClick={() => scroll('right')} className="p-4 rounded-full border border-[var(--white-20)] active:bg-[var(--white-10)] transition-colors text-white">
+                        <ChevronRight className="w-6 h-6" />
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    );
+}

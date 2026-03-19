@@ -1,0 +1,47 @@
+{
+    "brand_personality": [
+        "disciplinada",
+        "direta",
+        "moderna",
+        "determinada",
+        "técnica"
+    ],
+    "visual_style": {
+        "style": "Modern dark mode, finance-tech focused",
+        "density": "Medium-High",
+        "contrast": "Very High"
+    },
+    "colors": {
+        "primary": [
+            "Verde Candle",
+            "Vermelho Candle"
+        ],
+        "secondary": [
+            "Branco Puro"
+        ],
+        "neutral": [
+            "Preto Absoluto",
+            "Cinza Escuro"
+        ]
+    },
+    "typography": {
+        "headline_style": "Geometric Sans-Serif, Bold/Black weight, All-Caps, sometimes Italic/Condensed",
+        "body_style": "Clean Sans-Serif, mixed with elegant Handwritten/Script font accents"
+    },
+    "graphic_elements": [
+        "Candlestick charts",
+        "Diagonal lines/cut boxes",
+        "Neon/bright colored borders on circles",
+        "Hexagons and up-trend arrows",
+        "Minimalist line icons"
+    ],
+    "image_style": {
+        "type": "Photography with UI Overlays",
+        "tone": "Dark, intense, technological environment",
+        "composition": "Focus on trading screens with large blurred dark areas for text overlap"
+    },
+    "voice": {
+        "tone": "Assertive, motivational, challenging",
+        "formality": "Direct and colloquial (addresses the user as 'você')"
+    }
+}
