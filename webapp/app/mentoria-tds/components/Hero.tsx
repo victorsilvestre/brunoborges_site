@@ -60,8 +60,7 @@ export function Hero() {
 
                         <FadeIn delay={0.3}>
                             <p className="text-xl md:text-2xl text-[var(--white-80)] max-w-3xl mb-12 font-light leading-relaxed drop-shadow-md">
-                                Se você quer evoluir no day trade, entender price action puro e parar de devolver dinheiro para o mercado,
-                                a Mentoria <strong className="text-white font-semibold">Trader de Sucesso</strong> é a sua última parada.
+                                Se você quer evoluir no day trade, entender o Price Action de verdade e parar de devolver dinheiro para o mercado, a <strong className="text-white font-semibold">Mentoria Trader de Sucesso</strong> é o caminho certo.
                             </p>
                         </FadeIn>
 

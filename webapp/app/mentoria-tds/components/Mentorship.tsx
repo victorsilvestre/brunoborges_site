@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, TrendingUp, Tv, Target } from "lucide-react";
+import { TrendingUp, Tv, Target, Wallet, Briefcase, Lightbulb, Rocket, HeartHandshake } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 
 export function Mentorship() {
     const requirements = [
-        "Obter uma renda extra",
-        "Tornar-se um trader em tempo integral",
-        "Aprimorar suas habilidades de investimento",
-        "Acelerar seu aprendizado",
-        "Ter apoio vitalício do mentor"
+        { text: "Obter uma renda extra", icon: Wallet },
+        { text: "Tornar-se um trader em tempo integral", icon: Briefcase },
+        { text: "Aprimorar suas habilidades de investimento", icon: Lightbulb },
+        { text: "Acelerar seu aprendizado", icon: Rocket },
+        { text: "Ter apoio vitalício do mentor", icon: HeartHandshake }
     ];
 
     const contentBlocks = [
@@ -18,19 +18,19 @@ export function Mentorship() {
             title: "Aulas Ao Vivo",
             text: "Aulas ao vivo com leitura de mercado em tempo real. Entenda o contexto, o comportamento do preço e o porquê de cada movimento.",
             icon: <Tv className="w-6 h-6 text-[var(--gold-premium)]" />,
-            borderColor: "border-[var(--gold-premium)]"
+            borderColor: "border-[var(--white-20)]"
         },
         {
             title: "Método Validado",
             text: "Não é teoria. É prática diária. Um método simples, direto e replicável, baseado no que realmente funciona no mercado.",
             icon: <TrendingUp className="w-6 h-6 text-[var(--green-bull)]" />,
-            borderColor: "border-[var(--green-bull)]"
+            borderColor: "border-[var(--white-20)]"
         },
         {
             title: "Evolução Contínua",
             text: "Você não evolui por sorte, evolui por processo. Aqui você segue um caminho claro para sair do zero e construir consistência.",
             icon: <Target className="w-6 h-6 text-white" />,
-            borderColor: "border-[var(--white-40)]"
+            borderColor: "border-[var(--white-20)]"
         }
     ];
 
@@ -107,16 +107,19 @@ export function Mentorship() {
                                 </p>
 
                                 <ul className="space-y-4 relative z-10">
-                                    {requirements.map((req, idx) => (
-                                        <motion.li
-                                            key={idx}
-                                            whileHover={{ x: 10 }}
-                                            className="flex items-start gap-4 p-4 rounded-xl bg-[var(--dark-surface)]/50 border border-[var(--white-10)] hover:border-[var(--green-bull)]/50 transition-colors"
-                                        >
-                                            <ArrowUpRight className="w-6 h-6 shrink-0 text-[var(--green-bull)]" />
-                                            <span className="text-white font-medium">{req}</span>
-                                        </motion.li>
-                                    ))}
+                                    {requirements.map((req, idx) => {
+                                        const Icon = req.icon;
+                                        return (
+                                            <motion.li
+                                                key={idx}
+                                                whileHover={{ x: 10 }}
+                                                className="flex items-center gap-4 p-4 rounded-xl bg-[var(--dark-surface)]/50 border border-[var(--white-10)] hover:border-[var(--green-bull)]/50 transition-colors"
+                                            >
+                                                <Icon className="w-6 h-6 shrink-0 text-[var(--green-bull)]" />
+                                                <span className="text-white font-medium">{req.text}</span>
+                                            </motion.li>
+                                        );
+                                    })}
                                 </ul>
                             </div>
                         </FadeIn>

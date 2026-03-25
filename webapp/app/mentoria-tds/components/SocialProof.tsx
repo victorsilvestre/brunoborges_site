@@ -29,35 +29,26 @@ export function SocialProof() {
     ];
 
     return (
-        <section className="py-32 bg-[var(--dark-elevated)] relative overflow-hidden">
+        <section className="py-32 bg-[var(--light-surface)] relative overflow-hidden border-y border-slate-200">
             {/* Background Orbs */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--green-bull)]/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--green-bull)]/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full overflow-hidden">
 
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                     <div className="max-w-xl">
                         <FadeIn>
-                            <h2 className="text-[var(--white-40)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
+                            <h2 className="text-[var(--dark-medium)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
                                 Depoimentos
                             </h2>
                         </FadeIn>
                         <FadeIn delay={0.1}>
-                            <h3 className="font-display font-black text-4xl md:text-6xl text-white uppercase leading-[0.9] tracking-tighter">
+                            <h3 className="font-display font-black text-4xl md:text-6xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
                                 Seja o próximo <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] to-white">case de sucesso</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-pure)] to-[var(--green-bull)]">case de sucesso</span>
                             </h3>
                         </FadeIn>
                     </div>
-
-                    <FadeIn delay={0.2} className="flex items-center gap-4 hidden md:flex">
-                        <button onClick={() => scroll('left')} className="p-4 rounded-full border border-[var(--white-20)] hover:bg-[var(--white-10)] hover:border-[var(--white-40)] transition-colors text-white">
-                            <ChevronLeft className="w-6 h-6" />
-                        </button>
-                        <button onClick={() => scroll('right')} className="p-4 rounded-full border border-[var(--white-20)] hover:bg-[var(--white-10)] hover:border-[var(--white-40)] transition-colors text-white">
-                            <ChevronRight className="w-6 h-6" />
-                        </button>
-                    </FadeIn>
                 </div>
 
                 <FadeIn delay={0.3}>
@@ -68,28 +59,28 @@ export function SocialProof() {
                         {testimonials.map((t, idx) => (
                             <div
                                 key={idx}
-                                className="w-[85vw] sm:w-[400px] shrink-0 snap-center sm:snap-start flex flex-col justify-between p-8 sm:p-10 rounded-[2rem] border border-[var(--white-10)] bg-[var(--dark-base)] hover:border-[var(--white-20)] transition-colors h-[400px]"
+                                className="w-[85vw] sm:w-[400px] shrink-0 snap-center sm:snap-start flex flex-col justify-between p-8 sm:p-10 rounded-[2rem] border border-slate-200 bg-white shadow-sm hover:border-[var(--green-bull)]/30 transition-colors h-auto min-h-[400px]"
                             >
                                 <div
                                     className="font-display font-black text-6xl leading-none opacity-20 mb-6"
-                                    style={{ color: t.color }}
+                                    style={{ color: t.color === 'var(--white)' ? 'var(--dark-pure)' : t.color }}
                                 >
                                     "
                                 </div>
 
-                                <p className="text-lg md:text-xl text-[var(--white-80)] italic leading-relaxed mb-auto line-clamp-5">
+                                <p className="text-lg md:text-xl text-[var(--dark-medium)] font-medium italic leading-relaxed mb-auto">
                                     {t.text}
                                 </p>
 
-                                <div className="pt-6 border-t border-[var(--white-10)] flex items-center gap-4 mt-6">
-                                    <div className="w-12 h-12 rounded-full bg-[var(--white-5)] flex items-center justify-center font-display font-bold text-xl uppercase border border-[var(--white-10)] shrink-0" style={{ color: t.color }}>
+                                <div className="pt-6 border-t border-slate-100 flex items-center gap-4 mt-6">
+                                    <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center font-display font-bold text-xl uppercase border border-slate-200 shrink-0" style={{ color: t.color === 'var(--white)' ? 'var(--dark-pure)' : t.color }}>
                                         {t.author.charAt(0)}
                                     </div>
                                     <div className="truncate">
-                                        <div className="font-display font-bold text-base uppercase tracking-wider text-white truncate">
+                                        <div className="font-display font-bold text-base uppercase tracking-wider text-[var(--dark-pure)] truncate">
                                             {t.author}
                                         </div>
-                                        <div className="text-xs tracking-widest uppercase font-bold mt-1" style={{ color: t.color }}>
+                                        <div className="text-xs tracking-widest uppercase font-bold mt-1" style={{ color: t.color === 'var(--white)' ? 'var(--dark-medium)' : t.color }}>
                                             {t.role}
                                         </div>
                                     </div>
@@ -101,10 +92,10 @@ export function SocialProof() {
 
                 {/* Mobile controls */}
                 <div className="flex md:hidden items-center justify-center gap-4 mt-4">
-                    <button onClick={() => scroll('left')} className="p-4 rounded-full border border-[var(--white-20)] active:bg-[var(--white-10)] transition-colors text-white">
+                    <button onClick={() => scroll('left')} className="p-4 rounded-full border border-slate-200 bg-white active:bg-slate-50 transition-colors text-[var(--dark-pure)] shadow-sm">
                         <ChevronLeft className="w-6 h-6" />
                     </button>
-                    <button onClick={() => scroll('right')} className="p-4 rounded-full border border-[var(--white-20)] active:bg-[var(--white-10)] transition-colors text-white">
+                    <button onClick={() => scroll('right')} className="p-4 rounded-full border border-slate-200 bg-white active:bg-slate-50 transition-colors text-[var(--dark-pure)] shadow-sm">
                         <ChevronRight className="w-6 h-6" />
                     </button>
                 </div>

@@ -14,18 +14,18 @@ export function Differentiators() {
     ];
 
     return (
-        <section className="py-32 bg-[var(--dark-elevated)] border-t border-[var(--white-10)]">
+        <section className="py-32 bg-[var(--light-base)] border-y border-slate-200">
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
                     <div className="max-w-3xl">
                         <FadeIn>
-                            <h2 className="text-[var(--white-40)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
+                            <h2 className="text-[var(--dark-medium)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
                                 Diferenciais
                             </h2>
                         </FadeIn>
                         <FadeIn delay={0.1}>
-                            <h3 className="font-display font-black text-5xl md:text-7xl text-white uppercase leading-[0.9] tracking-tighter">
+                            <h3 className="font-display font-black text-5xl md:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
                                 Por que a Mentoria TDS<br />
                                 <span className="text-[var(--green-bull)]">é diferente?</span>
                             </h3>
@@ -39,17 +39,17 @@ export function Differentiators() {
                         <FadeIn
                             key={i}
                             delay={i * 0.1}
-                            className="relative group flex flex-col md:flex-row gap-6 lg:gap-8 items-start pb-12 border-b border-[var(--white-10)]"
+                            className="relative group flex flex-col md:flex-row gap-6 lg:gap-8 items-start pb-12 border-b border-slate-200"
                         >
                             <div className="font-script text-5xl md:text-6xl text-[var(--gold-premium)] shrink-0">
                                 {d.num}
                             </div>
 
                             <div>
-                                <h4 className="font-display font-black text-2xl text-white uppercase mb-4 tracking-tight group-hover:text-[var(--green-bull)] transition-colors">
+                                <h4 className="font-display font-black text-2xl text-[var(--dark-pure)] uppercase mb-4 tracking-tight group-hover:text-[var(--green-bull)] transition-colors">
                                     {d.label}
                                 </h4>
-                                <p className="text-[var(--white-60)] text-lg leading-relaxed">
+                                <p className="text-[var(--dark-medium)] font-medium text-lg leading-relaxed">
                                     {d.text}
                                 </p>
                             </div>

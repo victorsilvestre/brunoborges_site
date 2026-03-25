@@ -9,6 +9,8 @@ import { SocialProof } from "./components/SocialProof";
 import { Author } from "./components/Author";
 import { FAQ } from "./components/FAQ";
 import { Waitlist } from "./components/Waitlist";
+import { WhyTDSIsDifferent } from "./components/WhyTDSIsDifferent";
+import { NextClass } from "./components/NextClass";
 
 export default function LandingPage() {
     return (
@@ -16,8 +18,10 @@ export default function LandingPage() {
             <Hero />
             <Features />
             <Mentorship />
+            <WhyTDSIsDifferent />
             <WhatYouReceive />
             <VideoSection />
+            <NextClass />
             <Differentiators />
             <ResultsSection />
             <SocialProof />

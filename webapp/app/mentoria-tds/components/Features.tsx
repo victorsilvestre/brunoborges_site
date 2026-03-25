@@ -48,8 +48,15 @@ export function Features() {
                         </span>
                     </FadeIn>
                     <FadeIn delay={0.3}>
+                        <p className="text-lg text-[var(--dark-medium)] max-w-3xl mx-auto leading-relaxed mb-2">
+                            A <strong className="text-[var(--green-highlight)] font-semibold">Mentoria Trader de Sucesso</strong> é um acompanhamento completo, pensado para quem realmente quer viver do mercado e construir consistência de verdade.
+                        </p>
+                        <p className="text-lg text-[var(--dark-medium)] max-w-3xl mx-auto leading-relaxed mb-2">
+                            Entre para o <strong className="text-[var(--green-highlight)] font-semibold">Time TDS</strong>, formado por pessoas comuns que decidiram mudar de vida com o Mercado Financeiro, usando um método objetivo, validado e que respeita o que o mercado realmente entrega.
+                        </p>
+
                         <p className="text-lg text-[var(--dark-medium)] max-w-3xl mx-auto leading-relaxed">
-                            Com meu operacional e um acompanhamento personalizado, você estará preparado para atingir seus objetivos financeiros e se tornar um <strong className="text-[var(--dark-pure)] font-semibold">Trader de Sucesso!</strong>
+                            Com meu operacional e um acompanhamento personalizado, você estará preparado para atingir seus objetivos financeiros e se tornar um <strong className="text-[var(--green-highlight)] font-semibold">Trader de Sucesso!</strong>
                         </p>
                     </FadeIn>
                 </div>
@@ -80,6 +87,6 @@ export function Features() {
                 </div>
 
             </div>
-        </section>
+        </section >
     );
 }

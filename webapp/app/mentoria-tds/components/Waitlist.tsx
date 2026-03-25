@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Waitlist() {
     return (
-        <section id="waitlist" className="relative py-32 bg-[var(--dark-surface)] overflow-hidden">
+        <section id="waitlist" className="relative py-32 bg-[var(--light-surface)] overflow-hidden border-y border-slate-200">
 
             {/* Background Orbs */}
             <div className="absolute inset-0 pointer-events-none">
@@ -19,29 +19,29 @@ export function Waitlist() {
 
                         <div>
                             <FadeIn>
-                                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--green-bull)]/30 bg-[var(--green-bull)]/10 text-[var(--green-bull)] mb-8">
+                                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--green-bull)]/20 bg-[var(--green-bull)]/5 text-[var(--green-bull)] mb-8">
                                     <span className="w-2 h-2 rounded-full bg-[var(--green-bull)] animate-pulse" />
-                                    <span className="text-xs font-bold tracking-widest uppercase">Inscrições Abertas</span>
+                                    <span className="text-xs font-bold tracking-widest uppercase text-[var(--dark-pure)]">Inscrições Abertas</span>
                                 </div>
                             </FadeIn>
 
                             <FadeIn delay={0.1}>
-                                <h2 className="font-display font-black text-6xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-6 text-white">
+                                <h2 className="font-display font-black text-6xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-6 text-[var(--dark-pure)]">
                                     Venha <br />
                                     <span className="text-[var(--gold-premium)]">Rápido</span>
                                 </h2>
                             </FadeIn>
 
                             <FadeIn delay={0.2}>
-                                <p className="text-xl text-[var(--white-60)] font-light leading-relaxed mb-8">
-                                    Faça parte da próxima turma da Mentoria. <strong className="text-white font-semibold">Clique no link ao lado</strong> e entre para o grupo oficial de Alunos TDS.<br /><br />
-                                    As <strong className="text-white font-semibold">vagas são limitadas</strong>, aproveite essa oportunidade única de transformar a sua jornada no mercado financeiro.
+                                <p className="text-xl text-[var(--dark-medium)] font-medium leading-relaxed mb-8">
+                                    Faça parte da próxima turma da Mentoria. <strong className="text-[var(--dark-pure)] font-bold">Clique no link ao lado</strong> e entre para o grupo oficial de Alunos TDS.<br /><br />
+                                    As <strong className="text-[var(--dark-pure)] font-bold">vagas são limitadas</strong>, aproveite essa oportunidade única de transformar a sua jornada no mercado financeiro.
                                 </p>
                             </FadeIn>
                         </div>
 
                         <FadeIn delay={0.3} direction="left">
-                            <div className="bg-[var(--dark-elevated)]/80 backdrop-blur-xl p-10 rounded-[2rem] shadow-2xl border border-[var(--white-10)] relative overflow-hidden text-center">
+                            <div className="bg-white p-10 rounded-[2rem] shadow-xl border border-slate-200 relative overflow-hidden text-center">
 
                                 {/* Gold header accent */}
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--gold-premium)] to-[var(--gold-premium)]/20" />
@@ -57,12 +57,12 @@ export function Waitlist() {
                                         href="https://t.me/+MSL99oO7pmcyMWQx"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-full bg-[var(--gold-premium)] text-black font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-white transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group"
+                                        className="w-full bg-[var(--gold-premium)] text-[var(--dark-pure)] font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-slate-100 transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group shadow-sm"
                                     >
                                         Entrar no Grupo <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                                     </a>
 
-                                    <p className="text-center text-sm text-[var(--white-40)] mt-6 uppercase tracking-widest font-bold">
+                                    <p className="text-center text-sm text-[var(--dark-medium)] mt-6 uppercase tracking-widest font-bold">
                                         Grupo Oficial de Alunos TDS
                                     </p>
                                 </div>

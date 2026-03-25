@@ -18,25 +18,25 @@ export function VideoSection() {
     ];
 
     return (
-        <section className="py-32 bg-[var(--dark-elevated)] relative overflow-hidden" id="video">
+        <section className="py-32 bg-[var(--light-surface)] relative overflow-hidden border-y border-slate-200" id="video">
             <div className="absolute inset-0 z-0 pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[var(--gold-premium)]/5 blur-[150px] rounded-full" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[var(--gold-premium)]/10 blur-[150px] rounded-full" />
             </div>
 
             {/* Container ampliado para maximizar os vídeos em tela cheia */}
             <div className="max-w-[1500px] mx-auto px-6 lg:px-12 relative z-10 w-full">
                 <div className="text-center mb-20 max-w-4xl mx-auto">
                     <FadeIn>
-                        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[var(--white-10)] bg-[var(--white-5)] backdrop-blur-md mb-8">
+                        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-slate-200 bg-white shadow-sm mb-8">
                             <Play className="w-5 h-5 text-[var(--gold-premium)] fill-current" />
-                            <span className="text-sm font-bold tracking-widest uppercase text-white">Aperte o Play</span>
+                            <span className="text-sm font-bold tracking-widest uppercase text-[var(--dark-pure)]">Aperte o Play</span>
                         </div>
                     </FadeIn>
 
                     <FadeIn delay={0.1}>
-                        <h2 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-4 text-white">
+                        <h2 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-4 text-[var(--dark-pure)]">
                             O que os alunos <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] to-white">dizem por aí</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-pure)] to-[var(--green-bull)]">dizem por aí</span>
                         </h2>
                     </FadeIn>
                 </div>
@@ -52,7 +52,7 @@ export function VideoSection() {
                             // O uso do calc(33.333% - 2rem) garante exatamente 3 elementos por linha descontando os gaps (gap-12 = 3rem).
                             className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] flex-grow-0"
                         >
-                            <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-[var(--white-10)] bg-black group shadow-2xl hover:border-[var(--gold-premium)]/40 hover:shadow-[0_0_50px_rgba(212,175,55,0.2)] transition-all duration-500 scale-100 hover:scale-[1.03]">
+                            <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 bg-white group shadow-lg hover:border-[var(--gold-premium)]/60 hover:shadow-[0_10px_40px_rgba(212,175,55,0.15)] transition-all duration-500 scale-100 hover:scale-[1.03]">
                                 <iframe
                                     src={src}
                                     title={`Depoimento Mentoria TDS ${i + 1}`}
