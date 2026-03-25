@@ -5,12 +5,12 @@ import { FadeIn } from "./FadeIn";
 
 export function ResultsSection() {
     const images = [
-        "https://traderdesucesso.net.br/wp-content/uploads/2024/04/resultado-3.jpg",
-        "https://traderdesucesso.net.br/wp-content/uploads/2024/04/resultado-1-1.jpg",
-        "https://traderdesucesso.net.br/wp-content/uploads/2024/04/Captura-de-tela-2024-04-30-151326.png",
-        "https://traderdesucesso.net.br/wp-content/uploads/2024/04/Captura-de-tela-2024-04-30-151030.png",
-        "https://traderdesucesso.net.br/wp-content/uploads/2024/04/Captura-de-tela-2024-04-30-150857.png",
-        "https://traderdesucesso.net.br/wp-content/uploads/2024/04/Captura-de-tela-2024-04-30-150715.png"
+        "/images/results/image_result-1.jpg",
+        "/images/results/image_result-2.jpg",
+        "/images/results/image_result-3.jpg",
+        "/images/results/image_result-4.jpg",
+        "/images/results/image_result-5.jpg",
+        "/images/results/image_result-6.jpg"
     ];
 
     return (

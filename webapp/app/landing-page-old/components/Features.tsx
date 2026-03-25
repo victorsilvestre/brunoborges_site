@@ -9,25 +9,25 @@ export function Features() {
             icon: <Crosshair className="w-8 h-8 text-[var(--green-bull)]" />,
             num: "01",
             title: "Crença Fundamental",
-            text: "Não importa seu histórico, oferecemos uma mudança de vida real e duradoura. O mercado premia a disciplina, não o talento."
+            text: "Não importa de onde você está começando. O mercado recompensa a sua consistência. Aqui você desenvolve a mentalidade e a disciplina necessárias para evoluir."
         },
         {
             icon: <Crown className="w-8 h-8 text-[var(--gold-premium)]" />,
             num: "02",
             title: "Soluções Específicas",
-            text: "Uma abordagem única e comprovada que abrange o desenvolvimento emocional. Você opera quem você é."
+            text: "Nada de conteúdo genérico. Você terá acesso a uma metodologia clara, prática e validada, adaptada à sua realidade e ao seu momento no mercado."
         },
         {
             icon: <Zap className="w-8 h-8 text-[var(--white)]" />,
             num: "03",
             title: "Operacional Testado",
-            text: "Price Action purista. Aprenda a ler os movimentos sem indicadores poluindo a tela. Gráfico limpo, mente limpa."
+            text: "Um método simples, direto e funcional. Aprenda Price Action de forma limpa, sem dependência de indicadores, focando no que realmente move o preço."
         },
         {
             icon: <MessageSquare className="w-8 h-8 text-[var(--red-bear)]" />,
             num: "04",
             title: "Suporte Direto",
-            text: "Você nunca estará sozinho. Suporte direto e exclusivo com o Mentor para blindar a sua jornada diária."
+            text: "Você não vai caminhar sozinho. Acompanhamento próximo com o mentor para ajustar sua leitura, corrigir erros e acelerar sua evolução."
         }
     ];
 

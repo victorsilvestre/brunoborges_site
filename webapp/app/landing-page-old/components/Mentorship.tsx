@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, TrendingUp, ShieldAlert, Target } from "lucide-react";
+import { ArrowUpRight, TrendingUp, Tv, Target } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 
 export function Mentorship() {
@@ -15,20 +15,20 @@ export function Mentorship() {
 
     const contentBlocks = [
         {
-            title: "O Programa Ao Vivo",
-            text: "Um programa exclusivo projetado para guiá-lo rumo ao sucesso financeiro no Day Trade, blindando a sua mente contra setups mágicos.",
-            icon: <ShieldAlert className="w-6 h-6 text-[var(--gold-premium)]" />,
+            title: "Aulas Ao Vivo",
+            text: "Aulas ao vivo com leitura de mercado em tempo real. Entenda o contexto, o comportamento do preço e o porquê de cada movimento.",
+            icon: <Tv className="w-6 h-6 text-[var(--gold-premium)]" />,
             borderColor: "border-[var(--gold-premium)]"
         },
         {
             title: "Método Validado",
-            text: "Compartilho na prática o Método TDS que utilizo todos os dias e que irá multiplicar seus ganhos pela ótica do verdadeiro Price Action purista.",
+            text: "Não é teoria. É prática diária. Um método simples, direto e replicável, baseado no que realmente funciona no mercado.",
             icon: <TrendingUp className="w-6 h-6 text-[var(--green-bull)]" />,
             borderColor: "border-[var(--green-bull)]"
         },
         {
             title: "Evolução Contínua",
-            text: "Do zero ao experiente: mostro o passo a passo para lucrar e maximizo a gestão e o potencial de resultados de quem já tem bagagem no mercado.",
+            text: "Você não evolui por sorte, evolui por processo. Aqui você segue um caminho claro para sair do zero e construir consistência.",
             icon: <Target className="w-6 h-6 text-white" />,
             borderColor: "border-[var(--white-40)]"
         }
@@ -54,12 +54,14 @@ export function Mentorship() {
                                 <span className="text-[var(--gold-premium)]">Sucesso</span>
                             </h2>
 
-                            <p className="text-xl text-[var(--white-80)] leading-relaxed mb-8">
-                                A Mentoria TDS é um acompanhamento completo, pensado para quem realmente quer viver do mercado e construir consistência de verdade.
+                            <p className="text-lg text-[var(--white-60)] leading-relaxed mb-8">
+                                A <strong className="text-white font-semibold">Mentoria TDS</strong> é um acompanhamento completo para quem quer sair da tentativa e erro e construir consistência no mercado.
                             </p>
-
+                            <p className="text-lg text-[var(--white-60)] leading-relaxed mb-8">
+                                Você aprende a ler o preço com clareza, tomar decisões com segurança e desenvolver um processo que pode ser repetido <strong className="text-white font-semibold">todos os dias</strong>.
+                            </p>
                             <p className="text-lg text-[var(--white-60)] leading-relaxed">
-                                Aqui você não compra só conhecimento. Você entra para o <strong className="text-white font-semibold">Time TDS</strong>, formado por pessoas comuns que decidiram mudar de vida com o Mercado Financeiro, usando um método objetivo, validado e que respeita o que o mercado realmente entrega.
+                                Agora, você passa a fazer parte do <strong className="text-white font-semibold">Time TDS</strong>. Um grupo de traders que segue um método simples, direto e alinhado com o mercado.
                             </p>
                         </FadeIn>
                     </div>

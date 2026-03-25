@@ -26,8 +26,8 @@ export function Differentiators() {
                         </FadeIn>
                         <FadeIn delay={0.1}>
                             <h3 className="font-display font-black text-5xl md:text-7xl text-white uppercase leading-[0.9] tracking-tighter">
-                                Por que a Mentoria <br />
-                                <span className="text-[var(--green-bull)]">TDS é diferente?</span>
+                                Por que a Mentoria TDS<br />
+                                <span className="text-[var(--green-bull)]">é diferente?</span>
                             </h3>
                         </FadeIn>
                     </div>

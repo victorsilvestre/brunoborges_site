@@ -34,7 +34,7 @@ export function WhatYouReceive() {
             title: "Aulas operacionais aos sábados",
             description: "Alunos operando ao vivo com análise e feedback em tempo real",
             badge: "BÔNUS",
-            gradient: "from-[var(--red-bear)] to-[var(--gold-premium)]"
+            gradient: "from-white to-[var(--gold-premium)]"
         },
         {
             icon: <Clock className="w-8 h-8" />,
@@ -66,7 +66,7 @@ export function WhatYouReceive() {
                     <FadeIn delay={0.1}>
                         <h2 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-8 text-white">
                             O QUE VOCÊ <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--red-bear)] to-[var(--gold-premium)]">VAI RECEBER:</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--gold-premium)]">VAI RECEBER:</span>
                         </h2>
                     </FadeIn>
                 </div>
@@ -124,7 +124,7 @@ export function WhatYouReceive() {
                             href="https://t.me/+MSL99oO7pmcyMWQx"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-[var(--red-bear)] to-[var(--gold-premium)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(241,20,20,0.3)]"
+                            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-[var(--green-bull)] to-[var(--gold-premium)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(241,20,20,0.3)]"
                         >
                             Garantir Minha Vaga
                         </a>
