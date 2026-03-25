@@ -6,11 +6,11 @@ import { FadeIn } from "./FadeIn";
 
 export function Mentorship() {
     const requirements = [
-        "Obter uma renda extra (complementar)",
+        "Obter uma renda extra",
         "Tornar-se um trader em tempo integral",
         "Aprimorar suas habilidades de investimento",
         "Acelerar seu aprendizado",
-        "Ter apoio vitalício e operar acompanhado"
+        "Ter apoio vitalício do mentor"
     ];
 
     const contentBlocks = [
@@ -48,17 +48,18 @@ export function Mentorship() {
                     {/* Sticky Left Column com os títulos mantidos idênticos (que o usuário validou e gostou) */}
                     <div className="lg:col-span-5 lg:sticky lg:top-32">
                         <FadeIn>
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--gold-premium)]/20 bg-[var(--gold-premium)]/10 text-[var(--gold-premium)] mb-8">
-                                <span className="text-xs font-bold tracking-widest uppercase">Do Zero ao Avançado</span>
-                            </div>
-
-                            <h2 className="font-display font-black text-5xl md:text-7xl uppercase mb-6 leading-none">
-                                O que é a <br />
-                                <span className="text-[var(--gold-premium)] italic">Mentoria TDS?</span>
+                            <h2 className="font-display font-black text-5xl md:text-7xl uppercase mb-6 leading-none text-white">
+                                Mentoria <br />
+                                <span className="text-[var(--green-bull)]">Trader de </span>
+                                <span className="text-[var(--gold-premium)]">Sucesso</span>
                             </h2>
 
-                            <p className="font-script text-4xl text-[var(--green-bull)] -rotate-2 origin-left mb-12">
-                                Não é só um curso. É o mais completo.
+                            <p className="text-xl text-[var(--white-80)] leading-relaxed mb-8">
+                                A Mentoria TDS é um acompanhamento completo, pensado para quem realmente quer viver do mercado e construir consistência de verdade.
+                            </p>
+
+                            <p className="text-lg text-[var(--white-60)] leading-relaxed">
+                                Aqui você não compra só conhecimento. Você entra para o <strong className="text-white font-semibold">Time TDS</strong>, formado por pessoas comuns que decidiram mudar de vida com o Mercado Financeiro, usando um método objetivo, validado e que respeita o que o mercado realmente entrega.
                             </p>
                         </FadeIn>
                     </div>
@@ -100,7 +101,7 @@ export function Mentorship() {
                                 </h3>
 
                                 <p className="text-[var(--white-80)] text-lg mb-10 relative z-10 leading-relaxed">
-                                    Minha metodologia foi desenvolvida para atender às necessidades de traders de todos os níveis. Ela serve impecavelmente para quem deseja:
+                                    Minha metodologia foi desenvolvida para atender às necessidades de traders de todos os níveis. Ela serve para quem deseja:
                                 </p>
 
                                 <ul className="space-y-4 relative z-10">

@@ -33,22 +33,29 @@ export function Hero() {
                         <FadeIn>
                             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--white-10)] bg-black/50 backdrop-blur-md mb-8">
                                 <span className="w-2 h-2 rounded-full bg-[var(--green-bull)] shadow-[var(--glow-green)] animate-pulse" />
-                                <span className="text-xs font-bold tracking-widest uppercase text-white/80">Mentoria Oficial TDS</span>
+                                <span className="text-xs font-bold tracking-widest uppercase text-white/80">Mentoria TDS</span>
                             </div>
                         </FadeIn>
 
                         <FadeIn delay={0.1}>
                             <h1 className="font-display font-black text-6xl md:text-[85px] lg:text-[110px] xl:text-[120px] leading-[0.85] uppercase tracking-tighter mb-4 md:mb-6 text-white shadow-black/50 drop-shadow-2xl">
-                                O sucesso<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--white)] to-[var(--white-40)]">não perdoa</span><br />
-                                <span className="text-[var(--gold-premium)] drop-shadow-lg">os fracos.</span>
+                                Aprenda o <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--white)] to-[var(--white-40)]">Método que</span><br />
+                                <span className="text-[var(--gold-premium)] drop-shadow-lg">Mais Forma</span>
                             </h1>
                         </FadeIn>
 
                         <FadeIn delay={0.2}>
-                            <span className="font-script text-5xl md:text-7xl text-[var(--green-bull)] block -mt-4 mb-10 md:mb-12 origin-left -rotate-1 drop-shadow-md">
-                                Constância muda o jogo
+                            <span className="font-script text-5xl md:text-7xl text-[var(--green-bull)] block -mt-4 mb-6 md:mb-8 origin-left -rotate-1 drop-shadow-md">
+                                Traders Consistentes!
                             </span>
+                        </FadeIn>
+
+                        <FadeIn delay={0.25}>
+                            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[var(--green-bull)]/30 bg-[var(--green-bull)]/10 backdrop-blur-md mb-10 md:mb-12">
+                                <span className="w-2 h-2 rounded-full bg-[var(--green-bull)] animate-pulse" />
+                                <span className="text-lg md:text-xl font-bold tracking-wider uppercase text-[var(--green-bull)] italic">Próxima Turma: 15/04/26</span>
+                            </div>
                         </FadeIn>
 
                         <FadeIn delay={0.3}>

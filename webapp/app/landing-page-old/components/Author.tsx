@@ -19,7 +19,7 @@ export function Author() {
                     <div className="lg:col-span-7 z-20 order-2 lg:order-1 pt-8 lg:pt-0">
                         <FadeIn>
                             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--white-20)] bg-[var(--white-10)] backdrop-blur-md mb-8">
-                                <span className="text-xs font-bold tracking-widest uppercase text-white">06 — O Mentor</span>
+                                <span className="text-xs font-bold tracking-widest uppercase text-white">Seu último Mentor</span>
                             </div>
                         </FadeIn>
 
@@ -33,24 +33,25 @@ export function Author() {
                         <div className="space-y-6 text-xl text-[var(--white-60)] font-light leading-relaxed max-w-xl">
                             <FadeIn delay={0.2}>
                                 <p>
-                                    Trader Profissional e Mentor especializado em <strong className="text-white font-semibold">Mini Índice/B3</strong>.
+                                    Trader Profissional e Mentor especializado em <strong className="text-white font-semibold">Price Action</strong>. Utilizo a leitura <strong className="text-white font-semibold">Candle a Candle</strong> todos os dias para extrair o máximo do mercado financeiro.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.3}>
                                 <p>
-                                    Possuo 5 anos de experiência no Mercado Financeiro e decidi ajudar pessoas comuns a alcançarem lucratividade e consistência, fugindo da poluição e falsas promessas dos setups mágicos.
+                                    Possuo <strong className="text-white font-semibold">5 anos de experiência</strong> no Mercado Financeiro e decidi ajudar pessoas comuns a alcançarem lucratividade e consistência no <strong className="text-white font-semibold">Day Trade</strong>.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.4}>
                                 <p>
-                                    Sou o criador de padrões proprietários como o <strong className="text-white font-semibold">“Preguiçoso”</strong> e o <strong className="text-white font-semibold">“Teimoso”</strong>,
-                                    testados e validados por milhares de alunos no campo de batalha diário.
+                                    Sou o criador de <strong className="text-white font-semibold">Padrões de Price Action</strong> que buscam acelerar o aprendizado dos alunos,
+                                    como o <strong className="text-white font-semibold">“Preguiçoso”</strong> e o <strong className="text-white font-semibold">“Teimoso”</strong>.
+                                    Ao todo, são mais de 10 padrões testados e validados por milhares de alunos diariamente.
                                 </p>
                             </FadeIn>
                         </div>
 
                         <FadeIn delay={0.5} className="mt-16">
-                            <div className="border-l-4 border-[var(--green-bull)] pl-8 py-2">
+                            <div>
                                 <span className="font-script text-5xl text-[var(--green-bull)] block">
                                     Vamos juntos nessa jornada.
                                 </span>

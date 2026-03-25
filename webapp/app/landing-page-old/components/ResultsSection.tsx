@@ -20,7 +20,7 @@ export function ResultsSection() {
                 <div className="text-center mb-24 max-w-3xl mx-auto">
                     <FadeIn>
                         <h2 className="text-[var(--white-40)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                            Provas Incontestáveis
+                            Você é capaz de ter resultados assim
                         </h2>
                     </FadeIn>
                     <FadeIn delay={0.1}>
@@ -31,7 +31,7 @@ export function ResultsSection() {
                     </FadeIn>
                     <FadeIn delay={0.2}>
                         <p className="text-xl text-[var(--white-60)]">
-                            Vou te ensinar a ter resultados como esses no seu dia a dia operacional. Sem setups mágicos, apenas leitura purista do preço.
+                            Vou te ensinar a ter resultados como esses no seu dia a dia operacional. Sem setups mágicos ou indicadores milagrosos. Conheça a leitura de Price Action que transformou a vida de milhares de alunos.
                         </p>
                     </FadeIn>
                 </div>

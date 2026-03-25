@@ -19,23 +19,23 @@ export function Waitlist() {
 
                         <div>
                             <FadeIn>
-                                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--red-bear)]/30 bg-[var(--red-bear)]/10 text-[var(--red-bear)] mb-8">
-                                    <span className="w-2 h-2 rounded-full bg-[var(--red-bear)] animate-pulse" />
-                                    <span className="text-xs font-bold tracking-widest uppercase">Vagas Esgotadas</span>
+                                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--green-bull)]/30 bg-[var(--green-bull)]/10 text-[var(--green-bull)] mb-8">
+                                    <span className="w-2 h-2 rounded-full bg-[var(--green-bull)] animate-pulse" />
+                                    <span className="text-xs font-bold tracking-widest uppercase">Inscrições Abertas</span>
                                 </div>
                             </FadeIn>
 
                             <FadeIn delay={0.1}>
                                 <h2 className="font-display font-black text-6xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-6 text-white">
-                                    Lista de <br />
-                                    <span className="text-[var(--gold-premium)]">Espera</span>
+                                    Venha <br />
+                                    <span className="text-[var(--gold-premium)]">Rápido</span>
                                 </h2>
                             </FadeIn>
 
                             <FadeIn delay={0.2}>
                                 <p className="text-xl text-[var(--white-60)] font-light leading-relaxed mb-8">
-                                    No momento, as inscrições estão rigorosamente fechadas.<br /><br />
-                                    Mas grandes oportunidades retornam. Entre no grupo VIP do Telegram e receba o alerta primeiro quando abrirmos a próxima turma.
+                                    Faça parte da próxima turma da Mentoria. <strong className="text-white font-semibold">Clique no link ao lado</strong> e entre para o grupo oficial de Alunos TDS.<br /><br />
+                                    As <strong className="text-white font-semibold">vagas são limitadas</strong>, aproveite essa oportunidade única de transformar a sua jornada no mercado financeiro.
                                 </p>
                             </FadeIn>
                         </div>
@@ -59,11 +59,11 @@ export function Waitlist() {
                                         rel="noopener noreferrer"
                                         className="w-full bg-[var(--gold-premium)] text-black font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-white transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group"
                                     >
-                                        Entrar no Canal VIP <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                                        Entrar no Grupo <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                                     </a>
 
                                     <p className="text-center text-sm text-[var(--white-40)] mt-6 uppercase tracking-widest font-bold">
-                                        Grupo Oficial de Alunos
+                                        Grupo Oficial de Alunos TDS
                                     </p>
                                 </div>
 

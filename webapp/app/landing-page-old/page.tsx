@@ -1,6 +1,7 @@
 import { Hero } from "./components/Hero";
 import { Features } from "./components/Features";
 import { Mentorship } from "./components/Mentorship";
+import { WhatYouReceive } from "./components/WhatYouReceive";
 import { VideoSection } from "./components/VideoSection";
 import { Differentiators } from "./components/Differentiators";
 import { ResultsSection } from "./components/ResultsSection";
@@ -15,6 +16,7 @@ export default function LandingPage() {
             <Hero />
             <Features />
             <Mentorship />
+            <WhatYouReceive />
             <VideoSection />
             <Differentiators />
             <ResultsSection />

@@ -35,17 +35,22 @@ export function Features() {
         <section id="about" className="py-32 relative bg-[var(--light-base)] overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-                <div className="max-w-3xl mb-24">
-                    <FadeIn>
-                        <h2 className="text-[var(--dark-medium)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                            Fundamentos
-                        </h2>
-                    </FadeIn>
+                <div className="max-w-4xl mb-24 text-center mx-auto">
                     <FadeIn delay={0.1}>
-                        <h3 className="font-display font-black text-5xl md:text-6xl lg:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
-                            A base de um <br />
-                            <span className="text-[var(--green-bull)]">Trader de Elite.</span>
+                        <h3 className="font-display font-black text-5xl md:text-6xl lg:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter mb-6">
+                            Uma mentoria <br />
+                            Diferente de tudo que você já viu.
                         </h3>
+                    </FadeIn>
+                    <FadeIn delay={0.2}>
+                        <span className="font-script text-3xl md:text-4xl text-[var(--green-bull)] block -mt-4 mb-6 md:mb-8 origin-left -rotate-1">
+                            O conteúdo mais completo do mercado.
+                        </span>
+                    </FadeIn>
+                    <FadeIn delay={0.3}>
+                        <p className="text-lg text-[var(--dark-medium)] max-w-3xl mx-auto leading-relaxed">
+                            Com meu operacional e um acompanhamento personalizado, você estará preparado para atingir seus objetivos financeiros e se tornar um <strong className="text-[var(--dark-pure)] font-semibold">Trader de Sucesso!</strong>
+                        </p>
                     </FadeIn>
                 </div>
 

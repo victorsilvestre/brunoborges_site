@@ -18,15 +18,16 @@ export function Differentiators() {
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-                    <div>
+                    <div className="max-w-3xl">
                         <FadeIn>
                             <h2 className="text-[var(--white-40)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                                03 — O Que Você Leva
+                                Diferenciais
                             </h2>
                         </FadeIn>
                         <FadeIn delay={0.1}>
-                            <h3 className="font-display font-black text-5xl md:text-6xl text-white uppercase leading-none tracking-tight">
-                                Diferenciais da Mentoria
+                            <h3 className="font-display font-black text-5xl md:text-7xl text-white uppercase leading-[0.9] tracking-tighter">
+                                Por que a Mentoria <br />
+                                <span className="text-[var(--green-bull)]">TDS é diferente?</span>
                             </h3>
                         </FadeIn>
                     </div>
