@@ -4,8 +4,10 @@
       "Bash(curl -s \"https://traderbrunoborges.com.br/mentoriatds\")",
       "Bash(npm run dev)",
       "Bash(curl -s http://localhost:3000)",
-      "Bash(curl -s http://localhost:3000/landing-page-old)",
-      "Bash(mkdir -p webapp/public/images/results)"
+      "Bash(curl -s http://localhost:3000/mentoria-tds)",
+      "Bash(mkdir -p webapp/public/images/results)",
+      "Bash(npm install)",
+      "Bash(rm -rf node_modules)"
     ],
     "deny": [],
     "ask": []
