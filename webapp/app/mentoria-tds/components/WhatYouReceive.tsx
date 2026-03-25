@@ -7,39 +7,41 @@ export function WhatYouReceive() {
     const benefits = [
         {
             icon: <BookOpen className="w-8 h-8" />,
-            title: "Acesso VITALÍCIO às aulas gravadas",
-            badge: "BÔNUS",
+            title: "Acesso Vitalício",
+            badge: "pra sempre",
+            description: "Aulas gravadas para você assistir quando e onde quiser. Sem pressa, no seu ritmo.",
             gradient: "from-[var(--gold-premium)] to-[var(--green-bull)]"
         },
         {
             icon: <Headphones className="w-8 h-8" />,
-            title: "Suporte de Dúvidas VITALÍCIO, diretamente com o professor",
-            description: "Mesmo após encerramento da Mentoria",
-            badge: "BÔNUS",
+            title: "Suporte de Dúvidas",
+            description: "Suporte vitalício, diretamente com o professor, mesmo após encerramento da mentoria.",
             gradient: "from-[var(--green-bull)] to-[var(--gold-premium)]"
         },
         {
             icon: <Users className="w-8 h-8" />,
-            title: "Grupo exclusivo de alunos no Telegram",
+            title: "Grupo Exclusivo",
+            badge: "Comunidade",
+            description: "Grupo exclusivo de alunos no Telegram para troca de experiências e aprendizado.",
             gradient: "from-[var(--gold-premium)] to-white"
         },
         {
             icon: <GraduationCap className="w-8 h-8" />,
-            title: "60 dias de mentoria AO VIVO",
-            description: "3x na semana, das 19h até todas as dúvidas serem esclarecidas",
+            title: "Mentoria Ao Vivo",
+            badge: "virada de chave",
+            description: "60 dias de mentoria ao vivo, 3x na semana, das 19h até todas as dúvidas serem esclarecidas.",
             gradient: "from-white to-[var(--green-bull)]"
         },
         {
             icon: <Trophy className="w-8 h-8" />,
-            title: "Aulas operacionais aos sábados",
-            description: "Alunos operando ao vivo com análise e feedback em tempo real",
-            badge: "BÔNUS",
+            title: "Aulas Operacionais",
+            description: "Aulas operacionais aos sábados, com alunos operando e feedbacks do professor ao vivo.",
             gradient: "from-white to-[var(--gold-premium)]"
         },
         {
             icon: <Clock className="w-8 h-8" />,
-            title: "+100h de conteúdo exclusivo",
-            description: "Do básico ao avançado em Price Action purista",
+            title: "+100h de conteúdo",
+            description: "Aulas do básico ao avançado em Price Action. Exclusivo para alunos.",
             gradient: "from-[var(--green-bull)] to-white"
         }
     ];

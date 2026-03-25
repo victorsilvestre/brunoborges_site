@@ -60,9 +60,17 @@ export function Mentorship() {
                             <p className="text-lg text-[var(--white-60)] leading-relaxed mb-8">
                                 Você aprende a ler o preço com clareza, tomar decisões com segurança e desenvolver um processo que pode ser repetido <strong className="text-white font-semibold">todos os dias</strong>.
                             </p>
-                            <p className="text-lg text-[var(--white-60)] leading-relaxed">
+                            <p className="text-lg text-[var(--white-60)] leading-relaxed mb-10">
                                 Agora, você passa a fazer parte do <strong className="text-white font-semibold">Time TDS</strong>. Um grupo de traders que segue um método simples, direto e alinhado com o mercado.
                             </p>
+                            <a
+                                href="https://t.me/+MSL99oO7pmcyMWQx"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]"
+                            >
+                                Entrar no Grupo VIP
+                            </a>
                         </FadeIn>
                     </div>
 

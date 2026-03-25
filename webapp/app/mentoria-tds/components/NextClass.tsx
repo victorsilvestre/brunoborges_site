@@ -37,7 +37,7 @@ export function NextClass() {
                             </span>
 
                             <p className="text-xl text-[var(--white-60)] font-light max-w-lg mx-auto lg:mx-0">
-                                Reserve seu passe de acesso e prepare-se para elevar o seu operacional a um nível que você nunca imaginou ser possível.
+                                Garanta seu acesso e comece a evoluir seu operacional com mais clareza, consistência e direção. Um método validado diariamente.
                             </p>
 
 

@@ -56,7 +56,16 @@ export function Differentiators() {
                         </FadeIn>
                     ))}
                 </div>
-
+                <FadeIn delay={0.2} className="w-full md:w-auto shrink-0">
+                    <a
+                        href="https://t.me/+MSL99oO7pmcyMWQx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_4px_30px_rgba(16,185,129,0.5)] w-fit mx-auto mt-10"
+                    >
+                        Quero Fazer Parte
+                    </a>
+                </FadeIn>
             </div>
         </section>
     );
