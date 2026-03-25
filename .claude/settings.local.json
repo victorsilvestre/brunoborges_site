@@ -7,7 +7,8 @@
       "Bash(curl -s http://localhost:3000/mentoria-tds)",
       "Bash(mkdir -p webapp/public/images/results)",
       "Bash(npm install)",
-      "Bash(rm -rf node_modules)"
+      "Bash(rm -rf node_modules)",
+      "Bash(timeout /t 10)"
     ],
     "deny": [],
     "ask": []
