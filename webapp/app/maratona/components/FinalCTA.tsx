@@ -1,0 +1,47 @@
+"use client";
+
+import { FadeIn } from "./FadeIn";
+import { ArrowRight, Trophy } from "lucide-react";
+
+export function FinalCTA() {
+    return (
+        <section className="py-24 bg-[var(--dark-pure)] relative overflow-hidden border-b border-[var(--white-10)]">
+            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
+
+            {/* Glowing Orb */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[200px] rounded-full pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div className="max-w-3xl">
+                        <FadeIn>
+                            <h2 className="text-[var(--white-50)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
+                                Domine o Mercado
+                            </h2>
+                        </FadeIn>
+                        <FadeIn delay={0.1}>
+                            <h3 className="font-display font-black text-5xl md:text-7xl text-white uppercase leading-[0.9] tracking-tighter mb-6">
+                                Chegou a hora do seu <span className="text-[var(--green-bull)]">sucesso no Day Trade</span>
+                            </h3>
+                        </FadeIn>
+                        <FadeIn delay={0.2}>
+                            <p className="text-lg md:text-xl text-[var(--white-60)] font-medium leading-relaxed max-w-2xl">
+                                A 14ª Maratona TDS será um evento 100% online e gratuito, onde vou compartilhar conteúdos práticos e visão de mercado. Para garantir que você não perca nenhuma aula, entre no nosso grupo exclusivo.
+                            </p>
+                        </FadeIn>
+                    </div>
+                </div>
+
+                <FadeIn delay={0.3}>
+                    <div className="flex justify-start">
+                        <a href="https://t.me/+7OFz4IzbCLQ5MDhh" target="_blank" rel="noopener noreferrer" className="btn bg-[var(--green-bull)] hover:bg-[var(--green-bull)] text-white group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto inline-flex items-center justify-center rounded-sm transition-all shadow-[0_0_40px_rgba(239,68,68,0.4)] hover:shadow-[0_0_60px_rgba(239,68,68,0.6)]">
+                            <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
+                                Entrar no Grupo Exclusivo <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </span>
+                        </a>
+                    </div>
+                </FadeIn>
+            </div>
+        </section>
+    );
+}
