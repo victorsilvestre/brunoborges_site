@@ -31,20 +31,19 @@ export function HeroManifesto() {
                         transition={{ duration: 1, ease: "easeOut" }}
                         className="mb-12"
                     >
-                        <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.9] uppercase tracking-tighter mb-8 text-white">
-                            O Mercado <br />
+                        <h1 className="font-display font-black text-3xl md:text-5xl lg:text-7xl xl:text-7xl leading-[0.9] uppercase tracking-tighter mb-8 text-white">
+                            Aprenda a ler o mercado <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] via-[var(--gold-hover)] to-[var(--gold-premium)] animate-gradient">
-                                Recompensa
+                                como ele realmente funciona
                             </span>
-                            <br />
-                            a Disciplina
                         </h1>
                     </motion.div>
                 </FadeIn>
 
                 <FadeIn delay={0.4}>
-                    <p className="text-2xl md:text-3xl lg:text-4xl text-[var(--white-60)] font-light max-w-4xl mx-auto mb-4 leading-relaxed">
-                        Eu te mostro o caminho.
+                    <p className="text-2xl md:text-2xl lg:text-3xl text-[var(--white-20)] font-light max-w-4xl mx-auto mb-4 leading-none">
+                        Eu te ensino leitura de contexto para você tomar
+                        <br /> melhores decisões na sua conta real.
                     </p>
                 </FadeIn>
 
