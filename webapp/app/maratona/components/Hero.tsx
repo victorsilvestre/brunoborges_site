@@ -69,7 +69,7 @@ export function Hero() {
                                         <div className="flex items-center text-yellow-400 text-sm">
                                             {"★".repeat(5)} <span className="text-slate-800 font-bold ml-1 text-base">5.0</span>
                                         </div>
-                                        <span className="text-xs font-medium text-slate-500">(+5k alunos)</span>
+                                        <span className="text-xs font-medium text-slate-500">(+1,2k alunos)</span>
                                     </div>
                                 </div>
                             </div>

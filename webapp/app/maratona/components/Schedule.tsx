@@ -9,19 +9,19 @@ export function Schedule() {
             subtitle: "AULA 1 - TERÇA",
             date: "31/03",
             time: "20HRS",
-            topics: "EM BREVE DIVULGAREMOS!"
+            topics: "Aprenda a ler o gráfico sem indicadores"
         },
         {
             subtitle: "AULA 2 - QUARTA",
             date: "01/04",
             time: "20HRS",
-            topics: "EM BREVE DIVULGAREMOS!"
+            topics: "Lucro diário começa com negação"
         },
         {
             subtitle: "AULA 3 - QUINTA",
             date: "02/04",
             time: "20HRS",
-            topics: "EM BREVE DIVULGAREMOS!"
+            topics: "Scalp preciso, resultado real"
         }
     ];
 
@@ -44,7 +44,7 @@ export function Schedule() {
                         <FadeIn key={i} delay={0.1 + i * 0.1}>
                             <div className="relative p-8 rounded-3xl overflow-hidden group transition-all duration-500 border border-slate-200 bg-white hover:border-red-500/30 hover:shadow-[0_10px_40px_rgba(239,68,68,0.08)] flex flex-col h-full">
                                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-slate-200 to-slate-300 group-hover:from-red-500 group-hover:to-red-400 transition-colors duration-500" />
-                                
+
                                 <div className="mb-8 mt-2">
                                     <span className="inline-block py-1 px-3 rounded-md bg-[var(--dark-pure)] text-white text-xs font-bold tracking-widest uppercase mb-4">
                                         {day.subtitle}
