@@ -41,7 +41,7 @@ export function Differentiators() {
                             delay={i * 0.1}
                             className="relative group flex flex-col md:flex-row gap-6 lg:gap-8 items-start pb-12 border-b border-slate-200"
                         >
-                            <div className="font-script text-5xl md:text-6xl text-[var(--gold-premium)] shrink-0">
+                            <div className="font-script text-5xl md:text-6xl text-[var(--green-dark)] shrink-0">
                                 {d.num}
                             </div>
 
@@ -61,7 +61,7 @@ export function Differentiators() {
                         href="https://t.me/+MSL99oO7pmcyMWQx"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_4px_30px_rgba(16,185,129,0.5)] w-fit mx-auto mt-10"
+                        className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(0,191,99,0.30)] hover:shadow-[0_4px_30px_rgba(0,191,99,0.50)] w-fit mx-auto mt-10"
                     >
                         Quero Fazer Parte
                     </a>

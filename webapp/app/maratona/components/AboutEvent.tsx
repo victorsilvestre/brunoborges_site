@@ -5,11 +5,11 @@ import { LineChart, BookOpen, TrendingUp } from "lucide-react";
 
 export function AboutEvent() {
     return (
-        <section id="about" className="py-24 bg-[var(--dark-pure)] relative border-b border-[var(--white-10)]">
+        <section id="about" className="py-24 bg-[var(--dark-pure)] relative overflow-hidden border-b border-[var(--white-10)]">
             <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
             {/* Glowing Orb */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] rounded-full pointer-events-none" style={{ background: 'var(--green-dim)' }} />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
@@ -49,7 +49,7 @@ export function AboutEvent() {
 
                     <FadeIn delay={0.4}>
                         <div className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
-                            <BookOpen className="w-10 h-10 text-red-500 mb-6" />
+                            <BookOpen className="w-10 h-10 mb-6" style={{ color: 'var(--green-bull)' }} />
                             <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase">100% Prático</h3>
                             <p className="text-[var(--white-60)] leading-relaxed text-lg">
                                 Esqueça teorias complicadas. O foco é te ensinar na prática aquilo que aplico todos os dias operando no mercado financeiro.

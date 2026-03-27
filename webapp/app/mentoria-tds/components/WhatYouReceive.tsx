@@ -10,39 +10,39 @@ export function WhatYouReceive() {
             title: "Acesso Vitalício",
             badge: "pra sempre",
             description: "Aulas gravadas para você assistir quando e onde quiser. Sem pressa, no seu ritmo.",
-            gradient: "from-[var(--gold-premium)] to-[var(--green-bull)]"
+            gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
             icon: <Headphones className="w-8 h-8" />,
             title: "Suporte de Dúvidas",
             description: "Suporte vitalício, diretamente com o professor, mesmo após encerramento da mentoria.",
-            gradient: "from-[var(--green-bull)] to-[var(--gold-premium)]"
+            gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
             icon: <Users className="w-8 h-8" />,
             title: "Grupo Exclusivo",
             badge: "Comunidade",
             description: "Grupo exclusivo de alunos no Telegram para troca de experiências e aprendizado.",
-            gradient: "from-[var(--gold-premium)] to-white"
+            gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
             icon: <GraduationCap className="w-8 h-8" />,
             title: "Mentoria Ao Vivo",
             badge: "virada de chave",
             description: "60 dias de mentoria ao vivo, 3x na semana, das 19h até todas as dúvidas serem esclarecidas.",
-            gradient: "from-white to-[var(--green-bull)]"
+            gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
             icon: <Trophy className="w-8 h-8" />,
             title: "Aulas Operacionais",
             description: "Aulas operacionais aos sábados, com alunos operando e feedbacks do professor ao vivo.",
-            gradient: "from-white to-[var(--gold-premium)]"
+            gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
             icon: <Clock className="w-8 h-8" />,
             title: "+100h de conteúdo",
             description: "Aulas do básico ao avançado em Price Action. Exclusivo para alunos.",
-            gradient: "from-[var(--green-bull)] to-white"
+            gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         }
     ];
 
@@ -68,7 +68,7 @@ export function WhatYouReceive() {
                     <FadeIn delay={0.1}>
                         <h2 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-8 text-white">
                             O QUE VOCÊ <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--green-bull)]">VAI RECEBER:</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] to-[var(--green-bull)]">VAI RECEBER:</span>
                         </h2>
                     </FadeIn>
                 </div>
@@ -91,7 +91,7 @@ export function WhatYouReceive() {
                                     {/* Badge if exists */}
                                     {benefit.badge && (
                                         <div className="absolute top-6 right-6">
-                                            <span className="px-3 py-1 rounded-full bg-[var(--gold-premium)] text-black text-xs font-bold uppercase tracking-wider">
+                                            <span className="px-3 py-1 rounded-full bg-[var(--green-pure)] text-white text-xs font-bold uppercase tracking-wider">
                                                 {benefit.badge}
                                             </span>
                                         </div>

@@ -9,7 +9,7 @@ export function FinalCTA() {
             <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
             {/* Glowing Orb */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[200px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] blur-[200px] rounded-full pointer-events-none" style={{ background: 'var(--green-dim)' }} />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
@@ -26,7 +26,9 @@ export function FinalCTA() {
                         </FadeIn>
                         <FadeIn delay={0.2}>
                             <p className="text-lg md:text-xl text-[var(--white-60)] font-medium leading-relaxed max-w-2xl">
-                                A 14ª Maratona TDS será um evento 100% online e gratuito, onde vou compartilhar conteúdos práticos e visão de mercado. Para garantir que você não perca nenhuma aula, entre no nosso grupo exclusivo.
+                                A 14ª Maratona Trader de Sucesso será um evento 100% online e gratuito, 
+                                onde vou compartilhar conteúdos práticos, visão de mercado e peças valiosas do meu operacional. 
+                                Para garantir que você não perca nenhuma aula, entre no nosso grupo exclusivo.
                             </p>
                         </FadeIn>
                     </div>
@@ -34,7 +36,7 @@ export function FinalCTA() {
 
                 <FadeIn delay={0.3}>
                     <div className="flex justify-start">
-                        <a href="https://t.me/+7OFz4IzbCLQ5MDhh" target="_blank" rel="noopener noreferrer" className="btn bg-[var(--green-bull)] hover:bg-[var(--green-bull)] text-white group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto inline-flex items-center justify-center rounded-sm transition-all shadow-[0_0_40px_rgba(239,68,68,0.4)] hover:shadow-[0_0_60px_rgba(239,68,68,0.6)]">
+                        <a href="https://t.me/+7OFz4IzbCLQ5MDhh" target="_blank" rel="noopener noreferrer" className="btn text-white group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto inline-flex items-center justify-center rounded-sm transition-all" style={{ background: 'var(--green-pure)', boxShadow: '0 0 40px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 40px var(--green-dim)'; }}>
                             <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
                                 Entrar no Grupo Exclusivo <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>

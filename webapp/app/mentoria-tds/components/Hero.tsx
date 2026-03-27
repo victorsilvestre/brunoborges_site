@@ -40,8 +40,8 @@ export function Hero() {
                         <FadeIn delay={0.1}>
                             <h1 className="font-display font-black text-6xl md:text-[85px] lg:text-[110px] xl:text-[120px] leading-[0.85] uppercase tracking-tighter mb-4 md:mb-6 text-white shadow-black/50 drop-shadow-2xl">
                                 Aprenda o <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--white)] to-[var(--white-40)]">Método que</span><br />
-                                <span className="text-[var(--gold-premium)] drop-shadow-lg">Mais Forma</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--white)] to-[var(--white-80)]">Método que</span><br />
+                                <span className="text-[var(--white-80)] drop-shadow-lg">Mais Forma</span>
                             </h1>
                         </FadeIn>
 
@@ -66,7 +66,7 @@ export function Hero() {
 
                         <FadeIn delay={0.4}>
                             <div className="flex flex-col sm:flex-row gap-6">
-                                <a href="https://t.me/+MSL99oO7pmcyMWQx" target="_blank" rel="noopener noreferrer" className="btn btn-green group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto flex items-center justify-center shadow-[0_0_30px_rgba(0,255,136,0.3)] hover:shadow-[0_0_50px_rgba(0,255,136,0.5)] transition-shadow">
+                                <a href="https://t.me/+MSL99oO7pmcyMWQx" target="_blank" rel="noopener noreferrer" className="btn btn-green group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto flex items-center justify-center shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_50px_rgba(0,191,99,0.50)] transition-shadow">
                                     <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
                                         Garantir Minha Vaga <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </span>

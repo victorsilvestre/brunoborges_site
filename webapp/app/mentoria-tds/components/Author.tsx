@@ -26,7 +26,7 @@ export function Author() {
                         <FadeIn delay={0.1}>
                             <h2 className="font-display font-black text-6xl md:text-8xl uppercase leading-[0.9] tracking-tighter mb-8 text-white">
                                 Quem é <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--gold-premium)]">Bruno Borges?</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)] to-[var(--green-pure)]">Bruno Borges</span>
                             </h2>
                         </FadeIn>
 
@@ -59,7 +59,7 @@ export function Author() {
                                     href="https://t.me/+MSL99oO7pmcyMWQx"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]"
+                                    className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_40px_rgba(0,191,99,0.50)]"
                                 >
                                     Entrar para o Time
                                 </a>

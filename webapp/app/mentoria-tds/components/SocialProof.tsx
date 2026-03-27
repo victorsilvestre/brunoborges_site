@@ -17,15 +17,15 @@ export function SocialProof() {
 
     const testimonials = [
         { text: "Antes eu operava por emoção e devolvia tudo. A visão operacional do TDS virou a minha chave para a constância. Recomendo de olhos fechados.", author: "Fábio R.", role: "Aluno TDS", color: "var(--green-bull)" },
-        { text: "Didática fantástica. Sem enrolação de Setup Mágico. Equipe profissional de suporte, o Bruno realmente se importa com o nosso aprendizado.", author: "Marcela T.", role: "Aluno TDS", color: "var(--gold-premium)" },
-        { text: "O método é direto ao ponto e não fica enrolando com teorias que não funcionam na prática. Minha leitura de fluxo melhorou absurdamente.", author: "João P.", role: "Aluno TDS", color: "var(--white)" },
+        { text: "Didática fantástica. Sem enrolação de Setup Mágico. Equipe profissional de suporte, o Bruno realmente se importa com o nosso aprendizado.", author: "Marcela T.", role: "Aluna TDS", color: "var(--green-pure)" },
+        { text: "O método é direto ao ponto e não fica enrolando com teorias que não funcionam na prática. Minha leitura de fluxo melhorou absurdamente.", author: "João P.", role: "Aluno TDS", color: "var(--green-dark)" },
         { text: "Estou há 3 anos no mercado e foi só com a mentoria TDS que consegui fechar meu primeiro mês no positivo consistente. Incrível.", author: "Ricardo M.", role: "Aluno TDS", color: "var(--green-bull)" },
-        { text: "As operações explicadas ao vivo fazem toda a diferença. O Mentor pega na sua mão e mostra o momento exato de entrar e sair.", author: "Camila S.", role: "Aluno TDS", color: "var(--gold-premium)" },
-        { text: "Nunca vi um operacional tão simples e tão eficaz. O gráfico limpo ajuda muito a não travar na hora de clicar.", author: "Lucas A.", role: "Aluno TDS", color: "var(--white)" },
+        { text: "As operações explicadas ao vivo fazem toda a diferença. O Mentor pega na sua mão e mostra o momento exato de entrar e sair.", author: "Camila S.", role: "Aluna TDS", color: "var(--green-pure)" },
+        { text: "Nunca vi um operacional tão simples e tão eficaz. O gráfico limpo ajuda muito a não travar na hora de clicar.", author: "Lucas A.", role: "Aluno TDS", color: "var(--green-dark)" },
         { text: "Esse curso não apenas ensina a ganhar, mas ensina a proteger o capital. Isso mudou meu jogo completamente no mini índice.", author: "Pedro H.", role: "Aluno TDS", color: "var(--green-bull)" },
-        { text: "O suporte é o melhor que já vi. O Bruno responde rápido, tira dúvidas no Telegram com uma paciência de outro mundo.", author: "Mariana L.", role: "Aluno TDS", color: "var(--gold-premium)" },
-        { text: "As aulas de sábado com os alunos operando mostram a realidade nua e crua. Foi aí que minha chave para a consistência virou.", author: "Thiago C.", role: "Aluno TDS", color: "var(--white)" },
-        { text: "Eu tinha muito medo de operar depois de quebrar a banca três vezes. O Bruno me ajudou a resgatar a confiança e a perder o medo. Acompanhamento maravilhoso.", author: "Roberta D.", role: "Aluno TDS", color: "var(--green-bull)" }
+        { text: "O suporte é o melhor que já vi. O Bruno responde rápido, tira dúvidas no Telegram com uma paciência de outro mundo.", author: "Mariana L.", role: "Aluna TDS", color: "var(--green-pure)" },
+        { text: "As aulas de sábado com os alunos operando mostram a realidade nua e crua. Foi aí que minha chave para a consistência virou.", author: "Thiago C.", role: "Aluno TDS", color: "var(--green-dark)" },
+        { text: "Eu tinha muito medo de operar depois de quebrar a banca três vezes. O Bruno me ajudou a resgatar a confiança e a perder o medo. Acompanhamento maravilhoso.", author: "Roberta D.", role: "Aluna TDS", color: "var(--green-bull)" }
     ];
 
     return (
@@ -45,7 +45,7 @@ export function SocialProof() {
                         <FadeIn delay={0.1}>
                             <h3 className="font-display font-black text-4xl md:text-6xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
                                 Seja o próximo <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-pure)] to-[var(--green-bull)]">case de sucesso</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)] to-[var(--green-bull)]">case de sucesso</span>
                             </h3>
                         </FadeIn>
                     </div>

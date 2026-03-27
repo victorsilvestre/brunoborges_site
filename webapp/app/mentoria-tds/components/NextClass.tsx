@@ -24,11 +24,11 @@ export function NextClass() {
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.03] to-transparent -translate-x-[200%] group-hover:translate-x-[200%] transition-transform duration-[1500ms] ease-in-out pointer-events-none" />
 
                         <div className="flex-1 text-center lg:text-left z-10">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[var(--red-bear)]/10 border border-[var(--red-bear)]/20 text-[var(--red-bear)] text-xs font-bold uppercase tracking-widest rounded-full mb-8">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-8 text-[var(--red-pure)]" style={{ background: 'var(--red-dim)', borderColor: 'var(--red-border)', border: '1px solid' }}>
                                 <Lock className="w-3 h-3" /> Vagas Limitadas
                             </div>
 
-                            <h2 className="font-display font-black text-5xl md:text-7xl lg:text-[5rem] text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--green-bull)] uppercase leading-[0.85] tracking-tighter mb-6 relative">
+                            <h2 className="font-display font-black text-5xl md:text-7xl lg:text-[5rem] text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--light-surface)] uppercase leading-[0.85] tracking-tighter mb-6 relative">
                                 Próxima Turma
                             </h2>
 
@@ -59,7 +59,7 @@ export function NextClass() {
                             </div>
 
                             <div className="p-6 md:p-8 rounded-3xl bg-[var(--green-bull)]/5 border border-[var(--green-bull)]/20 backdrop-blur-md flex items-center gap-6 group/card hover:bg-[var(--green-bull)]/10 transition-colors">
-                                <div className="w-16 h-16 rounded-2xl bg-[#032e1f]/30 border border-[var(--green-bull)]/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(16,185,129,0.2)] group-hover/card:scale-110 transition-transform">
+                                <div className="w-16 h-16 rounded-2xl bg-[#032e1f]/30 border border-[var(--green-bull)]/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(0,191,99,0.20)] group-hover/card:scale-110 transition-transform">
                                     <Calendar className="w-8 h-8 text-[var(--green-bull)]" />
                                 </div>
                                 <div>
@@ -73,7 +73,7 @@ export function NextClass() {
                                     href="https://t.me/+MSL99oO7pmcyMWQx"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group flex-1 flex items-center justify-center gap-4 px-5 py-3 bg-white text-black rounded-2xl font-display font-black text-lg uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:bg-[var(--green-bull)] hover:text-white shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(16,185,129,0.4)]"
+                                    className="group flex-1 flex items-center justify-center gap-4 px-5 py-3 bg-white text-black rounded-2xl font-display font-black text-lg uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:bg-[var(--green-bull)] hover:text-white shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(0,191,99,0.40)]"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/10 to-transparent -translate-x-[200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
                                     <Ticket className="w-5 h-5 shrink-0" />

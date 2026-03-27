@@ -14,16 +14,18 @@
   --dark-pure: #0F172A;
   --dark-medium: rgba(15, 23, 42, 0.6);
 
-  /* Primary Signal Colors */
-  --green-bull: #10B981;
-  --green-hover: #059669;
-  --green-dim: rgba(16, 185, 129, 0.15);
-  --green-border: rgba(16, 185, 129, 0.3);
+  /* Primary Signal Colors — Cores Puras da Marca */
+  --green-pure: #00BF63;       /* Verde puro da marca */
+  --green-bull: #00BF63;       /* alias semântico: CTA, destaques positivos */
+  --green-dark: #009E52;       /* hover / estado ativo */
+  --green-dim: rgba(0, 191, 99, 0.12);   /* fundos sutis / badges */
+  --green-border: rgba(0, 191, 99, 0.25); /* bordas de destaque */
 
-  --red-bear: #EF4444;
-  --red-hover: #DC2626;
-  --red-dim: rgba(239, 68, 68, 0.15);
-  --red-border: rgba(239, 68, 68, 0.3);
+  --red-pure: #F11414;         /* Vermelho puro da marca */
+  --red-bear: #F11414;         /* alias semântico: urgência, alertas */
+  --red-hover: rgba(241, 20, 20, 0.85);  /* hover suave */
+  --red-dim: rgba(241, 20, 20, 0.10);    /* fundo de alerta pontual */
+  --red-border: rgba(241, 20, 20, 0.25); /* bordas de urgência */
 
   /* Secondary Brand Colors (New) */
   --gold-premium: #D4AF37;
@@ -56,8 +58,8 @@
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.5);
   --shadow-hard: 0 8px 30px rgba(0, 0, 0, 0.8);
   --shadow-light: 0 4px 20px rgba(15, 23, 42, 0.08);
-  --glow-green: 0 0 20px rgba(16, 185, 129, 0.4);
-  --glow-red: 0 0 20px rgba(239, 68, 68, 0.4);
+  --glow-green: 0 0 20px rgba(0, 191, 99, 0.35);
+  --glow-red: 0 0 20px rgba(241, 20, 20, 0.30);
   --glow-gold: 0 0 20px rgba(212, 175, 55, 0.4);
 
   /* Radius */
@@ -76,6 +78,11 @@
   --font-sans: var(--font-inter), sans-serif;
   --font-display: var(--font-montserrat), sans-serif;
   --font-script: var(--font-dancing-script), cursive;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -367,7 +374,7 @@ body {
 }
 
 .btn-green:hover {
-  background: var(--green-hover);
+  background: var(--green-dark);
   box-shadow: var(--glow-green);
   transform: translateY(-2px);
 }

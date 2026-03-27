@@ -40,7 +40,7 @@ export function ResultsSection() {
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                     {images.map((src, i) => (
                         <FadeIn key={i} delay={0.1 * (i % 3)} className="break-inside-avoid">
-                            <div className="relative rounded-2xl overflow-hidden border border-[var(--white-10)] bg-[var(--dark-elevated)] group hover:border-[var(--green-bull)]/50 hover:shadow-[0_0_40px_rgba(0,255,136,0.15)] transition-all duration-500">
+                            <div className="relative rounded-2xl overflow-hidden border border-[var(--white-10)] bg-[var(--dark-elevated)] group hover:border-[var(--green-bull)]/50 hover:shadow-[0_0_40px_rgba(0,191,99,0.15)] transition-all duration-500">
                                 <img
                                     src={src}
                                     alt={`Resultado do aluno ${i + 1}`}

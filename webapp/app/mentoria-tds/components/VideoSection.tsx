@@ -36,7 +36,7 @@ export function VideoSection() {
                     <FadeIn delay={0.1}>
                         <h2 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-4 text-[var(--dark-pure)]">
                             O que os alunos <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-pure)] to-[var(--green-bull)]">dizem por aí</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)] to-[var(--green-bull)]">dizem por aí</span>
                         </h2>
                     </FadeIn>
                 </div>

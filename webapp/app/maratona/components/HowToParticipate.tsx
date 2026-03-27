@@ -10,15 +10,15 @@ export function HowToParticipate() {
 
             <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
                 <FadeIn>
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-600/10 border border-red-500/20 mb-8">
-                        <Send className="w-8 h-8 text-red-500" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-8" style={{ background: 'var(--red-dim)', border: '1px solid var(--red-border)' }}>
+                        <Send className="w-8 h-8" style={{ color: 'var(--red-pure)' }} />
                     </div>
                 </FadeIn>
 
                 <FadeIn delay={0.1}>
                     <h2 className="font-display font-black text-5xl md:text-7xl lg:text-8xl text-white uppercase leading-[0.9] tracking-tighter mb-8 drop-shadow-md">
                         Como <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400">Participar?</span>
+                        <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, var(--red-pure), var(--red-hover))' }}>Participar?</span>
                     </h2>
                 </FadeIn>
 
@@ -33,7 +33,7 @@ export function HowToParticipate() {
 
                 <FadeIn delay={0.3}>
                     <div className="flex justify-center">
-                        <a href="https://t.me/+7OFz4IzbCLQ5MDhh" target="_blank" rel="noopener noreferrer" className="btn bg-red-600 hover:bg-red-500 text-white group relative overflow-hidden py-5 px-10 text-lg sm:w-auto flex items-center justify-center rounded-sm transition-all shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)]">
+                        <a href="https://t.me/+7OFz4IzbCLQ5MDhh" target="_blank" rel="noopener noreferrer" className="btn text-white group relative overflow-hidden py-5 px-10 text-lg sm:w-auto flex items-center justify-center rounded-sm transition-all" style={{ background: 'var(--red-pure)', boxShadow: '0 0 30px var(--red-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--red-hover)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-red)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--red-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 30px var(--red-dim)'; }}>
                             <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
                                 Quero Participar! <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>

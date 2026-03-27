@@ -34,7 +34,7 @@ export function Schedule() {
                     <div className="text-center mb-20">
                         <h2 className="font-display font-black text-5xl md:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
                             Calendário <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400">Completo</span>
+                            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, var(--green-pure), var(--green-dark))' }}>Completo</span>
                         </h2>
                     </div>
                 </FadeIn>
@@ -42,8 +42,8 @@ export function Schedule() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {days.map((day, i) => (
                         <FadeIn key={i} delay={0.1 + i * 0.1}>
-                            <div className="relative p-8 rounded-3xl overflow-hidden group transition-all duration-500 border border-slate-200 bg-white hover:border-red-500/30 hover:shadow-[0_10px_40px_rgba(239,68,68,0.08)] flex flex-col h-full">
-                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-slate-200 to-slate-300 group-hover:from-red-500 group-hover:to-red-400 transition-colors duration-500" />
+                            <div className="relative p-8 rounded-3xl overflow-hidden group transition-all duration-500 border border-slate-200 bg-white hover:border-[var(--green-border)] hover:shadow-[0_10px_40px_rgba(0,191,99,0.08)] flex flex-col h-full">
+                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-slate-200 to-slate-300 group-hover:from-[var(--green-pure)] group-hover:to-[var(--green-dark)] transition-colors duration-500" />
 
                                 <div className="mb-8 mt-2">
                                     <span className="inline-block py-1 px-3 rounded-md bg-[var(--dark-pure)] text-white text-xs font-bold tracking-widest uppercase mb-4">

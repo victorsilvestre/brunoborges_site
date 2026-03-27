@@ -1,0 +1,177 @@
+Sim. O segredo aqui não é “trocar cor”. É controlar sistema visual para essas cores rígidas não destruírem a elegância do site.
+
+Com verde, vermelho, branco e preto, o maior risco é o site ficar:
+
+agressivo demais,
+com cara de promoção barata,
+cansativo visualmente,
+ou com contraste ruim em alguns blocos.
+
+A melhor forma de fazer isso é tratar essas 4 cores como papéis diferentes, não como cores “livres” para usar em qualquer lugar.
+
+O princípio mais importante
+
+Preto e branco viram a base.
+Verde e vermelho viram cores de ação e destaque.
+
+Ou seja:
+
+Preto: fundo principal, textos escuros, blocos premium
+Branco: textos, fundos claros, áreas de respiro
+Verde: positivo, CTA principal, destaques bons, confirmação
+Vermelho: alerta, tensão, detalhe de contraste, microdestaques estratégicos
+
+O erro seria usar verde e vermelho como protagonistas o tempo todo.
+Eles devem aparecer com intenção.
+
+Regra prática de distribuição
+
+Pensa assim:
+
+70–80% preto, branco e tons derivados
+15–20% verde
+5–10% vermelho
+
+O vermelho precisa ser o mais econômico dos quatro.
+Se usar demais, ele “grita” e mata a sofisticação.
+
+Como aplicar sem estragar o site
+1. Crie uma hierarquia de cor antes de editar qualquer página
+
+Antes de pedir pro Claude mexer no layout, defina um mini sistema:
+
+Background principal: preto
+Background secundário: quase preto / cinza bem escuro
+Cards: preto suavizado ou branco, dependendo da página
+Texto principal em fundo escuro: branco
+Texto secundário: branco com opacidade menor
+CTA principal: verde
+CTA secundário: branco com borda ou preto com borda verde
+Hover positivo: verde mais claro ou glow verde sutil
+Erro / urgência / destaque de risco: vermelho
+Linhas divisórias / bordas: branco ou verde em baixa opacidade
+
+Isso já reduz muito a chance de ficar feio.
+
+2. Não use as cores puras em tudo
+
+Esse ponto é muito importante.
+
+Em vez de trabalhar só com as cores puras da marca:
+
+#000000 - Preto Sólido
+#FFFFFF - Branco Sólido
+#00BF63 - Verde Puro
+#F11414 - Vermelho Puro
+
+crie variações controladas.
+utilizar a imagem anexa no prompt para referência visual, porém pode propor as variações de cada cor, desde que não altere as cores puras da marca, informadas acima.
+
+Exemplo de raciocínio:
+
+preto absoluto para alguns fundos
+preto quebrado para cards
+branco puro para títulos
+branco suave para texto secundário
+verde principal para botões
+verde escuro para hover
+vermelho principal para alertas
+vermelho suave para pequenos detalhes
+
+Assim o site continua dentro da paleta, mas ganha profundidade.
+
+3. Defina a função de cada cor
+
+Você pode usar uma lógica assim:
+
+Preto
+fundo principal
+header/footer
+seções premium
+contraste geral
+Branco
+textos
+áreas de leitura
+blocos com mais respiro
+contraste de interface
+Verde
+botão principal
+links importantes
+ícones de sucesso
+bordas de destaque
+números positivos ou blocos-chave
+Vermelho
+pequenos acentos visuais
+indicadores de urgência
+detalhes pontuais de tensão ou energia
+nunca como fundo dominante em grandes áreas, salvo raríssimas exceções
+
+4. Escolha qual cor “manda” na identidade
+
+Mesmo tendo 4 cores, o site não precisa parecer de 4 cores.
+
+Vamos seguir essa abordagem:
+
+- Site elegante e premium
+base preta
+texto branco
+verde como cor principal
+vermelho quase só como detalhe
+
+5. Trabalhe por etapas, não nas 3 páginas de uma vez
+
+Não peça pro Claude alterar tudo de uma vez.
+
+Faça nessa ordem:
+
+Etapa 1 — tokens e variáveis
+
+Primeiro, mande ele:
+
+localizar todas as cores atuais
+mapear onde elas são usadas
+criar um sistema central de variáveis/tokens
+substituir o uso direto de cores por tokens
+
+Exemplo de estrutura mental:
+
+--background
+--background-secondary
+--foreground
+--foreground-muted
+--primary
+--primary-hover
+--accent
+--danger
+--border
+--card
+
+Só depois disso você troca a identidade visual.
+
+Etapa 2 — aplicar em uma página piloto
+
+Escolha a página mais importante ou mais representativa.
+
+Peça para:
+
+aplicar a nova paleta
+manter layout, espaçamento e tipografia
+focar só em cores, bordas, sombras e estados de hover
+
+Analise essa página primeiro.
+
+Etapa 3 — ajustar excessos
+
+Veja:
+
+ficou muito verde?
+o vermelho apareceu demais?
+os contrastes ficaram confortáveis?
+os botões estão elegantes ou berrando?
+o texto continua fácil de ler?
+
+Ajuste a página piloto.
+
+Etapa 4 — replicar para as outras 2 páginas após aprovação explícita.
+
+Só depois leve o padrão pronto para as outras páginas.
