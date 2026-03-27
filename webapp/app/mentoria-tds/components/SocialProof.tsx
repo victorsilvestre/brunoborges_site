@@ -16,16 +16,15 @@ export function SocialProof() {
     };
 
     const testimonials = [
-        { text: "Antes eu operava por emoção e devolvia tudo. A visão operacional do TDS virou a minha chave para a constância. Recomendo de olhos fechados.", author: "Fábio R.", role: "Aluno TDS", color: "var(--green-bull)" },
-        { text: "Didática fantástica. Sem enrolação de Setup Mágico. Equipe profissional de suporte, o Bruno realmente se importa com o nosso aprendizado.", author: "Marcela T.", role: "Aluna TDS", color: "var(--green-pure)" },
-        { text: "O método é direto ao ponto e não fica enrolando com teorias que não funcionam na prática. Minha leitura de fluxo melhorou absurdamente.", author: "João P.", role: "Aluno TDS", color: "var(--green-dark)" },
-        { text: "Estou há 3 anos no mercado e foi só com a mentoria TDS que consegui fechar meu primeiro mês no positivo consistente. Incrível.", author: "Ricardo M.", role: "Aluno TDS", color: "var(--green-bull)" },
-        { text: "As operações explicadas ao vivo fazem toda a diferença. O Mentor pega na sua mão e mostra o momento exato de entrar e sair.", author: "Camila S.", role: "Aluna TDS", color: "var(--green-pure)" },
-        { text: "Nunca vi um operacional tão simples e tão eficaz. O gráfico limpo ajuda muito a não travar na hora de clicar.", author: "Lucas A.", role: "Aluno TDS", color: "var(--green-dark)" },
-        { text: "Esse curso não apenas ensina a ganhar, mas ensina a proteger o capital. Isso mudou meu jogo completamente no mini índice.", author: "Pedro H.", role: "Aluno TDS", color: "var(--green-bull)" },
-        { text: "O suporte é o melhor que já vi. O Bruno responde rápido, tira dúvidas no Telegram com uma paciência de outro mundo.", author: "Mariana L.", role: "Aluna TDS", color: "var(--green-pure)" },
-        { text: "As aulas de sábado com os alunos operando mostram a realidade nua e crua. Foi aí que minha chave para a consistência virou.", author: "Thiago C.", role: "Aluno TDS", color: "var(--green-dark)" },
-        { text: "Eu tinha muito medo de operar depois de quebrar a banca três vezes. O Bruno me ajudou a resgatar a confiança e a perder o medo. Acompanhamento maravilhoso.", author: "Roberta D.", role: "Aluna TDS", color: "var(--green-bull)" }
+        { text: "Aula fantástica, com explicação focada nos detalhes e nas nossas dúvidas. Uma sensação libertadora de que é tudo muito simples se tiver disciplina e focar no SIMPLES sem inventar moda.\n\nE o mais sensacional de tudo é vcs fazerem um intensivão em pleno sábado, o dia inteiro, para atualizarem os ex-alunos das novidades e melhorias do operacional. Isso não existe em nenhum lugar. Muito obrigada. Gratidão!", author: "Debora Malta", role: "Aluna TDS", color: "var(--green-bull)" },
+        { text: "Incrível essa experiência de poder participar de um super intensivo como esse...\n\nRealmente o nível foi elevado ao extremo, pois foi um sábado intenso, de muito aprendizado, novos conceitos e principal, nos preparando para um futuro brilhante dentro do trade.\n\nObrigado Bruno e Fernanda por tanta competência no que fazem. Parabéns!", author: "Carlos Lobo", role: "Aluno TDS", color: "var(--green-pure)" },
+        { text: "Parabéns Bruno, vc comprova a cada dia o seu comprometimento conosco que fizemos sua mentoria, sempre procurando ajudar... DEUS lhe abençoe sempre 🙏🙏", author: "Anderson Rubinho", role: "Aluno TDS", color: "var(--green-dark)" },
+        { text: "Meus mais sinceros agradecimentos, por toda a dedicação e paciência para nos repassar toda a riqueza de conhecimentos e aprendizado.\n\nBruno e Fernanda são diferenciados, realmente desejam o progresso de todos os alunos, e não são simplesmente vendedores de curso!\n\nAgradeço a Deus por fazer parte desta verdadeira família TDS.", author: "Bino", role: "Aluno TDS", color: "var(--green-bull)" },
+        { text: "Como sempre as aulas do Bruno são sempre Top demais. Tô vendo cruzamento de fibo em todo quanto é canto agora. KKK", author: "Claudinei Corrêa", role: "Aluno TDS", color: "var(--green-pure)" },
+        { text: "Sem sombra de dúvidas, um mentor claro e preparado, explica com paciência. Tira as dúvidas tranquilo, faz vc sentir segurança no operacional que ele ensina.\n\nParabéns Fernanda pelo suporte. E a Bruno Borges. Deus abençoe grandemente cada vez mais.", author: "Valtinho Mezari", role: "Aluno TDS", color: "var(--green-dark)" },
+        { text: "Parabéns, como sempre aula top demais, dinheiro mais bem investido em mentoria que já fiz nos meus quase 6 anos de mercado.\n\nParabéns a toda equipe e principalmente ao nosso mentor Bruno. O homem da bola de cristal. Kkkk", author: "Paulo Pires", role: "Aluno TDS", color: "var(--green-bull)" },
+        { text: "Como sempre, o Bruno se supera a cada aula! Excepcional operacional!!!", author: "Andre Dias", role: "Aluno TDS", color: "var(--green-pure)" },
+        { text: "Obrigado a todos em especial à Fernanda e ao Bruno pela oportunidade do aprendizado e pela grandeza de compartilhar os seus conhecimentos e experiências!\n\nAbraços a todos e um ótimo final de semana!", author: "Luiz Roberto", role: "Aluno TDS", color: "var(--green-dark)" },
     ];
 
     return (
@@ -59,7 +58,7 @@ export function SocialProof() {
                         {testimonials.map((t, idx) => (
                             <div
                                 key={idx}
-                                className="w-[85vw] sm:w-[400px] shrink-0 snap-center sm:snap-start flex flex-col justify-between p-8 sm:p-10 rounded-[2rem] border border-slate-200 bg-white shadow-sm hover:border-[var(--green-bull)]/30 transition-colors h-auto min-h-[400px]"
+                                className="w-[85vw] sm:w-[420px] shrink-0 snap-center sm:snap-start flex flex-col justify-between p-8 sm:p-10 rounded-[2rem] border border-slate-200 bg-white shadow-sm hover:border-[var(--green-bull)]/30 transition-colors h-auto"
                             >
                                 <div
                                     className="font-display font-black text-6xl leading-none opacity-20 mb-6"
@@ -68,7 +67,7 @@ export function SocialProof() {
                                     "
                                 </div>
 
-                                <p className="text-lg md:text-xl text-[var(--dark-medium)] font-medium italic leading-relaxed mb-auto">
+                                <p className="text-lg md:text-xl text-[var(--dark-medium)] font-medium italic leading-relaxed mb-auto whitespace-pre-line">
                                     {t.text}
                                 </p>
 

@@ -5,12 +5,12 @@ import { FadeIn } from "./FadeIn";
 
 export function Differentiators() {
     const diffs = [
-        { num: "1.", label: "Conteúdo Prático & Denso", text: "Mais de +100h de conteúdo, guiando do básico ao Price Action purista. Assista a 25 aulas que moldarão sua nova visão de mercado." },
-        { num: "2.", label: "Mentoria de Elite Direta", text: "Sem suportes terceirizados. Tira-dúvidas exclusivo pelo Telegram e WhatsApp DIRETAMENTE com BRUNO." },
-        { num: "3.", label: "60 Dias de Fogo", text: "Foco integral operando junto com o Mentor, entendendo as armadilhas e as movimentações do mercado ao vivo da forma certa e profissional." },
-        { num: "4.", label: "Bônus Operacional", text: "Você não estará sozinho. Nossos alunos operam juntos aos sábados, solidificando o aprendizado com quem de fato está no campo de batalha." },
-        { num: "5.", label: "Acesso Vitalício", text: "Seu acesso a todo o conteúdo é liberado permanentemente. Sem restrições, pondendo rever aulas, operações e materiais sempre que necessário." },
-        { num: "6.", label: "Apenas 100 Vagas", text: "Turma intencionalmente reduzida para manter a qualidade do acompanhamento individual 1x1 em alta performance." },
+        { num: "1.", label: "Conteúdo Prático e Denso", text: "Mais de 100h de conteúdo estruturado, do zero ao Price Action Simplificado. São mais de 25 aulas pensadas para transformar sua leitura de mercado e desenvolver uma visão realmente profissional." },
+        { num: "2.", label: "Mentoria de Elite", text: "Sem intermediários. Sem suporte terceirizado. Você tira dúvidas diretamente comigo, com acompanhamento próximo e direcionado." },
+        { num: "3.", label: "60 Dias de Foco Total", text: "Imersão completa com análise do mercado e aulas valiosas. Entenda os movimentos do mercado e as armadilhas que fazem diferença no seu resultado." },
+        { num: "4.", label: "Bônus Operacional", text: "Você não evolui sozinho. Participe de sessões práticas de Replay de Mercado com outros alunos, fortalecendo a leitura e consolidando o aprendizado." },
+        { num: "5.", label: "Acesso Vitalício", text: "Todo o conteúdo liberado para você, sem prazo. Reveja aulas, operações e materiais quantas vezes quiser, no seu ritmo e conforme sua evolução." },
+        { num: "6.", label: "Vagas Limitadas", text: "Turmas reduzidas para garantir qualidade no ensino e proximidade no acompanhamento. Aproveite enquanto as vagas estiverem abertas." },
     ];
 
     return (

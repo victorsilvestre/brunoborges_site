@@ -57,7 +57,7 @@ export function BiografiaEditorial() {
                         <FadeIn delay={0.55}>
                             <div className="flex items-center gap-8">
                                 <div>
-                                    <span className="font-display font-black text-5xl text-[var(--green-bull)] leading-none">+5</span>
+                                    <span className="font-display font-black text-5xl text-[var(--green-bull)] leading-none">+7</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">
                                         Anos de Mercado
                                     </p>

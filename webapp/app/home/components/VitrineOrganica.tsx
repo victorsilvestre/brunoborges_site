@@ -189,7 +189,7 @@ export function VitrineOrganica() {
                                         rel="noopener noreferrer"
                                         className="block"
                                     >
-                                        <div className="relative aspect-square rounded-xl overflow-hidden border border-[var(--white-10)]">
+                                        <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-[var(--white-10)]">
                                             <img
                                                 src={post.image}
                                                 alt={post.caption}

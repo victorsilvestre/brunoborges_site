@@ -1,6 +1,6 @@
 "use client";
 
-import { GraduationCap, Headphones, Users, Trophy, BookOpen, Clock } from "lucide-react";
+import { GraduationCap, Headphones, Users, Trophy, BookOpen, Clock, BarChart2 } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 
 export function WhatYouReceive() {
@@ -43,6 +43,13 @@ export function WhatYouReceive() {
             title: "+100h de conteúdo",
             description: "Aulas do básico ao avançado em Price Action. Exclusivo para alunos.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
+        },
+        {
+            icon: <BarChart2 className="w-8 h-8" />,
+            title: "Gestão de Risco",
+            badge: "exclusivo",
+            description: "Planilha de gerencimento de risco para auxiliar seu aprendizado e as operações no mercado.",
+            gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         }
     ];
 
@@ -73,22 +80,17 @@ export function WhatYouReceive() {
                     </FadeIn>
                 </div>
 
-                {/* Benefits Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {benefits.map((benefit, idx) => (
-                        <FadeIn key={idx} delay={0.1 * (idx % 3)} direction="up">
+                {/* Benefits Grid — linha 1: 4 cards */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                    {benefits.slice(0, 4).map((benefit, idx) => (
+                        <FadeIn key={idx} delay={0.1 * idx} direction="up">
                             <div className="relative group h-full">
-                                {/* Card */}
                                 <div className="relative h-full p-8 rounded-[2rem] border border-[var(--white-10)] bg-[var(--dark-elevated)] hover:border-[var(--white-20)] transition-all duration-500 flex flex-col">
-
-                                    {/* Icon with gradient background */}
                                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${benefit.gradient} p-[2px] mb-6 shrink-0`}>
                                         <div className="w-full h-full rounded-[calc(1rem-2px)] bg-[var(--dark-base)] flex items-center justify-center text-white">
                                             {benefit.icon}
                                         </div>
                                     </div>
-
-                                    {/* Badge if exists */}
                                     {benefit.badge && (
                                         <div className="absolute top-6 right-6">
                                             <span className="px-3 py-1 rounded-full bg-[var(--green-pure)] text-white text-xs font-bold uppercase tracking-wider">
@@ -96,21 +98,50 @@ export function WhatYouReceive() {
                                             </span>
                                         </div>
                                     )}
-
-                                    {/* Title */}
                                     <h3 className="font-display font-bold text-xl text-white uppercase mb-3 leading-tight">
                                         {benefit.title}
                                     </h3>
-
-                                    {/* Description if exists */}
                                     {benefit.description && (
                                         <p className="text-[var(--white-60)] leading-relaxed">
                                             {benefit.description}
                                         </p>
                                     )}
+                                    <div className="mt-auto pt-6">
+                                        <div className={`h-1 w-12 rounded-full bg-gradient-to-r ${benefit.gradient} opacity-60 group-hover:w-full transition-all duration-500`} />
+                                    </div>
+                                </div>
+                            </div>
+                        </FadeIn>
+                    ))}
+                </div>
 
-                                    {/* Bottom accent line */}
-                                    <div className={`mt-auto pt-6`}>
+                {/* Benefits Grid — linha 2: 3 cards centralizados */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-[75%] lg:mx-auto">
+                    {benefits.slice(4).map((benefit, idx) => (
+                        <FadeIn key={idx + 4} delay={0.1 * idx} direction="up">
+                            <div className="relative group h-full">
+                                <div className="relative h-full p-8 rounded-[2rem] border border-[var(--white-10)] bg-[var(--dark-elevated)] hover:border-[var(--white-20)] transition-all duration-500 flex flex-col">
+                                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${benefit.gradient} p-[2px] mb-6 shrink-0`}>
+                                        <div className="w-full h-full rounded-[calc(1rem-2px)] bg-[var(--dark-base)] flex items-center justify-center text-white">
+                                            {benefit.icon}
+                                        </div>
+                                    </div>
+                                    {benefit.badge && (
+                                        <div className="absolute top-6 right-6">
+                                            <span className="px-3 py-1 rounded-full bg-[var(--green-pure)] text-white text-xs font-bold uppercase tracking-wider">
+                                                {benefit.badge}
+                                            </span>
+                                        </div>
+                                    )}
+                                    <h3 className="font-display font-bold text-xl text-white uppercase mb-3 leading-tight">
+                                        {benefit.title}
+                                    </h3>
+                                    {benefit.description && (
+                                        <p className="text-[var(--white-60)] leading-relaxed">
+                                            {benefit.description}
+                                        </p>
+                                    )}
+                                    <div className="mt-auto pt-6">
                                         <div className={`h-1 w-12 rounded-full bg-gradient-to-r ${benefit.gradient} opacity-60 group-hover:w-full transition-all duration-500`} />
                                     </div>
                                 </div>

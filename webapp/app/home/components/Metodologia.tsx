@@ -372,6 +372,7 @@ export function Metodologia() {
                                         "Como definir alvos e stops",
                                         "A importância do payoff",
                                         "O equilíbrio entre risco e retorno",
+                                        "Planilha exclusiva de gestão de risco",
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center gap-3">
                                             <ChevronRight className="w-4 h-4 text-[var(--green-bull)] flex-shrink-0" />

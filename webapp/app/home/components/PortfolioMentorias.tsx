@@ -84,9 +84,8 @@ export function PortfolioMentorias() {
                     "Aulas ao vivo + gravadas",
                     "Todos os 10+ setups autorais",
                     "Comunidade exclusiva",
-                    "Suporte direto do Bruno",
+                    "Suporte direto comigo",
                     "+100h de conteúdo de valor",
-                    "Certificado de conclusão",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[var(--green-bull)] flex-shrink-0" />
@@ -219,7 +218,7 @@ export function PortfolioMentorias() {
                     "Análise personalizada de trades",
                     "Estratégias avançadas exclusivas",
                     "Acesso prioritário a novos conteúdos",
-                    "Suporte via WhatsApp direto",
+                    "Suporte exclusivo via Telegram",
                     "Acompanhamento de performance",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
