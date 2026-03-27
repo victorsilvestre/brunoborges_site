@@ -22,9 +22,9 @@ export function BiografiaEditorial() {
 
                         <FadeIn delay={0.2}>
                             <h2 className="font-display font-black text-4xl md:text-5xl lg:text-6xl uppercase leading-[1.0] tracking-tighter text-white mt-10">
-                                De Trader a{" "}
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] to-[var(--gold-hover)]">
-                                    Mentor
+                                De Trader{" "}<br/>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] via-[var(--green-bull)] to-[var(--green-pure)]">
+                                    a Mentor
                                 </span>
                             </h2>
                         </FadeIn>
@@ -49,7 +49,7 @@ export function BiografiaEditorial() {
                             <blockquote className="border-l-2 border-[var(--gold-premium)] pl-5">
                                 <p className="text-[var(--white-60)] italic text-sm leading-relaxed">
                                     "Meu objetivo é formar traders que entendem o mercado, 
-                                    <br/> e não seguirem indicadores milagrosos."
+                                    <br/> e que não seguem indicadores milagrosos."
                                 </p>
                             </blockquote>
                         </FadeIn>
@@ -57,19 +57,19 @@ export function BiografiaEditorial() {
                         <FadeIn delay={0.55}>
                             <div className="flex items-center gap-8">
                                 <div>
-                                    <span className="font-display font-black text-5xl text-[var(--green-bull)] leading-none">5+</span>
+                                    <span className="font-display font-black text-5xl text-[var(--green-bull)] leading-none">+5</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">
                                         Anos de Mercado
                                     </p>
                                 </div>
                                 <div className="h-12 w-px bg-[var(--white-20)]" />
                                 <div>
-                                    <span className="font-display font-black text-5xl text-[var(--gold-premium)] leading-none">10+</span>
+                                    <span className="font-display font-black text-5xl text-[var(--green-pure)] leading-none">+10</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">Setups Criados</p>
                                 </div>
                                 <div className="h-12 w-px bg-[var(--white-20)]" />
                                 <div>
-                                    <span className="font-display font-black text-5xl text-white leading-none">1,2k+</span>
+                                    <span className="font-display font-black text-5xl text-[var(--green-dark)] leading-none">+1,2k</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">Alunos Formados</p>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ export function BiografiaEditorial() {
                         <FadeIn delay={0.65}>
                             <a
                                 href="#metodologia"
-                                className="inline-flex items-center gap-3 px-10 py-4 bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider text-sm hover:bg-[var(--green-hover)] transition-all hover:shadow-[var(--glow-green)] hover:scale-105"
+                                className="inline-flex items-center gap-3 px-10 py-4 bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider text-sm hover:bg-[var(--green-dark)] transition-all hover:shadow-[var(--glow-green)] hover:scale-105"
                             >
                                 Conhecer a Metodologia
                             </a>

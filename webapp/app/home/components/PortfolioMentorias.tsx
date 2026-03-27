@@ -14,16 +14,16 @@ export function PortfolioMentorias() {
       {/* Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[var(--green-bull)]/8 blur-[150px] rounded-full" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[var(--gold-premium)]/8 blur-[150px] rounded-full" />
+        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[var(--red-bear)]/6 blur-[150px] rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <FadeIn>
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[var(--gold-premium)]/30 bg-[var(--gold-premium)]/10 backdrop-blur-md mb-8">
-              <Award className="w-4 h-4 text-[var(--gold-premium)]" />
-              <span className="text-xs font-bold tracking-widest uppercase text-[var(--gold-premium)]">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[var(--green-border)] bg-[var(--green-dim)] backdrop-blur-md mb-8">
+              <Award className="w-4 h-4 text-[var(--green-bull)]" />
+              <span className="text-xs font-bold tracking-widest uppercase text-[var(--green-bull)]">
                 Aprendizado
               </span>
             </div>
@@ -32,7 +32,7 @@ export function PortfolioMentorias() {
           <FadeIn delay={0.1}>
             <h2 className="font-display font-black text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase leading-[0.9] tracking-tighter text-white mb-8">
               Comece a aprender{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] to-[var(--gold-hover)]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] to-[var(--green-bull)]">
                 Hoje
               </span>
             </h2>
@@ -51,7 +51,7 @@ export function PortfolioMentorias() {
           <FadeIn delay={0.3}>
             <motion.div
               whileHover={{ y: -12 }}
-              className="group relative bg-gradient-to-br from-[var(--dark-elevated)] to-[var(--dark-surface)] border-2 border-[var(--green-bull)]/40 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(16,185,129,0.3)] transition-all"
+              className="group relative bg-gradient-to-br from-[var(--dark-elevated)] to-[var(--dark-surface)] border-2 border-[var(--green-bull)]/40 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(0,191,99,0.3)] transition-all"
             >
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--green-bull)]/10 via-transparent to-transparent opacity-50" />
@@ -100,7 +100,7 @@ export function PortfolioMentorias() {
                 {/* CTA */}
                 <Link
                   href="/mentoria-tds"
-                  className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-hover)] transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)]"
+                  className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all shadow-[0_0_30px_rgba(0,191,99,0.3)] hover:shadow-[0_0_50px_rgba(0,191,99,0.5)]"
                 >
                   Conhecer a Mentoria Trader de Sucesso
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
@@ -116,15 +116,15 @@ export function PortfolioMentorias() {
           <FadeIn delay={0.4}>
             <motion.div
               whileHover={{ y: -12 }}
-              className="group relative bg-gradient-to-br from-[var(--dark-elevated)] to-[var(--dark-surface)] border-2 border-[var(--slate-tech)]/40 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(100,116,139,0.3)] transition-all"
+              className="group relative bg-gradient-to-br from-[var(--dark-elevated)] to-[var(--dark-surface)] border-2 border-[var(--red-bear)]/30 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(241,20,20,0.2)] transition-all"
             >
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--slate-tech)]/10 via-transparent to-transparent opacity-50" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--red-bear)]/8 via-transparent to-transparent opacity-50" />
 
               {/* Badge */}
-              <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--slate-tech)]/20 border border-[var(--slate-tech)]/40 mb-6">
-                <Lock className="w-4 h-4 text-[var(--slate-tech)]" />
-                <span className="text-xs font-bold tracking-widest uppercase text-[var(--slate-tech)]">
+              <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--red-dim)] border border-[var(--red-border)] mb-6">
+                <Lock className="w-4 h-4 text-[var(--red-bear)]" />
+                <span className="text-xs font-bold tracking-widest uppercase text-[var(--red-bear)]">
                   Exclusivo Ex-Alunos TDS
                 </span>
               </div>
@@ -150,7 +150,7 @@ export function PortfolioMentorias() {
                     "Melhore suas operações",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[var(--slate-tech)] flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-[var(--red-bear)] flex-shrink-0" />
                       <span className="text-[var(--white-80)] text-sm">
                         {feature}
                       </span>
@@ -161,7 +161,7 @@ export function PortfolioMentorias() {
                 {/* CTA */}
                 <Link
                   href="/mentoria-tds"
-                  className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--slate-tech)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--slate-hover)] transition-all shadow-[0_0_30px_rgba(100,116,139,0.3)] hover:shadow-[0_0_50px_rgba(100,116,139,0.5)]"
+                  className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--red-bear)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--red-hover)] transition-all shadow-[0_0_30px_rgba(241,20,20,0.2)] hover:shadow-[0_0_50px_rgba(241,20,20,0.35)]"
                 >
                   Ver Próximos Intensivões
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
@@ -177,7 +177,7 @@ export function PortfolioMentorias() {
               </div>
 
               {/* Decorative Corner */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--slate-tech)]/20 to-transparent rounded-bl-[100px]" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--red-bear)]/15 to-transparent rounded-bl-[100px]" />
             </motion.div>
           </FadeIn>
 
@@ -185,22 +185,22 @@ export function PortfolioMentorias() {
           <FadeIn delay={0.5}>
             <motion.div
               whileHover={{ y: -12 }}
-              className="group relative bg-gradient-to-br from-black via-[var(--dark-elevated)] to-black border-2 border-[var(--gold-premium)]/60 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(212,175,55,0.4)] transition-all"
+              className="group relative bg-gradient-to-br from-black via-[var(--dark-elevated)] to-black border-2 border-[var(--green-bull)]/50 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(0,191,99,0.3)] transition-all"
             >
               {/* Premium Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--gold-premium)]/15 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--green-bull)]/10 via-transparent to-transparent" />
 
               {/* Exclusive Badge */}
-              <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--gold-premium)] to-[var(--gold-hover)] mb-6">
-                <Lock className="w-4 h-4 text-black" />
-                <span className="text-xs font-bold tracking-widest uppercase text-black">
+              <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--green-bull)] mb-6">
+                <Lock className="w-4 h-4 text-white" />
+                <span className="text-xs font-bold tracking-widest uppercase text-white">
                   Exclusivo Ex-Alunos TDS
                 </span>
               </div>
 
               <div className="relative z-10">
                 <h3 className="font-display font-black text-3xl lg:text-4xl uppercase mb-2">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] to-[var(--gold-hover)]">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] to-[var(--green-bull)]">
                     Mentoria
                   </span>
                   <br />
@@ -223,7 +223,7 @@ export function PortfolioMentorias() {
                     "Acompanhamento de performance",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[var(--gold-premium)] flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-[var(--green-bull)] flex-shrink-0" />
                       <span className="text-[var(--white-80)] text-sm">
                         {feature}
                       </span>
@@ -233,12 +233,12 @@ export function PortfolioMentorias() {
 
                 {/* Premium CTA */}
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[var(--gold-premium)] to-[var(--gold-hover)] rounded-xl blur-xl opacity-50" />
+                  <div className="absolute inset-0 bg-[var(--green-bull)] rounded-xl blur-xl opacity-30" />
                   <a
                     href="https://t.me/+MSL99oO7pmcyMWQx"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn relative w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-[var(--gold-premium)] to-[var(--gold-hover)] text-black font-display font-black uppercase tracking-wider hover:opacity-90 transition-all"
+                    className="group/btn relative w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all shadow-[0_0_30px_rgba(0,191,99,0.3)] hover:shadow-[0_0_50px_rgba(0,191,99,0.5)]"
                   >
                     Solicitar Acesso
                     <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
@@ -255,13 +255,13 @@ export function PortfolioMentorias() {
               </div>
 
               {/* Premium Corner Decoration */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-[var(--gold-premium)]/30 to-transparent rounded-bl-[120px]" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-[var(--green-bull)]/20 to-transparent rounded-bl-[120px]" />
 
               {/* Animated Ring */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-                className="absolute -top-20 -right-20 w-64 h-64 border-2 border-dashed border-[var(--gold-premium)]/10 rounded-full"
+                className="absolute -top-20 -right-20 w-64 h-64 border-2 border-dashed border-[var(--green-bull)]/10 rounded-full"
               />
             </motion.div>
           </FadeIn>

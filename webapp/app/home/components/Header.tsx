@@ -66,7 +66,7 @@ export function Header() {
                             href="#mentorias"
                             className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors"
                         >
-                            Mentorias
+                            Cursos
                         </a>
                     </nav>
 
@@ -75,7 +75,7 @@ export function Header() {
                         href="https://t.me/+MSL99oO7pmcyMWQx"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--green-bull)] text-white font-display font-bold text-sm uppercase tracking-wider hover:bg-[var(--green-hover)] transition-all hover:shadow-[var(--glow-green)]"
+                        className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--green-bull)] text-white font-display font-bold text-sm uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all hover:shadow-[var(--glow-green)]"
                     >
                         Começar Agora
                     </a>

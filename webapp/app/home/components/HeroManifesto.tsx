@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 
 export function HeroManifesto() {
@@ -33,7 +33,7 @@ export function HeroManifesto() {
                     >
                         <h1 className="font-display font-black text-3xl md:text-5xl lg:text-7xl xl:text-7xl leading-[0.9] uppercase tracking-tighter mb-8 text-white">
                             Aprenda a ler o mercado <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] via-[var(--gold-hover)] to-[var(--gold-premium)] animate-gradient">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)]/60 via-[var(--green-pure)]/75 to-[var(--green-pure)] animate-gradient">
                                 como ele realmente funciona
                             </span>
                         </h1>
@@ -41,9 +41,9 @@ export function HeroManifesto() {
                 </FadeIn>
 
                 <FadeIn delay={0.4}>
-                    <p className="text-2xl md:text-2xl lg:text-3xl text-[var(--white-20)] font-light max-w-4xl mx-auto mb-4 leading-none">
-                        Eu te ensino leitura de contexto para você tomar
-                        <br /> melhores decisões na sua conta real.
+                    <p className="text-2xl md:text-2xl lg:text-2xl text-[var(--white-40)] font-light max-w-4xl mx-auto mb-4 leading-none">
+                        Leitura de Contexto e Price Action Simplificado
+                        <br/>para guiar seus resultados no mercado.
                     </p>
                 </FadeIn>
 
@@ -51,11 +51,11 @@ export function HeroManifesto() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-16">
                         <a
                             href="#metodologia"
-                            className="btn btn-gold group px-12 py-6 text-lg shadow-[0_0_40px_rgba(212,175,55,0.3)] hover:shadow-[0_0_60px_rgba(212,175,55,0.5)] transition-all"
+                            className="btn btn-green group relative overflow-hidden px-12 py-6 text-lg shadow-[0_0_40px_rgba(0,191,99,0.25)] hover:shadow-[0_0_60px_rgba(0,191,99,0.45)]"
                         >
-                            <span className="font-display font-black uppercase tracking-wider">
-                                Conhecer Metodologia
-                            </span>
+                            <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12" />
+                            <span className="relative z-10">Conhecer Metodologia</span>
+                            <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                         </a>
                         <a
                             href="#biografia"
