@@ -14,7 +14,7 @@ export function Footer() {
         },
         {
             name: "Instagram",
-            url: "https://www.instagram.com/traderbrunoborges/",
+            url: "https://www.instagram.com/trader_brunoborges/",
             icon: Instagram,
             color: "#E4405F"
         },
@@ -135,14 +135,14 @@ export function Footer() {
                 </div>
 
                 {/* Premium Seal */}
-                <div className="mt-12 flex justify-center">
+                {/* <div className="mt-12 flex justify-center">
                     <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[var(--gold-premium)]/20 bg-[var(--gold-premium)]/5 backdrop-blur-md">
                         <div className="w-2 h-2 rounded-full bg-[var(--gold-premium)] animate-pulse" />
                         <span className="text-xs font-bold tracking-widest uppercase text-[var(--gold-premium)]">
                             Premium Trading Education
                         </span>
                     </div>
-                </div>
+                </div> */}
             </div>
         </footer>
     );

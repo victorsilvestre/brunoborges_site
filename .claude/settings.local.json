@@ -11,7 +11,10 @@
       "Bash(timeout /t 10)",
       "Bash(npm run:*)",
       "Bash(npx next:*)",
-      "Bash(taskkill //F //IM node.exe)"
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(find c:/Users/victo/Desktop/brunoborges_site -name *metodologia* -o -name *metodologia*)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:behold.so)"
     ],
     "deny": [],
     "ask": []

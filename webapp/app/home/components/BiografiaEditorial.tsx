@@ -20,14 +20,8 @@ export function BiografiaEditorial() {
                     {/* Left — content */}
                     <div className="space-y-8 pb-32 lg:pb-48">
 
-                        <FadeIn delay={0.1}>
-                            <span className="inline-block text-[var(--gold-premium)] text-xs font-display font-bold uppercase tracking-[0.35em] border border-[var(--gold-border)] px-3 py-1">
-                                Quem é Bruno Borges
-                            </span>
-                        </FadeIn>
-
                         <FadeIn delay={0.2}>
-                            <h2 className="font-display font-black text-4xl md:text-5xl lg:text-6xl uppercase leading-[1.0] tracking-tighter text-white">
+                            <h2 className="font-display font-black text-4xl md:text-5xl lg:text-6xl uppercase leading-[1.0] tracking-tighter text-white mt-10">
                                 De Trader a{" "}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-premium)] to-[var(--gold-hover)]">
                                     Mentor
@@ -37,17 +31,16 @@ export function BiografiaEditorial() {
 
                         <FadeIn delay={0.35}>
                             <div className="grid grid-cols-2 gap-6">
-                                <p className="text-sm text-[var(--white-40)] leading-relaxed">
+                                <p className="text-lg text-[var(--white-40)] leading-relaxed">
                                     Trader Profissional especializado em Price Action e leitura
                                     Candle a Candle. Com mais de 5 anos de mercado financeiro,
-                                    decidiu compartilhar o conhecimento para ajudar pessoas
-                                    comuns a alcançar lucratividade real.
+                                    decidiu compartilhar o conhecimento para ajudar alunos
+                                    a alcançar lucratividade real.
                                 </p>
-                                <p className="text-sm text-[var(--white-40)] leading-relaxed">
+                                <p className="text-lg text-[var(--white-40)] leading-relaxed">
                                     Criador de padrões autorais como o "Preguiçoso", "Teimoso"
-                                    e "Leônidas" — mais de 10 setups testados e validados por
-                                    milhares de alunos. Seu objetivo: formar traders que
-                                    entendem o mercado, não apenas seguem robôs.
+                                    e "Leônidas" — contando com mais de 10 setups testados e validados por
+                                    milhares de alunos todos os dias. Você pode ser um deles.
                                 </p>
                             </div>
                         </FadeIn>
@@ -55,8 +48,8 @@ export function BiografiaEditorial() {
                         <FadeIn delay={0.45}>
                             <blockquote className="border-l-2 border-[var(--gold-premium)] pl-5">
                                 <p className="text-[var(--white-60)] italic text-sm leading-relaxed">
-                                    "Meu objetivo é formar traders que entendem o mercado,
-                                    não apenas seguem robôs."
+                                    "Meu objetivo é formar traders que entendem o mercado, 
+                                    <br/> e não seguirem indicadores milagrosos."
                                 </p>
                             </blockquote>
                         </FadeIn>
@@ -64,17 +57,19 @@ export function BiografiaEditorial() {
                         <FadeIn delay={0.55}>
                             <div className="flex items-center gap-8">
                                 <div>
-                                    <span className="font-display font-black text-4xl text-[var(--green-bull)] leading-none">5+</span>
-                                    <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">Anos de Mercado</p>
+                                    <span className="font-display font-black text-5xl text-[var(--green-bull)] leading-none">5+</span>
+                                    <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">
+                                        Anos de Mercado
+                                    </p>
                                 </div>
                                 <div className="h-12 w-px bg-[var(--white-20)]" />
                                 <div>
-                                    <span className="font-display font-black text-4xl text-[var(--gold-premium)] leading-none">10+</span>
+                                    <span className="font-display font-black text-5xl text-[var(--gold-premium)] leading-none">10+</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">Setups Criados</p>
                                 </div>
                                 <div className="h-12 w-px bg-[var(--white-20)]" />
                                 <div>
-                                    <span className="font-display font-black text-4xl text-white leading-none">2k+</span>
+                                    <span className="font-display font-black text-5xl text-white leading-none">1,2k+</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">Alunos Formados</p>
                                 </div>
                             </div>

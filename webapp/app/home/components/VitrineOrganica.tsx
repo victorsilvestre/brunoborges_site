@@ -6,42 +6,49 @@ import { FadeIn } from "./FadeIn";
 
 const youtubeVideos = [
     {
-        title: "Setup Leônidas ao Vivo",
-        views: "15K visualizações",
-        thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80"
+        id: "UuApdnP_fbQ",
+        title: "Daytrade Entendendo um pouco mais sobre Alvos de Fibo",
+        views: "+307k visualizações",
+        url: "https://www.youtube.com/watch?v=UuApdnP_fbQ"
     },
     {
-        title: "Price Action Candle a Candle",
-        views: "22K visualizações",
-        thumbnail: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&q=80"
+        id: "IVp17SnRzoQ",
+        title: "Daytrade - O segredo da FIBO que muda Tudo!!!",
+        views: "+224k visualizações",
+        url: "https://www.youtube.com/watch?v=IVp17SnRzoQ"
     },
     {
-        title: "Como Ler o Mercado",
-        views: "18K visualizações",
-        thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+        id: "-GaoKSksiZ0",
+        title: "Como alcançar uma alta assertividade - Estratégia infalível",
+        views: "+47k visualizações",
+        url: "https://www.youtube.com/watch?v=-GaoKSksiZ0"
     },
     {
-        title: "Gerenciamento de Risco",
-        views: "12K visualizações",
-        thumbnail: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80"
+        id: "D9B88kMNAFA",
+        title: "Fazendo mais de 35 mil reais no Day Trade no mini indice",
+        views: "+16k visualizações",
+        url: "https://www.youtube.com/watch?v=D9B88kMNAFA"
     }
 ];
 
 const instagramPosts = [
     {
-        type: "reel",
-        caption: "Bastidores da Rotina de Trader",
-        likes: "8.5K"
+        type: "post",
+        image: "/images/insta/image_insta-post-1.jpg",
+        caption: "Mentoria TDS — Próxima turma: 15/04",
+        tag: "Mentoria"
+    },
+    {
+        type: "evento",
+        image: "/images/insta/image_insta-post-2.jpg",
+        caption: "14ª Maratona TDS — Evento 100% online e gratuito",
+        tag: "Evento"
     },
     {
         type: "post",
-        caption: "Resultado da Semana",
-        likes: "12.3K"
-    },
-    {
-        type: "reel",
-        caption: "Quick Tips: Fibonacci",
-        likes: "15.2K"
+        image: "/images/insta/image_insta-post-4.jpg",
+        caption: "\"Seja constante. Os resultados serão inevitáveis.\"",
+        tag: "Mentalidade"
     }
 ];
 
@@ -76,7 +83,7 @@ export function VitrineOrganica() {
                     </FadeIn>
 
                     <FadeIn delay={0.2}>
-                        <p className="text-xl lg:text-2xl text-[var(--white-60)] font-light leading-relaxed">
+                        <p className="text-xl lg:text-2xl text-[var(--white-40)] font-light leading-relaxed">
                             Aulas, lives e bastidores disponíveis no YouTube e Instagram.
                         </p>
                     </FadeIn>
@@ -92,7 +99,7 @@ export function VitrineOrganica() {
                                 </div>
                                 <div>
                                     <h3 className="font-display font-bold text-2xl uppercase text-white">YouTube</h3>
-                                    <p className="text-sm text-[var(--white-60)]">Lives diárias + Aulas completas</p>
+                                    <p className="text-sm text-[var(--white-60)]">Aulas, Lives e Replays de Mercado</p>
                                 </div>
                             </div>
                             <a
@@ -113,30 +120,32 @@ export function VitrineOrganica() {
                                     whileHover={{ y: -8 }}
                                     className="group cursor-pointer"
                                 >
-                                    <div className="relative aspect-video rounded-xl overflow-hidden mb-4 bg-[var(--dark-surface)] border border-[var(--white-10)]">
-                                        <img
-                                            src={video.thumbnail}
-                                            alt={video.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        />
+                                    <a
+                                        href={video.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block"
+                                    >
+                                        <div className="relative aspect-video rounded-xl overflow-hidden mb-4 bg-[var(--dark-surface)] border border-[var(--white-10)]">
+                                            <img
+                                                src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                                                alt={video.title}
+                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                            />
 
-                                        {/* Play Button Overlay */}
-                                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                            <div className="w-16 h-16 rounded-full bg-[#FF0000] flex items-center justify-center">
-                                                <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                                            {/* Play Button Overlay */}
+                                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                                <div className="w-16 h-16 rounded-full bg-[#FF0000] flex items-center justify-center">
+                                                    <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                                                </div>
                                             </div>
                                         </div>
 
-                                        {/* Duration Badge */}
-                                        <div className="absolute bottom-2 right-2 px-2 py-1 rounded bg-black/80 text-white text-xs font-bold">
-                                            12:34
-                                        </div>
-                                    </div>
-
-                                    <h4 className="font-display font-bold text-base text-white mb-2 group-hover:text-[var(--green-bull)] transition-colors">
-                                        {video.title}
-                                    </h4>
-                                    <p className="text-sm text-[var(--white-40)]">{video.views}</p>
+                                        <h4 className="font-display font-bold text-base text-white mb-2 group-hover:text-[var(--green-bull)] transition-colors">
+                                            {video.title}
+                                        </h4>
+                                        <p className="text-sm text-[var(--white-40)]">{video.views}</p>
+                                    </a>
                                 </motion.div>
                             </FadeIn>
                         ))}
@@ -153,11 +162,11 @@ export function VitrineOrganica() {
                                 </div>
                                 <div>
                                     <h3 className="font-display font-bold text-2xl uppercase text-white">Instagram</h3>
-                                    <p className="text-sm text-[var(--white-60)]">Bastidores e resultados diários</p>
+                                    <p className="text-sm text-[var(--white-60)]">Conheça mais o Bruno Borges</p>
                                 </div>
                             </div>
                             <a
-                                href="https://www.instagram.com/traderbrunoborges/"
+                                href="https://www.instagram.com/trader_brunoborges/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white font-display font-bold uppercase text-sm hover:opacity-90 transition-all"
@@ -174,22 +183,26 @@ export function VitrineOrganica() {
                                     whileHover={{ y: -8 }}
                                     className="group cursor-pointer"
                                 >
-                                    <div className="relative aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-[var(--dark-elevated)] to-[var(--dark-surface)] border border-[var(--white-10)]">
-                                        {/* Placeholder Instagram Post */}
-                                        <div className="w-full h-full bg-gradient-to-br from-[#F58529]/20 via-[#DD2A7B]/20 to-[#8134AF]/20 flex items-center justify-center">
-                                            <Instagram className="w-20 h-20 text-[var(--white-20)]" />
+                                    <a
+                                        href="https://www.instagram.com/trader_brunoborges/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block"
+                                    >
+                                        <div className="relative aspect-square rounded-xl overflow-hidden border border-[var(--white-10)]">
+                                            <img
+                                                src={post.image}
+                                                alt={post.caption}
+                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                            />
+                                            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/80 text-white text-xs font-bold uppercase">
+                                                {post.tag}
+                                            </div>
                                         </div>
-
-                                        {/* Type Badge */}
-                                        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/80 text-white text-xs font-bold uppercase">
-                                            {post.type}
+                                        <div className="mt-4">
+                                            <p className="text-white font-medium">{post.caption}</p>
                                         </div>
-                                    </div>
-
-                                    <div className="mt-4">
-                                        <p className="text-white font-medium mb-2">{post.caption}</p>
-                                        <p className="text-sm text-[var(--white-40)]">{post.likes} curtidas</p>
-                                    </div>
+                                    </a>
                                 </motion.div>
                             </FadeIn>
                         ))}
@@ -197,7 +210,7 @@ export function VitrineOrganica() {
                 </div>
 
                 {/* Mobile CTAs */}
-                <FadeIn delay={0.9}>
+                {/* <FadeIn delay={0.9}>
                     <div className="flex md:hidden flex-col gap-4 mt-12">
                         <a
                             href="https://www.youtube.com/@traderbrunoborges"
@@ -209,7 +222,7 @@ export function VitrineOrganica() {
                             Ver Canal no YouTube
                         </a>
                         <a
-                            href="https://www.instagram.com/traderbrunoborges/"
+                            href="https://www.instagram.com/trader_brunoborges/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white font-display font-bold uppercase"
@@ -218,7 +231,7 @@ export function VitrineOrganica() {
                             Seguir no Instagram
                         </a>
                     </div>
-                </FadeIn>
+                </FadeIn> */}
             </div>
         </section>
     );
