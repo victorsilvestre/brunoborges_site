@@ -33,7 +33,7 @@ export function Header() {
                     {/* Logo */}
                     <Link href="/" className="group">
                         <Image
-                            src="/images/logo/logo_complete-white_vert-2.png"
+                            src="/images/logo/logo_white_transparent.png"
                             alt="Trader Bruno Borges"
                             width={444}
                             height={165}
