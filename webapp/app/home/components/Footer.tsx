@@ -3,6 +3,7 @@
 import { Youtube, Instagram, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
     const socialLinks = [
@@ -52,9 +53,13 @@ export function Footer() {
                     {/* Brand */}
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-6">
-                            <span className="font-display font-black text-3xl tracking-tighter uppercase text-white">
-                                Bruno Borges
-                            </span>
+                            <Image
+                                src="/images/logo/logo_complete-white_vert-2.png"
+                                alt="Trader Bruno Borges"
+                                width={444}
+                                height={165}
+                                className="h-12 w-auto object-contain hover:opacity-80 transition-opacity"
+                            />
                         </Link>
                         <p className="text-[var(--white-60)] leading-relaxed max-w-md mb-6">
                             Trader profissional especializado em Price Action. Criador de setups autorais e mentor de milhares de

@@ -26,9 +26,11 @@ export default function MaratonaPage() {
             {/* Footer premium minimalista */}
             <footer className="py-12 flex flex-col items-center justify-center border-t border-[var(--white-10)] bg-black relative overflow-hidden">
                 <div className="absolute bottom-0 w-[500px] h-[1px] bg-gradient-to-r from-transparent via-[var(--gold-premium)] to-transparent opacity-30" />
-                <span className="font-display font-black text-2xl tracking-tighter uppercase mb-4 text-[var(--white-40)]">
-                    Trader Bruno Borges
-                </span>
+                <img
+                    src="/images/logo/logo_icon-white-1.png"
+                    alt="Trader Bruno Borges"
+                    className="h-10 w-10 object-contain opacity-40 mb-4"
+                />
                 <div className="text-[10px] uppercase tracking-[0.3em] text-[var(--white-20)] font-bold">
                     &copy; {new Date().getFullYear()} — Excelência em Price Action
                 </div>

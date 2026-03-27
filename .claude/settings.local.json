@@ -14,7 +14,9 @@
       "Bash(taskkill //F //IM node.exe)",
       "Bash(find c:/Users/victo/Desktop/brunoborges_site -name *metodologia* -o -name *metodologia*)",
       "WebFetch(domain:www.youtube.com)",
-      "WebFetch(domain:behold.so)"
+      "WebFetch(domain:behold.so)",
+      "Bash(find webapp:*)",
+      "Bash(node -e \":*)"
     ],
     "deny": [],
     "ask": []

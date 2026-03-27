@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -31,9 +32,14 @@ export function Header() {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="group">
-                        <span className="font-display font-black text-2xl tracking-tighter uppercase text-white group-hover:text-[var(--gold-premium)] transition-colors">
-                            Bruno Borges
-                        </span>
+                        <Image
+                            src="/images/logo/logo_complete-white_vert-2.png"
+                            alt="Trader Bruno Borges"
+                            width={444}
+                            height={165}
+                            className="h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
+                            priority
+                        />
                     </Link>
 
                     {/* Navigation */}
