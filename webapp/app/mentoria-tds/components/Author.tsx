@@ -38,7 +38,7 @@ export function Author() {
                             </FadeIn>
                             <FadeIn delay={0.3}>
                                 <p>
-                                    Possuo <strong className="text-white font-semibold">5 anos de experiência</strong> no Mercado Financeiro e decidi ajudar pessoas comuns a alcançarem lucratividade e consistência no <strong className="text-white font-semibold">Day Trade</strong>.
+                                    Possuo mais de <strong className="text-white font-semibold">7 anos de experiência</strong> no Mercado Financeiro e decidi ajudar pessoas comuns a alcançarem lucratividade e consistência no <strong className="text-white font-semibold">Day Trade</strong>.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.4}>

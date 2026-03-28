@@ -15,6 +15,7 @@ export function WhatYouReceive() {
         {
             icon: <Headphones className="w-8 h-8" />,
             title: "Suporte de Dúvidas",
+            badge: "pra sempre",
             description: "Suporte vitalício, diretamente com o professor, mesmo após encerramento da mentoria.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
