@@ -68,7 +68,7 @@ export function Eventos() {
                                 <span className="text-white font-medium">100% gratuito</span>{" "}
                                 onde Bruno Borges ensina Price Action na prática. 
                                 Ao todo, <span className="text-white font-medium">são três dias de imersão e conteúdo de mentoria ao vivo,</span>{" "}
-                                para que você possa conhecer peças valiosas do operacional. 
+                                para que você possa conhecer algumas peças valiosas do operacional. 
                             </p>
                         </FadeIn>
 

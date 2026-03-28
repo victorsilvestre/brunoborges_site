@@ -75,10 +75,11 @@ export function VitrineOrganica() {
 
                     <FadeIn delay={0.1}>
                         <h2 className="font-display font-black text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase leading-[0.9] tracking-tighter text-white mb-8">
-                            Aprenda{" "}
+                            Aprenda{" "}<br/>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-bull)] to-[var(--green-dark)]">
-                                Gratuitamente
+                                Sem pagar{" "}
                             </span>
+                            <br/>Nada
                         </h2>
                     </FadeIn>
 
