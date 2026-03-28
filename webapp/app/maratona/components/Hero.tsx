@@ -27,8 +27,8 @@ export function Hero() {
 
                         <FadeIn delay={0.1}>
                             <h1 className="font-display font-black text-5xl md:text-6xl lg:text-[70px] leading-[1.05] tracking-tight mb-6 text-[var(--dark-pure)]">
-                                Participe da 14ª <br />
-                                <span className="text-[var(--dark-pure)]">Maratona</span>{" "}
+                                Participe da <br />
+                                <span className="text-[var(--dark-pure)]">14ª Maratona</span>{" "}
                                 <span className="block italic" style={{ color: 'var(--green-dark)' }}>Trader de Sucesso</span>
                             </h1>
                         </FadeIn>
