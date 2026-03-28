@@ -57,6 +57,12 @@ export function Header() {
                             Metodologia
                         </a>
                         <a
+                            href="#eventos"
+                            className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors"
+                        >
+                            Eventos
+                        </a>
+                        <a
                             href="#conteudo"
                             className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors"
                         >
