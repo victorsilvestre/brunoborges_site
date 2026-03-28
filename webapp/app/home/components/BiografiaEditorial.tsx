@@ -33,7 +33,7 @@ export function BiografiaEditorial() {
                             <div className="grid grid-cols-2 gap-6">
                                 <p className="text-lg text-[var(--white-40)] leading-relaxed">
                                     Trader Profissional especializado em Price Action e leitura
-                                    Candle a Candle. Com mais de 5 anos de mercado financeiro,
+                                    Candle a Candle. Com mais de 7 anos de mercado financeiro,
                                     decidiu compartilhar o conhecimento para ajudar alunos
                                     a alcançar lucratividade real.
                                 </p>

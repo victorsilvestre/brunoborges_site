@@ -11,6 +11,8 @@ import {
     Target,
     TrendingUp,
     Zap,
+    Globe,
+    Brain,
 } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 
@@ -20,7 +22,7 @@ const setups = [
     { name: "Irresponsável", description: "E se você fizesse diferente de todos os outros traders conhece" },
     { name: "Tetra (4 Candles)", description: "O padrão mais formatado do operacional. Contou até 4, é sucesso garantido" },
     { name: "Cruzamento de Fibo", description: "Se a Fibonacci cruzar na região certa, você precisa aproveitar" },
-    { name: "Insano", description: "Comprar todo e vender fundo pode não ser coisa de maluco" },
+    { name: "Insano", description: "Comprar topo e vender fundo pode não ser coisa de maluco" },
     { name: "Teimoso", description: "Ele disse que ia, mas não foi. Agora ele vai ter que te pagar" },
     { name: "Preguiçoso", description: "O padrão de Price Action de todo iniciante no mercado financeiro" },
 ];
@@ -70,8 +72,8 @@ export function Metodologia() {
 
                     <FadeIn delay={0.2}>
                         <p className="text-xl lg:text-2xl text-[var(--white-40)] font-light leading-relaxed">
-                            Um método completo e validado por milhares de alunos.
-                            <br/> Do operacional simplificado à gestão de risco consciente.
+                            Um método completo e validado por milhares de alunos. Conheça um operacional fácil que funciona em qualquer ativo ou mercado.
+                            Do operacional simplificado à gestão de risco consciente.
                         </p>
                     </FadeIn>
                 </div>
@@ -118,7 +120,7 @@ export function Metodologia() {
                                 </span>
                             </div>
                             <blockquote className="font-display font-bold text-2xl lg:text-3xl text-white leading-snug mb-8">
-                                O mesmo candle pode significar coisas completamente diferentes, dependendo do contexto.
+                                O que realmente importa é a relação entre abertura, fechamento, máxima e mínima dos candles — é isso que revela o comportamento do preço.
                             </blockquote>
                             <p className="text-[var(--white-40)] text-sm uppercase tracking-widest font-bold">
                                 Regra base do operacional
@@ -384,6 +386,152 @@ export function Metodologia() {
                                     <p className="text-sm text-[var(--white-60)] leading-relaxed">
                                         Porque não é só sobre acertar… É sobre{" "}
                                         <strong className="text-white">como você ganha quando acerta</strong> e quanto você perde quando erra.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </FadeIn>
+
+                {/* ─── 07 CONTEXTO DE MERCADO ─── three columns */}
+                <FadeIn delay={0.1}>
+                    <div className="mb-24">
+                        <div className="flex items-center gap-4 mb-10">
+                            <span className="text-xs font-black tracking-[0.2em] uppercase text-[var(--green-bull)]">07</span>
+                            <div className="h-px flex-1 max-w-[60px] bg-[var(--green-bull)]/20" />
+                            <h3 className="font-display font-black text-3xl lg:text-4xl uppercase text-white">
+                                Contexto de <span className="text-[var(--green-bull)]">Mercado</span>
+                            </h3>
+                            <div className="h-px flex-1 bg-[var(--white-10)]" />
+                            <Globe className="w-5 h-5 text-[var(--green-bull)]" />
+                        </div>
+
+                        <div className="grid lg:grid-cols-[1.2fr_1fr_1fr] gap-6">
+                            {/* Card principal — contexto e descrição */}
+                            <div className="bg-[var(--dark-surface)] border border-[var(--white-10)] rounded-2xl p-8 flex flex-col justify-between row-span-1 group hover:border-[var(--green-border)] transition-all relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[var(--green-bull)]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="relative z-10">
+                                    <p className="text-[var(--white-60)] leading-relaxed mb-6">
+                                        O mercado não é um candle isolado.{" "}
+                                        <strong className="text-white">É uma sequência de decisões sendo tomadas o tempo todo.</strong>
+                                    </p>
+                                    <p className="text-[var(--white-40)] text-sm leading-relaxed mb-8">
+                                        Aprenda a interpretar o cenário antes de pensar em qualquer operação.
+                                    </p>
+                                    <div className="space-y-3">
+                                        {[
+                                            { label: "Tendência e correção", sub: "Movimento primário e secundário" },
+                                            { label: "Leitura do ambiente", sub: "antes da execução" },
+                                            { label: "Interpretação", sub: "do comportamento do preço" },
+                                        ].map((item, i) => (
+                                            <div key={i} className="flex items-start gap-3 bg-[var(--dark-elevated)] border border-[var(--white-10)] rounded-xl px-4 py-3">
+                                                <ChevronRight className="w-4 h-4 text-[var(--green-bull)] flex-shrink-0 mt-0.5" />
+                                                <div>
+                                                    <p className="text-sm font-semibold text-white">{item.label}</p>
+                                                    <p className="text-xs text-[var(--white-40)] uppercase tracking-wider">{item.sub}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Quote destaque */}
+                            <div className="bg-[var(--green-bull)] rounded-2xl p-8 flex flex-col justify-between">
+                                <div>
+                                    <span className="font-display font-black text-6xl text-white/20 leading-none block mb-2">"</span>
+                                    <p className="font-display font-black text-xl lg:text-2xl text-white leading-snug">
+                                        O mesmo candle pode significar coisas completamente diferentes, dependendo do contexto.
+                                    </p>
+                                </div>
+                                <div className="mt-6 pt-6 border-t border-white/20">
+                                    <span className="text-white/60 text-xs uppercase font-bold tracking-widest">Princípio do contexto</span>
+                                </div>
+                            </div>
+
+                            {/* Card consequência */}
+                            <div className="bg-[var(--dark-elevated)] border border-[var(--white-10)] rounded-2xl p-8 flex flex-col justify-between group hover:border-[var(--green-border)] transition-all">
+                                <div>
+                                    <p className="text-xs font-bold uppercase tracking-widest text-[var(--green-bull)] mb-4">O que muda</p>
+                                    <p className="text-[var(--white-60)] leading-relaxed text-sm mb-6">
+                                        Sem contexto, qualquer leitura vira achismo.
+                                    </p>
+                                    <p className="text-[var(--white-80)] leading-relaxed text-sm">
+                                        É aqui que você começa a{" "}
+                                        <strong className="text-white">enxergar o que a maioria não vê</strong>{" "}
+                                        — e deixa de operar no automático.
+                                    </p>
+                                </div>
+                                <div className="mt-6 pt-6 border-t border-[var(--white-10)]">
+                                    <div className="flex items-center gap-2">
+                                        <Circle className="w-2 h-2 text-[var(--green-bull)] fill-[var(--green-bull)] flex-shrink-0" />
+                                        <span className="text-xs text-[var(--white-40)] italic">Leitura que poucos desenvolvem</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </FadeIn>
+
+                {/* ─── 08 COMPORTAMENTO EMOCIONAL ─── split assimétrico invertido */}
+                <FadeIn delay={0.1}>
+                    <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 items-stretch mb-24">
+
+                        {/* Left — quote em destaque */}
+                        <div className="flex flex-col justify-between bg-gradient-to-br from-[var(--green-bull)]/8 to-transparent border border-[var(--green-border)] rounded-3xl p-10">
+                            <div>
+                                <div className="flex items-center gap-3 mb-6">
+                                    <span className="text-xs font-black tracking-[0.2em] uppercase text-[var(--green-bull)]">08</span>
+                                    <div className="h-px flex-1 max-w-[40px] bg-[var(--green-bull)]/20" />
+                                    <Brain className="w-5 h-5 text-[var(--green-bull)]" />
+                                </div>
+                                <h3 className="font-display font-black text-4xl lg:text-5xl uppercase leading-tight text-white mb-6">
+                                    Comportamento
+                                    <br />
+                                    <span className="text-[var(--green-bull)]">Emocional</span>
+                                </h3>
+                                <p className="text-[var(--white-60)] leading-relaxed mb-8">
+                                    Não é só sobre técnica.{" "}
+                                    <strong className="text-white">É sobre como você reage diante do mercado.</strong>
+                                </p>
+                            </div>
+                            <div>
+                                <div className="h-px w-16 bg-[var(--green-bull)]/40 mb-6" />
+                                <blockquote className="font-display font-bold text-xl lg:text-2xl text-white leading-snug mb-4">
+                                    "O problema não é o mercado. É como você reage a ele."
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        {/* Right — 4 pilares + conclusão */}
+                        <div className="bg-[var(--dark-surface)] border border-[var(--white-10)] rounded-3xl p-10 relative overflow-hidden group hover:border-[var(--green-border)] transition-all">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--green-bull)]/5 blur-[80px] rounded-full" />
+                            <div className="relative z-10">
+                                <div className="grid grid-cols-2 gap-4 mb-8">
+                                    {[
+                                        { label: "Controle emocional", sub: "durante a operação" },
+                                        { label: "Disciplina", sub: "para seguir o plano" },
+                                        { label: "Paciência", sub: "para esperar o momento certo" },
+                                        { label: "Consistência", sub: "ao longo do tempo" },
+                                    ].map((item, i) => (
+                                        <motion.div
+                                            key={i}
+                                            whileHover={{ y: -3 }}
+                                            className="bg-[var(--dark-elevated)] border border-[var(--white-10)] rounded-xl p-5 hover:border-[var(--green-border)] transition-all"
+                                        >
+                                            <p className="font-semibold text-white text-sm mb-1">{item.label}</p>
+                                            <p className="text-xs text-[var(--white-40)] uppercase tracking-wider leading-relaxed">{item.sub}</p>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                                <div className="bg-[var(--green-bull)]/10 border border-[var(--green-bull)]/20 rounded-xl px-5 py-4 space-y-2">
+                                    <p className="text-sm text-[var(--white-60)] leading-relaxed">
+                                        Você pode ter o melhor operacional do mundo —
+                                        sem controle emocional, nada se sustenta.
+                                    </p>
+                                    <p className="text-sm text-white font-semibold leading-relaxed">
+                                        Aqui você aprende a tomar decisões com clareza,{" "}
+                                        <span className="text-[var(--green-bull)]">sem impulso, sem ansiedade e sem sabotagem.</span>
                                     </p>
                                 </div>
                             </div>

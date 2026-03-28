@@ -16,7 +16,8 @@
       "WebFetch(domain:www.youtube.com)",
       "WebFetch(domain:behold.so)",
       "Bash(find webapp:*)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(ls -la /c/Users/victo/Desktop/brunoborges_site/webapp/*.config.*)"
     ],
     "deny": [],
     "ask": []
