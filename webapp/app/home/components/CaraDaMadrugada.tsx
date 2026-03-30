@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Clock, Zap, Target, TrendingUp } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 export function CaraDaMadrugada() {
   return (

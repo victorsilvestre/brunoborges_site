@@ -1,7 +1,7 @@
 "use client";
 
 import { Crosshair, Crown, Zap, MessageSquare } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 export function Features() {
     const features = [

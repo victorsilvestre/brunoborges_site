@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 export function FAQ() {
     const faqs = [

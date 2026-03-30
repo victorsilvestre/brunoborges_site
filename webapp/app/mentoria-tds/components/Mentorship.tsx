@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TrendingUp, Tv, Target, Wallet, Briefcase, Lightbulb, Rocket, HeartHandshake } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 export function Mentorship() {
     const requirements = [

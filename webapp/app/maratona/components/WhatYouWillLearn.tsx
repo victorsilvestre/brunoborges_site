@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 import { BookOpenCheck, ShieldCheck, LineChart, Star } from "lucide-react";
 
 export function WhatYouWillLearn() {

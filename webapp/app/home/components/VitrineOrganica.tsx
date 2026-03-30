@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Youtube, Instagram, Play, ExternalLink } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 const youtubeVideos = [
     {

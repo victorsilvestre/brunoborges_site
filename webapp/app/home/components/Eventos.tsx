@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar, Zap, ArrowRight, Users } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 // Defina null se não houver próxima maratona agendada
 const proximaMaratona = {

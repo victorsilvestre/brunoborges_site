@@ -14,7 +14,7 @@ import {
     Globe,
     Brain,
 } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 const setups = [
     { name: "Leônidas", description: "O único rompimento que vale a pena para entrar na operação" },

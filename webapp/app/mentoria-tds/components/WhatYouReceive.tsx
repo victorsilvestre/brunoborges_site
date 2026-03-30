@@ -1,7 +1,7 @@
 "use client";
 
 import { GraduationCap, Headphones, Users, Trophy, BookOpen, Clock, BarChart2 } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 export function WhatYouReceive() {
     const benefits = [
