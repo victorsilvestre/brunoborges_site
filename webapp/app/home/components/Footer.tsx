@@ -30,6 +30,7 @@ export function Footer() {
     const quickLinks = [
         { label: "Sobre", href: "#biografia" },
         { label: "Metodologia", href: "#metodologia" },
+        { label: "Eventos", href: "#eventos" },
         { label: "Conteúdo", href: "#conteudo" },
         { label: "Mentorias", href: "#mentorias" }
     ];
@@ -37,6 +38,11 @@ export function Footer() {
     const mentoriaLinks = [
         { label: "Mentoria TDS", href: "/mentoria-tds" },
         { label: "Maratona TDS", href: "/maratona" }
+    ];
+
+    const pageLinks = [
+        { label: "Termos de Uso", href: "/termos-de-uso" },
+        { label: "Políticas de Privacidade", href: "/politicas-de-privacidade" }
     ];
 
     return (
@@ -49,7 +55,7 @@ export function Footer() {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 {/* Top Section */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
                     {/* Brand */}
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-6">
@@ -111,6 +117,20 @@ export function Footer() {
                             {mentoriaLinks.map((link, idx) => (
                                 <li key={idx}>
                                     <Link href={link.href} className="text-[var(--white-60)] hover:text-white transition-colors text-sm">
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Page Links */}
+                    <div>
+                        <h4 className="font-display font-bold text-sm uppercase tracking-wider text-white mb-6">Páginas</h4>
+                        <ul className="space-y-3">
+                            {pageLinks.map((link, idx) => (
+                                <li key={idx}>
+                                    <Link href={link.href} target="_blank" rel="noopener noreferrer" className="text-[var(--white-60)] hover:text-white transition-colors text-sm">
                                         {link.label}
                                     </Link>
                                 </li>
