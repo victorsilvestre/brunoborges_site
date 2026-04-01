@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "../../components/FadeIn";
-import { Lock } from "lucide-react";
+import { Lock, LockOpen, Play } from "lucide-react";
 
 export function Schedule() {
     const days = [
@@ -9,19 +9,22 @@ export function Schedule() {
             subtitle: "AULA 1 - TERÇA",
             date: "31/03",
             time: "20HRS",
-            topics: "Aprenda a ler o gráfico sem indicadores"
+            topics: "Aprenda a ler o gráfico sem indicadores",
+            url: "https://www.youtube.com/watch?v=ehc84tlSdG0"
         },
         {
             subtitle: "AULA 2 - QUARTA",
             date: "01/04",
             time: "20HRS",
-            topics: "Lucro diário começa com negação"
+            topics: "Lucro diário começa com negação",
+            url: null
         },
         {
             subtitle: "AULA 3 - QUINTA",
             date: "02/04",
             time: "20HRS",
-            topics: "Scalp preciso, resultado real"
+            topics: "Scalp preciso, resultado real",
+            url: null
         }
     ];
 
@@ -55,13 +58,30 @@ export function Schedule() {
                                     </div>
                                 </div>
 
-                                <div className="mt-auto bg-[var(--light-surface)] rounded-2xl p-6 border border-slate-100 flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center shrink-0">
-                                        <Lock className="w-4 h-4 text-slate-500" />
+                                <div className="mt-auto bg-[var(--light-surface)] rounded-2xl p-6 border border-slate-100 flex flex-col gap-4">
+                                    <div className="flex items-center gap-4">
+                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${day.url ? "bg-[var(--green-pure)]" : "bg-slate-200"}`}>
+                                            {day.url
+                                                ? <LockOpen className="w-4 h-4 text-white" />
+                                                : <Lock className="w-4 h-4 text-slate-500" />
+                                            }
+                                        </div>
+                                        <p className="font-bold text-[var(--dark-medium)] text-sm uppercase tracking-wider">
+                                            {day.topics}
+                                        </p>
                                     </div>
-                                    <p className="font-bold text-[var(--dark-medium)] text-sm uppercase tracking-wider">
-                                        {day.topics}
-                                    </p>
+                                    {day.url && (
+                                        <a
+                                            href={day.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-bold text-sm uppercase tracking-wider text-white transition-all duration-300"
+                                            style={{ background: 'linear-gradient(to right, var(--green-pure), var(--green-dark))' }}
+                                        >
+                                            <Play className="w-4 h-4 fill-white" />
+                                            Assistir Aula
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </FadeIn>
