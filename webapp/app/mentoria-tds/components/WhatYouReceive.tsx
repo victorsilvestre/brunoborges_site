@@ -155,7 +155,7 @@ export function WhatYouReceive() {
                 <FadeIn delay={0.6}>
                     <div className="mt-20 text-center">
                         <a
-                            href="https://t.me/+MSL99oO7pmcyMWQx"
+                            href="/mentoria-tds/checkout"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-[var(--green-bull)] to-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(241,20,20,0.3)]"

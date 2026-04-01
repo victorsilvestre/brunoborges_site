@@ -34,8 +34,12 @@ export function Waitlist() {
 
                             <FadeIn delay={0.2}>
                                 <p className="text-xl text-[var(--dark-medium)] font-medium leading-relaxed mb-8">
-                                    Faça parte da próxima turma da Mentoria. <strong className="text-[var(--dark-pure)] font-bold">Clique no link ao lado</strong> e entre para o grupo oficial de Alunos TDS.<br /><br />
-                                    As <strong className="text-[var(--dark-pure)] font-bold">vagas são limitadas</strong>, aproveite essa oportunidade única de transformar a sua jornada no mercado financeiro.
+                                    Faça parte da próxima turma da Mentoria.{" "} 
+                                    <strong className="text-[var(--dark-pure)] font-bold">Clique no link ao lado</strong>, 
+                                    realize sua inscrição e entre para o grupo oficial de Alunos TDS.
+                                    <br /><br />
+                                    As <strong className="text-[var(--dark-pure)] font-bold">vagas são limitadas</strong>, 
+                                    aproveite essa oportunidade única de transformar a sua jornada no mercado financeiro.
                                 </p>
                             </FadeIn>
                         </div>
@@ -54,12 +58,12 @@ export function Waitlist() {
                                     </div>
 
                                     <a
-                                        href="https://t.me/+MSL99oO7pmcyMWQx"
+                                        href="/mentoria-tds/checkout"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full bg-[var(--green-pure)] text-[var(--ligth-elevated)] font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-[var(--green-pure)]/85 transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group shadow-sm"
                                     >
-                                        Entrar no Grupo <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                                        Quero entrar! <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                                     </a>
 
                                     <p className="text-center text-sm text-[var(--dark-medium)] mt-6 uppercase tracking-widest font-bold">

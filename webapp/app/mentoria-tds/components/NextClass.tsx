@@ -70,7 +70,7 @@ export function NextClass() {
 
                             <div className="flex flex-col sm:flex-row gap-6 w-full max-w-sm mx-auto md:mx-0 relative z-20">
                                 <a
-                                    href="https://t.me/+MSL99oO7pmcyMWQx"
+                                    href="/mentoria-tds/checkout"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group flex-1 flex items-center justify-center gap-4 px-5 py-3 bg-white text-black rounded-2xl font-display font-black text-lg uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:bg-[var(--green-bull)] hover:text-white shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(0,191,99,0.40)]"

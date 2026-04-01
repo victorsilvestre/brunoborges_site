@@ -190,16 +190,14 @@ function PixPanel({ copied, onCopy }: { copied: boolean; onCopy: () => void }) {
     return (
         <div className="flex flex-col items-center gap-6">
 
-            {/* QR Code placeholder */}
+            {/* QR Code */}
             <div className="relative">
-                <div className="w-44 h-44 bg-slate-50 border-2 border-dashed border-slate-200 rounded-xl flex flex-col items-center justify-center gap-2 text-slate-300">
-                    <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                        <rect x="3" y="3" width="7" height="7" rx="1" />
-                        <rect x="14" y="3" width="7" height="7" rx="1" />
-                        <rect x="3" y="14" width="7" height="7" rx="1" />
-                        <path d="M14 14h2v2h-2zM18 14h3M14 18h2M18 18h3v3M14 21h2" strokeLinecap="round" />
-                    </svg>
-                    <span className="text-[10px] font-bold uppercase tracking-widest">QR Code PIX</span>
+                <div className="w-44 h-44 rounded-xl overflow-hidden">
+                    <img
+                        src="/images/qrcode/image_qrcode-aluno-novo-700.jpg"
+                        alt="QR Code PIX"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
                 {/* Corner decorations */}
                 <div className="absolute -top-1 -left-1 w-5 h-5 border-t-2 border-l-2 border-[var(--green-bull)] rounded-tl-md" />
@@ -279,11 +277,33 @@ function PixPanel({ copied, onCopy }: { copied: boolean; onCopy: () => void }) {
                 </span>
             </div>
 
+            <SendReceiptButton />
+
             <p className="text-[11px] text-slate-400 text-center leading-relaxed">
                 Após o pagamento, envie o comprovante para confirmar sua vaga.
             </p>
 
         </div>
+    );
+}
+
+const TELEGRAM_URL = "https://t.me/fernanda_bs";
+
+function SendReceiptButton() {
+    return (
+        <a
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden w-full flex items-center justify-center gap-3 py-5 px-8 rounded-xl text-base font-display font-black uppercase tracking-wider text-white transition-shadow duration-200 shadow-[0_4px_24px_rgba(0,136,204,0.25)] hover:shadow-[0_6px_36px_rgba(0,136,204,0.40)]"
+            style={{ backgroundColor: "#0088cc" }}
+        >
+            <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" fill="currentColor">
+                <path d="M19.07 4.93a10 10 0 1 0 0 14.14 10 10 0 0 0 0-14.14zM16.64 8.8c-.15 1.58-.82 5.52-1.16 7.34-.14.77-.42 1.03-.69 1.05-.58.06-1.02-.38-1.59-.75-.9-.59-1.41-.95-2.28-1.52-1.02-.67-.36-1.04.2-1.63.15-.15 2.72-2.48 2.77-2.7.01-.03.01-.14-.05-.19-.06-.05-.16-.03-.23-.02-.1.02-1.78 1.13-5.04 3.33-.48.33-.91.49-1.3.48-.43-.01-1.26-.24-1.88-.45-.76-.24-1.37-.37-1.31-.8.03-.22.33-.45.82-.69 3.17-1.38 5.28-2.29 6.34-2.72 3.01-1.25 3.64-1.47 4.05-1.48.09 0 .29.02.42.12.1.08.13.19.14.27-.02.09.79.36.79.36z"/>
+            </svg>
+            Enviar comprovante
+            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+        </a>
     );
 }
 
@@ -332,6 +352,8 @@ function CardPanel() {
                 </span>
                 <div className="absolute inset-0 bg-white/15 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
             </a>
+
+            <SendReceiptButton />
 
             <p className="text-[11px] text-slate-400 text-center leading-relaxed">
                 Você será redirecionado para o ambiente seguro do Mercado Pago para concluir o pagamento.

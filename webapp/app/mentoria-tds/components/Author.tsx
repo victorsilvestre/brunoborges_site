@@ -56,7 +56,7 @@ export function Author() {
                                     Vamos juntos nessa jornada.
                                 </span>
                                 <a
-                                    href="https://t.me/+MSL99oO7pmcyMWQx"
+                                    href="/mentoria-tds/checkout"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_40px_rgba(0,191,99,0.50)]"

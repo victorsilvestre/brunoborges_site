@@ -1,13 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
-import { Modal } from "../../components/Modal";
+import Link from "next/link";
 
 export function Hero() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <section className="relative min-h-[95vh] lg:min-h-screen flex items-center overflow-hidden pt-20 border-b border-[var(--white-10)]">
@@ -70,14 +68,14 @@ export function Hero() {
 
                         <FadeIn delay={0.4}>
                             <div className="flex flex-col sm:flex-row gap-6">
-                                <button onClick={() => setIsModalOpen(true)} className="btn btn-green group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto flex items-center justify-center shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_50px_rgba(0,191,99,0.50)] transition-shadow">
+                                <Link href="/mentoria-tds/checkout" className="btn btn-green group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto flex items-center justify-center shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_50px_rgba(0,191,99,0.50)] transition-shadow">
                                     <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
                                         Garantir Minha Vaga <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </span>
                                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                                </button>
+                                </Link>
                                 <a href="#about" className="btn btn-outline-white backdrop-blur-md bg-black/30 hover:bg-white/10 py-5 px-10 text-lg w-full sm:w-auto flex items-center justify-center font-display font-bold uppercase tracking-wider">
-                                    Conhecer o Método
+                                    Saiba Mais
                                 </a>
                             </div>
                         </FadeIn>
@@ -96,7 +94,7 @@ export function Hero() {
                 <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
             </motion.div>
 
-            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
         </section>
     );
 }
