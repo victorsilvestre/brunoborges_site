@@ -2,6 +2,7 @@
 
 import { FadeIn } from "../../components/FadeIn";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function Waitlist() {
     return (
@@ -57,14 +58,12 @@ export function Waitlist() {
                                         </svg>
                                     </div>
 
-                                    <a
+                                    <Link
                                         href="/mentoria-tds/checkout"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
                                         className="w-full bg-[var(--green-pure)] text-[var(--ligth-elevated)] font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-[var(--green-pure)]/85 transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group shadow-sm"
                                     >
                                         Quero entrar! <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                                    </a>
+                                    </Link>
 
                                     <p className="text-center text-sm text-[var(--dark-medium)] mt-6 uppercase tracking-widest font-bold">
                                         Grupo Oficial de Alunos TDS
