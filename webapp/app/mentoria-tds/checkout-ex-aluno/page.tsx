@@ -6,11 +6,11 @@ import { Copy, Check, CreditCard, ArrowRight, ShieldCheck, Lock } from "lucide-r
 import { FadeIn } from "../../components/FadeIn";
 
 const PIX_KEY = "62 98590-6104";
-const MERCADO_PAGO_URL = "https://mpago.la/21jPCHq";
+const MERCADO_PAGO_URL = "https://mpago.la/1aGw4Ya";
 const PRODUCT_NAME = "Mentoria TDS — Bruno Borges";
-const PRODUCT_PRICE = "R$ 700,00";
+const PRODUCT_PRICE = "R$ 420,00";
 
-export default function CheckoutPage() {
+export default function CheckoutExAlunoPage() {
     const [activeTab, setActiveTab] = useState<"pix" | "card">("pix");
     const [copied, setCopied] = useState(false);
 

@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, AlertTriangle } from "lucide-react";
+import Link from "next/link";
 
 interface ModalProps {
     isOpen: boolean;
@@ -54,22 +55,24 @@ export function Modal({ isOpen, onClose }: ModalProps) {
 
                             {/* Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                                <button
+                                <Link
+                                    href="/mentoria-tds/checkout"
                                     className="btn btn-green group relative overflow-hidden py-4 px-8 text-base w-full flex items-center justify-center shadow-[0_0_30px_rgba(0,191,99,0.25)] hover:shadow-[0_0_50px_rgba(0,191,99,0.45)] transition-shadow"
                                 >
                                     <span className="relative z-10 flex items-center gap-2 font-display font-bold uppercase tracking-wider">
                                         Aluno Novo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </span>
                                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                                </button>
+                                </Link>
 
-                                <button
+                                <Link
+                                    href="/mentoria-tds/checkout-ex-aluno"
                                     className="btn btn-outline-white backdrop-blur-md bg-black/30 hover:bg-white/10 py-4 px-8 text-base w-full flex items-center justify-center font-display font-bold uppercase tracking-wider group"
                                 >
                                     <span className="flex items-center gap-2">
                                         Ex Aluno <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </span>
-                                </button>
+                                </Link>
                             </div>
 
                             {/* Divider */}
