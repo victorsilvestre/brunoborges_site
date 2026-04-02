@@ -66,7 +66,7 @@ export function Modal({ isOpen, onClose }: ModalProps) {
                                 </Link>
 
                                 <Link
-                                    href="/mentoria-tds/checkout-ex-aluno"
+                                    href="https://t.me/fernanda_bs"
                                     className="btn btn-outline-white backdrop-blur-md bg-black/30 hover:bg-white/10 py-4 px-8 text-base w-full flex items-center justify-center font-display font-bold uppercase tracking-wider group"
                                 >
                                     <span className="flex items-center gap-2">

@@ -2,9 +2,10 @@
 
 import { FadeIn } from "../../components/FadeIn";
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { useModal } from "../ModalContext";
 
 export function Waitlist() {
+    const { openModal } = useModal();
     return (
         <section id="waitlist" className="relative py-32 bg-[var(--light-surface)] overflow-hidden border-y border-slate-200">
 
@@ -58,12 +59,12 @@ export function Waitlist() {
                                         </svg>
                                     </div>
 
-                                    <Link
-                                        href="/mentoria-tds/checkout"
+                                    <button
+                                        onClick={openModal}
                                         className="w-full bg-[var(--green-pure)] text-[var(--ligth-elevated)] font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-[var(--green-pure)]/85 transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group shadow-sm"
                                     >
                                         Quero entrar! <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                                    </Link>
+                                    </button>
 
                                     <p className="text-center text-sm text-[var(--dark-medium)] mt-6 uppercase tracking-widest font-bold">
                                         Grupo Oficial de Alunos TDS
