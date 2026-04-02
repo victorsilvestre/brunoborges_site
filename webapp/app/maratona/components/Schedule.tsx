@@ -17,7 +17,7 @@ export function Schedule() {
             date: "01/04",
             time: "20HRS",
             topics: "Lucro diário começa com negação",
-            url: null
+            url: "https://www.youtube.com/watch?v=cKJ6owXUQ40"
         },
         {
             subtitle: "AULA 3 - QUINTA",
@@ -45,8 +45,15 @@ export function Schedule() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {days.map((day, i) => (
                         <FadeIn key={i} delay={0.1 + i * 0.1}>
-                            <div className="relative p-8 rounded-3xl overflow-hidden group transition-all duration-500 border border-slate-200 bg-white hover:border-[var(--green-border)] hover:shadow-[0_10px_40px_rgba(0,191,99,0.08)] flex flex-col h-full">
-                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-slate-200 to-slate-300 group-hover:from-[var(--green-pure)] group-hover:to-[var(--green-dark)] transition-colors duration-500" />
+                            <div className="relative p-8 rounded-3xl overflow-hidden transition-all duration-500 border border-slate-200 bg-white hover:border-[var(--green-border)] hover:shadow-[0_10px_40px_rgba(0,191,99,0.08)] flex flex-col h-full">
+                                <div
+                                    className="absolute top-0 left-0 w-full h-2"
+                                    style={{
+                                        background: day.url
+                                            ? 'linear-gradient(to right, var(--green-bull), var(--green-dark))'
+                                            : 'linear-gradient(to right, #F11414, #8B0000)'
+                                    }}
+                                />
 
                                 <div className="mb-8 mt-2">
                                     <span className="inline-block py-1 px-3 rounded-md bg-[var(--dark-pure)] text-white text-xs font-bold tracking-widest uppercase mb-4">
@@ -60,10 +67,10 @@ export function Schedule() {
 
                                 <div className="mt-auto bg-[var(--light-surface)] rounded-2xl p-6 border border-slate-100 flex flex-col gap-4">
                                     <div className="flex items-center gap-4">
-                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${day.url ? "bg-[var(--green-pure)]" : "bg-slate-200"}`}>
+                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${day.url ? "bg-[var(--green-pure)]" : "bg-[var(--red-bear)]"}`}>
                                             {day.url
                                                 ? <LockOpen className="w-4 h-4 text-white" />
-                                                : <Lock className="w-4 h-4 text-slate-500" />
+                                                : <Lock className="w-4 h-4 text-white" />
                                             }
                                         </div>
                                         <p className="font-bold text-[var(--dark-medium)] text-sm uppercase tracking-wider">
