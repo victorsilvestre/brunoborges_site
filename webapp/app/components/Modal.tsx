@@ -67,6 +67,8 @@ export function Modal({ isOpen, onClose }: ModalProps) {
 
                                 <Link
                                     href="https://t.me/fernanda_bs"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="btn btn-outline-white backdrop-blur-md bg-black/30 hover:bg-white/10 py-4 px-8 text-base w-full flex items-center justify-center font-display font-bold uppercase tracking-wider group"
                                 >
                                     <span className="flex items-center gap-2">

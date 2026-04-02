@@ -90,7 +90,7 @@ export function Hero() {
             <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 z-20"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 opacity-60 z-20"
             >
                 <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-white">Scroll</span>
                 <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
