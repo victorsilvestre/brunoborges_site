@@ -6,6 +6,7 @@ import { VideoSection } from "./components/VideoSection";
 import { Differentiators } from "./components/Differentiators";
 import { ResultsSection } from "./components/ResultsSection";
 import { SocialProof } from "../components/SocialProof";
+import { Pricing } from "./components/Pricing";
 import { Author } from "./components/Author";
 import { FAQ } from "./components/FAQ";
 import { Waitlist } from "./components/Waitlist";
@@ -31,6 +32,7 @@ export default function LandingPage() {
                 titleHighlight="case de sucesso"
                 titleHighlightClass="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)] to-[var(--green-bull)]"
             />
+            <Pricing />
             <Author />
             <FAQ />
             <Waitlist />
