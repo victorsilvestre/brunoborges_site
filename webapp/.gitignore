@@ -43,3 +43,6 @@ next-env.d.ts
 # skills
 /skills
 
+#agents
+.claude/settings.local.json
+
