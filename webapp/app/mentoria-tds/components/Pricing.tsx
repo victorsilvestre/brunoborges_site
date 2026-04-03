@@ -14,16 +14,20 @@ const items = [
         value: "R$ 400,00",
     },
     {
-        label: "Indicadores do Método TDS",
-        value: "R$ 250,00",
+        label: "Mentorias Individuais - Aulas de Sábado",
+        value: "R$ 500,00",
     },
     {
         label: "Apostila digital do Método",
         value: "R$ 150,00",
     },
+    {
+        label: "4 Setups Exclusivos",
+        value: "R$ 1.200,00",
+    },
 ];
 
-const TOTAL_FICTICIO = "R$ 2.300,00";
+const TOTAL_FICTICIO = "R$ 3.750,00";
 const PRECO_FINAL = "R$ 700,00";
 
 export function Pricing() {
