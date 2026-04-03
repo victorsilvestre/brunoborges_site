@@ -7,6 +7,7 @@ import Image from "next/image";
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { scrollY } = useScroll();
 
     useEffect(() => {
@@ -23,7 +24,7 @@ export function Header() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled
+                isScrolled || isMobileMenuOpen
                     ? "bg-black/80 backdrop-blur-xl border-b border-[var(--white-10)] shadow-lg"
                     : "bg-transparent"
             }`}
@@ -31,7 +32,14 @@ export function Header() {
             <div className="max-w-7xl mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="group">
+                    <Link
+                        href="/"
+                        className="group"
+                        onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                    >
                         <Image
                             src="/images/logo/logo_white_transparent.png"
                             alt="Trader Bruno Borges"
@@ -55,6 +63,12 @@ export function Header() {
                             className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors"
                         >
                             Metodologia
+                        </a>
+                        <a
+                            href="#eventos"
+                            className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors"
+                        >
+                            Eventos
                         </a>
                         <a
                             href="#conteudo"
@@ -81,22 +95,41 @@ export function Header() {
                     </a>
 
                     {/* Mobile Menu Button */}
-                    <button className="md:hidden text-white">
-                        <svg
-                            className="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
-                        </svg>
+                    <button
+                        className="md:hidden text-white"
+                        onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                        aria-label="Abrir menu"
+                    >
+                        {isMobileMenuOpen ? (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        ) : (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        )}
                     </button>
                 </div>
+
+                {/* Mobile Menu */}
+                {isMobileMenuOpen && (
+                    <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
+                        <a href="#biografia" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Sobre</a>
+                        <a href="#metodologia" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Metodologia</a>
+                        <a href="#eventos" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Eventos</a>
+                        <a href="#conteudo" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Conteúdo</a>
+                        <a href="#mentorias" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Cursos</a>
+                        <a
+                            href="https://t.me/+MSL99oO7pmcyMWQx"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[var(--green-bull)] text-white font-display font-bold text-sm uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all"
+                        >
+                            Começar Agora
+                        </a>
+                    </div>
+                )}
             </div>
         </motion.header>
     );

@@ -1,7 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl -s \"https://traderbrunoborges.com.br/mentoriatds\")",
+      "Bash(curl -s \"https://traderbrunoborges.com.br/mentoria-tds\")",
       "Bash(npm run dev)",
       "Bash(curl -s http://localhost:3000)",
       "Bash(curl -s http://localhost:3000/mentoria-tds)",
@@ -17,7 +17,10 @@
       "WebFetch(domain:behold.so)",
       "Bash(find webapp:*)",
       "Bash(node -e \":*)",
-      "Bash(ls -la /c/Users/victo/Desktop/brunoborges_site/webapp/*.config.*)"
+      "Bash(ls -la /c/Users/victo/Desktop/brunoborges_site/webapp/*.config.*)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(tasklist)"
     ],
     "deny": [],
     "ask": []

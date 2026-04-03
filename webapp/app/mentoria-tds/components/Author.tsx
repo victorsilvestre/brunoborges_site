@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
+import { useModal } from "../ModalContext";
 
 export function Author() {
+    const { openModal } = useModal();
     return (
         <section className="relative py-32 bg-[var(--dark-base)] overflow-hidden">
 
@@ -38,7 +40,7 @@ export function Author() {
                             </FadeIn>
                             <FadeIn delay={0.3}>
                                 <p>
-                                    Possuo <strong className="text-white font-semibold">5 anos de experiência</strong> no Mercado Financeiro e decidi ajudar pessoas comuns a alcançarem lucratividade e consistência no <strong className="text-white font-semibold">Day Trade</strong>.
+                                    Possuo mais de <strong className="text-white font-semibold">7 anos de experiência</strong> no Mercado Financeiro e decidi ajudar pessoas comuns a alcançarem lucratividade e consistência no <strong className="text-white font-semibold">Day Trade</strong>.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.4}>
@@ -55,14 +57,12 @@ export function Author() {
                                 <span className="font-script text-5xl text-[var(--green-bull)] block">
                                     Vamos juntos nessa jornada.
                                 </span>
-                                <a
-                                    href="https://t.me/+MSL99oO7pmcyMWQx"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <button
+                                    onClick={openModal}
                                     className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_40px_rgba(0,191,99,0.50)]"
                                 >
                                     Entrar para o Time
-                                </a>
+                                </button>
                             </div>
                         </FadeIn>
                     </div>

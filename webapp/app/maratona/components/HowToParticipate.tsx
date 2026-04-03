@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 import { ArrowRight, Send } from "lucide-react";
 
 export function HowToParticipate() {

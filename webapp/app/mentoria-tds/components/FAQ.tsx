@@ -3,17 +3,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 export function FAQ() {
     const faqs = [
         { q: "Qual o tempo de duração da Mentoria TDS?", a: "São 60 dias de acompanhamento com aulas 3x na semana (das 19h até não haver mais dúvidas na turma)." },
         { q: "As aulas são gravadas?", a: "Todas as aulas são AO VIVO e, após finalizar a aula, disponibilizo a gravação também. O acesso às gravações é VITALÍCIO, pois as aulas são de vocês!" },
-        { q: "As turmas são cheias/lotadas?", a: "Prezo muito pela QUALIDADE e não pela QUANTIDADE. Por este motivo, a quantidade máxima por turma é de 100 alunos." },
+        { q: "As turmas são cheias/lotadas?", a: "Prezo muito pela QUALIDADE e não pela QUANTIDADE. Por este motivo, a quantidade máxima por turma é limitada." },
         { q: "O suporte de dúvidas é terceirizado ou direto com o Mentor?", a: "Somente eu, Bruno (Mentor), dou suporte aos meus alunos com relação às dúvidas do operacional no Telegram." },
         { q: "O acesso ao Mentor é somente durante os 60 dias?", a: "Não! Seu acesso a mim é vitalício via Telegram. Mesmo após encerrar a mentoria, continuarei dando suporte sempre que você precisar." },
         { q: "E quanto à aula de sábado? Do que se trata?", a: "É uma aula BÔNUS que ocorre aos sábados às 8h. Nela, um aluno opera ao vivo sob minha análise, recebendo feedback prático sobre pontos positivos e negativos. É aberta para assistir vitaliciamente." },
-        { q: "Você demora a responder as mensagens de dúvidas?", a: "Como não terceirizo suporte e prezo pela atenção pessoal, respondo às mensagens com a maior brevidade possível dentro do meu dia de operações. Vocês não ficarão sem resposta." },
+        { q: "Você demora a responder as mensagens de dúvidas?", a: "Como não terceirizo suporte e prezo pela atenção pessoal, respondo às mensagens com a maior brevidade possível, porém pedimos um prazo de 72h para retorno. Mas fique tranquilo(a), estarei sempre disponível nas aulas e no grupo de estudos, assim você não ficará sem resposta." },
         { q: "O seu operacional funciona no Sistema Mini Dólar?", a: "Funciona em qualquer mercado, ativo ou intervalo de tempo, inclusive perfeitamente no Mini Dólar." },
         { q: "Você tem sala de pregão ao vivo?", a: "Não trabalho com modelo de sala de sinais / EAD. Meu objetivo é te formar um trader independente." },
         { q: "Você possui Mentoria Individual?", a: "Sim, porém é um serviço adicional à parte (não obrigatório). Está disponível SOMENTE para alunos que já finalizaram a mentoria em grupo e dominam a base teórica." },

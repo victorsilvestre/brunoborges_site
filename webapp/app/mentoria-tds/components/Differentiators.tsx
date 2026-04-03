@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
+import { useModal } from "../ModalContext";
 
 export function Differentiators() {
+    const { openModal } = useModal();
     const diffs = [
         { num: "1.", label: "Conteúdo Prático e Denso", text: "Mais de 100h de conteúdo estruturado, do zero ao Price Action Simplificado. São mais de 25 aulas pensadas para transformar sua leitura de mercado e desenvolver uma visão realmente profissional." },
         { num: "2.", label: "Mentoria de Elite", text: "Sem intermediários. Sem suporte terceirizado. Você tira dúvidas diretamente comigo, com acompanhamento próximo e direcionado." },
@@ -57,14 +59,12 @@ export function Differentiators() {
                     ))}
                 </div>
                 <FadeIn delay={0.2} className="w-full md:w-auto shrink-0">
-                    <a
-                        href="https://t.me/+MSL99oO7pmcyMWQx"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        onClick={openModal}
                         className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(0,191,99,0.30)] hover:shadow-[0_4px_30px_rgba(0,191,99,0.50)] w-fit mx-auto mt-10"
                     >
                         Quero Fazer Parte
-                    </a>
+                    </button>
                 </FadeIn>
             </div>
         </section>

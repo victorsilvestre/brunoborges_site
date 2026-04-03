@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Star, Award, Lock } from "lucide-react";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 import Link from "next/link";
 
 export function PortfolioMentorias() {

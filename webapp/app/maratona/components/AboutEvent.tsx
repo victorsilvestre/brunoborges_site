@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 import { LineChart, BookOpen, TrendingUp } from "lucide-react";
 
 export function AboutEvent() {

@@ -5,15 +5,17 @@ import { WhatYouReceive } from "./components/WhatYouReceive";
 import { VideoSection } from "./components/VideoSection";
 import { Differentiators } from "./components/Differentiators";
 import { ResultsSection } from "./components/ResultsSection";
-import { SocialProof } from "./components/SocialProof";
+import { SocialProof } from "../components/SocialProof";
 import { Author } from "./components/Author";
 import { FAQ } from "./components/FAQ";
 import { Waitlist } from "./components/Waitlist";
 import { WhyTDSIsDifferent } from "./components/WhyTDSIsDifferent";
 import { NextClass } from "./components/NextClass";
+import { ModalProvider } from "./ModalContext";
 
 export default function LandingPage() {
     return (
+        <ModalProvider>
         <main className="bg-[var(--dark-base)] min-h-screen text-white selection:bg-[var(--green-bull)] selection:text-white">
             <Hero />
             <Features />
@@ -24,7 +26,11 @@ export default function LandingPage() {
             <NextClass />
             <Differentiators />
             <ResultsSection />
-            <SocialProof />
+            <SocialProof
+                title="Seja o próximo"
+                titleHighlight="case de sucesso"
+                titleHighlightClass="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)] to-[var(--green-bull)]"
+            />
             <Author />
             <FAQ />
             <Waitlist />
@@ -42,5 +48,6 @@ export default function LandingPage() {
                 </div>
             </footer>
         </main>
+        </ModalProvider>
     );
 }

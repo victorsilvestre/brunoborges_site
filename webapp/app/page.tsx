@@ -4,6 +4,7 @@ import { HeroManifesto } from "./home/components/HeroManifesto";
 import { BiografiaEditorial } from "./home/components/BiografiaEditorial";
 import { CaraDaMadrugada } from "./home/components/CaraDaMadrugada";
 import { Metodologia } from "./home/components/Metodologia";
+import { Eventos } from "./home/components/Eventos";
 import { VitrineOrganica } from "./home/components/VitrineOrganica";
 import { PortfolioMentorias } from "./home/components/PortfolioMentorias";
 import { Footer } from "./home/components/Footer";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <BiografiaEditorial />
       <CaraDaMadrugada />
       <Metodologia />
+      <Eventos />
       <VitrineOrganica />
       <PortfolioMentorias />
       <Footer />

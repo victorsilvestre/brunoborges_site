@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 import { Play } from "lucide-react";
 
 export function VideoSection() {

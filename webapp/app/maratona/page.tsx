@@ -4,7 +4,7 @@ import { AboutEvent } from "./components/AboutEvent";
 import { WhatYouWillLearn } from "./components/WhatYouWillLearn";
 import { HowToParticipate } from "./components/HowToParticipate";
 import { Schedule } from "./components/Schedule";
-import { SocialProof } from "./components/SocialProof";
+import { SocialProof } from "../components/SocialProof";
 import { FinalCTA } from "./components/FinalCTA";
 
 export const metadata: Metadata = {
@@ -20,7 +20,11 @@ export default function MaratonaPage() {
             <WhatYouWillLearn />
             <HowToParticipate />
             <Schedule />
-            <SocialProof />
+            <SocialProof
+                title="Quem já Participou"
+                titleHighlight="Aprova!"
+                titleHighlightClass="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] to-[var(--green-pure)]"
+            />
             <FinalCTA />
 
             {/* Footer premium minimalista */}

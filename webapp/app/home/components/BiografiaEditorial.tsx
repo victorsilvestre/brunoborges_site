@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FadeIn } from "./FadeIn";
+import { FadeIn } from "../../components/FadeIn";
 
 export function BiografiaEditorial() {
     return (
@@ -30,7 +30,7 @@ export function BiografiaEditorial() {
                         </FadeIn>
 
                         <FadeIn delay={0.35}>
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <p className="text-lg text-[var(--white-40)] leading-relaxed">
                                     Trader Profissional especializado em Price Action e leitura
                                     Candle a Candle. Com mais de 7 anos de mercado financeiro,
@@ -48,28 +48,28 @@ export function BiografiaEditorial() {
                         <FadeIn delay={0.45}>
                             <blockquote className="border-l-2 border-[var(--gold-premium)] pl-5">
                                 <p className="text-[var(--white-60)] italic text-sm leading-relaxed">
-                                    "Meu objetivo é formar traders que entendem o mercado, 
-                                    <br/> e que não seguem indicadores milagrosos."
+                                    "Meu objetivo é formar traders que entendam verdadeiramente o mercado financeiro. 
+                                    Que saibem analisar e entender o movimento do gráfico, ao invés de seguirem indicadores "milagrosos"."
                                 </p>
                             </blockquote>
                         </FadeIn>
 
                         <FadeIn delay={0.55}>
-                            <div className="flex items-center gap-8">
+                            <div className="flex items-center gap-4 lg:gap-8">
                                 <div>
-                                    <span className="font-display font-black text-5xl text-[var(--green-bull)] leading-none">+7</span>
+                                    <span className="font-display font-black text-4xl lg:text-5xl text-[var(--green-bull)] leading-none">+7</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">
                                         Anos de Mercado
                                     </p>
                                 </div>
                                 <div className="h-12 w-px bg-[var(--white-20)]" />
                                 <div>
-                                    <span className="font-display font-black text-5xl text-[var(--green-pure)] leading-none">+10</span>
+                                    <span className="font-display font-black text-4xl lg:text-5xl text-[var(--green-pure)] leading-none">+10</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">Setups Criados</p>
                                 </div>
                                 <div className="h-12 w-px bg-[var(--white-20)]" />
                                 <div>
-                                    <span className="font-display font-black text-5xl text-[var(--green-dark)] leading-none">+1,2k</span>
+                                    <span className="font-display font-black text-4xl lg:text-5xl text-[var(--green-dark)] leading-none">+1,2k</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">Alunos Formados</p>
                                 </div>
                             </div>
