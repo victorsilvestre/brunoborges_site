@@ -45,15 +45,15 @@ export function Pricing() {
 
                     <FadeIn delay={0.1}>
                         <h2 className="font-display font-black text-5xl md:text-6xl uppercase leading-[0.9] tracking-tighter mb-6 text-white">
-                            Tudo isso por<br />
+                            O método mais completo<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] to-[var(--green-bull)]">
-                                muito menos</span>
+                                pelo menor preço</span>
                         </h2>
                     </FadeIn>
 
                     <FadeIn delay={0.15}>
                         <p className="text-[var(--white-60)] text-lg max-w-xl mx-auto">
-                            Veja tudo o que você está levando — e quanto custaria investir em cada item separadamente:
+                            Veja tudo o que você está levando.
                         </p>
                     </FadeIn>
                 </div>
