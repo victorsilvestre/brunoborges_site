@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "../../components/FadeIn";
-import { Lock, LockOpen, Play } from "lucide-react";
+import { Lock, LockOpen, Play, ArrowRight, Zap } from "lucide-react";
 
 export function Schedule() {
     const days = [
@@ -24,7 +24,7 @@ export function Schedule() {
             date: "02/04",
             time: "20HRS",
             topics: "Scalp preciso, resultado real",
-            url: null
+            url: "https://www.youtube.com/watch?v=mVU46VQo4rs"
         }
     ];
 
@@ -94,6 +94,50 @@ export function Schedule() {
                         </FadeIn>
                     ))}
                 </div>
+
+                {/* Aviso de inscrições */}
+                <FadeIn delay={0.4}>
+                    <div className="mt-12 max-w-6xl mx-auto">
+                        <div
+                            className="relative rounded-3xl overflow-hidden border border-[var(--green-border)] p-8 md:p-10"
+                            style={{ background: 'linear-gradient(135deg, var(--dark-pure) 0%, #0d2818 100%)' }}
+                        >
+                            {/* Glow de fundo */}
+                            <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-[80px] pointer-events-none" style={{ background: 'var(--green-dim)' }} />
+
+                            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style={{ background: 'var(--green-pure)' }}>
+                                        <Zap className="w-6 h-6 text-white fill-white" />
+                                    </div>
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="text-xs font-bold tracking-widest uppercase text-[var(--green-pure)]">Próxima Turma — 15/04</span>
+                                            <span className="inline-block w-2 h-2 rounded-full bg-[var(--green-pure)] animate-pulse" />
+                                        </div>
+                                        <p className="font-display font-black text-2xl md:text-3xl text-white uppercase leading-tight tracking-tight">
+                                            Inscrições abertas: 
+                                            <br/>Mentoria Trader de Sucesso
+                                        </p>
+                                        <p className="text-[var(--red-bear)] text-sm mt-1">
+                                            Vagas limitadas.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <a
+                                    href="/mentoria-tds"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="shrink-0 inline-flex items-center gap-2 py-4 px-8 rounded-xl font-display font-bold text-sm uppercase tracking-wider text-white transition-all duration-300 hover:scale-105"
+                                    style={{ background: 'linear-gradient(to right, var(--green-pure), var(--green-dark))', boxShadow: '0 0 30px var(--green-dim)' }}
+                                >
+                                    Saiba Mais <ArrowRight className="w-4 h-4" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </FadeIn>
             </div>
         </section>
     );
