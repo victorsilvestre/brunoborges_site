@@ -13,10 +13,12 @@ import { Waitlist } from "./components/Waitlist";
 import { WhyTDSIsDifferent } from "./components/WhyTDSIsDifferent";
 import { NextClass } from "./components/NextClass";
 import { ModalProvider } from "./ModalContext";
+import { MaratonaModal } from "../components/MaratonaModal";
 
 export default function LandingPage() {
     return (
         <ModalProvider>
+        <MaratonaModal />
         <main className="bg-[var(--dark-base)] min-h-screen text-white selection:bg-[var(--green-bull)] selection:text-white">
             <Hero />
             <Features />
