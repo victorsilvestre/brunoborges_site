@@ -17,16 +17,15 @@ export function FadeIn({
 }) {
     const isMobile = useIsMobile();
 
-    const offset = isMobile ? 20 : 40;
-    const duration = isMobile ? 0.45 : 0.7;
-    const margin = isMobile ? "0px" : "-100px";
-    const activeDelay = isMobile ? Math.min(delay, 0.1) : delay;
+    if (isMobile) {
+        return <div className={className}>{children}</div>;
+    }
 
     const directions = {
-        up: { y: offset, x: 0 },
-        down: { y: -offset, x: 0 },
-        left: { x: offset, y: 0 },
-        right: { x: -offset, y: 0 },
+        up: { y: 40, x: 0 },
+        down: { y: -40, x: 0 },
+        left: { x: 40, y: 0 },
+        right: { x: -40, y: 0 },
         none: { x: 0, y: 0 }
     };
 
@@ -34,8 +33,8 @@ export function FadeIn({
         <motion.div
             initial={{ opacity: 0, ...directions[direction] }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
-            viewport={{ once: false, margin }}
-            transition={{ duration, ease: [0.25, 0.1, 0.25, 1], delay: activeDelay }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1], delay }}
             className={className}
         >
             {children}

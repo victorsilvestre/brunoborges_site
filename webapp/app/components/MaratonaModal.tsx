@@ -64,7 +64,7 @@ export function MaratonaModal() {
                         <p className="text-white/60 text-sm leading-relaxed mb-8">
                             A Maratona chegou ao fim — e o que você viu ali foi só uma parte 
                             do que realmente constrói consistência no mercado. 
-                            As inscrições para a{" "}<span className="text-white/80 font-medium">Mentoria Trader de Sucesso</span> 
+                            As inscrições para a{" "}<span className="text-white/80 font-medium">Mentoria Trader de Sucesso{" "}</span> 
                             estão abertas por tempo limitado ou enquanto durarem as vagas.
                             <br /><br />
                             Um método validado por milhares de alunos, 
