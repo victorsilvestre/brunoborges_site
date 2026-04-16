@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight } from "lucide-react";
+import { INSCRICOES_ABERTAS } from "../mentoria-tds/config";
 
 export function MaratonaModal() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export function MaratonaModal() {
         const hasOrigem = cookies.some((c) => c.startsWith("maratona_origem=true"));
         if (hasOrigem) {
             document.cookie = "maratona_origem=; path=/; max-age=0";
-            setIsOpen(true);
+            if (INSCRICOES_ABERTAS) setIsOpen(true);
         }
     }, []);
 
