@@ -14,6 +14,7 @@ import { WhyTDSIsDifferent } from "./components/WhyTDSIsDifferent";
 import { NextClass } from "./components/NextClass";
 import { ModalProvider } from "./ModalContext";
 import { MaratonaModal } from "../components/MaratonaModal";
+import { INSCRICOES_ABERTAS } from "./config";
 
 export default function LandingPage() {
     return (
@@ -26,7 +27,7 @@ export default function LandingPage() {
             <WhyTDSIsDifferent />
             <WhatYouReceive />
             <VideoSection />
-            <NextClass />
+            {INSCRICOES_ABERTAS && <NextClass />}
             <Differentiators />
             <ResultsSection />
             <SocialProof
@@ -34,7 +35,7 @@ export default function LandingPage() {
                 titleHighlight="case de sucesso"
                 titleHighlightClass="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)] to-[var(--green-bull)]"
             />
-            <Pricing />
+            {INSCRICOES_ABERTAS && <Pricing />}
             <Author />
             <FAQ />
             <Waitlist />

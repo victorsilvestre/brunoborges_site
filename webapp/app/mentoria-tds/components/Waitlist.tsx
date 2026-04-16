@@ -3,6 +3,7 @@
 import { FadeIn } from "../../components/FadeIn";
 import { ArrowRight } from "lucide-react";
 import { useModal } from "../ModalContext";
+import { INSCRICOES_ABERTAS } from "../config";
 
 export function Waitlist() {
     const { openModal } = useModal();
@@ -21,27 +22,43 @@ export function Waitlist() {
 
                         <div>
                             <FadeIn>
-                                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--green-bull)]/20 bg-[var(--green-bull)]/5 text-[var(--green-bull)] mb-8">
-                                    <span className="w-2 h-2 rounded-full bg-[var(--green-bull)] animate-pulse" />
-                                    <span className="text-xs font-bold tracking-widest uppercase text-[var(--dark-pure)]">Inscrições Abertas</span>
+                                <div className={`inline-flex items-center gap-3 px-4 py-2 rounded-full border mb-8 ${INSCRICOES_ABERTAS ? "border-[var(--green-bull)]/20 bg-[var(--green-bull)]/5" : "border-[var(--white-10)] bg-slate-200"}`}>
+                                    <span className={`w-2 h-2 rounded-full ${INSCRICOES_ABERTAS ? "bg-[var(--green-bull)] animate-pulse" : "bg-slate-100"}`} />
+                                    <span className="text-xs font-bold tracking-widest uppercase text-[var(--dark-pure)]">
+                                        {INSCRICOES_ABERTAS ? "Inscrições Abertas" : "Inscrições Encerradas"}
+                                    </span>
                                 </div>
                             </FadeIn>
 
                             <FadeIn delay={0.1}>
                                 <h2 className="font-display font-black text-6xl md:text-7xl uppercase leading-[0.9] tracking-tighter mb-6 text-[var(--dark-pure)]">
-                                    Venha <br />
-                                    <span className="text-[var(--green-pure)]">Rápido</span>
+                                    {INSCRICOES_ABERTAS ? (
+                                        <>Venha <br /><span className="text-[var(--green-pure)]">Rápido</span></>
+                                    ) : (
+                                        <>Em <br /><span className="text-[var(--green-pure)]">Breve</span></>
+                                    )}
                                 </h2>
                             </FadeIn>
 
                             <FadeIn delay={0.2}>
                                 <p className="text-xl text-[var(--dark-medium)] font-medium leading-relaxed mb-8">
-                                    Faça parte da próxima turma da Mentoria.{" "} 
-                                    <strong className="text-[var(--dark-pure)] font-bold">Clique no link ao lado</strong>, 
-                                    realize sua inscrição e entre para o grupo oficial de Alunos TDS.
-                                    <br /><br />
-                                    As <strong className="text-[var(--dark-pure)] font-bold">vagas são limitadas</strong>, 
-                                    aproveite essa oportunidade única de transformar a sua jornada no mercado financeiro.
+                                    {INSCRICOES_ABERTAS ? (
+                                        <>
+                                            Faça parte da próxima turma da Mentoria.{" "}
+                                            <strong className="text-[var(--dark-pure)] font-bold">Clique no link ao lado</strong>,
+                                            realize sua inscrição e entre para o grupo oficial de Alunos TDS.
+                                            <br /><br />
+                                            As <strong className="text-[var(--dark-pure)] font-bold">vagas são limitadas</strong>,
+                                            aproveite essa oportunidade única de transformar a sua jornada no mercado financeiro.
+                                        </>
+                                    ) : (
+                                        <>
+                                            A turma atual da Mentoria já está em andamento e as inscrições foram encerradas.
+                                            <br /><br />
+                                            Uma <strong className="text-[var(--dark-pure)] font-bold">nova turma está sendo preparada</strong>.
+                                            Fique de olho nas nossas redes sociais para não perder as próximas novidades.
+                                        </>
+                                    )}
                                 </p>
                             </FadeIn>
                         </div>
@@ -59,12 +76,18 @@ export function Waitlist() {
                                         </svg>
                                     </div>
 
-                                    <button
-                                        onClick={openModal}
-                                        className="w-full bg-[var(--green-pure)] text-[var(--ligth-elevated)] font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-[var(--green-pure)]/85 transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group shadow-sm"
-                                    >
-                                        Quero entrar! <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                                    </button>
+                                    {INSCRICOES_ABERTAS ? (
+                                        <button
+                                            onClick={openModal}
+                                            className="w-full bg-[var(--green-pure)] text-[var(--ligth-elevated)] font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-[var(--green-pure)]/85 transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group shadow-sm"
+                                        >
+                                            Quero entrar! <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                                        </button>
+                                    ) : (
+                                        <div className="w-full bg-slate-100 text-slate-400 font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl flex items-center justify-center gap-3 mt-4 cursor-not-allowed">
+                                            Inscrições Encerradas
+                                        </div>
+                                    )}
 
                                     <p className="text-center text-sm text-[var(--dark-medium)] mt-6 uppercase tracking-widest font-bold">
                                         Grupo Oficial de Alunos TDS

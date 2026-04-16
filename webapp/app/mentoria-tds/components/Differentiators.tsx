@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FadeIn } from "../../components/FadeIn";
 import { useModal } from "../ModalContext";
+import { INSCRICOES_ABERTAS } from "../config";
 
 export function Differentiators() {
     const { openModal } = useModal();
@@ -58,14 +59,16 @@ export function Differentiators() {
                         </FadeIn>
                     ))}
                 </div>
-                <FadeIn delay={0.2} className="w-full md:w-auto shrink-0">
-                    <button
-                        onClick={openModal}
-                        className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(0,191,99,0.30)] hover:shadow-[0_4px_30px_rgba(0,191,99,0.50)] w-fit mx-auto mt-10"
-                    >
-                        Quero Fazer Parte
-                    </button>
-                </FadeIn>
+                {INSCRICOES_ABERTAS && (
+                    <FadeIn delay={0.2} className="w-full md:w-auto shrink-0">
+                        <button
+                            onClick={openModal}
+                            className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(0,191,99,0.30)] hover:shadow-[0_4px_30px_rgba(0,191,99,0.50)] w-fit mx-auto mt-10"
+                        >
+                            Quero Fazer Parte
+                        </button>
+                    </FadeIn>
+                )}
             </div>
         </section>
     );
