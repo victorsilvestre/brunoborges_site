@@ -3,7 +3,7 @@ import { Header } from "./home/components/Header";
 import { HeroManifesto } from "./home/components/HeroManifesto";
 import { BiografiaEditorial } from "./home/components/BiografiaEditorial";
 import { CaraDaMadrugada } from "./home/components/CaraDaMadrugada";
-import { Metodologia } from "./home/components/Metodologia";
+import { MetodologiaTeaser } from "./home/components/MetodologiaTeaser";
 import { Eventos } from "./home/components/Eventos";
 import { VitrineOrganica } from "./home/components/VitrineOrganica";
 import { PortfolioMentorias } from "./home/components/PortfolioMentorias";
@@ -22,7 +22,7 @@ export default function HomePage() {
       <HeroManifesto />
       <BiografiaEditorial />
       <CaraDaMadrugada />
-      <Metodologia />
+      <MetodologiaTeaser />
       <Eventos />
       <VitrineOrganica />
       <PortfolioMentorias />

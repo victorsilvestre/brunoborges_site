@@ -543,10 +543,10 @@ export function Metodologia() {
                 <FadeIn delay={0.3}>
                     <div className="text-center">
                         <a
-                            href="#mentorias"
+                            href="/mentoria-tds"
                             className="inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all hover:shadow-[var(--glow-green)] hover:scale-105 text-lg"
                         >
-                            Quero Aprender a Metodologia
+                            Quero Aprender na Mentoria TDS
                         </a>
                     </div>
                 </FadeIn>
