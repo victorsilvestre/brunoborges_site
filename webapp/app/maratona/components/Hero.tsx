@@ -28,7 +28,7 @@ export function Hero() {
                         <FadeIn delay={0.1}>
                             <h1 className="font-display font-black text-5xl md:text-6xl lg:text-[70px] leading-[1.05] tracking-tight mb-6 text-[var(--dark-pure)]">
                                 Participe da <br />
-                                <span className="text-[var(--dark-pure)]">14ª Maratona</span>{" "}
+                                <span className="text-[var(--dark-pure)]">15ª Maratona</span>{" "}
                                 <span className="block italic" style={{ color: 'var(--green-dark)' }}>Trader de Sucesso</span>
                             </h1>
                         </FadeIn>
@@ -43,7 +43,7 @@ export function Hero() {
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-10">
                                 <div className="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <Calendar className="w-5 h-5" style={{ color: 'var(--red-pure)' }} />
-                                    <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">31/03 a 02/04/26</span>
+                                    <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">23/06 a 25/06/26</span>
                                 </div>
                                 <div className="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">100% Online e Gratuito</span>
@@ -53,7 +53,7 @@ export function Hero() {
 
                         <FadeIn delay={0.4}>
                             <div className="flex flex-col sm:flex-row gap-6 items-center">
-                                <a href="https://t.me/+7OFz4IzbCLQ5MDhh" target="_blank" rel="noopener noreferrer" className="text-white py-4 px-8 text-lg w-full sm:w-auto flex items-center justify-center rounded-xl transition-all hover:-translate-y-1" style={{ background: 'var(--green-pure)', boxShadow: '0 8px 20px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 20px var(--green-dim)'; }}>
+                                <a href="https://t.me/+eyQwbBFDUXBkMGIx" target="_blank" rel="noopener noreferrer" className="text-white py-4 px-8 text-lg w-full sm:w-auto flex items-center justify-center rounded-xl transition-all hover:-translate-y-1" style={{ background: 'var(--green-pure)', boxShadow: '0 8px 20px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 20px var(--green-dim)'; }}>
                                     <span className="font-bold">Garantir Minha Vaga</span>
                                     <ArrowRight className="w-5 h-5 ml-2" />
                                 </a>

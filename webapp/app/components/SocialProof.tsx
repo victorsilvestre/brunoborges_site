@@ -2,7 +2,7 @@
 
 import { FadeIn } from "./FadeIn";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const testimonials = [
     { text: "Aula fantástica, com explicação focada nos detalhes e nas nossas dúvidas. Uma sensação libertadora de que é tudo muito simples se tiver disciplina e focar no SIMPLES sem inventar moda.\n\nE o mais sensacional de tudo é vcs fazerem um intensivão em pleno sábado, o dia inteiro, para atualizarem os ex-alunos das novidades e melhorias do operacional. Isso não existe em nenhum lugar. Muito obrigada. Gratidão!", author: "Debora Malta", role: "Aluna TDS", color: "var(--green-bull)" },
@@ -26,6 +26,7 @@ export function SocialProof({
     titleHighlightClass: string;
 }) {
     const scrollRef = useRef<HTMLDivElement>(null);
+    const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
 
     const scroll = (direction: "left" | "right") => {
         if (scrollRef.current) {
@@ -65,10 +66,12 @@ export function SocialProof({
                         ref={scrollRef}
                         className="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                     >
-                        {testimonials.map((t, idx) => (
+                        {testimonials.map((t, idx) => {
+                            const isExpanded = expandedIdx === idx;
+                            return (
                             <div
                                 key={idx}
-                                className="w-[85vw] sm:w-[420px] shrink-0 snap-center sm:snap-start flex flex-col justify-between p-8 sm:p-10 rounded-[2rem] border border-slate-200 bg-white shadow-sm hover:border-[var(--green-pure)]/40 transition-colors h-auto"
+                                className="w-[85vw] sm:w-[420px] shrink-0 snap-center sm:snap-start flex flex-col p-8 sm:p-10 rounded-[2rem] border border-slate-200 bg-white shadow-sm hover:border-[var(--green-pure)]/40 transition-colors h-auto"
                             >
                                 <div
                                     className="font-display font-black text-6xl leading-none opacity-20 mb-6"
@@ -77,9 +80,23 @@ export function SocialProof({
                                     "
                                 </div>
 
-                                <p className="text-lg md:text-xl text-[var(--dark-medium)] font-medium italic leading-relaxed mb-auto whitespace-pre-line">
-                                    {t.text}
-                                </p>
+                                <div className="flex-1">
+                                    <div className="relative">
+                                        <p className={`text-lg md:text-xl text-[var(--dark-medium)] font-medium italic leading-relaxed whitespace-pre-line transition-all duration-300 ${!isExpanded ? "line-clamp-4" : ""}`}>
+                                            {t.text}
+                                        </p>
+                                        {!isExpanded && (
+                                            <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+                                        )}
+                                    </div>
+                                    <button
+                                        onClick={() => setExpandedIdx(isExpanded ? null : idx)}
+                                        className="mt-3 text-sm font-bold uppercase tracking-widest transition-colors cursor-pointer"
+                                        style={{ color: t.color === "var(--white)" ? "var(--dark-medium)" : t.color }}
+                                    >
+                                        {isExpanded ? "Ler menos ↑" : "Ler mais ↓"}
+                                    </button>
+                                </div>
 
                                 <div className="pt-6 border-t border-slate-100 flex items-center gap-4 mt-6">
                                     <div
@@ -101,7 +118,8 @@ export function SocialProof({
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </FadeIn>
 

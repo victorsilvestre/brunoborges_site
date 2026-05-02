@@ -24,18 +24,19 @@ export function HowToParticipate() {
 
                 <FadeIn delay={0.2}>
                     <p className="text-xl md:text-2xl text-[var(--white-80)] max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-                        Para receber os links das aulas, basta entrar no nosso <strong className="text-white">grupo exclusivo da Maratona Trader de Sucesso</strong>.
+                        Para receber os links ao vivo, as gravações das aulas depois que a Maratona acontecer, 
+                        e o resumo exclusivo entre no grupo exclusivo da <strong className="text-white">Maratona Trader de Sucesso</strong>.
                         <br />
                         <br />
-                        Você será avisado sobre cada aula e terá acesso a conteúdos bônus liberados durante o evento.
+                        Você será avisado sobre cada aula e terá acesso a <strong className="text-white">conteúdos bônus</strong> liberados durante o evento.
                     </p>
                 </FadeIn>
 
                 <FadeIn delay={0.3}>
                     <div className="flex justify-center">
-                        <a href="https://t.me/+7OFz4IzbCLQ5MDhh" target="_blank" rel="noopener noreferrer" className="btn text-white group relative overflow-hidden py-5 px-10 text-lg sm:w-auto flex items-center justify-center rounded-sm transition-all" style={{ background: 'var(--red-pure)', boxShadow: '0 0 30px var(--red-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--red-hover)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-red)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--red-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 30px var(--red-dim)'; }}>
+                        <a href="https://t.me/+eyQwbBFDUXBkMGIx" target="_blank" rel="noopener noreferrer" className="btn text-white group relative overflow-hidden py-5 px-10 text-lg sm:w-auto flex items-center justify-center rounded-sm transition-all" style={{ background: 'var(--red-pure)', boxShadow: '0 0 30px var(--red-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--red-hover)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-red)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--red-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 30px var(--red-dim)'; }}>
                             <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
-                                Quero Participar! <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                Quero Participar e receber os bônus! <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </a>
                     </div>

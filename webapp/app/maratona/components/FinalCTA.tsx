@@ -26,7 +26,7 @@ export function FinalCTA() {
                         </FadeIn>
                         <FadeIn delay={0.2}>
                             <p className="text-lg md:text-xl text-[var(--white-60)] font-medium leading-relaxed max-w-2xl">
-                                A 14ª Maratona Trader de Sucesso será um evento 100% online e gratuito, 
+                                A 15ª Maratona Trader de Sucesso será um evento 100% online e gratuito, 
                                 onde vou compartilhar conteúdos práticos, visão de mercado e peças valiosas do meu operacional. 
                                 Para garantir que você não perca nenhuma aula, entre no nosso grupo exclusivo.
                             </p>
@@ -36,7 +36,7 @@ export function FinalCTA() {
 
                 <FadeIn delay={0.3}>
                     <div className="flex justify-start">
-                        <a href="https://t.me/+7OFz4IzbCLQ5MDhh" target="_blank" rel="noopener noreferrer" className="btn text-white group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto inline-flex items-center justify-center rounded-sm transition-all" style={{ background: 'var(--green-pure)', boxShadow: '0 0 40px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 40px var(--green-dim)'; }}>
+                        <a href="https://t.me/+eyQwbBFDUXBkMGIx" target="_blank" rel="noopener noreferrer" className="btn text-white group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto inline-flex items-center justify-center rounded-sm transition-all" style={{ background: 'var(--green-pure)', boxShadow: '0 0 40px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 40px var(--green-dim)'; }}>
                             <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
                                 Entrar no Grupo Exclusivo <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
