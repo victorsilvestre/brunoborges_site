@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/next';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { Inter, Montserrat, Dancing_Script } from "next/font/google";
 import "./globals.css";
 
@@ -42,6 +43,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${inter.variable} ${montserrat.variable} ${dancingScript.variable} h-full antialiased`}
     >
+      <GoogleTagManager gtmId="GTM-557S97RM" />
       <body className="min-h-full flex flex-col">{children}<Analytics /></body>
     </html>
   );
