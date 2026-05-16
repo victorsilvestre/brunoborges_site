@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Hero } from "./components/Hero";
+import { AboutMentor } from "./components/AboutMentor";
 import { AboutEvent } from "./components/AboutEvent";
 import { WhatYouWillLearn } from "./components/WhatYouWillLearn";
 import { HowToParticipate } from "./components/HowToParticipate";
@@ -16,6 +17,7 @@ export default function MaratonaPage() {
     return (
         <main className="bg-[var(--dark-base)] min-h-screen text-white selection:bg-red-500 selection:text-white">
             <Hero />
+            <AboutMentor />
             <AboutEvent />
             <WhatYouWillLearn />
             <HowToParticipate />

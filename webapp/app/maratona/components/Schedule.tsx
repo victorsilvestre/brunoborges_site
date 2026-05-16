@@ -35,7 +35,7 @@ export function Schedule() {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <FadeIn>
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-14">
                         <h2 className="font-display font-black text-5xl md:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
                             Calendário <br />
                             <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, var(--green-pure), var(--green-dark))' }}>Completo</span>
@@ -103,7 +103,7 @@ export function Schedule() {
                             href="https://t.me/+eyQwbBFDUXBkMGIx"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 py-5 px-10 rounded-xl font-display font-bold text-lg uppercase tracking-wider text-white transition-all duration-300 hover:scale-105"
+                            className="inline-flex items-center gap-3 py-4 px-8 rounded-xl font-display font-bold text-sm uppercase tracking-wider text-white transition-all duration-300 hover:scale-105"
                             style={{ background: 'linear-gradient(to right, var(--green-pure), var(--green-dark))', boxShadow: '0 0 40px var(--green-dim)' }}
                         >
                             Entrar no Grupo Exclusivo <ArrowRight className="w-5 h-5" />

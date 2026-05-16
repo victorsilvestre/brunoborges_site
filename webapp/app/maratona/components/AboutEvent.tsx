@@ -26,7 +26,7 @@ export function AboutEvent() {
                             </h3>
                         </FadeIn>
                         <FadeIn delay={0.2}>
-                            <p className="text-lg md:text-xl text-[var(--white-60)] font-medium leading-relaxed max-w-2xl">
+                            <p className="text-base text-[var(--white-60)] font-light leading-relaxed max-w-2xl">
                                 Durante 3 dias intensivos de muito aprendizado, análise técnica estruturada e insights, vou compartilhar peças valiosas do meu operacional.
                                 <br />
                                 <br />

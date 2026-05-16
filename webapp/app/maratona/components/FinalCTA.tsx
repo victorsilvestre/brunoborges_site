@@ -12,7 +12,7 @@ export function FinalCTA() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] blur-[200px] rounded-full pointer-events-none" style={{ background: 'var(--green-dim)' }} />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-8">
                     <div className="max-w-3xl">
                         <FadeIn>
                             <h2 className="text-[var(--white-50)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
@@ -25,7 +25,7 @@ export function FinalCTA() {
                             </h3>
                         </FadeIn>
                         <FadeIn delay={0.2}>
-                            <p className="text-lg md:text-xl text-[var(--white-60)] font-medium leading-relaxed max-w-2xl">
+                            <p className="text-base text-[var(--white-60)] font-light leading-relaxed max-w-2xl">
                                 A 15ª Maratona Trader de Sucesso será um evento 100% online e gratuito, 
                                 onde vou compartilhar conteúdos práticos, visão de mercado e peças valiosas do meu operacional. 
                                 Para garantir que você não perca nenhuma aula, entre no nosso grupo exclusivo.

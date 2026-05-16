@@ -23,12 +23,14 @@ export function HowToParticipate() {
                 </FadeIn>
 
                 <FadeIn delay={0.2}>
-                    <p className="text-xl md:text-2xl text-[var(--white-80)] max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                    <p className="text-base text-[var(--white-60)] max-w-2xl mx-auto mb-12 font-light leading-relaxed">
                         Para receber os links ao vivo, as gravações das aulas depois que a Maratona acontecer, 
                         e o resumo exclusivo entre no grupo exclusivo da <strong className="text-white">Maratona Trader de Sucesso</strong>.
                         <br />
                         <br />
-                        Você será avisado sobre cada aula e terá acesso a <strong className="text-white">conteúdos bônus</strong> liberados durante o evento.
+                        Você será avisado sobre cada aula e terá acesso a 
+                        <strong className="text-white"> conteúdos bônus </strong> 
+                        liberados durante o evento. Além de áudios e vídeos exclusivos no grupo!
                     </p>
                 </FadeIn>
 
