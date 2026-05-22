@@ -10,21 +10,21 @@ export function Schedule() {
             subtitle: "AULA 1 - TERÇA",
             date: "23/06",
             time: "20HRS",
-            topics: "Aprenda a ler o gráfico sem indicadores",
+            topics: "O básico que quase ninguém aprende sobre o gráfico",
             url: ""
         },
         {
             subtitle: "AULA 2 - QUARTA",
             date: "24/06",
             time: "20HRS",
-            topics: "Lucro diário começa com negação",
+            topics: "A estratégia que mudou a minha vida",
             url: ""
         },
         {
             subtitle: "AULA 3 - QUINTA",
             date: "25/06",
             time: "20HRS",
-            topics: "Scalp preciso, resultado real",
+            topics: "O método para Scalp limpo, rápido e objetivo",
             url: ""
         }
     ];
