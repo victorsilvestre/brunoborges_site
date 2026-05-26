@@ -43,22 +43,20 @@ export function SocialProof({
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--green-bull)]/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full overflow-hidden">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-                    <div className="max-w-xl">
-                        <FadeIn>
-                            <h2 className="text-[var(--white-30)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                                Depoimentos
-                            </h2>
-                        </FadeIn>
-                        <FadeIn delay={0.1}>
-                            <h3 className="font-display font-black text-4xl md:text-6xl text-white uppercase leading-[0.9] tracking-tighter">
-                                {title} <br />
-                                <span className={titleHighlightClass}>
-                                    {titleHighlight}
-                                </span>
-                            </h3>
-                        </FadeIn>
-                    </div>
+                <div className="text-center mb-16">
+                    <FadeIn>
+                        <h2 className="text-[var(--white-30)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
+                            Depoimentos
+                        </h2>
+                    </FadeIn>
+                    <FadeIn delay={0.1}>
+                        <h3 className="font-display font-black text-4xl md:text-6xl text-white uppercase leading-[0.9] tracking-tighter">
+                            {title} <br />
+                            <span className={titleHighlightClass}>
+                                {titleHighlight}
+                            </span>
+                        </h3>
+                    </FadeIn>
                 </div>
 
                 <FadeIn delay={0.3}>

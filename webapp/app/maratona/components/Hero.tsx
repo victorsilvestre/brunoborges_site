@@ -5,7 +5,7 @@ import { FadeIn } from "../../components/FadeIn";
 
 export function Hero() {
     return (
-        <section className="relative min-h-[95vh] lg:min-h-screen flex items-center overflow-hidden pt-20 bg-[var(--light-base)]">
+        <section className="relative min-h-[95vh] lg:min-h-screen flex items-center overflow-hidden py-14 lg:py-0 bg-[var(--light-base)]">
             {/* Light Background Pattern */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]"></div>
@@ -14,18 +14,18 @@ export function Hero() {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full mb-10">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-end">
                     {/* Left Column: Text */}
-                    <div className="max-w-xl">
+                    <div className="max-w-xl pb-0">
                         <FadeIn>
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg border mb-8" style={{ borderColor: 'var(--red-border)', background: 'var(--red-border)', color: 'var(--red-pure)' }}>
+                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg border mb-5" style={{ borderColor: 'var(--red-border)', background: 'var(--red-border)', color: 'var(--red-pure)' }}>
                                 <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--red-pure)', boxShadow: '0 0 8px var(--red-dim)' }} />
                                 <span className="text-xs font-bold tracking-widest uppercase">Evento Online Exclusivo</span>
                             </div>
                         </FadeIn>
 
                         <FadeIn delay={0.1}>
-                            <h1 className="font-display font-black text-5xl md:text-6xl lg:text-[70px] leading-[1.05] tracking-tight mb-6 text-[var(--dark-pure)]">
+                            <h1 className="font-display font-black text-4xl md:text-5xl lg:text-[56px] leading-[1.05] tracking-tight mb-4 text-[var(--dark-pure)]">
                                 Pare de operar<br />
                                 <span className="text-[var(--dark-pure)]">no escuro.</span>{" "}
                                 <span style={{ color: 'var(--green-dark)' }}>Entenda o gráfico e melhore seus resultados.</span>
@@ -33,18 +33,18 @@ export function Hero() {
                         </FadeIn>
 
                         <FadeIn delay={0.2}>
-                            <p className="text-lg md:text-xl text-[var(--dark-medium)] mb-8 leading-relaxed max-w-[480px]">
+                            <p className="text-base md:text-lg text-[var(--dark-medium)] mb-5 leading-relaxed max-w-[440px]">
                                 Entre no grupo exclusivo da Maratona Trader de Sucesso e conheça o método que eu utilizo todos os dias para operar com os meus alunos e sair positivo no mercado.
                             </p>
                         </FadeIn>
 
                         <FadeIn delay={0.25}>
-                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-10">
-                                <div className="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-white shadow-sm border border-slate-200">
-                                    <Calendar className="w-5 h-5" style={{ color: 'var(--red-pure)' }} />
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white shadow-sm border border-slate-200">
+                                    <Calendar className="w-4 h-4" style={{ color: 'var(--red-pure)' }} />
                                     <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">23, 24 e 25/06</span>
                                 </div>
-                                <div className="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-white shadow-sm border border-slate-200">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">100% Online e Gratuito</span>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@ export function Hero() {
 
                         <FadeIn delay={0.4}>
                             <div className="flex flex-col sm:flex-row gap-6 items-center">
-                                <a href="https://t.me/+eyQwbBFDUXBkMGIx" target="_blank" rel="noopener noreferrer" className="text-white py-4 px-8 text-lg w-full sm:w-auto flex items-center justify-center rounded-xl transition-all hover:-translate-y-1" style={{ background: 'var(--green-pure)', boxShadow: '0 8px 20px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 20px var(--green-dim)'; }}>
+                                <a href="https://t.me/+eyQwbBFDUXBkMGIx" target="_blank" rel="noopener noreferrer" className="text-white py-3 px-7 text-base w-full sm:w-auto flex items-center justify-center rounded-xl transition-all hover:-translate-y-1" style={{ background: 'var(--green-pure)', boxShadow: '0 8px 20px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 20px var(--green-dim)'; }}>
                                     <span className="font-bold">Entrar no Grupo Exclusivo da Maratona</span>
                                     <ArrowRight className="w-5 h-5 ml-2" />
                                 </a>

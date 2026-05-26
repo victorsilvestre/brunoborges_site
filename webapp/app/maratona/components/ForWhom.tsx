@@ -26,7 +26,7 @@ export function ForWhom() {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <FadeIn>
-                    <div className="mb-14">
+                    <div className="mb-14 text-center">
                         <span className="text-[10px] font-bold tracking-[0.35em] uppercase text-[var(--green-pure)] block mb-4">
                             Público do Evento
                         </span>

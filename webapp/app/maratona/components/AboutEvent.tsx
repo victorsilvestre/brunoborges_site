@@ -12,28 +12,26 @@ export function AboutEvent() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] rounded-full pointer-events-none" style={{ background: 'var(--green-dim)' }} />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                    <div className="max-w-3xl">
-                        <FadeIn>
-                            <h2 className="text-[var(--white-20)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                                Sobre o evento
-                            </h2>
-                        </FadeIn>
-                        <FadeIn delay={0.1}>
-                            <h3 className="font-display font-black text-5xl md:text-6xl text-white uppercase leading-[0.95] tracking-tighter mb-6">
-                                O gráfico fala com a gente<br />
-                                <span className="text-[var(--green-bull)]">Eu vou te ensinar a ouvir</span>
-                            </h3>
-                        </FadeIn>
-                        <FadeIn delay={0.2}>
-                            <p className="text-base text-[var(--white-60)] font-light leading-relaxed max-w-2xl">
-                                Durante 3 dias, eu vou ensinar para você um método operacional extremamente simples e mostrar na prática o que observo antes de entrar nas operações ao vivo.
-                                <br />
-                                <br />
-                                Você vai aprender comigo a ler o movimento do preço, entender o que o mercado está fazendo e, principalmente, identificar as melhores oportunidades para operar consistentemente.
-                            </p>
-                        </FadeIn>
-                    </div>
+                <div className="text-center mb-20">
+                    <FadeIn>
+                        <h2 className="text-[var(--white-20)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
+                            Sobre o evento
+                        </h2>
+                    </FadeIn>
+                    <FadeIn delay={0.1}>
+                        <h3 className="font-display font-black text-5xl md:text-6xl text-white uppercase leading-[0.95] tracking-tighter mb-6">
+                            O gráfico conversa com a gente.<br/>
+                            <span className="text-[var(--green-bull)]">Mas você precisa entender.</span>
+                        </h3>
+                    </FadeIn>
+                    <FadeIn delay={0.2}>
+                        <p className="text-base text-[var(--white-60)] font-light leading-relaxed max-w-2xl mx-auto">
+                            Durante 3 dias, eu vou ensinar para você um método operacional extremamente simples e mostrar na prática o que observo antes de entrar nas operações ao vivo.
+                            <br />
+                            <br />
+                            Você vai aprender comigo a ler o movimento do preço, entender o que o mercado está fazendo e, principalmente, identificar as melhores oportunidades para operar consistentemente tirar dinheiro do mercado.
+                        </p>
+                    </FadeIn>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
