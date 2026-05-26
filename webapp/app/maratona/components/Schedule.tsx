@@ -11,6 +11,7 @@ export function Schedule() {
             date: "23/06",
             time: "20HRS",
             topics: "O básico que quase ninguém aprende sobre o gráfico",
+            description: "A maioria dos traders pula essa etapa — e paga muito caro por isso. Nessa aula você vai entender como o preço realmente se comporta, o que o gráfico comunica antes de qualquer movimento e por que a leitura correta das obrigações dos candles é o que separa quem opera bem de quem não consegue fechar no positivo.",
             url: ""
         },
         {
@@ -18,25 +19,28 @@ export function Schedule() {
             date: "24/06",
             time: "20HRS",
             topics: "A estratégia que mudou a minha vida",
+            description: "O Bruno vai compartilhar a primeira estratégia que ele utilizou no mercado financeiro e que transformou a vida dele. Você vai acompanhar as entradas, os alvos e o gerenciamento de risco de cada operação. Você vai aprender a aplicar essa estratégia nos principais ativos do mercado e por que ela funciona independente do cenário.",
             url: ""
         },
         {
             subtitle: "AULA 3 - QUINTA",
             date: "25/06",
             time: "20HRS",
-            topics: "O método para Scalp limpo, rápido e objetivo",
+            topics: "O método para fazer Scalp rápido e objetivo",
+            description: "Scalp não é sobre velocidade — é sobre precisão. Nessa última aula da Maratona, você vai aprender como montar operações curtas com critério, sem ansiedade e com risco controlado. O objetivo é ensinar para você exatamente quando entrar, quando sair e quando ficar de fora do mercado para não tomar loss à toa.",
             url: ""
         }
     ];
 
     return (
-        <section className="py-24 bg-[var(--light-base)] relative overflow-hidden border-b border-slate-200">
+        <section className="py-24 bg-[var(--dark-pure)] relative overflow-hidden border-b border-[var(--white-10)]">
             <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[160px] rounded-full pointer-events-none" style={{ background: 'var(--green-dim)' }} />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <FadeIn>
                     <div className="text-center mb-14">
-                        <h2 className="font-display font-black text-5xl md:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
+                        <h2 className="font-display font-black text-5xl md:text-7xl text-white uppercase leading-[0.9] tracking-tighter">
                             Calendário <br />
                             <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, var(--green-pure), var(--green-dark))' }}>Completo</span>
                         </h2>
@@ -78,6 +82,9 @@ export function Schedule() {
                                             {day.topics}
                                         </p>
                                     </div>
+                                    <p className="text-sm text-[var(--dark-medium)] font-light leading-relaxed">
+                                        {day.description}
+                                    </p>
                                     {day.url && (
                                         <a
                                             href={day.url}

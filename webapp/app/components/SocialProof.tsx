@@ -39,19 +39,19 @@ export function SocialProof({
     };
 
     return (
-        <section className="py-32 bg-[var(--light-surface)] relative overflow-hidden border-y border-slate-200">
+        <section className="py-32 bg-[var(--dark-pure)] relative overflow-hidden border-y border-[var(--white-10)]">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--green-bull)]/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full overflow-hidden">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                     <div className="max-w-xl">
                         <FadeIn>
-                            <h2 className="text-[var(--dark-medium)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
+                            <h2 className="text-[var(--white-30)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
                                 Depoimentos
                             </h2>
                         </FadeIn>
                         <FadeIn delay={0.1}>
-                            <h3 className="font-display font-black text-4xl md:text-6xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
+                            <h3 className="font-display font-black text-4xl md:text-6xl text-white uppercase leading-[0.9] tracking-tighter">
                                 {title} <br />
                                 <span className={titleHighlightClass}>
                                     {titleHighlight}
@@ -126,13 +126,13 @@ export function SocialProof({
                 <div className="flex md:hidden items-center justify-center gap-4 mt-4">
                     <button
                         onClick={() => scroll("left")}
-                        className="p-4 rounded-full border border-slate-200 bg-white active:bg-slate-50 transition-colors text-[var(--dark-pure)] shadow-sm"
+                        className="p-4 rounded-full border border-[var(--white-10)] bg-white/5 active:bg-white/10 transition-colors text-white shadow-sm"
                     >
                         <ChevronLeft className="w-6 h-6" />
                     </button>
                     <button
                         onClick={() => scroll("right")}
-                        className="p-4 rounded-full border border-slate-200 bg-white active:bg-slate-50 transition-colors text-[var(--dark-pure)] shadow-sm"
+                        className="p-4 rounded-full border border-[var(--white-10)] bg-white/5 active:bg-white/10 transition-colors text-white shadow-sm"
                     >
                         <ChevronRight className="w-6 h-6" />
                     </button>

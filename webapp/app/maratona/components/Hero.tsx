@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowRight, Calendar, TrendingUp, Target } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
 
 export function Hero() {
@@ -27,15 +26,15 @@ export function Hero() {
 
                         <FadeIn delay={0.1}>
                             <h1 className="font-display font-black text-5xl md:text-6xl lg:text-[70px] leading-[1.05] tracking-tight mb-6 text-[var(--dark-pure)]">
-                                Participe da <br />
-                                <span className="text-[var(--dark-pure)]">15ª Maratona</span>{" "}
-                                <span className="block italic" style={{ color: 'var(--green-dark)' }}>Trader de Sucesso</span>
+                                Pare de operar<br />
+                                <span className="text-[var(--dark-pure)]">no escuro.</span>{" "}
+                                <span style={{ color: 'var(--green-dark)' }}>Entenda o gráfico e melhore seus resultados.</span>
                             </h1>
                         </FadeIn>
 
                         <FadeIn delay={0.2}>
                             <p className="text-lg md:text-xl text-[var(--dark-medium)] mb-8 leading-relaxed max-w-[480px]">
-                                Aprenda de forma direta, organizada e sem custo. Domine as ferramentas e estratégias para operar no mercado financeiro entendendo exatamente o que o gráfico está mostrando.
+                                Entre no grupo exclusivo da Maratona Trader de Sucesso e conheça o método que eu utilizo todos os dias para operar com os meus alunos e sair positivo no mercado.
                             </p>
                         </FadeIn>
 
@@ -43,7 +42,7 @@ export function Hero() {
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-10">
                                 <div className="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <Calendar className="w-5 h-5" style={{ color: 'var(--red-pure)' }} />
-                                    <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">23/06 a 25/06/26</span>
+                                    <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">23, 24 e 25/06</span>
                                 </div>
                                 <div className="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">100% Online e Gratuito</span>
@@ -54,11 +53,11 @@ export function Hero() {
                         <FadeIn delay={0.4}>
                             <div className="flex flex-col sm:flex-row gap-6 items-center">
                                 <a href="https://t.me/+eyQwbBFDUXBkMGIx" target="_blank" rel="noopener noreferrer" className="text-white py-4 px-8 text-lg w-full sm:w-auto flex items-center justify-center rounded-xl transition-all hover:-translate-y-1" style={{ background: 'var(--green-pure)', boxShadow: '0 8px 20px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 20px var(--green-dim)'; }}>
-                                    <span className="font-bold">Garantir Minha Vaga</span>
+                                    <span className="font-bold">Entrar no Grupo Exclusivo da Maratona</span>
                                     <ArrowRight className="w-5 h-5 ml-2" />
                                 </a>
 
-                                {/* Social Proof block similar to reference */}
+                                {/* Social Proof block similar to reference 
                                 <div className="flex items-center gap-3 w-full sm:w-auto mt-2 sm:mt-0">
                                     <div className="flex -space-x-2">
                                         <img src="https://i.pravatar.cc/100?img=1" alt="Alunos" className="w-9 h-9 rounded-full border-2 border-white shadow-sm" />
@@ -71,81 +70,64 @@ export function Hero() {
                                         </div>
                                         <span className="text-xs font-medium text-[var(--dark-medium)]">(+1,2k alunos)</span>
                                     </div>
-                                </div>
+                                </div>*/}
                             </div>
                         </FadeIn>
                     </div>
 
-                    {/* Right Column: Illustration / Floating Elements */}
-                    <div className="relative mt-16 lg:mt-0 lg:h-[600px] flex items-center justify-center">
-                        <FadeIn delay={0.6} className="relative w-full max-w-lg">
-                            {/* Abstract organic shape behind */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[110%] h-[110%] bg-[#fff0ed] rounded-[30%_70%_70%_30%/30%_30%_70%_70%] -z-10 shadow-inner"></div>
+                    {/* Right Column: Bruno */}
+                    <div className="relative mt-16 lg:mt-0 flex items-end justify-center">
+                        {/* Blob orgânico de fundo — só desktop */}
+                        <div
+                            className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[50%] w-[90%] h-[90%] -z-10"
+                            style={{
+                                background: 'radial-gradient(ellipse at 60% 40%, #e8f5ee 0%, #f0faf4 60%, transparent 100%)',
+                                borderRadius: '60% 40% 55% 45% / 50% 60% 40% 50%',
+                            }}
+                        />
 
-                            {/* Main Setup/Trader Image Area */}
-                            <div className="relative z-10 w-full aspect-[4/3] rounded-3xl bg-white border border-slate-100 shadow-2xl overflow-hidden p-6">
-                                <div className="w-full h-full relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200">
-                                    <img src="/images/image_tela-bruno.png" alt="Tela Bruno Borges" className="w-full h-full object-cover opacity-95" />
-                                </div>
-                            </div>
+                        {/* Glow verde suave de chão — só desktop */}
+                        <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 w-72 h-20 rounded-full blur-[60px] -z-10" style={{ background: 'var(--green-dim)' }} />
 
-                            {/* Floating Widget 1: Profit / Performance */}
-                            <motion.div
-                                animate={{ y: [-10, 10, -10] }}
-                                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                                className="absolute -left-6 md:-left-16 top-16 md:top-24 z-20 bg-white p-5 rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 w-48 max-w-[calc(100vw-40px)]"
-                            >
-                                <div className="flex justify-between items-start mb-2">
-                                    <span className="text-xs font-medium text-[var(--dark-medium)]">Assertividade</span>
-                                    <span className="text-xs font-bold flex items-center" style={{ color: 'var(--green-pure)' }}>
-                                        <TrendingUp className="w-3 h-3 mr-1" /> +90%
-                                    </span>
-                                </div>
-                                <div className="text-3xl font-black text-[var(--dark-pure)]">92,5%</div>
-                                <div className="text-xs text-[var(--dark-medium)] mt-1">No último mês</div>
-                            </motion.div>
+                        {/* Foto do Bruno */}
+                        <div className="relative w-full max-w-[520px]">
+                            <img
+                                src="/images/bruno/img_bruno-corpo_transparente-tratada.png"
+                                alt="Bruno Borges"
+                                className="relative z-10 w-full h-auto object-contain object-bottom select-none"
+                                style={{ filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.12)) drop-shadow(0 4px 12px rgba(0,191,99,0.08))' }}
+                            />
+                        </div>
 
-                            {/* Floating Widget 3: Setup Graph */}
-                            <motion.div
-                                animate={{ y: [-8, 8, -8] }}
-                                transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 1 }}
-                                className="absolute right-0 md:-right-8 -bottom-12 md:-bottom-16 z-20 bg-white p-5 rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 w-48 flex flex-col items-center max-w-[calc(100vw-60px)]"
-                            >
-                                <div className="flex justify-between w-full text-[var(--dark-medium)] text-xs font-medium mb-4">
-                                    <span>Gerenciamento</span>
-                                    <span className="flex items-center" style={{ color: 'var(--green-pure)' }}><TrendingUp className="w-3 h-3 mr-1" />90%</span>
-                                </div>
-                                <div className="relative w-24 h-24">
-                                    <svg viewBox="0 0 36 36" className="w-24 h-24 max-w-full" style={{ color: 'var(--green-pure)' }}>
-                                        <path
-                                            className="text-slate-100"
-                                            strokeWidth="4"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                                        />
-                                        <path
-                                            strokeWidth="4"
-                                            strokeDasharray="90, 100"
-                                            strokeLinecap="round"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                                        />
-                                    </svg>
-                                    <div className="absolute inset-0 flex items-center justify-center flex-col">
-                                        <span className="text-xl font-bold text-[var(--dark-pure)]">90%</span>
-                                    </div>
-                                </div>
-                            </motion.div>
+                        {/* Badge flutuante — autoridade, lado esquerdo (só desktop) */}
+                        <div className="hidden lg:block absolute left-0 lg:-left-4 top-[15%] z-20 bg-white rounded-2xl shadow-[0_12px_30px_-8px_rgba(0,0,0,0.12)] border border-slate-100 p-4 w-44">
+                            <p className="text-[10px] font-bold tracking-widest uppercase text-[var(--dark-medium)] mb-1">Trader profissional</p>
+                            <p className="font-display font-black text-2xl text-[var(--dark-pure)] leading-none">+7 anos</p>
+                            <p className="text-[10px] text-[var(--dark-medium)] mt-1">operando no mercado real</p>
+                        </div>
 
-                            {/* Floating Side Tools matching reference */}
-                            <div className="absolute -right-16 md:-right-24 top-1/4 bg-white rounded-2xl p-2 shadow-lg border border-slate-100 hidden lg:flex flex-col gap-4 z-10">
-                                <div className="p-3 rounded-xl" style={{ background: 'var(--green-dim)', color: 'var(--green-pure)' }}><Target className="w-5 h-5" /></div>
-                                <div className="p-3 text-[var(--dark-medium)] hover:text-[var(--green-pure)] transition-colors"><TrendingUp className="w-5 h-5" /></div>
-                                <div className="p-3 text-[var(--dark-medium)] hover:text-[var(--green-pure)] transition-colors"><Calendar className="w-5 h-5" /></div>
-                            </div>
-                        </FadeIn>
+                        {/* Badge flutuante — social proof, lado direito (só desktop) */}
+                        <div className="hidden lg:block absolute right-0 lg:-right-4 bottom-[18%] z-20 bg-white rounded-2xl shadow-[0_12px_30px_-8px_rgba(0,0,0,0.12)] border border-slate-100 p-4 w-44">
+                            <div className="flex items-center gap-1 text-yellow-400 text-sm mb-1">{"★★★★★"}</div>
+                            <p className="font-display font-black text-2xl text-[var(--dark-pure)] leading-none">+1,2k</p>
+                            <p className="text-[10px] text-[var(--dark-medium)] mt-1">traders formados</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                {/* Stats inline — só mobile, fora do grid */}
+                <div className="hidden max-lg:flex justify-center gap-6 py-4 border-t border-slate-200 bg-[#f0faf4] rounded-b-2xl">
+                    <div className="text-center">
+                        <p className="text-[10px] font-bold tracking-widest uppercase text-[var(--dark-medium)]">Trader profissional</p>
+                        <p className="font-display font-black text-xl text-[var(--dark-pure)] leading-none">+7 anos</p>
+                        <p className="text-[10px] text-[var(--dark-medium)] mt-0.5">no mercado real</p>
+                    </div>
+                    <div className="w-px bg-slate-200" />
+                    <div className="text-center">
+                        <div className="flex items-center justify-center gap-0.5 text-yellow-400 text-xs mb-0.5">{"★★★★★"}</div>
+                        <p className="font-display font-black text-xl text-[var(--dark-pure)] leading-none">+1,2k</p>
+                        <p className="text-[10px] text-[var(--dark-medium)] mt-0.5">traders formados</p>
                     </div>
                 </div>
             </div>

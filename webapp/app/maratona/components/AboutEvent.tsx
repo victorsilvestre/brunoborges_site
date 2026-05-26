@@ -21,16 +21,16 @@ export function AboutEvent() {
                         </FadeIn>
                         <FadeIn delay={0.1}>
                             <h3 className="font-display font-black text-5xl md:text-6xl text-white uppercase leading-[0.95] tracking-tighter mb-6">
-                                Transforme a sua visão de mercado <br />
-                                <span className="text-[var(--green-bull)]">em lucro</span>
+                                O gráfico fala com a gente<br />
+                                <span className="text-[var(--green-bull)]">Eu vou te ensinar a ouvir</span>
                             </h3>
                         </FadeIn>
                         <FadeIn delay={0.2}>
                             <p className="text-base text-[var(--white-60)] font-light leading-relaxed max-w-2xl">
-                                Durante 3 dias intensivos de muito aprendizado, análise técnica estruturada e insights, vou compartilhar peças valiosas do meu operacional.
+                                Durante 3 dias, eu vou ensinar para você um método operacional extremamente simples e mostrar na prática o que observo antes de entrar nas operações ao vivo.
                                 <br />
                                 <br />
-                                Descubra comigo durante a Maratona Trader de Sucesso como estruturar um operacional consistente e aprimorar para sempre as suas habilidades no Day Trade.
+                                Você vai aprender comigo a ler o movimento do preço, entender o que o mercado está fazendo e, principalmente, identificar as melhores oportunidades para operar consistentemente.
                             </p>
                         </FadeIn>
                     </div>
@@ -40,9 +40,9 @@ export function AboutEvent() {
                     <FadeIn delay={0.3}>
                         <div className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                             <LineChart className="w-10 h-10 text-[var(--green-bull)] mb-6" />
-                            <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase">Para Todos os Níveis</h3>
+                            <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase">Do zero ao operacional</h3>
                             <p className="text-[var(--white-60)] leading-relaxed text-lg">
-                                Do iniciante ao avançado. Conteúdo estruturado para você entender a lógica institucional por trás dos movimentos de preço.
+                                Não importa se você está começando agora ou já opera há anos. O conteúdo da Maratona foi pensado para quem quer parar de apanhar do mercado e começar a entender ele de verdade.
                             </p>
                         </div>
                     </FadeIn>
@@ -50,9 +50,9 @@ export function AboutEvent() {
                     <FadeIn delay={0.4}>
                         <div className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                             <BookOpen className="w-10 h-10 mb-6" style={{ color: 'var(--green-bull)' }} />
-                            <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase">100% Prático</h3>
+                            <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase">Direto no gráfico</h3>
                             <p className="text-[var(--white-60)] leading-relaxed text-lg">
-                                Esqueça teorias complicadas. O foco é te ensinar na prática aquilo que aplico todos os dias operando no mercado financeiro.
+                                Eu vou ensinar você a ler o mercado e iremos realizar diversas operações juntos. Você poderá acompanhar tudo da sua tela. As oportunidades, o preço de entrada, o lugar do stop, onde é o alvo, e o pensamento de um trader consistente para cada situação que o mercado fizer. 
                             </p>
                         </div>
                     </FadeIn>

@@ -2,10 +2,12 @@ import { Metadata } from 'next';
 import { Hero } from "./components/Hero";
 import { AboutMentor } from "./components/AboutMentor";
 import { AboutEvent } from "./components/AboutEvent";
+import { ForWhom } from "./components/ForWhom";
 import { WhatYouWillLearn } from "./components/WhatYouWillLearn";
 import { HowToParticipate } from "./components/HowToParticipate";
 import { Schedule } from "./components/Schedule";
 import { SocialProof } from "../components/SocialProof";
+import { FAQ } from "./components/FAQ";
 import { FinalCTA } from "./components/FinalCTA";
 
 export const metadata: Metadata = {
@@ -19,6 +21,7 @@ export default function MaratonaPage() {
             <Hero />
             <AboutMentor />
             <AboutEvent />
+            <ForWhom />
             <WhatYouWillLearn />
             <HowToParticipate />
             <Schedule />
@@ -27,6 +30,7 @@ export default function MaratonaPage() {
                 titleHighlight="Aprova!"
                 titleHighlightClass="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] to-[var(--green-pure)]"
             />
+            <FAQ />
             <FinalCTA />
 
             {/* Footer premium minimalista */}

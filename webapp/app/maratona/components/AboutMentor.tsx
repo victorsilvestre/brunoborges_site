@@ -1,11 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { FadeIn } from "../../components/FadeIn";
 
 const stats = [
     { value: "+7", label: "Anos operando", sub: "mercado real" },
-    { value: "+10", label: "Setups autorais", sub: "testados na prática" },
+    { value: "+10", label: "Padrões autorais", sub: "testados na prática" },
     { value: "+1,2k", label: "Traders formados", sub: "método próprio" },
 ];
 
@@ -78,20 +77,14 @@ export function AboutMentor() {
                         {/* Highlight de chão sob Bruno */}
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-20 bg-[var(--green-bull)]/20 blur-[50px] rounded-full" />
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 60, scale: 0.97 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-                            viewport={{ once: true }}
-                            className="relative w-full max-w-[340px]"
-                        >
+                        <div className="relative w-full max-w-[480px]">
                             <img
-                                src="/images/bruno/bruno_transparent.png"
+                                src="/images/bruno/img_bruno-corpo_transparente-tratada.png"
                                 alt="Bruno Borges"
                                 className="relative z-10 w-full h-auto object-contain object-bottom"
                                 style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.8)) drop-shadow(0 0 40px rgba(0,191,99,0.08))" }}
                             />
-                        </motion.div>
+                        </div>
                     </div>
 
                     {/* Coluna de conteúdo */}
@@ -107,9 +100,9 @@ export function AboutMentor() {
                         <FadeIn delay={0.1}>
                             <h2 className="font-display font-black uppercase leading-[0.88] tracking-tighter text-white mb-8"
                                 style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}>
-                                O mercado<br />
+                                Eu já estive<br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)] to-[var(--green-dark)]">
-                                    deixa pistas.
+                                    Onde você está agora
                                 </span>
                             </h2>
                         </FadeIn>
@@ -119,15 +112,16 @@ export function AboutMentor() {
                                 <p className="text-[var(--white-60)] text-base font-light leading-relaxed">
                                     Trader Profissional com mais de <strong className="text-white font-semibold">7 anos operando</strong> no mercado financeiro.
                                     Especialista em <strong className="text-white font-semibold">Price Action</strong> e leitura{" "}
-                                    <strong className="text-white font-semibold">Candle a Candle</strong> — sem indicadores, sem ruído.
+                                    <strong className="text-white font-semibold">Candle a Candle</strong> sem indicadores.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.3}>
                                 <p className="text-[var(--white-60)] text-base font-light leading-relaxed">
                                     Criou padrões autorais como o <strong className="text-white font-semibold">"Preguiçoso"</strong>,{" "}
-                                    <strong className="text-white font-semibold">"Teimoso"</strong> e{" "}
-                                    <strong className="text-white font-semibold">"Leônidas"</strong> — mais de{" "}
-                                    <strong className="text-white font-semibold">10 setups</strong> nascidos da observação real de mercado,
+                                    <strong className="text-white font-semibold">"Teimoso"</strong> {" "}
+                                    <strong className="text-white font-semibold">"Responsivo"</strong> e{" "}
+                                    <strong className="text-white font-semibold">"Leônidas"</strong> — ao todo, são mais de{" "}
+                                    <strong className="text-white font-semibold">10 padrões</strong> de Price Action
                                     validados por milhares de traders todos os dias.
                                 </p>
                             </FadeIn>
