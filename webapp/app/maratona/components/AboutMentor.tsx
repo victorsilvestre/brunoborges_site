@@ -77,11 +77,11 @@ export function AboutMentor() {
                         {/* Highlight de chão sob Bruno */}
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-20 bg-[var(--green-bull)]/20 blur-[50px] rounded-full" />
 
-                        <div className="relative w-full max-w-[480px]">
+                        <div className="relative w-full max-w-[420px]">
                             <img
-                                src="/images/bruno/img_bruno-corpo_transparente-tratada.png"
+                                src="/images/bruno/img_bruno-blusa-preta_transparent.png"
                                 alt="Bruno Borges"
-                                className="relative z-10 w-full h-auto object-contain object-bottom"
+                                className="relative z-10 w-full h-auto object-contain object-center"
                                 style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.8)) drop-shadow(0 0 40px rgba(0,191,99,0.08))" }}
                             />
                         </div>

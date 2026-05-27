@@ -19,7 +19,7 @@ export function WhatYouWillLearn() {
         },
         {
             title: "Estratégias",
-            description: "Os padrões de Price Action que o Bruno utiliza no mercado diariamente — testados, validados e aplicáveis em qualquer ativo do mercado financeiro.",
+            description: "Os padrões de Price Action que eu utilizo no mercado diariamente — testados e validados em todos os ativos do mercado financeiro por milhares de alunos.",
             icon: BookOpenCheck,
             accent: false,
         },
