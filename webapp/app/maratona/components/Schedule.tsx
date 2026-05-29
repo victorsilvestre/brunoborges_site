@@ -107,9 +107,7 @@ export function Schedule() {
                 <FadeIn delay={0.4}>
                     <div className="mt-12 max-w-6xl mx-auto flex justify-center">
                         <a
-                            href="https://t.me/+eyQwbBFDUXBkMGIx"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/maratona-grupo"
                             className="inline-flex items-center gap-3 py-4 px-8 rounded-xl font-display font-bold text-sm uppercase tracking-wider text-white transition-all duration-300 hover:scale-105"
                             style={{ background: 'linear-gradient(to right, var(--green-pure), var(--green-dark))', boxShadow: '0 0 40px var(--green-dim)' }}
                         >

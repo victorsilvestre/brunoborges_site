@@ -92,9 +92,7 @@ export function HowToParticipate() {
                 <FadeIn delay={0.5}>
                     <div className="flex justify-center">
                         <a
-                            href="https://t.me/+eyQwbBFDUXBkMGIx"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/maratona-grupo"
                             className="btn text-white group relative overflow-hidden py-5 px-10 text-lg sm:w-auto flex items-center justify-center rounded-sm transition-all"
                             style={{ background: 'var(--green-pure)', boxShadow: '0 0 30px var(--green-dim)' }}
                             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }}

@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "../../components/FadeIn";
-import { TrendingUp, Compass } from "lucide-react";
+import { TrendingUp, Compass, ArrowRight } from "lucide-react";
 
 const profiles = [
     {
@@ -62,6 +62,15 @@ export function ForWhom() {
                         );
                     })}
                 </div>
+
+                <FadeIn delay={0.4}>
+                    <div className="flex justify-center mt-12">
+                        <a href="/maratona-grupo" className="text-white py-3 px-7 text-base flex items-center justify-center gap-2 rounded-xl transition-all hover:-translate-y-1" style={{ background: 'var(--green-pure)', boxShadow: '0 8px 20px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 20px var(--green-dim)'; }}>
+                            <span className="font-bold">Entrar no Grupo Exclusivo</span>
+                            <ArrowRight className="w-5 h-5" />
+                        </a>
+                    </div>
+                </FadeIn>
             </div>
         </section>
     );
