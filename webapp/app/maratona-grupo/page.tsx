@@ -116,30 +116,11 @@ export default function MaratonaGrupoPage() {
                 {/* Seção de fallback */}
                 {showFallback && (
                     <div className="w-full flex flex-col items-center gap-4">
-                        {/* Box de suporte */}
-                        <div
-                            className="w-full rounded-2xl p-5 text-left mb-1"
-                            style={{
-                                background: 'rgba(255,255,255,0.04)',
-                                border: '1px solid rgba(255,255,255,0.08)',
-                            }}
-                        >
-                            <p className="text-white font-bold text-base mb-2">
-                                O Telegram não abriu automaticamente?
-                            </p>
-                            <p className="text-[var(--white-50)] text-sm leading-relaxed mb-3">
-                                Sem problema. Clique no botão abaixo e entre diretamente pelo navegador.
-                            </p>
-                            <p className="text-[var(--white-50)] text-sm leading-relaxed"
-                                style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '12px' }}
-                            >
-                                <span className="mr-1">⚠️</span>
-                                <span className="text-white font-semibold">Importante:</span>{' '}
-                                o grupo é o principal canal de comunicação da Maratona TDS. Sem entrar nele, você pode perder avisos, materiais e links das aulas.
-                            </p>
-                        </div>
+                        <p className="text-white font-display font-bold text-xl text-center leading-snug mb-2">
+                            O Telegram não abriu automaticamente?
+                        </p>
 
-                        {/* Botão principal */}
+                        {/* Botão principal — entrar pelo navegador */}
                         <a
                             href={TELEGRAM_WEB}
                             target="_blank"
@@ -158,27 +139,36 @@ export default function MaratonaGrupoPage() {
                                 (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
                             }}
                         >
-                            Quero entrar no grupo agora
+                            Entrar pelo navegador
                             <svg viewBox="0 0 20 20" className="w-4 h-4 fill-white shrink-0">
                                 <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
                             </svg>
                         </a>
 
-                        {/* Link de download do Telegram */}
-                        <div className="text-center">
-                            <p className="text-[var(--white-50)] text-xs mb-1">Ainda não tem Telegram?</p>
+                        {/* Botão secundário — baixar o Telegram (oculto em desktop) */}
+                        {device && !device.isDesktop && (
                             <a
                                 href={getDownloadLink()}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xs underline underline-offset-2 transition-colors"
-                                style={{ color: 'var(--green-pure)' }}
-                                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = 'var(--green-dark)'}
-                                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = 'var(--green-pure)'}
+                                className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-xl font-display font-bold text-sm uppercase tracking-wider transition-all active:scale-[0.98]"
+                                style={{
+                                    background: 'transparent',
+                                    border: '1.5px solid rgba(255,255,255,0.15)',
+                                    color: 'var(--white-70)',
+                                }}
+                                onMouseEnter={e => {
+                                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--green-pure)';
+                                    (e.currentTarget as HTMLElement).style.color = 'white';
+                                }}
+                                onMouseLeave={e => {
+                                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.15)';
+                                    (e.currentTarget as HTMLElement).style.color = 'var(--white-70)';
+                                }}
                             >
-                                Baixe gratuitamente e participe da comunidade
+                                Baixar o Telegram
                             </a>
-                        </div>
+                        )}
                     </div>
                 )}
             </div>
