@@ -7,16 +7,16 @@ import { INSCRICOES_ABERTAS } from "../../mentoria-tds/config";
 export function Schedule() {
     const days = [
         {
-            subtitle: "AULA 1 - TERÇA",
-            date: "23/06",
+            subtitle: "AULA 1 - SEGUNDA",
+            date: "22/06",
             time: "20HRS",
             topics: "O básico que quase ninguém aprende sobre o gráfico",
             description: "A maioria dos traders pula essa etapa — e paga muito caro por isso. Nessa aula você vai entender como o preço realmente se comporta, o que o gráfico comunica antes de qualquer movimento e por que a leitura correta das obrigações dos candles é o que separa quem opera bem de quem não consegue fechar no positivo.",
             url: ""
         },
         {
-            subtitle: "AULA 2 - QUARTA",
-            date: "24/06",
+            subtitle: "AULA 2 - TERÇA",
+            date: "23/06",
             time: "20HRS",
             topics: "A estratégia que mudou a minha vida",
             description: "Nessa aula, eu vou compartilhar com você a primeira estratégia que eu utilizei no mercado financeiro e que transformou a minha vida. Você vai acompanhar as entradas, os alvos e o gerenciamento de risco de cada operação. Você vai aprender a aplicar essa estratégia nos principais ativos do mercado e entender por que ela funciona independente do cenário.",

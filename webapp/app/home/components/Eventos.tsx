@@ -7,8 +7,8 @@ import { FadeIn } from "../../components/FadeIn";
 // Defina null se não houver próxima maratona agendada
 const proximaMaratona = {
     numero: "15ª",
-    data: "23 de junho",
-    diaSemana: "terça-feira",
+    data: "22 de junho",
+    diaSemana: "segunda-feira",
     horario: "20h00 (horário de Brasília)",
     inscricaoUrl: "/maratona",
 };

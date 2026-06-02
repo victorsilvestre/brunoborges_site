@@ -42,7 +42,7 @@ export function Hero() {
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6">
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <Calendar className="w-4 h-4" style={{ color: 'var(--red-pure)' }} />
-                                    <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">23, 24 e 25/06</span>
+                                    <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">22, 23 e 25/06</span>
                                 </div>
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">100% Online e Gratuito</span>
