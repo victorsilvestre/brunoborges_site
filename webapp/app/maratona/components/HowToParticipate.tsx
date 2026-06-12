@@ -7,14 +7,14 @@ const steps = [
     {
         number: "01",
         icon: MousePointerClick,
-        title: "Clique no botão abaixo",
-        description: "Um clique — sem formulário ou qualquer cadastro complicado que levaria horas.",
+        title: "Preencha o formulário",
+        description: "Rápido e simples — nome, e-mail e WhatsApp. É tudo que precisamos para garantir seu acesso.",
     },
     {
         number: "02",
         icon: Users,
         title: "Entre no grupo exclusivo",
-        description: "Você é direcionado direto para o grupo exclusivo da Maratona no Telegram.",
+        description: "Após o cadastro, você é direcionado para o grupo exclusivo da Maratona no Telegram.",
     },
     {
         number: "03",
@@ -92,14 +92,14 @@ export function HowToParticipate() {
                 <FadeIn delay={0.5}>
                     <div className="flex justify-center">
                         <a
-                            href="/maratona-grupo"
+                            href="#"
                             className="btn text-white group relative overflow-hidden py-5 px-10 text-lg sm:w-auto flex items-center justify-center rounded-sm transition-all"
                             style={{ background: 'var(--green-pure)', boxShadow: '0 0 30px var(--green-dim)' }}
                             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }}
                             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 30px var(--green-dim)'; }}
                         >
                             <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
-                                Quero Participar e receber os bônus! <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                Quero me inscrever hoje na 15ª Maratona TDS <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </a>
                     </div>

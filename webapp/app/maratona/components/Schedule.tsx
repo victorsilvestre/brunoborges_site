@@ -103,15 +103,15 @@ export function Schedule() {
                     ))}
                 </div>
 
-                {/* CTA Grupo Telegram */}
+                {/* CTA inscrição */}
                 <FadeIn delay={0.4}>
                     <div className="mt-12 max-w-6xl mx-auto flex justify-center">
                         <a
-                            href="/maratona-grupo"
+                            href="#"
                             className="inline-flex items-center gap-3 py-4 px-8 rounded-xl font-display font-bold text-sm uppercase tracking-wider text-white transition-all duration-300 hover:scale-105"
                             style={{ background: 'linear-gradient(to right, var(--green-pure), var(--green-dark))', boxShadow: '0 0 40px var(--green-dim)' }}
                         >
-                            Entrar no Grupo Exclusivo <ArrowRight className="w-5 h-5" />
+                            Quero me inscrever na Maratona e receber todos os bônus <ArrowRight className="w-5 h-5" />
                         </a>
                     </div>
                 </FadeIn>

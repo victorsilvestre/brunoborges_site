@@ -1,7 +1,8 @@
 "use client";
 
 import { FadeIn } from "../../components/FadeIn";
-import { ArrowRight, Trophy } from "lucide-react";
+import { Trophy } from "lucide-react";
+import { LeadCaptureForm } from "../../components/LeadCaptureForm";
 
 export function FinalCTA() {
     return (
@@ -33,12 +34,13 @@ export function FinalCTA() {
                 </div>
 
                 <FadeIn delay={0.3}>
-                    <div className="flex justify-center">
-                        <a href="/maratona-grupo" className="btn text-white group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto inline-flex items-center justify-center rounded-sm transition-all" style={{ background: 'var(--green-pure)', boxShadow: '0 0 40px var(--green-dim)' }} onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-dark)'; (e.currentTarget as HTMLElement).style.boxShadow = 'var(--glow-green)'; }} onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 40px var(--green-dim)'; }}>
-                            <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
-                                Entrar no Grupo Exclusivo <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </span>
-                        </a>
+                    <div className="w-full max-w-md mx-auto">
+                        <LeadCaptureForm
+                            source="maratona-jun-2026"
+                            redirectTo="/maratona-grupo"
+                            buttonLabel="Garantir minha vaga na Maratona TDS"
+                            variant="dark"
+                        />
                     </div>
                 </FadeIn>
             </div>
