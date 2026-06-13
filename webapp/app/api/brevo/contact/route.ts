@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { BREVO_CAMPAIGNS } from '@/lib/brevo/campaigns';
+import { resolveBrevoError, BREVO_SUCCESS, INTERNAL_ERROR_MAP } from '@/lib/brevo/errors';
 
 function normalizeWhatsapp(raw: string): string {
   return raw.replace(/\D/g, '');
@@ -24,31 +25,31 @@ export async function POST(req: NextRequest) {
   };
 
   if (!nome?.trim() || !email?.trim() || !whatsapp?.trim() || !source?.trim()) {
-    return NextResponse.json({ error: 'Todos os campos são obrigatórios.' }, { status: 400 });
+    return NextResponse.json({ ok: false, feedback: INTERNAL_ERROR_MAP.missing_fields });
   }
 
   if (!isValidEmail(email)) {
-    return NextResponse.json({ error: 'E-mail inválido.' }, { status: 400 });
+    return NextResponse.json({ ok: false, feedback: INTERNAL_ERROR_MAP.invalid_email });
   }
 
   const digits = normalizeWhatsapp(whatsapp);
   if (digits.length < 10) {
-    return NextResponse.json({ error: 'WhatsApp inválido.' }, { status: 400 });
+    return NextResponse.json({ ok: false, feedback: INTERNAL_ERROR_MAP.invalid_whatsapp });
   }
 
   const campaign = BREVO_CAMPAIGNS[source];
   if (!campaign) {
-    return NextResponse.json({ error: 'Campanha não encontrada.' }, { status: 400 });
+    return NextResponse.json({ ok: false, feedback: INTERNAL_ERROR_MAP.server_error }, { status: 400 });
   }
 
   const apiKey = process.env.BREVO_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: 'Configuração de servidor ausente.' }, { status: 500 });
+    return NextResponse.json({ ok: false, feedback: INTERNAL_ERROR_MAP.server_error }, { status: 500 });
   }
 
   const listId = Number(process.env[campaign.listIdEnv]);
   if (!listId || isNaN(listId)) {
-    return NextResponse.json({ error: 'Configuração de servidor ausente.' }, { status: 500 });
+    return NextResponse.json({ ok: false, feedback: INTERNAL_ERROR_MAP.server_error }, { status: 500 });
   }
 
   const brevoRes = await fetch('https://api.brevo.com/v3/contacts', {
@@ -69,11 +70,18 @@ export async function POST(req: NextRequest) {
     }),
   });
 
-  if (!brevoRes.ok && brevoRes.status !== 204) {
-    const errBody = await brevoRes.json().catch(() => ({}));
-    console.error('[Brevo] Erro ao criar contato:', errBody);
-return NextResponse.json({ error: 'Erro ao salvar seus dados. Tente novamente.' }, { status: 502 });
+  if (brevoRes.status === 204) {
+    return NextResponse.json({ ok: true, feedback: BREVO_SUCCESS });
   }
 
-  return NextResponse.json({ ok: true });
+  if (brevoRes.status === 201) {
+    return NextResponse.json({ ok: true, feedback: BREVO_SUCCESS });
+  }
+
+  const errBody = await brevoRes.json().catch(() => ({})) as { code?: string; message?: string };
+  console.error('[Brevo] Erro ao criar contato:', errBody);
+
+  const feedback = resolveBrevoError(errBody.code ?? 'unknown', errBody.message ?? '');
+
+  return NextResponse.json({ ok: false, feedback }, { status: 200 });
 }

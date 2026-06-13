@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowRight, Loader2 } from 'lucide-react';
+import type { BrevoFeedback } from '@/lib/brevo/errors';
 
 interface LeadCaptureFormProps {
   source: string;
@@ -19,6 +20,15 @@ function applyWhatsappMask(value: string): string {
   return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
 }
 
+const feedbackStyles: Record<BrevoFeedback['type'], string> = {
+  error:
+    'text-red-400 bg-red-500/10 border border-red-500/20',
+  duplicate:
+    'text-blue-400 bg-blue-500/10 border border-blue-500/20',
+  success:
+    'text-[var(--green-pure)] bg-[var(--green-dim)] border border-[var(--green-border)]',
+};
+
 export function LeadCaptureForm({
   source,
   redirectTo,
@@ -30,7 +40,7 @@ export function LeadCaptureForm({
   const [email, setEmail] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [feedback, setFeedback] = useState<BrevoFeedback | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
   const isDark = variant === 'dark';
@@ -50,7 +60,7 @@ export function LeadCaptureForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setError('');
+    setFeedback(null);
     setLoading(true);
 
     try {
@@ -63,13 +73,23 @@ export function LeadCaptureForm({
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error ?? 'Algo deu errado. Tente novamente.');
+        setFeedback({ type: 'error', message: data.error ?? 'Algo deu errado. Tente novamente.' });
+        return;
+      }
+
+      if (!data.ok) {
+        setFeedback(data.feedback);
+        return;
+      }
+
+      if (data.feedback?.type === 'success' && !redirectTo) {
+        setFeedback(data.feedback);
         return;
       }
 
       router.push(redirectTo);
     } catch {
-      setError('Erro de conexão. Verifique sua internet e tente novamente.');
+      setFeedback({ type: 'error', message: 'Erro de conexão. Verifique sua internet e tente novamente.' });
     } finally {
       setLoading(false);
     }
@@ -124,9 +144,9 @@ export function LeadCaptureForm({
         />
       </div>
 
-      {error && (
-        <p className="text-sm font-medium text-red-400 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3">
-          {error}
+      {feedback && (
+        <p className={`text-sm font-medium rounded-xl px-4 py-3 ${feedbackStyles[feedback.type]}`}>
+          {feedback.message}
         </p>
       )}
 
