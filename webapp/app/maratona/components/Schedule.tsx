@@ -12,7 +12,7 @@ export function Schedule() {
             time: "20HRS",
             topics: "O básico que quase ninguém aprende sobre o gráfico",
             description: "A maioria dos traders pula essa etapa — e paga muito caro por isso. Nessa aula você vai entender como o preço realmente se comporta, o que o gráfico comunica antes de qualquer movimento e por que a leitura correta das obrigações dos candles é o que separa quem opera bem de quem não consegue fechar no positivo.",
-            url: ""
+            url: "https://www.youtube.com/watch?v=uTfh-5q5Ck4"
         },
         {
             subtitle: "AULA 2 - TERÇA",
