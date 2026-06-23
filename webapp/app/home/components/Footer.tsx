@@ -36,8 +36,8 @@ export function Footer() {
     ];
 
     const mentoriaLinks = [
-        { label: "Mentoria TDS", href: "/mentoria-tds" },
-        { label: "Maratona TDS", href: "/maratona" }
+        { label: "Mentoria", href: "" },
+        { label: "Maratona", href: "/maratona" }
     ];
 
     const pageLinks = [

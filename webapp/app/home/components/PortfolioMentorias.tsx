@@ -86,6 +86,7 @@ export function PortfolioMentorias() {
                     "Comunidade exclusiva",
                     "Suporte direto comigo",
                     "+100h de conteúdo de valor",
+                    "30 dias de Sala Educacional Ao Vivo",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[var(--green-bull)] flex-shrink-0" />
@@ -98,10 +99,10 @@ export function PortfolioMentorias() {
 
                 {/* CTA */}
                 <Link
-                  href="/mentoria-tds"
+                  href=""
                   className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all shadow-[0_0_30px_rgba(0,191,99,0.3)] hover:shadow-[0_0_50px_rgba(0,191,99,0.5)]"
                 >
-                  Conhecer a Mentoria Trader de Sucesso
+                  Inscrições Para a Próxima Turma em 25/06
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
