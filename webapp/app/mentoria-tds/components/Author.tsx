@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { FadeIn } from "../../components/FadeIn";
-import { useModal } from "../ModalContext";
 import { INSCRICOES_ABERTAS } from "../config";
 
+const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+
 export function Author() {
-    const { openModal } = useModal();
     return (
         <section className="relative py-32 bg-[var(--dark-base)] overflow-hidden">
 
@@ -59,12 +59,14 @@ export function Author() {
                                     Vamos juntos nessa jornada.
                                 </span>
                                 {INSCRICOES_ABERTAS && (
-                                    <button
-                                        onClick={openModal}
+                                    <a
+                                        href={HOTMART_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_40px_rgba(0,191,99,0.50)]"
                                     >
                                         Entrar para o Time
-                                    </button>
+                                    </a>
                                 )}
                             </div>
                         </FadeIn>

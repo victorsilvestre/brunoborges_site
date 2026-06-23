@@ -2,10 +2,10 @@
 
 import { FadeIn } from "../../components/FadeIn";
 import { Lock, Calendar, Zap, Ticket } from "lucide-react";
-import { useModal } from "../ModalContext";
+
+const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
 
 export function NextClass() {
-    const { openModal } = useModal();
     return (
         <section className="py-32 bg-[var(--dark-base)] relative overflow-hidden">
             {/* Background elements */}
@@ -56,7 +56,7 @@ export function NextClass() {
                                 </div>
                                 <div>
                                     <div className="text-xs uppercase tracking-widest text-[var(--gold-premium)] font-bold mb-1">Inscrições Abertas</div>
-                                    <div className="text-3xl font-display font-black text-white tracking-wide">02/04<span className="text-white/40">/26</span></div>
+                                    <div className="text-3xl font-display font-black text-white tracking-wide">25/06<span className="text-white/40">/26</span></div>
                                 </div>
                             </div>
 
@@ -66,19 +66,21 @@ export function NextClass() {
                                 </div>
                                 <div>
                                     <div className="text-xs uppercase tracking-widest text-[var(--green-bull)] font-bold mb-1">Início das Aulas</div>
-                                    <div className="text-3xl font-display font-black text-white tracking-wide">15/04<span className="text-white/40">/26</span></div>
+                                    <div className="text-3xl font-display font-black text-white tracking-wide">07/07<span className="text-white/40">/26</span></div>
                                 </div>
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-6 w-full max-w-sm mx-auto md:mx-0 relative z-20">
-                                <button
-                                    onClick={openModal}
+                                <a
+                                    href={HOTMART_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="group flex-1 flex items-center justify-center gap-4 px-5 py-3 bg-white text-black rounded-2xl font-display font-black text-lg uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:bg-[var(--green-bull)] hover:text-white shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(0,191,99,0.40)]"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/10 to-transparent -translate-x-[200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
                                     <Ticket className="w-5 h-5 shrink-0" />
                                     <span>Garantir Vaga</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

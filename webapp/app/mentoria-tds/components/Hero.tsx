@@ -3,13 +3,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
-import { useModal } from "../ModalContext";
 import { INSCRICOES_ABERTAS } from "../config";
 
+const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
 
 export function Hero() {
-    const { openModal } = useModal();
-
     return (
         <section className="relative min-h-[95vh] lg:min-h-screen flex items-center overflow-hidden pt-20 border-b border-[var(--white-10)]">
 
@@ -60,7 +58,7 @@ export function Hero() {
                             <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[var(--green-bull)]/30 bg-[var(--green-bull)]/10 backdrop-blur-md mb-10 md:mb-12">
                                 <span className="w-2 h-2 rounded-full bg-[var(--green-bull)] animate-pulse" />
                                 <span className="text-lg md:text-xl font-bold tracking-wider uppercase text-[var(--green-bull)] italic">
-                                    {INSCRICOES_ABERTAS ? "Próxima Turma: 15/04/26" : "Nova turma em breve"}
+                                    {INSCRICOES_ABERTAS ? "Próxima Turma: 07/07/26" : "Nova turma em breve"}
                                 </span>
                             </div>
                         </FadeIn>
@@ -74,12 +72,12 @@ export function Hero() {
                         <FadeIn delay={0.4}>
                             <div className="flex flex-col sm:flex-row gap-6">
                                 {INSCRICOES_ABERTAS ? (
-                                    <button onClick={openModal} className="btn btn-green group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto flex items-center justify-center shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_50px_rgba(0,191,99,0.50)] transition-shadow">
+                                    <a href={HOTMART_URL} target="_blank" rel="noopener noreferrer" className="btn btn-green group relative overflow-hidden py-5 px-10 text-lg w-full sm:w-auto flex items-center justify-center shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_50px_rgba(0,191,99,0.50)] transition-shadow">
                                         <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
                                             Garantir Minha Vaga <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         </span>
                                         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                                    </button>
+                                    </a>
                                 ) : (
                                     <div className="btn py-5 px-10 text-lg w-full sm:w-auto flex items-center justify-center font-display font-bold uppercase tracking-wider opacity-50 cursor-not-allowed border border-white/20 text-white/50 rounded-xl">
                                         Inscrições Encerradas

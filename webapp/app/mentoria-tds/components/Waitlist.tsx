@@ -2,11 +2,11 @@
 
 import { FadeIn } from "../../components/FadeIn";
 import { ArrowRight } from "lucide-react";
-import { useModal } from "../ModalContext";
 import { INSCRICOES_ABERTAS } from "../config";
 
+const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+
 export function Waitlist() {
-    const { openModal } = useModal();
     return (
         <section id="waitlist" className="relative py-32 bg-[var(--light-surface)] overflow-hidden border-y border-slate-200">
 
@@ -77,12 +77,14 @@ export function Waitlist() {
                                     </div>
 
                                     {INSCRICOES_ABERTAS ? (
-                                        <button
-                                            onClick={openModal}
+                                        <a
+                                            href={HOTMART_URL}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="w-full bg-[var(--green-pure)] text-[var(--ligth-elevated)] font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl hover:bg-[var(--green-pure)]/85 transition-colors duration-300 flex items-center justify-center gap-3 mt-4 group shadow-sm"
                                         >
                                             Quero entrar! <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                                        </button>
+                                        </a>
                                     ) : (
                                         <div className="w-full bg-slate-100 text-slate-400 font-display font-black text-lg uppercase tracking-wider py-6 sm:px-8 rounded-xl flex items-center justify-center gap-3 mt-4 cursor-not-allowed">
                                             Inscrições Encerradas

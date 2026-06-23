@@ -12,14 +12,10 @@ import { FAQ } from "./components/FAQ";
 import { Waitlist } from "./components/Waitlist";
 import { WhyTDSIsDifferent } from "./components/WhyTDSIsDifferent";
 import { NextClass } from "./components/NextClass";
-import { ModalProvider } from "./ModalContext";
-import { MaratonaModal } from "../components/MaratonaModal";
 import { INSCRICOES_ABERTAS } from "./config";
 
 export default function LandingPage() {
     return (
-        <ModalProvider>
-        <MaratonaModal />
         <main className="bg-[var(--dark-base)] min-h-screen text-white selection:bg-[var(--green-bull)] selection:text-white">
             <Hero />
             <Features />
@@ -53,6 +49,5 @@ export default function LandingPage() {
                 </div>
             </footer>
         </main>
-        </ModalProvider>
     );
 }

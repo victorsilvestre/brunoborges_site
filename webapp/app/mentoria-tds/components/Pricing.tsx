@@ -2,7 +2,8 @@
 
 import { Check, ArrowRight, X } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
-import { useModal } from "../ModalContext";
+
+const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
 
 const items = [
     {
@@ -31,8 +32,6 @@ const TOTAL_FICTICIO = "R$ 3.750,00";
 const PRECO_FINAL = "R$ 700,00";
 
 export function Pricing() {
-    const { openModal } = useModal();
-
     return (
         <section className="relative py-32 bg-[var(--dark-base)] overflow-hidden border-y border-[var(--white-10)]">
 
@@ -136,8 +135,10 @@ export function Pricing() {
                             </div>
 
                             {/* CTA */}
-                            <button
-                                onClick={openModal}
+                            <a
+                                href={HOTMART_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="w-full relative overflow-hidden flex items-center justify-center gap-3 py-5 px-8 rounded-xl bg-[var(--green-bull)] hover:bg-[var(--green-dark)] text-white font-display font-black text-lg uppercase tracking-wider transition-all duration-300 shadow-[0_0_40px_rgba(0,191,99,0.25)] hover:shadow-[0_0_60px_rgba(0,191,99,0.40)] hover:scale-[1.02] group"
                             >
                                 <span className="relative z-10 flex items-center gap-3">
@@ -145,9 +146,9 @@ export function Pricing() {
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </span>
                                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                            </button>
+                            </a>
                             <p className="text-center text-[var(--white-20)] text-xs mt-4 uppercase tracking-widest font-bold">
-                                Vagas limitadas · Próxima turma: 15/04/26
+                                Vagas limitadas · Próxima turma: 07/07/26
                             </p>
 
                         </div>
