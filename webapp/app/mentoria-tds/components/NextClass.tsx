@@ -3,7 +3,7 @@
 import { FadeIn } from "../../components/FadeIn";
 import { Lock, Calendar, Zap, Ticket } from "lucide-react";
 
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+const HOTMART_URL = "";
 
 export function NextClass() {
     return (

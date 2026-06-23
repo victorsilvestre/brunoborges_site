@@ -3,33 +3,37 @@
 import { Check, ArrowRight, X } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
 
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+const HOTMART_URL = "";
 
 const items = [
     {
-        label: "60 dias de acompanhamento",
+        label: "60 dias de acompanhamento comigo",
         value: "R$ 1.500,00",
     },
     {
-        label: "Grupo de estudos ao vivo",
-        value: "R$ 400,00",
+        label: "4 Setups de Price Action Autorais e Exclusivos",
+        value: "R$ 1.200,00",
     },
     {
-        label: "Mentorias Individuais - Aulas de Sábado",
+        label: "Mentorias Individuais com Alunos Antigos - Aulas de Sábado",
         value: "R$ 500,00",
     },
     {
-        label: "Apostila digital do Método",
-        value: "R$ 150,00",
+        label: "30 dias de Sala Educacional Ao Vivo",
+        value: "R$ 499,00",
     },
     {
-        label: "4 Setups Exclusivos",
-        value: "R$ 1.200,00",
+        label: "Apostila digital do Operacional Completo",
+        value: "R$ 250,00",
+    },
+    {
+        label: "Indicadores do Método no Profit para facilitar o aprendizado",
+        value: "R$ 250,00",
     },
 ];
 
-const TOTAL_FICTICIO = "R$ 3.750,00";
-const PRECO_FINAL = "R$ 700,00";
+const TOTAL_FICTICIO = "R$ 4.199,00";
+const PRECO_FINAL = "R$ 1.200,00";
 
 export function Pricing() {
     return (
@@ -130,7 +134,7 @@ export function Pricing() {
                                 <span className="text-[var(--white-40)] text-sm font-medium tracking-wide">à vista</span>
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--green-bull)]/10 border border-[var(--green-border)] mt-2">
                                     <span className="w-2 h-2 rounded-full bg-[var(--green-bull)] animate-pulse" />
-                                    <span className="text-[var(--green-bull)] text-xs font-bold uppercase tracking-widest">Economia de R$ 1.600,00</span>
+                                    <span className="text-[var(--green-bull)] text-xs font-bold uppercase tracking-widest">Economia de R$ 2.999,00</span>
                                 </div>
                             </div>
 

@@ -4,7 +4,7 @@ import { FadeIn } from "../../components/FadeIn";
 import { ArrowRight } from "lucide-react";
 import { INSCRICOES_ABERTAS } from "../config";
 
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+const HOTMART_URL = "";
 
 export function Waitlist() {
     return (
