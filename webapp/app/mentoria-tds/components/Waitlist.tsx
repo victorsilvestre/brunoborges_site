@@ -36,21 +36,29 @@ export function Waitlist() {
             <FadeIn delay={0.2}>
               <div className="space-y-5 max-w-md">
                 <p className="text-lg text-[var(--dark-medium)] leading-snug">
-                  Ao entrar para a Mentoria TDS,
-                  você terá <strong className="text-[var(--dark-pure)] font-bold">15 dias completos</strong> para
-                  conhecer o método por dentro, assistir às primeiras aulas,
-                  participar dos encontros ao vivo e entender como funciona a
-                  nossa metodologia na prática.
+                  Ao entrar para a Mentoria TDS, você terá{" "}
+                  <strong className="text-[var(--dark-pure)] font-bold">
+                    15 dias completos
+                  </strong>{" "}
+                  para conhecer o método por dentro, assistir às primeiras
+                  aulas, participar dos encontros ao vivo e entender como
+                  funciona a nossa metodologia na prática.
                 </p>
                 <p className="text-lg text-[var(--dark-medium)] leading-snug">
-                  <strong className="text-[var(--dark-pure)] font-bold">Queremos que sua decisão seja baseada em experiência, não em promessa</strong>.
-                  Por isso, você pode explorar o conteúdo, tirar suas
-                  dúvidas e avaliar com tranquilidade se a Mentoria TDS faz
-                  sentido para o seu momento.
+                  <strong className="text-[var(--dark-pure)] font-bold">
+                    Queremos que sua decisão seja baseada em experiência, não em
+                    promessa
+                  </strong>
+                  . Por isso, você pode explorar o conteúdo, tirar suas dúvidas
+                  e avaliar com tranquilidade se a Mentoria TDS faz sentido para
+                  o seu momento.
                 </p>
                 <p className="text-lg text-[var(--dark-medium)] leading-snug">
                   Se dentro desse período você concluir que não é para você,{" "}
-                  <strong className="text-[var(--dark-pure)] font-bold">basta solicitar o reembolso</strong> e devolveremos 100% do valor investido.
+                  <strong className="text-[var(--dark-pure)] font-bold">
+                    basta solicitar o reembolso
+                  </strong>{" "}
+                  e devolveremos 100% do valor investido.
                 </p>
               </div>
             </FadeIn>
@@ -75,15 +83,15 @@ export function Waitlist() {
               </div>
 
               <p className="text-[var(--dark-medium)] text-sm leading-relaxed mb-6 max-w-xs">
-                Compre com total segurança. Se não for para você, devolvemos
-                cada centavo investido.
+                Experimente a Mentoria Trader de Sucesso sem risco. Se você não
+                enxergar valor no operacional ou sentir que o método não é para
+                você, devolvemos todo o seu investimento.
               </p>
 
               <div className="w-full border-t border-slate-100 pt-6 flex flex-col gap-3">
                 {[
                   "Reembolso integral garantido",
                   "Sem perguntas ou burocracia",
-                  "O risco é nosso, a decisão é sua",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-left">
                     <span className="w-5 h-5 rounded-full bg-[var(--green-bull)]/10 border border-[var(--green-bull)]/30 flex items-center justify-center flex-shrink-0">

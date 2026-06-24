@@ -3,7 +3,7 @@
 import { Check, ArrowRight, X, Lock } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
 
-const HOTMART_URL = "";
+const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
 
 const items = [
     {
