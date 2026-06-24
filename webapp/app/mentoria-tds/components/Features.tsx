@@ -34,7 +34,7 @@ export function Features() {
   return (
     <section
       id="about"
-      className="py-32 relative bg-[var(--light-base)] overflow-hidden"
+      className="py-16 md:py-24 relative bg-[var(--light-base)] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="max-w-4xl mb-24 text-center mx-auto">

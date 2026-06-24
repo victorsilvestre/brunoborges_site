@@ -8,7 +8,7 @@ const HOTMART_URL = "";
 
 export function Author() {
     return (
-        <section className="relative py-32 bg-[var(--dark-base)] overflow-hidden">
+        <section className="relative py-16 md:py-24 bg-[var(--dark-base)] overflow-hidden">
 
             {/* Immersive Background Glows */}
             <div className="absolute inset-0 z-0 pointer-events-none">
@@ -33,30 +33,35 @@ export function Author() {
                             </h2>
                         </FadeIn>
 
-                        <div className="space-y-6 text-xl text-[var(--white-60)] font-light leading-relaxed max-w-xl">
+                        <div className="space-y-6 text-xl text-[var(--white-60)] font-light leading-snug max-w-xl">
                             <FadeIn delay={0.2}>
                                 <p>
-                                    Trader Profissional e Mentor especializado em <strong className="text-white font-semibold">Price Action</strong>. Utilizo a leitura <strong className="text-white font-semibold">Candle a Candle</strong> todos os dias para extrair o máximo do mercado financeiro.
+                                    Trader Profissional e Mentor especializado em <strong className="text-white font-semibold">Price Action</strong>. Utiliza a leitura <strong className="text-white font-semibold">Candle a Candle</strong> todos os dias para extrair o máximo do mercado financeiro.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.3}>
                                 <p>
-                                    Possuo mais de <strong className="text-white font-semibold">7 anos de experiência</strong> no Mercado Financeiro e decidi ajudar pessoas comuns a alcançarem lucratividade e consistência no <strong className="text-white font-semibold">Day Trade</strong>.
+                                    Possui mais de <strong className="text-white font-semibold">7 anos de experiência</strong> no Mercado Financeiro e decidiu ajudar pessoas comuns a alcançarem lucratividade e consistência no <strong className="text-white font-semibold">Day Trade</strong>.
                                 </p>
                             </FadeIn>
                             <FadeIn delay={0.4}>
                                 <p>
-                                    Sou o criador de <strong className="text-white font-semibold">Padrões de Price Action</strong> que buscam acelerar o aprendizado dos alunos,
+                                    Ele é o criador de <strong className="text-white font-semibold">Padrões de Price Action</strong> que buscam acelerar o aprendizado dos alunos,
                                     como o <strong className="text-white font-semibold">“Preguiçoso”</strong> e o <strong className="text-white font-semibold">“Teimoso”</strong>.
-                                    Ao todo, são mais de 10 padrões testados e validados por milhares de alunos diariamente.
+                                </p>
+                            </FadeIn>
+                            <FadeIn delay={0.4}>
+                                <p>
+                                    Além de <strong className="text-white font-semibold">4 setups altamente assertivos</strong>, 100% autorais e exclusivos. Ao todo, são mais de 10 padrões testados e validados por milhares de alunos diariamente.
                                 </p>
                             </FadeIn>
                         </div>
 
                         <FadeIn delay={0.5} className="mt-16">
                             <div className="space-y-10">
-                                <span className="font-script text-5xl text-[var(--green-bull)] block">
-                                    Vamos juntos nessa jornada.
+                                <span className="font-script text-3xl text-[var(--green-bull)] block">
+                                    #EscolhaPorAprendizado <br />
+                                    #NãoPorResultadosMentirosos
                                 </span>
                                 {INSCRICOES_ABERTAS && (
                                     <a
@@ -65,7 +70,7 @@ export function Author() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_40px_rgba(0,191,99,0.50)]"
                                     >
-                                        Entrar para o Time
+                                        Eu escolhi o meu mentor
                                     </a>
                                 )}
                             </div>

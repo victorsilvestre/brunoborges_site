@@ -7,7 +7,7 @@ const HOTMART_URL = "";
 
 export function NextClass() {
     return (
-        <section className="py-32 bg-[var(--dark-base)] relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-[var(--dark-base)] relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[var(--dark-elevated)] via-[var(--dark-base)] to-black opacity-80" />
             <div className="absolute w-[1px] h-[50%] bg-gradient-to-b from-transparent via-[var(--white-10)] to-transparent top-0 left-1/2 -translate-x-1/2 hidden lg:block pointer-events-none" />
@@ -17,11 +17,11 @@ export function NextClass() {
             <div className="absolute -left-1/4 top-1/4 w-[1000px] h-[2px] bg-[var(--green-bull)] opacity-20 rotate-[-15deg] blur-md pointer-events-none" />
             <div className="absolute -right-1/4 bottom-1/4 w-[1000px] h-[2px] bg-[var(--gold-premium)] opacity-10 rotate-[-15deg] blur-md pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center">
 
                 {/* Header CTA Style */}
                 <FadeIn className="w-full">
-                    <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-20 bg-[var(--black-absolute)]/40 p-10 md:p-16 rounded-[40px] border border-[var(--white-10)] backdrop-blur-xl relative overflow-hidden group hover:border-[var(--green-bull)]/40 transition-colors duration-700">
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-10 mb-20 bg-[var(--black-absolute)]/40 p-6 sm:p-10 md:p-12 rounded-[32px] border border-[var(--white-10)] backdrop-blur-xl relative overflow-hidden group hover:border-[var(--green-bull)]/40 transition-colors duration-700">
                         {/* Shimmer */}
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.03] to-transparent -translate-x-[200%] group-hover:translate-x-[200%] transition-transform duration-[1500ms] ease-in-out pointer-events-none" />
 
@@ -38,8 +38,8 @@ export function NextClass() {
                                 Aulas ao vivo + Gravadas
                             </span>
 
-                            <p className="text-xl text-[var(--white-60)] font-light max-w-lg mx-auto lg:mx-0">
-                                Garanta seu acesso e comece a evoluir seu operacional com mais clareza, consistência e direção. Um método validado diariamente.
+                            <p className="text-xl text-[var(--white-60)] font-light max-w-lg mx-auto lg:mx-0 leading-snug">
+                                Garanta seu acesso e comece a evoluir seu operacional com mais clareza e consistência. Um método validado diariamente por milhares de alunos.
                             </p>
 
 
@@ -50,9 +50,9 @@ export function NextClass() {
                             {/* Decorative line */}
                             <div className="absolute -left-10 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[var(--white-10)] to-transparent hidden lg:block pointer-events-none" />
 
-                            <div className="p-6 md:p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-6 group/card hover:bg-[var(--gold-premium)]/5 transition-colors">
-                                <div className="w-16 h-16 rounded-2xl bg-[var(--black-absolute)] border border-[var(--gold-premium)]/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(212,175,55,0.1)] group-hover/card:scale-110 transition-transform">
-                                    <Zap className="w-8 h-8 text-[var(--gold-premium)]" />
+                            <div className="p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-5 group/card hover:bg-[var(--gold-premium)]/5 transition-colors">
+                                <div className="w-14 h-14 rounded-xl bg-[var(--black-absolute)] border border-[var(--gold-premium)]/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(212,175,55,0.1)] group-hover/card:scale-110 transition-transform">
+                                    <Zap className="w-7 h-7 text-[var(--gold-premium)]" />
                                 </div>
                                 <div>
                                     <div className="text-xs uppercase tracking-widest text-[var(--gold-premium)] font-bold mb-1">Inscrições Abertas</div>
@@ -60,9 +60,9 @@ export function NextClass() {
                                 </div>
                             </div>
 
-                            <div className="p-6 md:p-8 rounded-3xl bg-[var(--green-bull)]/5 border border-[var(--green-bull)]/20 backdrop-blur-md flex items-center gap-6 group/card hover:bg-[var(--green-bull)]/10 transition-colors">
-                                <div className="w-16 h-16 rounded-2xl bg-[#032e1f]/30 border border-[var(--green-bull)]/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(0,191,99,0.20)] group-hover/card:scale-110 transition-transform">
-                                    <Calendar className="w-8 h-8 text-[var(--green-bull)]" />
+                            <div className="p-5 sm:p-6 rounded-2xl bg-[var(--green-bull)]/5 border border-[var(--green-bull)]/20 backdrop-blur-md flex items-center gap-5 group/card hover:bg-[var(--green-bull)]/10 transition-colors">
+                                <div className="w-14 h-14 rounded-xl bg-[#032e1f]/30 border border-[var(--green-bull)]/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(0,191,99,0.20)] group-hover/card:scale-110 transition-transform">
+                                    <Calendar className="w-7 h-7 text-[var(--green-bull)]" />
                                 </div>
                                 <div>
                                     <div className="text-xs uppercase tracking-widest text-[var(--green-bull)] font-bold mb-1">Início das Aulas</div>

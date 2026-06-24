@@ -1,11 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef, useState, useCallback } from "react";
 import { FadeIn } from "../../components/FadeIn";
-import { Play } from "lucide-react";
+import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function VideoSection() {
-    // 8 links Extraídos da própria playlist original (PL-KmsquED46aFcEZTItikmbgclFd8MDvo) do Bruno Borges
     const videos = [
         "https://www.youtube.com/embed/99lo7Y6CQwA",
         "https://www.youtube.com/embed/me01oy7m5Qo",
@@ -17,18 +16,44 @@ export function VideoSection() {
         "https://www.youtube.com/embed/0qsh0aDGsfs"
     ];
 
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const getCardWidth = useCallback(() => {
+        const container = scrollRef.current;
+        if (!container) return 0;
+        const card = container.firstElementChild as HTMLElement | null;
+        if (!card) return 0;
+        return card.offsetWidth + 24; // 24px = gap-6
+    }, []);
+
+    const scrollBy = (dir: 1 | -1) => {
+        const container = scrollRef.current;
+        if (!container) return;
+        container.scrollBy({ left: dir * getCardWidth(), behavior: "smooth" });
+    };
+
+    const handleScroll = useCallback(() => {
+        const container = scrollRef.current;
+        if (!container) return;
+        const cardWidth = getCardWidth();
+        if (cardWidth === 0) return;
+        const index = Math.round(container.scrollLeft / cardWidth);
+        setActiveIndex(index);
+    }, [getCardWidth]);
+
     return (
-        <section className="py-32 bg-[var(--light-surface)] relative overflow-hidden border-y border-slate-200" id="video">
+        <section className="py-16 md:py-24 bg-[var(--light-surface)] relative overflow-hidden border-y border-slate-200" id="video">
             <div className="absolute inset-0 z-0 pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[var(--gold-premium)]/10 blur-[150px] rounded-full" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[var(--green-bull)]/5 blur-[150px] rounded-full" />
             </div>
 
-            {/* Container ampliado para maximizar os vídeos em tela cheia */}
             <div className="max-w-[1500px] mx-auto px-6 lg:px-12 relative z-10 w-full">
-                <div className="text-center mb-20 max-w-4xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-16 max-w-4xl mx-auto">
                     <FadeIn>
                         <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-slate-200 bg-white shadow-sm mb-8">
-                            <Play className="w-5 h-5 text-[var(--gold-premium)] fill-current" />
+                            <Play className="w-5 h-5 text-[var(--green-bull)] fill-current" />
                             <span className="text-sm font-bold tracking-widest uppercase text-[var(--dark-pure)]">Aperte o Play</span>
                         </div>
                     </FadeIn>
@@ -41,29 +66,82 @@ export function VideoSection() {
                     </FadeIn>
                 </div>
 
-                {/* Estrutura flexível (Flexbox) projetada com justify-center
-                    3 colunas inteiras na Desktop, resultando em 3 no topo, 3 no meio e 2 perfeitamente centralizados no final 
-                */}
-                <div className="flex flex-wrap justify-center gap-8 md:gap-12 w-full">
-                    {videos.map((src, i) => (
-                        <FadeIn
-                            key={i}
-                            delay={0.1 * (i % 3)}
-                            // O uso do calc(33.333% - 2rem) garante exatamente 3 elementos por linha descontando os gaps (gap-12 = 3rem).
-                            className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] flex-grow-0"
-                        >
-                            <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 bg-white group shadow-lg hover:border-[var(--gold-premium)]/60 hover:shadow-[0_10px_40px_rgba(212,175,55,0.15)] transition-all duration-500 scale-100 hover:scale-[1.03]">
-                                <iframe
-                                    src={src}
-                                    title={`Depoimento Mentoria TDS ${i + 1}`}
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                    className="absolute top-0 left-0 w-full h-full"
-                                ></iframe>
+                {/* Carrossel */}
+                <FadeIn delay={0.2}>
+                    {/*
+                        Scroll snapping nativo:
+                        - overflow-x: auto com scroll-snap-type: x mandatory
+                        - Cada card tem scroll-snap-align: start
+                        - Mobile:  1 card por vez (w-full)
+                        - Tablet:  2 cards por vez (w-[calc(50%-12px)])
+                        - Desktop: 3 cards por vez (w-[calc(33.333%-16px)])
+                        As setas chamam scrollBy com a largura real do card lido do DOM.
+                        Scrollbar oculta via [-ms-overflow-style:none] e [&::-webkit-scrollbar]:hidden
+                    */}
+                    <div
+                        ref={scrollRef}
+                        onScroll={handleScroll}
+                        className="flex gap-6 overflow-x-auto scroll-smooth [scroll-snap-type:x_mandatory] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    >
+                        {videos.map((src, i) => (
+                            <div
+                                key={i}
+                                className="flex-shrink-0 [scroll-snap-align:start] w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                            >
+                                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-md">
+                                    <iframe
+                                        src={src}
+                                        title={`Depoimento Mentoria TDS ${i + 1}`}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="absolute top-0 left-0 w-full h-full"
+                                    />
+                                </div>
                             </div>
-                        </FadeIn>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+
+                    {/* Controles: setas + bolinhas na mesma linha, abaixo dos vídeos */}
+                    <div className="flex items-center justify-center gap-6 mt-8">
+                        <button
+                            onClick={() => scrollBy(-1)}
+                            aria-label="Vídeo anterior"
+                            className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-[var(--dark-pure)] hover:border-[var(--green-bull)] hover:text-[var(--green-bull)] transition-all duration-200"
+                        >
+                            <ChevronLeft className="w-5 h-5" />
+                        </button>
+
+                        <div className="flex items-center gap-2">
+                            {videos.map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => {
+                                        const container = scrollRef.current;
+                                        if (!container) return;
+                                        const card = container.firstElementChild as HTMLElement | null;
+                                        if (!card) return;
+                                        const cardWidth = card.offsetWidth + 24;
+                                        container.scrollTo({ left: i * cardWidth, behavior: "smooth" });
+                                    }}
+                                    aria-label={`Ir para vídeo ${i + 1}`}
+                                    className={`rounded-full transition-all duration-300 ${
+                                        i === activeIndex
+                                            ? "w-6 h-2 bg-[var(--green-bull)]"
+                                            : "w-2 h-2 bg-slate-300 hover:bg-slate-400"
+                                    }`}
+                                />
+                            ))}
+                        </div>
+
+                        <button
+                            onClick={() => scrollBy(1)}
+                            aria-label="Próximo vídeo"
+                            className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-[var(--dark-pure)] hover:border-[var(--green-bull)] hover:text-[var(--green-bull)] transition-all duration-200"
+                        >
+                            <ChevronRight className="w-5 h-5" />
+                        </button>
+                    </div>
+                </FadeIn>
             </div>
         </section>
     );

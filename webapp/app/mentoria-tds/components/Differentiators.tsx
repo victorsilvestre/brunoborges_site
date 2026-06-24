@@ -8,25 +8,20 @@ const HOTMART_URL = "";
 
 export function Differentiators() {
     const diffs = [
-        { num: "1.", label: "Conteúdo Prático e Denso", text: "Mais de 100h de conteúdo estruturado, do zero ao Price Action Simplificado. São mais de 25 aulas pensadas para transformar sua leitura de mercado e desenvolver uma visão realmente profissional." },
-        { num: "2.", label: "Mentoria de Elite", text: "Sem intermediários. Sem suporte terceirizado. Você tira dúvidas diretamente comigo, com acompanhamento próximo e direcionado." },
-        { num: "3.", label: "60 Dias de Foco Total", text: "Imersão completa com análise do mercado e aulas valiosas. Entenda os movimentos do mercado e as armadilhas que fazem diferença no seu resultado." },
-        { num: "4.", label: "Bônus Operacional", text: "Você não evolui sozinho. Participe de sessões práticas de Replay de Mercado com outros alunos, fortalecendo a leitura e consolidando o aprendizado." },
-        { num: "5.", label: "Acesso Vitalício", text: "Todo o conteúdo liberado para você, sem prazo. Reveja aulas, operações e materiais quantas vezes quiser, no seu ritmo e conforme sua evolução." },
-        { num: "6.", label: "Vagas Limitadas", text: "Turmas reduzidas para garantir qualidade no ensino e proximidade no acompanhamento. Aproveite enquanto as vagas estiverem abertas." },
+        { num: "1.", label: "Conteúdo Prático", text: "Mais de 100 horas de conteúdo estruturado para levar você do básico ao avançado. Um método organizado, direto ao ponto e pensado para transformar conhecimento em execução prática." },
+        { num: "2.", label: "Acompanhamento", text: "Aqui você aprende diretamente com quem desenvolveu o método. Sem suporte terceirizado, sem repassar dúvidas para outras pessoas. Correções, direcionamento e acompanhamento próximos durante toda a jornada." },
+        { num: "3.", label: "60 Dias de Imersão", text: "Durante dois meses você acompanha aulas ao vivo, análises de mercado e sessões práticas que aceleram o aprendizado e ajudam a consolidar a leitura de mercado no dia a dia operacional." },
+        { num: "4.", label: "Evolução Contínua", text: "Além da mentoria principal, você participa de aulas bônus, lives exclusivas, encontros operacionais e iniciativas criadas para aprofundar seu conhecimento e continuar evoluindo dia após dia." },
+        { num: "5.", label: "Acesso Vitalício", text: "Todo o conteúdo permanece disponível para consulta na sua área de membros. Revise aulas, materiais, estratégias e conceitos sempre que precisar, respeitando o seu ritmo e a sua fase de evolução." },
+        { num: "6.", label: "Turmas Selecionadas", text: "Turmas reduzidas para garantir proximidade, qualidade nas interações e um acompanhamento mais eficiente. Menos volume, mais atenção para quem realmente deseja evoluir." },
     ];
 
     return (
-        <section className="py-32 bg-[var(--light-base)] border-y border-slate-200">
+        <section className="py-16 md:py-24 bg-[var(--light-base)] border-y border-slate-200">
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
                     <div className="max-w-3xl">
-                        <FadeIn>
-                            <h2 className="text-[var(--dark-medium)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                                Diferenciais
-                            </h2>
-                        </FadeIn>
                         <FadeIn delay={0.1}>
                             <h3 className="font-display font-black text-5xl md:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
                                 Por que a Mentoria TDS<br />
@@ -67,7 +62,7 @@ export function Differentiators() {
                             rel="noopener noreferrer"
                             className="flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(0,191,99,0.30)] hover:shadow-[0_4px_30px_rgba(0,191,99,0.50)] w-fit mx-auto mt-10"
                         >
-                            Quero Fazer Parte
+                            Quero Fazer Parte da Mentoria
                         </a>
                     </FadeIn>
                 )}

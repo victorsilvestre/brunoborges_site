@@ -66,7 +66,7 @@ export function WhatYouReceive() {
     ];
 
     return (
-        <section className="relative py-32 bg-[var(--dark-base)] overflow-hidden border-y border-[var(--white-10)]">
+        <section className="relative py-16 md:py-24 bg-[var(--dark-base)] overflow-hidden border-y border-[var(--white-10)]">
 
             {/* Background decoration */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">

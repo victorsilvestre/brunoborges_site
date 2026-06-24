@@ -89,7 +89,7 @@ const reasons = [
 
 export function WhyTDSIsDifferent() {
   return (
-    <section className="py-32 bg-[var(--light-base)] relative overflow-hidden border-y border-slate-200">
+    <section className="py-16 md:py-24 bg-[var(--light-base)] relative overflow-hidden border-y border-slate-200">
       <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
       {/* Ambient glow */}

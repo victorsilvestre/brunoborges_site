@@ -49,7 +49,7 @@ export function Mentorship() {
   ];
 
   return (
-    <section className="relative py-32 bg-[var(--dark-base)]" id="mentorship">
+    <section className="relative py-16 md:py-24 bg-[var(--dark-base)]" id="mentorship">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[400px] bg-[var(--gold-premium)]/5 blur-[150px] rounded-[100%]" />
       </div>

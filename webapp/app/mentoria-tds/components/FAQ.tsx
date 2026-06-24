@@ -24,15 +24,10 @@ export function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-32 bg-[var(--light-base)] overflow-hidden border-y border-slate-200">
+        <section className="py-16 md:py-24 bg-[var(--light-base)] overflow-hidden border-y border-slate-200">
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="text-center mb-24">
-                    <FadeIn>
-                        <h2 className="text-[var(--dark-medium)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                            Transparência Total
-                        </h2>
-                    </FadeIn>
                     <FadeIn delay={0.1}>
                         <h3 className="font-display font-black text-5xl md:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
                             Perguntas <br /> Frequentes

@@ -1,26 +1,53 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef, useState, useCallback } from "react";
 import { FadeIn } from "../../components/FadeIn";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function ResultsSection() {
-    const images = [
-        "/images/results/image_result-1.jpg",
-        "/images/results/image_result-2.jpg",
-        "/images/results/image_result-3.jpg",
-        "/images/results/image_result-4.jpg",
-        "/images/results/image_result-5.jpg",
-        "/images/results/image_result-6.jpg"
+    const images: { src: string; position: string }[] = [
+        { src: "/images/results/image_result-1.jpg", position: "object-center" },
+        { src: "/images/results/image_result-2.jpg", position: "object-center" },
+        { src: "/images/results/image_result-3.jpg", position: "object-bottom" },
+        { src: "/images/results/image_result-4.jpg", position: "object-center" },
+        { src: "/images/results/image_result-5.jpg", position: "object-center" },
+        { src: "/images/results/image_result-6.jpg", position: "object-bottom" },
     ];
 
-    return (
-        <section className="py-32 bg-[var(--dark-base)] border-t border-[var(--white-10)] relative overflow-hidden" id="results">
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
+    const getCardWidth = useCallback(() => {
+        const container = scrollRef.current;
+        if (!container) return 0;
+        const card = container.firstElementChild as HTMLElement | null;
+        if (!card) return 0;
+        return card.offsetWidth + 24; // 24px = gap-6
+    }, []);
+
+    const scrollBy = (dir: 1 | -1) => {
+        const container = scrollRef.current;
+        if (!container) return;
+        container.scrollBy({ left: dir * getCardWidth(), behavior: "smooth" });
+    };
+
+    const handleScroll = useCallback(() => {
+        const container = scrollRef.current;
+        if (!container) return;
+        const cardWidth = getCardWidth();
+        if (cardWidth === 0) return;
+        const index = Math.round(container.scrollLeft / cardWidth);
+        setActiveIndex(index);
+    }, [getCardWidth]);
+
+    return (
+        <section className="py-16 md:py-24 bg-[var(--dark-base)] border-t border-[var(--white-10)] relative overflow-hidden" id="results">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="text-center mb-24 max-w-3xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-16 max-w-3xl mx-auto">
                     <FadeIn>
                         <h2 className="text-[var(--white-40)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                            Você é capaz de ter resultados assim
+                            Você é capaz de ter resultados assim todos os dias
                         </h2>
                     </FadeIn>
                     <FadeIn delay={0.1}>
@@ -28,33 +55,78 @@ export function ResultsSection() {
                             Resultados <br />
                             <span className="text-[var(--green-bull)]">Reais</span>
                         </h3>
+                        <span className="font-script text-3xl md:text-4xl text-[var(--green-bull)] block -mt-4 mb-6 md:mb-8 origin-left -rotate-1">
+                            #AlunosTDS
+                        </span>
                     </FadeIn>
                     <FadeIn delay={0.2}>
-                        <p className="text-xl text-[var(--white-60)]">
+                        <p className="text-xl text-[var(--white-60)] leading-snug">
                             Vou te ensinar a ter resultados como esses no seu dia a dia operacional. Sem setups mágicos ou indicadores milagrosos. Conheça a leitura de Price Action que transformou a vida de milhares de alunos.
                         </p>
                     </FadeIn>
                 </div>
 
-                {/* Grid de resultados tipo Masonry sem grayscale inicial */}
-                <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                    {images.map((src, i) => (
-                        <FadeIn key={i} delay={0.1 * (i % 3)} className="break-inside-avoid">
-                            <div className="relative rounded-2xl overflow-hidden border border-[var(--white-10)] bg-[var(--dark-elevated)] group hover:border-[var(--green-bull)]/50 hover:shadow-[0_0_40px_rgba(0,191,99,0.15)] transition-all duration-500">
-                                <img
-                                    src={src}
-                                    alt={`Resultado do aluno ${i + 1}`}
-                                    className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-all duration-500 group-hover:scale-[1.03]"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-end p-6">
-                                    <span className="text-[var(--green-bull)] font-display font-bold uppercase tracking-widest text-xs">
-                                        Operação Validada
-                                    </span>
+                {/* Carrossel */}
+                <FadeIn delay={0.3}>
+                    <div
+                        ref={scrollRef}
+                        onScroll={handleScroll}
+                        className="flex gap-6 overflow-x-auto [scroll-snap-type:x_mandatory] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    >
+                        {images.map(({ src, position }, i) => (
+                            <div
+                                key={i}
+                                className="flex-shrink-0 [scroll-snap-align:start] w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                            >
+                                <div className="relative h-80 rounded-2xl overflow-hidden border border-[var(--white-10)] bg-[var(--dark-elevated)]">
+                                    <img
+                                        src={src}
+                                        alt={`Resultado do aluno ${i + 1}`}
+                                        className={`w-full h-full object-cover opacity-90 ${position}`}
+                                    />
                                 </div>
                             </div>
-                        </FadeIn>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+
+                    {/* Controles: setas + bolinhas na mesma linha, abaixo das imagens */}
+                    <div className="flex items-center justify-center gap-6 mt-8">
+                        <button
+                            onClick={() => scrollBy(-1)}
+                            aria-label="Imagem anterior"
+                            className="w-10 h-10 rounded-full bg-[var(--dark-elevated)] border border-[var(--white-10)] shadow-sm flex items-center justify-center text-white hover:border-[var(--green-bull)] hover:text-[var(--green-bull)] transition-all duration-200"
+                        >
+                            <ChevronLeft className="w-5 h-5" />
+                        </button>
+
+                        <div className="flex items-center gap-2">
+                            {images.map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => {
+                                        const container = scrollRef.current;
+                                        if (!container) return;
+                                        container.scrollTo({ left: i * getCardWidth(), behavior: "smooth" });
+                                    }}
+                                    aria-label={`Ir para imagem ${i + 1}`}
+                                    className={`rounded-full transition-all duration-300 ${
+                                        i === activeIndex
+                                            ? "w-6 h-2 bg-[var(--green-bull)]"
+                                            : "w-2 h-2 bg-[var(--white-20)] hover:bg-[var(--white-40)]"
+                                    }`}
+                                />
+                            ))}
+                        </div>
+
+                        <button
+                            onClick={() => scrollBy(1)}
+                            aria-label="Próxima imagem"
+                            className="w-10 h-10 rounded-full bg-[var(--dark-elevated)] border border-[var(--white-10)] shadow-sm flex items-center justify-center text-white hover:border-[var(--green-bull)] hover:text-[var(--green-bull)] transition-all duration-200"
+                        >
+                            <ChevronRight className="w-5 h-5" />
+                        </button>
+                    </div>
+                </FadeIn>
             </div>
         </section>
     );
