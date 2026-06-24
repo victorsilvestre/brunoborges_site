@@ -19,7 +19,7 @@ export function Schedule() {
             time: "20HRS",
             topics: "A estratégia que mudou a minha vida",
             description: "Nessa aula, eu vou compartilhar com você a primeira estratégia que eu utilizei no mercado financeiro e que transformou a minha vida. Você vai acompanhar as entradas, os alvos e o gerenciamento de risco de cada operação. Você vai aprender a aplicar essa estratégia nos principais ativos do mercado e entender por que ela funciona independente do cenário.",
-            url: ""
+            url: "https://www.youtube.com/watch?v=Ll58wZkHNYo"
         },
         {
             subtitle: "AULA 3 - QUINTA",
