@@ -1,6 +1,6 @@
 "use client";
 
-import { GraduationCap, Headphones, Users, Trophy, BookOpen, Clock, BarChart2 } from "lucide-react";
+import { GraduationCap, Headphones, Users, Trophy, BookOpen, Clock, BarChart2, MonitorPlay } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
 import { INSCRICOES_ABERTAS } from "../config";
 
@@ -9,50 +9,58 @@ const HOTMART_URL = "";
 export function WhatYouReceive() {
     const benefits = [
         {
-            icon: <BookOpen className="w-8 h-8" />,
-            title: "Acesso Vitalício",
-            badge: "pra sempre",
-            description: "Aulas gravadas para você assistir quando e onde quiser. Sem pressa, no seu ritmo.",
+            icon: <GraduationCap className="w-8 h-8" />,
+            title: "Mentoria Ao Vivo",
+            badge: "virada de chave",
+            description: "60 dias de aulas e acompanhamento ao vivo, 3 vezes por semana, para acelerar sua evolução e esclarecer as dúvidas do pregão diretamente com o mentor.",
+            gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
+        },
+        {
+            icon: <MonitorPlay className="w-8 h-8" />,
+            title: "Sala Educacional",
+            badge: "bônus",
+            description: "Acompanhe o mercado ao vivo durante 30 dias com o mentor das 8h45 às 10h15 e veja na prática como aplicar os conceitos ensinados na mentoria em cenários reais diariamente.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
             icon: <Headphones className="w-8 h-8" />,
             title: "Suporte de Dúvidas",
             badge: "pra sempre",
-            description: "Suporte vitalício, diretamente com o professor, mesmo após encerramento da mentoria.",
+            description: "Tenha acesso contínuo para esclarecer dúvidas, ajustar sua leitura de mercado e continuar evoluindo mesmo após o encerramento da mentoria.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
-            icon: <Users className="w-8 h-8" />,
-            title: "Grupo Exclusivo",
-            badge: "Comunidade",
-            description: "Grupo exclusivo de alunos no Telegram para troca de experiências e aprendizado.",
+            icon: <BookOpen className="w-8 h-8" />,
+            title: "Acesso Vitalício",
+            badge: "pra sempre",
+            description: "Revise aulas, conceitos e conteúdos quantas vezes precisar. Aprenda no seu ritmo com o conteúdo sempre disponível na nova área de membros da Mentoria TDS.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
-            icon: <GraduationCap className="w-8 h-8" />,
-            title: "Mentoria Ao Vivo",
-            badge: "virada de chave",
-            description: "60 dias de mentoria ao vivo, 3x na semana, das 19h até todas as dúvidas serem esclarecidas.",
+            icon: <Clock className="w-8 h-8" />,
+            title: "+100H de Conteúdo",
+            badge: "exclusivo",
+            description: "Mais de 100 horas de conteúdo organizadas do básico ao avançado para construir uma base sólida em leitura de contexto e Price Action puro, simples e fácil.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
             icon: <Trophy className="w-8 h-8" />,
             title: "Aulas Operacionais",
-            description: "Aulas operacionais aos sábados, com alunos operando e feedbacks do professor ao vivo.",
+            description: "Aulas práticas aos sábados com alunos operando junto com o mentor ou aulas de análise e aprofundamento do operacional para fortalecer sua leitura e refinar sua execução na prática.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
-            icon: <Clock className="w-8 h-8" />,
-            title: "+100h de conteúdo",
-            description: "Aulas do básico ao avançado em Price Action. Exclusivo para alunos.",
+            icon: <Users className="w-8 h-8" />,
+            title: "Grupo Exclusivo",
+            badge: "comunidade",
+            description: "Troque experiências com os outros alunos da sua turma, compartilhe aprendizados e evolua ao lado de traders que buscam os mesmos objetivos que você.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         },
         {
             icon: <BarChart2 className="w-8 h-8" />,
             title: "Gestão de Risco",
             badge: "exclusivo",
-            description: "Planilha de gerencimento de risco para auxiliar seu aprendizado e as operações no mercado.",
+            description: "Ferramentas e materiais para ajudar você a desenvolver disciplina, controle emocional e uma gestão mais eficiente das suas operações.",
             gradient: "from-[var(--green-dark)] to-[var(--green-bull)]"
         }
     ];
@@ -72,7 +80,7 @@ export function WhatYouReceive() {
                 <div className="text-center mb-24 max-w-4xl mx-auto">
                     <FadeIn>
                         <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[var(--green-bull)]/20 bg-[var(--green-bull)]/10 text-[var(--green-bull)] mb-8">
-                            <span className="text-xs font-bold tracking-widest uppercase">Pacote Completo</span>
+                            <span className="text-xs font-bold tracking-widest uppercase">Pacote Exclusivo Para 15ª Turma</span>
                         </div>
                     </FadeIn>
 
@@ -106,7 +114,7 @@ export function WhatYouReceive() {
                                         {benefit.title}
                                     </h3>
                                     {benefit.description && (
-                                        <p className="text-[var(--white-60)] leading-relaxed">
+                                        <p className="text-[var(--white-60)] leading-snug">
                                             {benefit.description}
                                         </p>
                                     )}
@@ -119,8 +127,8 @@ export function WhatYouReceive() {
                     ))}
                 </div>
 
-                {/* Benefits Grid — linha 2: 3 cards centralizados */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-[75%] lg:mx-auto">
+                {/* Benefits Grid — linha 2: 4 cards */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {benefits.slice(4).map((benefit, idx) => (
                         <FadeIn key={idx + 4} delay={0.1 * idx} direction="up">
                             <div className="relative group h-full">
