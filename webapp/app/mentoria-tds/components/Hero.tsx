@@ -21,10 +21,9 @@ export function Hero() {
             {/* Premium Background Diagram */}
             <div className="absolute inset-0 z-0 bg-black">
                 <img
-                    src="/hero_trader_setup.png"
+                    src="/images/imagem_hero-1.jpg"
                     alt="Trader Setup Background"
-                    // mantendo o object-position focado no trader e subindo o eixo Y (25%) para revelar a parte superior da imagem.
-                    className="w-full h-full object-cover object-[75%_63%] opacity-[0.45] grayscale-[20%] scale-105"
+                    className="w-full h-full object-cover object-[70%_50%] lg:object-[75%_50%] opacity-[0.45] grayscale-[20%] scale-105"
                 />
 
                 {/* Advanced Gradients - Protege o texto na esquerda reforçando o fade suave */}
