@@ -8,19 +8,19 @@ const youtubeVideos = [
     {
         id: "UuApdnP_fbQ",
         title: "Daytrade Entendendo um pouco mais sobre Alvos de Fibo",
-        views: "+307k visualizações",
+        views: "+445k visualizações",
         url: "https://www.youtube.com/watch?v=UuApdnP_fbQ"
     },
     {
         id: "IVp17SnRzoQ",
         title: "Daytrade - O segredo da FIBO que muda Tudo!!!",
-        views: "+224k visualizações",
+        views: "+322k visualizações",
         url: "https://www.youtube.com/watch?v=IVp17SnRzoQ"
     },
     {
         id: "-GaoKSksiZ0",
         title: "Como alcançar uma alta assertividade - Estratégia infalível",
-        views: "+47k visualizações",
+        views: "+86k visualizações",
         url: "https://www.youtube.com/watch?v=-GaoKSksiZ0"
     },
     {
@@ -34,20 +34,20 @@ const youtubeVideos = [
 const instagramPosts = [
     {
         type: "post",
-        image: "/images/insta/image_insta-post-1.jpg",
-        caption: "Mentoria TDS — Próxima turma: 15/04",
-        tag: "Mentoria"
+        image: "/images/insta/image_insta-post-5.jpg",
+        caption: "O caminho é o mesmo para cada um. A diferença está em como enfrentamos essa jornada.",
+        tag: "Motivacional"
     },
     {
         type: "evento",
-        image: "/images/insta/image_insta-post-2.jpg",
-        caption: "14ª Maratona TDS — Evento 100% online e gratuito",
+        image: "/images/insta/image_insta-post-8.jpg",
+        caption: "A 15ª Maratona TDS foi um sucesso! Obrigado a todos que participaram e aceitaram o desafio de aprender um novo operacional.",
         tag: "Evento"
     },
     {
         type: "post",
-        image: "/images/insta/image_insta-post-4.jpg",
-        caption: "\"Seja constante. Os resultados serão inevitáveis.\"",
+        image: "/images/insta/image_insta-post-7.jpg",
+        caption: "Você quer ir mais longe ou mais rápido? A família TDS sempre quer ir mais longe. #EuSouTDS",
         tag: "Mentalidade"
     }
 ];

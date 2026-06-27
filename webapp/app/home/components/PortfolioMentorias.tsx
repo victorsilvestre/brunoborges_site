@@ -102,7 +102,7 @@ export function PortfolioMentorias() {
                   href="/mentoria-tds"
                   className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all shadow-[0_0_30px_rgba(0,191,99,0.3)] hover:shadow-[0_0_50px_rgba(0,191,99,0.5)]"
                 >
-                  Inscrições Para a Próxima Turma em 25/06 às 21h
+                  Inscrições abertas! Vagas limitadas.
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>

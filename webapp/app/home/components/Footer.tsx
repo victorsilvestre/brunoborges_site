@@ -36,7 +36,7 @@ export function Footer() {
     ];
 
     const mentoriaLinks = [
-        { label: "Mentoria", href: "" },
+        { label: "Mentoria", href: "/mentoria-tds" },
         { label: "Maratona", href: "/maratona" }
     ];
 

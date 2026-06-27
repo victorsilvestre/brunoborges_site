@@ -20,7 +20,7 @@ export function Features() {
     {
       icon: <Zap className="w-8 h-8 text-[var(--white)]" />,
       num: "03",
-      title: "Price Action simplificado",
+      title: "Price Action Simples",
       text: "Aprenda a interpretar o comportamento do preço com objetividade e desenvolva um operacional baseado no que realmente importa sem depender de indicadores 'milagrosos'.",
     },
     {
