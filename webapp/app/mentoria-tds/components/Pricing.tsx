@@ -33,7 +33,6 @@ const items = [
 ];
 
 const TOTAL_FICTICIO = "R$ 4.199,00";
-const PARCELAS = "12x R$ 124,11";
 const PRECO_FINAL = "R$ 1.200,00";
 const ECONOMIA = "R$ 2.999,00";
 
@@ -135,7 +134,7 @@ export function Pricing() {
 
                                 {/* Destaque principal: parcelas */}
                                 <span className="font-display font-black text-5xl md:text-6xl text-[var(--green-bull)] drop-shadow-[0_0_30px_rgba(0,191,99,0.35)] leading-none">
-                                    {PARCELAS}
+                                    12x<br className="md:hidden" /> R$ 124,11
                                 </span>
                                 <span className="text-[var(--white-20)] text-xs font-bold uppercase tracking-widest">
                                     no cartão de crédito

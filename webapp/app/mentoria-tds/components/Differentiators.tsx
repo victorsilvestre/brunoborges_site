@@ -14,6 +14,8 @@ export function Differentiators() {
         { num: "4.", label: "Evolução Contínua", text: "Além da mentoria principal, você participa de aulas bônus, lives exclusivas, encontros operacionais e iniciativas criadas para aprofundar seu conhecimento e continuar evoluindo dia após dia." },
         { num: "5.", label: "Acesso Vitalício", text: "Todo o conteúdo permanece disponível para consulta na sua área de membros. Revise aulas, materiais, estratégias e conceitos sempre que precisar, respeitando o seu ritmo e a sua fase de evolução." },
         { num: "6.", label: "Turmas Selecionadas", text: "Turmas reduzidas para garantir proximidade, qualidade nas interações e um acompanhamento mais eficiente. Menos volume, mais atenção para quem realmente deseja evoluir." },
+        { num: "7.", label: "Mesas Proprietárias", text: "Alto índice de aprovação dos alunos em mesas proprietárias. Você opera com capital de terceiros, sem arriscar o próprio dinheiro, e ganha em dólar." },
+        { num: "8.", label: "Método Comprovado", text: "Funciona em qualquer ativo, mercado e tempo gráfico — e não é teoria. São mais de 1.200 alunos aplicando o método em conta real todos os dias, com resultados que falam por si." },
     ];
 
     return (
@@ -24,9 +26,12 @@ export function Differentiators() {
                     <div className="max-w-3xl">
                         <FadeIn delay={0.1}>
                             <h3 className="font-display font-black text-5xl md:text-7xl text-[var(--dark-pure)] uppercase leading-[0.9] tracking-tighter">
-                                Por que a Mentoria TDS<br />
+                                Por que a Família TDS<br />
                                 <span className="text-[var(--green-bull)]">é diferente?</span>
                             </h3>
+                            <span className="font-script text-3xl md:text-4xl text-[var(--green-bull)] block mt-4 -rotate-1">
+                                #EuSouTDS
+                            </span>
                         </FadeIn>
                     </div>
                 </div>
@@ -47,7 +52,7 @@ export function Differentiators() {
                                 <h4 className="font-display font-black text-2xl text-[var(--dark-pure)] uppercase mb-4 tracking-tight group-hover:text-[var(--green-bull)] transition-colors">
                                     {d.label}
                                 </h4>
-                                <p className="text-[var(--dark-medium)] font-medium text-lg leading-relaxed">
+                                <p className="text-[var(--dark-medium)] font-medium text-lg leading-snug">
                                     {d.text}
                                 </p>
                             </div>

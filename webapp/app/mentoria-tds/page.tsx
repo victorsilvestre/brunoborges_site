@@ -10,7 +10,7 @@ import { Pricing } from "./components/Pricing";
 import { Author } from "./components/Author";
 import { FAQ } from "./components/FAQ";
 import { Waitlist } from "./components/Waitlist";
-import { WhyTDSIsDifferent } from "./components/WhyTDSIsDifferent";
+// import { WhyTDSIsDifferent } from "./components/WhyTDSIsDifferent";
 import { NextClass } from "./components/NextClass";
 import { INSCRICOES_ABERTAS } from "./config";
 
@@ -20,10 +20,10 @@ export default function LandingPage() {
             <Hero />
             <Features />
             <Mentorship />
-            <WhyTDSIsDifferent />
+            <Author />
+            {/* <WhyTDSIsDifferent /> */}
             <WhatYouReceive />
             <VideoSection />
-            {INSCRICOES_ABERTAS && <NextClass />}
             <Differentiators />
             <ResultsSection />
             <SocialProof
@@ -31,8 +31,8 @@ export default function LandingPage() {
                 titleHighlight="case de sucesso"
                 titleHighlightClass="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-pure)] to-[var(--green-bull)]"
             />
+            {INSCRICOES_ABERTAS && <NextClass />}
             {INSCRICOES_ABERTAS && <Pricing />}
-            <Author />
             <FAQ />
             <Waitlist />
 
