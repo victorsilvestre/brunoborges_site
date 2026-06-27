@@ -1,23 +1,25 @@
 "use client";
 
 import { useRef, useState, useCallback } from "react";
+import Image from "next/image";
 import { FadeIn } from "../../components/FadeIn";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function VideoSection() {
     const videos = [
-        "https://www.youtube.com/embed/99lo7Y6CQwA",
-        "https://www.youtube.com/embed/me01oy7m5Qo",
-        "https://www.youtube.com/embed/XGm9_8p8szw",
-        "https://www.youtube.com/embed/mc-BLTC9u8g",
-        "https://www.youtube.com/embed/MxZHpqm0Tiw",
-        "https://www.youtube.com/embed/axURBwz8Y6Y",
-        "https://www.youtube.com/embed/8r9odFeCfGg",
-        "https://www.youtube.com/embed/0qsh0aDGsfs"
+        { id: "99lo7Y6CQwA" },
+        { id: "me01oy7m5Qo" },
+        { id: "XGm9_8p8szw" },
+        { id: "mc-BLTC9u8g" },
+        { id: "MxZHpqm0Tiw" },
+        { id: "axURBwz8Y6Y" },
+        { id: "8r9odFeCfGg" },
+        { id: "0qsh0aDGsfs" },
     ];
 
     const scrollRef = useRef<HTMLDivElement>(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [activatedVideos, setActivatedVideos] = useState<Set<number>>(new Set());
 
     const getCardWidth = useCallback(() => {
         const container = scrollRef.current;
@@ -83,19 +85,40 @@ export function VideoSection() {
                         onScroll={handleScroll}
                         className="flex gap-6 overflow-x-auto scroll-smooth [scroll-snap-type:x_mandatory] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                     >
-                        {videos.map((src, i) => (
+                        {videos.map(({ id }, i) => (
                             <div
                                 key={i}
                                 className="flex-shrink-0 [scroll-snap-align:start] w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
                             >
-                                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-md">
-                                    <iframe
-                                        src={src}
-                                        title={`Depoimento Mentoria TDS ${i + 1}`}
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        className="absolute top-0 left-0 w-full h-full"
-                                    />
+                                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 bg-black shadow-md">
+                                    {activatedVideos.has(i) ? (
+                                        <iframe
+                                            src={`https://www.youtube.com/embed/${id}?autoplay=1`}
+                                            title={`Depoimento Mentoria TDS ${i + 1}`}
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            className="absolute top-0 left-0 w-full h-full"
+                                        />
+                                    ) : (
+                                        <button
+                                            onClick={() => setActivatedVideos(prev => new Set(prev).add(i))}
+                                            className="absolute inset-0 w-full h-full group"
+                                            aria-label={`Reproduzir depoimento ${i + 1}`}
+                                        >
+                                            <Image
+                                                src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+                                                alt={`Depoimento Mentoria TDS ${i + 1}`}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-200" />
+                                            <div className="absolute inset-0 flex items-center justify-center">
+                                                <div className="w-16 h-16 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110">
+                                                    <Play className="w-7 h-7 text-[var(--dark-pure)] fill-current ml-1" />
+                                                </div>
+                                            </div>
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         ))}

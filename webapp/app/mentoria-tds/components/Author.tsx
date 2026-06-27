@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FadeIn } from "../../components/FadeIn";
 import { INSCRICOES_ABERTAS } from "../config";
 
@@ -89,10 +90,11 @@ export function Author() {
                             {/* Backglow specifically for the image */}
                             <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-[var(--gold-premium)]/20 to-transparent blur-[80px]" />
 
-                            <img
+                            <Image
                                 src="/image_bruno-borges.webp"
                                 alt="Bruno Borges"
-                                className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                                fill
+                                className="object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                             />
                         </motion.div>
                     </div>

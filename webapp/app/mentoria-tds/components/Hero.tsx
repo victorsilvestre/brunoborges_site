@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { FadeIn } from "../../components/FadeIn";
 import { INSCRICOES_ABERTAS } from "../config";
 
@@ -20,10 +21,12 @@ export function Hero() {
 
             {/* Premium Background Diagram */}
             <div className="absolute inset-0 z-0 bg-black">
-                <img
+                <Image
                     src="/images/imagem_hero-1.jpg"
                     alt="Trader Setup Background"
-                    className="w-full h-full object-cover object-[70%_50%] lg:object-[75%_50%] opacity-[0.45] grayscale-[20%] scale-105"
+                    fill
+                    priority
+                    className="object-cover object-[70%_50%] lg:object-[75%_50%] opacity-[0.45] grayscale-[20%] scale-105"
                 />
 
                 {/* Advanced Gradients - Protege o texto na esquerda reforçando o fade suave */}
