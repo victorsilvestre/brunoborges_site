@@ -15,7 +15,7 @@ export function Hero() {
             {/* Faixa de urgência - Vagas Limitadas */}
             <div className="absolute top-0 left-0 right-0 z-20 bg-[var(--red-bear)] py-2 flex items-center justify-center">
                 <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.25em]">
-                    Vagas Limitadas
+                    Últimos Dias - Encerra Amanhã, 07/07
                 </span>
             </div>
 
