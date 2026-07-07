@@ -1,6 +1,5 @@
-import { ArrowRight, ShieldCheck } from "lucide-react";
-
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+import { ShieldCheck } from "lucide-react";
+import { CTAButton } from "./CTAButton";
 
 export function Guarantee() {
   return (
@@ -36,16 +35,12 @@ export function Guarantee() {
               </strong>
             </p>
 
-            <a
-              href={HOTMART_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-display font-black text-base uppercase tracking-wider transition-all duration-300 hover:scale-[1.02] group"
+            <CTAButton
+              label="Quero testar a Sala"
+              className="text-base"
+              hoverScaleClassName="hover:scale-[1.02]"
               style={{ background: "var(--dark-pure)", color: "#FFFFFF" }}
-            >
-              Quero testar a Sala
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            />
           </div>
         </div>
       </div>

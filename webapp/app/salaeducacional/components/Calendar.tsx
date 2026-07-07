@@ -1,6 +1,4 @@
-import { ArrowRight } from "lucide-react";
-
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+import { CTAButton } from "./CTAButton";
 
 export function Calendar() {
   return (
@@ -76,16 +74,13 @@ export function Calendar() {
               </div>
             </div>
 
-            <a
-              href={HOTMART_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 py-4 px-6 rounded-2xl font-display font-black text-base uppercase tracking-wider transition-all duration-300 hover:scale-[1.02] group w-full"
-              style={{ background: "#BFEA24", color: "#0C0D0E" }}
-            >
-              Garantir Minha Vaga
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <CTAButton
+              label="Garantir Minha Vaga"
+              className="justify-center w-full"
+              textSizeClassName="text-base"
+              hoverScaleClassName="hover:scale-[1.02]"
+              roundedClassName="rounded-2xl"
+            />
           </div>
         </div>
       </div>

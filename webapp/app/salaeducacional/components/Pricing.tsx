@@ -1,6 +1,5 @@
-import { Check, ArrowRight } from "lucide-react";
-
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+import { Check } from "lucide-react";
+import { CTAButton } from "./CTAButton";
 
 export function Pricing() {
   const includes = [
@@ -110,13 +109,13 @@ export function Pricing() {
             <div className="flex flex-col items-center text-center gap-2 mb-8">
               <span
                 className="text-sm font-bold line-through"
-                style={{ color: "rgba(255,255,255,0.2)" }}
+                style={{ color: "#f03210" }}
               >
                 R$ 499,90/mês
               </span>
               <span
                 className="font-display font-black leading-none tracking-tighter"
-                style={{ fontSize: "clamp(56px,12vw,80px)", color: "#BFEA24" }}
+                style={{ fontSize: "clamp(56px,12vw,70px)", color: "#BFEA24" }}
               >
                 R$ 249,90
               </span>
@@ -138,25 +137,22 @@ export function Pricing() {
                   className="text-xs font-bold uppercase tracking-widest"
                   style={{ color: "#BFEA24" }}
                 >
-                  50% off — preço de lançamento
+                  Cupom: EUSOUTDS50
                 </span>
               </div>
             </div>
 
             {/* CTA */}
-            <a
-              href={HOTMART_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full relative overflow-hidden flex items-center justify-center gap-3 py-5 px-4 rounded-xl font-display font-black text-lg uppercase tracking-wider transition-all duration-300 hover:scale-[1.02] group"
-              style={{ background: "#BFEA24", color: "#0C0D0E" }}
+            <CTAButton
+              label="Quero Assinar"
+              className="w-full relative overflow-hidden justify-center"
+              paddingClassName="py-5 px-4"
+              textSizeClassName="text-lg"
+              hoverScaleClassName="hover:scale-[1.02]"
+              contentClassName="relative z-10 flex items-center gap-3"
             >
-              <span className="relative z-10 flex items-center gap-3">
-                Quero Assinar
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-            </a>
+            </CTAButton>
 
             <p className="text-center text-xs text-white/20 mt-4 uppercase tracking-widest">
               7 dias de garantia · cancele quando quiser

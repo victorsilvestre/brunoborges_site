@@ -1,3 +1,5 @@
+import { CTAButton } from "./CTAButton";
+
 export function FinancialResults() {
   return (
     <section className="py-16 md:py-24 border-t border-slate-200 bg-[var(--light-base)]">
@@ -8,14 +10,14 @@ export function FinancialResults() {
             Resultado financeiro
           </span>
           <h2 className="font-display font-black text-4xl md:text-5xl uppercase leading-[0.9] tracking-tighter text-[var(--dark-pure)] mb-4">
-            O mercado recompensa quem sabe o que
-            <br />
-            <span className="text-[var(--green-bull)]">está fazendo.</span>
+            <span className="text-[var(--green-bull)]">O mercado recompensa</span> quem sabe o que
+            está fazendo.
           </h2>
           <p className="text-[var(--dark-medium)] text-lg leading-snug">
             No projeto piloto, alunos que nunca tinham operado com consistência
             começaram a fechar dias no positivo. Não por sorte — por método
-            aplicado ao vivo, todos os dias fazendo a mesma coisa, com contexto real de mercado.
+            aplicado ao vivo, todos os dias fazendo a mesma coisa, com contexto
+            real de mercado.
           </p>
         </div>
 
@@ -104,7 +106,8 @@ export function FinancialResults() {
             <strong className="text-[var(--dark-pure)]">
               não falhas do produto, mas falhas comportamentais.
             </strong>{" "}
-            É exatamente esse padrão que a Sala Educacional corrige, dia após dia, ao vivo.
+            É exatamente esse padrão que a Sala Educacional corrige, dia após
+            dia, ao vivo.
           </p>
         </div>
 
@@ -121,6 +124,10 @@ export function FinancialResults() {
           <span className="text-xs font-bold tracking-widest uppercase text-[var(--green-bull)]">
             — Italo
           </span>
+        </div>
+
+        <div className="mt-8 text-center">
+          <CTAButton label="Quero ter resultados assim" />
         </div>
 
         {/* Ponte */}

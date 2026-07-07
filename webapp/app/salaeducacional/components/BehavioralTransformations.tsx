@@ -1,3 +1,5 @@
+import { CTAButton } from "./CTAButton";
+
 export function BehavioralTransformations() {
   const transformations = [
     {
@@ -115,6 +117,10 @@ export function BehavioralTransformations() {
               </span>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <CTAButton label="Quero essa transformação" />
         </div>
       </div>
     </section>

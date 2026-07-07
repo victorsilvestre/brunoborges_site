@@ -1,3 +1,5 @@
+import { CTAButton } from "./CTAButton";
+
 export function ApplicationConfidence() {
   return (
     <section className="py-16 md:py-24 bg-[#0C0D0E] border-t border-white/[0.06]">
@@ -118,6 +120,10 @@ export function ApplicationConfidence() {
               </span>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <CTAButton label="Quero praticar ao vivo" />
         </div>
       </div>
     </section>

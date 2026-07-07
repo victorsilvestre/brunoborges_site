@@ -1,4 +1,5 @@
 import { Check, X } from "lucide-react";
+import { CTAButton } from "./CTAButton";
 
 export function ForWhom() {
   const forYou = [
@@ -112,6 +113,10 @@ export function ForWhom() {
               disciplina para seguir o seu próprio plano, não o dos outros.
             </strong>
           </p>
+        </div>
+
+        <div className="mt-8 text-center">
+          <CTAButton label="Eu sou esse aluno" />
         </div>
       </div>
     </section>

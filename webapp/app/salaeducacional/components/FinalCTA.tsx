@@ -1,6 +1,4 @@
-import { ArrowRight } from "lucide-react";
-
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+import { CTAButton } from "./CTAButton";
 
 export function FinalCTA() {
   return (
@@ -42,16 +40,13 @@ export function FinalCTA() {
           A Sala Educacional inicia no dia 21 de julho — e as vagas são limitadas.
         </p>
 
-        <a
-          href={HOTMART_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex  gap-3 py-3 px-3 rounded-xl font-display font-black text-sl uppercase tracking-wider transition-all duration-300 hover:scale-[1.03] group mb-5"
-          style={{ background: "#BFEA24", color: "#0C0D0E" }}
-        >
-          Garantir Minha Vaga
-          <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-        </a>
+        <CTAButton
+          label="Garantir Minha Vaga"
+          className="mb-5"
+          paddingClassName="py-3 px-3"
+          textSizeClassName="text-sl"
+          iconClassName="w-6 h-6 group-hover:translate-x-1 transition-transform"
+        />
 
         <p className="text-[10px] text-white/20 uppercase tracking-[0.25em]">
           7 dias de garantia · R$ 249,90/mês · Cancele quando quiser

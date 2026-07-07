@@ -1,8 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+import { CTAButton } from "./CTAButton";
 
 export function Hero() {
   return (
@@ -92,16 +90,11 @@ export function Hero() {
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4 items-start">
-          <a
-            href={HOTMART_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-10 py-5 rounded-xl font-display font-black text-base uppercase tracking-wider transition-all duration-300 hover:scale-[1.03] group"
-            style={{ background: "#BFEA24", color: "#0C0D0E" }}
-          >
-            Garantir minha vaga
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          <CTAButton
+            label="Garantir minha vaga"
+            paddingClassName="px-10 py-5"
+            textSizeClassName="text-base"
+          />
           {/* <div className="flex items-center gap-2 self-center">
                         <span className="text-xs text-white/30 uppercase tracking-widest">7 dias de garantia</span>
                     </div> */}

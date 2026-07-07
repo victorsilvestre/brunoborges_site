@@ -1,3 +1,5 @@
+import { CTAButton } from "./CTAButton";
+
 export function WhatStudentsValued() {
   const items = [
     {
@@ -91,6 +93,10 @@ export function WhatStudentsValued() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14 text-center">
+          <CTAButton label="Quero fazer parte" />
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Radio, Clock, LockKeyhole, VolumeX } from "lucide-react";
+import { CTAButton } from "./CTAButton";
 
 const cards = [
   {
@@ -55,6 +56,9 @@ export function WhatIs() {
               Você assiste, absorve, acompanha e aprende a pensar como um trader
               profissional.
             </p>
+            <div className="mt-8">
+              <CTAButton label="Quero entrar na Sala" />
+            </div>
           </div>
 
           {/* Lado direito — cards */}
