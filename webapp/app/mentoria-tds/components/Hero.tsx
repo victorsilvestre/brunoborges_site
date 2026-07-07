@@ -13,11 +13,13 @@ export function Hero() {
         <section className="relative min-h-[95vh] lg:min-h-screen flex items-center overflow-hidden pt-20 border-b border-[var(--white-10)]">
 
             {/* Faixa de urgência - Vagas Limitadas */}
-            <div className="absolute top-0 left-0 right-0 z-20 bg-[var(--red-bear)] py-2 flex items-center justify-center">
-                <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.25em]">
-                    Últimos Dias - Encerra Amanhã, 07/07
-                </span>
-            </div>
+            {INSCRICOES_ABERTAS && (
+                <div className="absolute top-0 left-0 right-0 z-20 bg-[var(--red-bear)] py-2 flex items-center justify-center">
+                    <span className="text-white text-xs md:text-sm font-black uppercase tracking-[0.25em]">
+                        Últimos Dias - Encerra Amanhã, 07/07
+                    </span>
+                </div>
+            )}
 
             {/* Premium Background Diagram */}
             <div className="absolute inset-0 z-0 bg-black">
@@ -45,7 +47,7 @@ export function Hero() {
                         <FadeIn>
                             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--green-bull)] bg-black/50 backdrop-blur-md mb-8">
                                 <span className="w-2 h-2 rounded-full bg-[var(--green-bull)] shadow-[var(--glow-green)] animate-pulse" />
-                                <span className="text-xs font-bold tracking-widest uppercase text-white/80">Mentoria TDS - Próxima Turma 07/07</span>
+                                <span className="text-xs font-bold tracking-widest uppercase text-white/80">Mentoria Trader de Sucesso</span>
                             </div>
                         </FadeIn>
 

@@ -13,6 +13,7 @@ import {
 
 const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
 import { FadeIn } from "../../components/FadeIn";
+import { INSCRICOES_ABERTAS } from "../config";
 
 export function Mentorship() {
   const requirements = [
@@ -130,18 +131,20 @@ export function Mentorship() {
         </FadeIn>
 
         {/* CTA */}
-        <FadeIn delay={0.3}>
-          <div className="mt-10 flex justify-center">
-            <a
-              href={HOTMART_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_40px_rgba(0,191,99,0.50)]"
-            >
-              Sim, eu quero ser TDS! <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
-        </FadeIn>
+        {INSCRICOES_ABERTAS && (
+          <FadeIn delay={0.3}>
+            <div className="mt-10 flex justify-center">
+              <a
+                href={HOTMART_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(0,191,99,0.30)] hover:shadow-[0_0_40px_rgba(0,191,99,0.50)]"
+              >
+                Sim, eu quero ser TDS! <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </FadeIn>
+        )}
       </div>
     </section>
   );
