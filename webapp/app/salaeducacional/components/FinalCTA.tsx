@@ -49,7 +49,7 @@ export function FinalCTA() {
         />
 
         <p className="text-[10px] text-white/20 uppercase tracking-[0.25em]">
-          7 dias de garantia · R$ 249,90/mês · Cancele quando quiser
+          7 dias de garantia · R$ 229,90/mês · Cancele quando quiser
         </p>
       </div>
     </section>
