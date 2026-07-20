@@ -117,7 +117,7 @@ export function Pricing() {
                 className="font-display font-black leading-none tracking-tighter"
                 style={{ fontSize: "clamp(56px,12vw,70px)", color: "#BFEA24" }}
               >
-                R$ 249,90
+                R$ 229,90
               </span>
               <span className="text-[10px] font-bold uppercase tracking-widest text-white/30">
                 por mês · assinatura recorrente
