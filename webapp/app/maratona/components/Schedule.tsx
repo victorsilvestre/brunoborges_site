@@ -6,27 +6,27 @@ import { Lock, LockOpen, Play, ArrowRight } from "lucide-react";
 export function Schedule() {
     const days = [
         {
-            subtitle: "AULA 1 - SEGUNDA",
-            date: "22/06",
+            subtitle: "AULA 1 - TERÇA",
+            date: "15/09",
             time: "20HRS",
-            topics: "O básico que quase ninguém aprende sobre o gráfico",
-            description: "A maioria dos traders pula essa etapa — e paga muito caro por isso. Nessa aula você vai entender como o preço realmente se comporta, o que o gráfico comunica antes de qualquer movimento e por que a leitura correta das obrigações dos candles é o que separa quem opera bem de quem não consegue fechar no positivo.",
-            url: "https://www.youtube.com/watch?v=uTfh-5q5Ck4"
+            topics: "Como enxergar o que o gráfico está tentando mostrar",
+            description: "Antes de pensar em estratégias, entradas ou indicadores, você precisa aprender a interpretar o que está acontecendo no gráfico. Nessa aula, você vai entender a lógica por trás dos movimentos do preço, como os candles revelam a atuação do mercado e quais informações observar para deixar de operar no escuro e começar a tomar decisões com mais clareza.",
+            url: ""
         },
         {
-            subtitle: "AULA 2 - TERÇA",
-            date: "23/06",
+            subtitle: "AULA 2 - QUARTA",
+            date: "16/09",
             time: "20HRS",
-            topics: "A estratégia que mudou a minha vida",
-            description: "Nessa aula, eu vou compartilhar com você a primeira estratégia que eu utilizei no mercado financeiro e que transformou a minha vida. Você vai acompanhar as entradas, os alvos e o gerenciamento de risco de cada operação. Você vai aprender a aplicar essa estratégia nos principais ativos do mercado e entender por que ela funciona independente do cenário.",
-            url: "https://www.youtube.com/watch?v=Ll58wZkHNYo"
+            topics: "Utilizando apenas a Fibonacci para sair positivo",
+            description: "Você não precisa encher o gráfico de indicadores para encontrar boas oportunidades. Nessa aula, eu vou mostrar como utilizo apenas a Fibonacci para identificar regiões importantes, encontrar pontos de entrada, projetar alvos e controlar o risco das operações. Você vai aprender uma forma simples e objetiva de interpretar os movimentos do mercado e buscar mais consistência, sabendo exatamente onde prestar atenção antes de tomar uma decisão.",
+            url: ""
         },
         {
             subtitle: "AULA 3 - QUINTA",
-            date: "25/06",
+            date: "17/09",
             time: "20HRS",
-            topics: "O método para fazer Scalp rápido e objetivo",
-            description: "Scalp não é sobre velocidade — é sobre precisão. Nessa última aula da Maratona, você vai aprender como montar operações curtas com critério, sem ansiedade e com risco controlado. O objetivo é ensinar para você exatamente quando entrar, quando sair e quando ficar de fora do mercado para não tomar loss à toa.",
+            topics: "Como alavancar seus resultados com Scalps",
+            description: "Operações rápidas não precisam ser operações apressadas. Nessa aula, você vai aprender a estruturar um scalp com contexto, confirmação e gerenciamento de risco. Vou mostrar o que observar antes da entrada, como conduzir a operação e, principalmente, como reconhecer os momentos em que ficar de fora é a melhor decisão para proteger o seu capital.",
             url: ""
         }
     ];
@@ -69,7 +69,7 @@ export function Schedule() {
                                     </div>
                                 </div>
 
-                                <div className="mt-auto bg-[var(--light-surface)] rounded-2xl p-6 border border-slate-100 flex flex-col gap-4">
+                                <div className="bg-[var(--light-surface)] rounded-2xl p-6 border border-slate-100 flex flex-col gap-4">
                                     <div className="flex items-center gap-4">
                                         <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${day.url ? "bg-[var(--green-pure)]" : "bg-[var(--red-bear)]"}`}>
                                             {day.url

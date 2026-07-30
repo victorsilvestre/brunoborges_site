@@ -7,8 +7,8 @@ import { FadeIn } from "../../components/FadeIn";
 // Defina null se não houver próxima maratona agendada
 const proximaMaratona = {
     numero: "16ª",
-    data: " ",
-    diaSemana: "à definir",
+    data: "15, 16 e 17/09",
+    diaSemana: "Terça a Quinta",
     horario: "20h00 (horário de Brasília)",
     inscricaoUrl: "/maratona",
 };
@@ -104,7 +104,7 @@ export function Eventos() {
                                     whileTap={{ scale: 0.98 }}
                                     className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase text-sm tracking-wider hover:bg-[var(--green-dark)] transition-colors shadow-[var(--glow-green)]"
                                 >
-                                    Maratona Finalizada! Conheça a Mentoria TDS
+                                    Quero me inscrever na 16ª Maratona TDS
                                     <ArrowRight className="w-4 h-4" />
                                 </motion.a>
                             </FadeIn>

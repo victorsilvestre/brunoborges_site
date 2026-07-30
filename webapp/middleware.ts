@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 // Para DESATIVAR o redirect (nova maratona): mude para false e publique
-const MARATONA_REDIRECT = true;
+const MARATONA_REDIRECT = false;
 
 export function middleware(request: NextRequest) {
     if (MARATONA_REDIRECT) {

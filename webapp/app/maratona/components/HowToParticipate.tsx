@@ -99,7 +99,7 @@ export function HowToParticipate() {
                             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--green-pure)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 30px var(--green-dim)'; }}
                         >
                             <span className="relative z-10 flex items-center gap-3 font-display font-bold uppercase tracking-wider">
-                                Quero me inscrever hoje na 15ª Maratona TDS <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                Quero me inscrever hoje na 16ª Maratona TDS <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </a>
                     </div>

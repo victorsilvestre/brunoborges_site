@@ -26,7 +26,7 @@ export function FinalCTA() {
                     </FadeIn>
                     <FadeIn delay={0.2}>
                         <p className="text-base text-[var(--white-60)] font-light leading-relaxed max-w-2xl mx-auto">
-                            A 15ª Maratona Trader de Sucesso será um evento 100% online e gratuito,
+                            A 16ª Maratona Trader de Sucesso será um evento 100% online e gratuito,
                             onde vou compartilhar conteúdos práticos, visão de mercado e peças valiosas do meu operacional.
                             Para garantir que você não perca nenhuma aula, entre no nosso grupo exclusivo.
                         </p>
@@ -36,7 +36,7 @@ export function FinalCTA() {
                 <FadeIn delay={0.3}>
                     <div className="w-full max-w-md mx-auto">
                         <LeadCaptureForm
-                            source="maratona-jun-2026"
+                            source="maratona-set-2026"
                             redirectTo="/maratona-grupo"
                             buttonLabel="Garantir minha vaga na Maratona TDS"
                             variant="dark"

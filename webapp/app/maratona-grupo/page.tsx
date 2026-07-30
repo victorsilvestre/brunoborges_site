@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
-const DEEP_LINK = 'tg://join?invite=eyQwbBFDUXBkMGIx';
-const TELEGRAM_WEB = 'https://t.me/+eyQwbBFDUXBkMGIx';
+const DEEP_LINK = 'tg://join?invite=KneI8WDXEEJmNWY5';
+const TELEGRAM_WEB = 'https://t.me/+KneI8WDXEEJmNWY5';
 const APP_STORE = 'https://apps.apple.com/app/telegram-messenger/id686449807';
 const PLAY_STORE = 'https://play.google.com/store/apps/details?id=org.telegram.messenger';
 const DEEP_LINK_DELAY_MS = 2000;

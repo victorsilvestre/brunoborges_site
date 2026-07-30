@@ -12,7 +12,7 @@ import { FinalCTA } from "./components/FinalCTA";
 
 export const metadata: Metadata = {
     title: 'Maratona TDS | Trader Bruno Borges',
-    description: 'Participe da 15ª Maratona TDS Trader de Sucesso. Evento 100% online e gratuito. Aprenda Price Action, Gerenciamento e Estratégias diretamente no gráfico.',
+    description: 'Participe da 16ª Maratona TDS Trader de Sucesso. Evento 100% online e gratuito. Aprenda Price Action, Gerenciamento e Estratégias diretamente no gráfico.',
 };
 
 export default function MaratonaPage() {

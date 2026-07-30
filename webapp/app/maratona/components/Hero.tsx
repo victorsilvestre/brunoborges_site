@@ -59,7 +59,7 @@ export function Hero() {
                             <div className="flex flex-wrap items-center gap-3 hero-tags">
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <Calendar className="w-4 h-4" style={{ color: 'var(--red-pure)' }} />
-                                    <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">22, 23 e 25/06</span>
+                                    <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">15, 16 e 17/09</span>
                                 </div>
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white shadow-sm border border-slate-200">
                                     <span className="text-sm font-bold tracking-wider text-[var(--dark-pure)]">100% Online e Gratuito</span>
@@ -89,9 +89,9 @@ export function Hero() {
                                     Aproveite os bônus e conteúdos exclusivos
                                 </p>
                                 <LeadCaptureForm
-                                    source="maratona-jun-2026"
+                                    source="maratona-set-2026"
                                     redirectTo="/maratona-grupo"
-                                    buttonLabel="Quero Participar da 15ª Maratona TDS"
+                                    buttonLabel="Quero Participar da 16ª Maratona TDS"
                                     variant="light"
                                 />
                             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "../../components/FadeIn";
-import { TrendingUp, Compass, ArrowRight } from "lucide-react";
+import { TrendingUp, Compass, Rocket, ArrowRight } from "lucide-react";
 
 const profiles = [
     {
@@ -15,6 +15,12 @@ const profiles = [
         tag: "Intermediário",
         title: "Você já opera, mas ainda não é consistente",
         description: "Conhece os conceitos, fez alguns cursos, mas na hora de operar ainda erra mais do que gostaria e não consegue fechar positivo no mês. A Maratona vai ajudar você a identificar o que está quebrando o seu operacional — seja leitura de contexto, gestão de risco ou disciplina na execução das operações. Não é sobre aprender mais conteúdo. É sobre aplicar o que já sabe de forma mais precisa.",
+    },
+    {
+        icon: Rocket,
+        tag: "Avançado",
+        title: "É consistente, mas sabe que pode ir além",
+        description: "Você já é consistente e consegue ganhar dinheiro no mercado de forma constante, mas sente que os seus resultados poderiam ser muito melhores. A Maratona vai ajudar você a refinar detalhes do operacional, aprimorar a leitura do gráfico e destravar o próximo nível de consistência e performance.",
     },
 ];
 
@@ -37,7 +43,7 @@ export function ForWhom() {
                     </div>
                 </FadeIn>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {profiles.map((profile, i) => {
                         const Icon = profile.icon;
                         return (

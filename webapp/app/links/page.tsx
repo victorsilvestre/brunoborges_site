@@ -60,7 +60,7 @@ const links = [
     },
     {
         label: "Grupo Exclusivo Maratona",
-        url: "https://t.me/+eyQwbBFDUXBkMGIx",
+        url: "https://t.me/+KneI8WDXEEJmNWY5",
         icon: Send,
         highlight: false,
     },
