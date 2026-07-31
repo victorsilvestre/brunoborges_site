@@ -15,7 +15,7 @@ export function Differentiators() {
         { num: "5.", label: "Acesso Vitalício", text: "Todo o conteúdo permanece disponível para consulta na sua área de membros. Revise aulas, materiais, estratégias e conceitos sempre que precisar, respeitando o seu ritmo e a sua fase de evolução." },
         { num: "6.", label: "Turmas Selecionadas", text: "Turmas reduzidas para garantir proximidade, qualidade nas interações e um acompanhamento mais eficiente. Menos volume, mais atenção para quem realmente deseja evoluir." },
         { num: "7.", label: "Mesas Proprietárias", text: "Alto índice de aprovação dos alunos em mesas proprietárias. Você opera com capital de terceiros, sem arriscar o próprio dinheiro, e ganha em dólar." },
-        { num: "8.", label: "Método Comprovado", text: "Funciona em qualquer ativo, mercado e tempo gráfico — e não é teoria. São mais de 1.200 alunos aplicando o método em conta real todos os dias, com resultados que falam por si." },
+        { num: "8.", label: "Método Comprovado", text: "Funciona em qualquer ativo, mercado e tempo gráfico — e não é teoria. São mais de 1.400 alunos aplicando o método em conta real todos os dias, com resultados que falam por si." },
     ];
 
     return (

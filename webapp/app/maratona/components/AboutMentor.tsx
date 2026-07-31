@@ -5,7 +5,7 @@ import { FadeIn } from "../../components/FadeIn";
 const stats = [
     { value: "+7", label: "Anos operando", sub: "mercado real" },
     { value: "+10", label: "Padrões autorais", sub: "testados na prática" },
-    { value: "+1,2k", label: "Traders formados", sub: "método próprio" },
+    { value: "+1,4k", label: "Traders formados", sub: "método próprio" },
 ];
 
 export function AboutMentor() {

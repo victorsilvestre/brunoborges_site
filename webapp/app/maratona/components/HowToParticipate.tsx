@@ -26,7 +26,7 @@ const steps = [
         number: "04",
         icon: Gift,
         title: "Tenha acesso aos bônus",
-        description: "Link das gravações, resumões exclusivos, sorteio de vaga pra mentoria e conteúdos extras liberados antes, durante e após o evento.",
+        description: "Link das gravações, resumões exclusivos e conteúdos extras liberados antes, durante e após o evento.",
     },
 ];
 

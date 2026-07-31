@@ -69,7 +69,7 @@ export function BiografiaEditorial() {
                                 </div>
                                 <div className="h-12 w-px bg-[var(--white-20)]" />
                                 <div>
-                                    <span className="font-display font-black text-4xl lg:text-5xl text-[var(--green-dark)] leading-none">+1,2k</span>
+                                    <span className="font-display font-black text-4xl lg:text-5xl text-[var(--green-dark)] leading-none">+1,4k</span>
                                     <p className="text-[10px] uppercase tracking-widest text-[var(--white-40)] font-bold mt-1">Alunos Formados</p>
                                 </div>
                             </div>

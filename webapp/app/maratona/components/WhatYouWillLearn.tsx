@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "../../components/FadeIn";
-import { BookOpenCheck, ShieldCheck, LineChart, Zap, Users, Video, FileText, Trophy } from "lucide-react";
+import { BookOpenCheck, ShieldCheck, LineChart, Zap, Users, Video, FileText } from "lucide-react";
 
 export function WhatYouWillLearn() {
     const topics = [
@@ -117,7 +117,7 @@ export function WhatYouWillLearn() {
                             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'var(--green-pure)' }} />
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
                             {[
                                 {
                                     icon: Video,
@@ -133,11 +133,6 @@ export function WhatYouWillLearn() {
                                     icon: Zap,
                                     title: "Aula Bônus ao Vivo",
                                     description: "Uma aula exclusiva com operacional na prática, ao vivo, com visão real de mercado e execução comentada.",
-                                },
-                                {
-                                    icon: Trophy,
-                                    title: "Sorteio: Vaga na Mentoria",
-                                    description: "Participe da Maratona e concorra a uma vaga na próxima Mentoria Trader de Sucesso.",
                                 },
                             ].map((benefit, i) => {
                                 const Icon = benefit.icon;

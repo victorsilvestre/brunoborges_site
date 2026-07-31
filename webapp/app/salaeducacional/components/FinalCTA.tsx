@@ -35,7 +35,7 @@ export function FinalCTA() {
         </h2>
 
         <p className="text-lg text-white/50 max-w-xl mx-auto mb-10 leading-snug">
-          Você já conhece o Método Trader de Sucesso, que formou mais de 1.200
+          Você já conhece o Método Trader de Sucesso, que formou mais de 1.400
           alunos ao longo de 7 anos. Faltava apenas o ambiente certo para você evoluir ainda mais o seu operacional. 
           A Sala Educacional inicia no dia 21 de julho — e as vagas são limitadas.
         </p>
