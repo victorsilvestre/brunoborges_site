@@ -67,7 +67,7 @@ export function Features() {
               intenção do preço para operar com mais clareza e menos achismo.
             </p>  
             <p className="text-lg text-[var(--dark-medium)] max-w-3xl mx-auto leading-snug mb-2">
-              Esse é o método que já ajudou <strong className="text-[var(--green-highlight)] font-semibold">mais de 1.200 alunos</strong> a saírem da
+              Esse é o método que já ajudou <strong className="text-[var(--green-highlight)] font-semibold">mais de 1.400 alunos</strong> a saírem da
               tentativa e erro e construírem um processo operacional mais
               consistente.
             </p>

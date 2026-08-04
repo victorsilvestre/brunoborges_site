@@ -33,7 +33,7 @@ const reasons = [
   },
   {
     title: "Método Validado",
-    text: "Método aplicado diariamente em conta real com mais de 1.200 alunos formados. Nada de teoria solta — é Price Action simples, ensinado na prática todos os dias.",
+    text: "Método aplicado diariamente em conta real com mais de 1.400 alunos formados. Nada de teoria solta — é Price Action simples, ensinado na prática todos os dias.",
     icon: ShieldCheck,
     colSpan: "col-span-1",
     bg: "bg-white",

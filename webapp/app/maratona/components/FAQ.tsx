@@ -15,7 +15,7 @@ const faqs = [
     },
     {
         question: "Como vou receber os links das aulas?",
-        answer: "Tudo chega pelo grupo exclusivo no Telegram. Você recebe o aviso antes de cada aula, o link para assistir ao vivo e o acesso às gravações logo depois que cada noite encerra.",
+        answer: "Tudo chega pelo grupo exclusivo no Telegram. Você recebe o aviso antes de cada aula, o link para assistir ao vivo e o acesso às gravações no dia seguinte.",
     },
     {
         question: "Vou conseguir assistir mesmo se não puder ao vivo?",
