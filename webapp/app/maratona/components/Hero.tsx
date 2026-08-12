@@ -45,14 +45,16 @@ export function Hero() {
                         </FadeIn> */}
                         <FadeIn delay={0.1}>
                             <h1 className="font-display font-black leading-[1.05] tracking-tight mb-4 text-[var(--dark-pure)]" style={{ fontSize: 'clamp(2.5rem, 3.2vw, 3.25rem)' }}>
-                                Pare de operar<br />
-                                <span className="text-[var(--dark-pure)]">no escuro.</span>{" "}
-                                <span style={{ color: 'var(--green-dark)' }}>Entenda o gráfico e melhore seus resultados.</span>
+                                Em apenas 3 aulas você vai aprender a {" "}
+                                <span style={{ color: 'var(--green-dark)' }}>ler o gráfico do jeito que</span>
+                                
+                                <span style={{ color: 'var(--green-dark)' }}>traders profissionais </span>
+                                fazem.
                             </h1>
                         </FadeIn>
                         <FadeIn delay={0.2}>
                             <p className="text-base text-[var(--dark-medium)] mb-5 leading-relaxed">
-                                Faça a sua inscrição na Maratona Trader de Sucesso para aproveitar todos os bônus e conheça o método que eu utilizo todos os dias para operar com os meus alunos e sair positivo no mercado.
+                                Na Maratona Trader de Sucesso, vou mostrar na prática o operacional de desenvolvi em 7 anos operando no mercado real. O mesmo método que eu uso todos os dias com mais de 1.400 alunos.
                             </p>
                         </FadeIn>
                         <FadeIn delay={0.25}>
