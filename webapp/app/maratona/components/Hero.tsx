@@ -46,7 +46,7 @@ export function Hero() {
                         <FadeIn delay={0.1}>
                             <h1 className="font-display font-black leading-[1.05] tracking-tight mb-4 text-[var(--dark-pure)]" style={{ fontSize: 'clamp(2.5rem, 3.2vw, 3.25rem)' }}>
                                 Em apenas 3 aulas você vai aprender a {" "}
-                                <span style={{ color: 'var(--green-dark)' }}>ler o gráfico do jeito que</span>
+                                <span style={{ color: 'var(--green-dark)' }}>ler o gráfico do jeito que </span>
                                 
                                 <span style={{ color: 'var(--green-dark)' }}>traders profissionais </span>
                                 fazem.
