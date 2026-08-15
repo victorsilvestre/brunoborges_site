@@ -105,7 +105,7 @@ export default function LinksPage() {
                     className="mb-5"
                 >
                     <Image
-                        src="/images/logo/logo_icon-white-1.png"
+                        src="/images/logo/logo_icon-white_new.png"
                         alt="Trader Bruno Borges"
                         width={72}
                         height={72}

@@ -60,7 +60,7 @@ export function Footer() {
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-6">
                             <Image
-                                src="/images/logo/logo_white_transparent.png"
+                                src="/images/logo/logo_traderbrunoborges_fundo-escuro.png"
                                 alt="Trader Bruno Borges"
                                 width={444}
                                 height={165}

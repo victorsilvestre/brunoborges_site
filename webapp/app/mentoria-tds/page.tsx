@@ -40,7 +40,7 @@ export default function LandingPage() {
             <footer className="py-12 flex flex-col items-center justify-center border-t border-[var(--white-10)] bg-black relative overflow-hidden">
                 <div className="absolute bottom-0 w-[500px] h-[1px] bg-gradient-to-r from-transparent via-[var(--gold-premium)] to-transparent opacity-30" />
                 <img
-                    src="/images/logo/logo_icon-white-1.png"
+                    src="/images/logo/logo_icon-white_new.png"
                     alt="Trader Bruno Borges"
                     className="h-10 w-10 object-contain opacity-40 mb-4"
                 />

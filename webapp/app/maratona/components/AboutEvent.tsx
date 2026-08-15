@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "../../components/FadeIn";
-import { LineChart, BookOpen, TrendingUp } from "lucide-react";
+import { LineChart, BookOpen, TrendingUp, ArrowRight } from "lucide-react";
 
 export function AboutEvent() {
     return (
@@ -55,6 +55,19 @@ export function AboutEvent() {
                         </div>
                     </FadeIn>
                 </div>
+
+                {/* CTA inscrição */}
+                <FadeIn delay={0.5}>
+                    <div className="mt-16 flex justify-center">
+                        <a
+                            href="#inscricao"
+                            className="inline-flex items-center gap-3 py-4 px-8 rounded-xl font-display font-bold text-sm uppercase tracking-wider text-white transition-all duration-300 hover:scale-105"
+                            style={{ background: 'linear-gradient(to right, var(--green-pure), var(--green-dark))', boxShadow: '0 0 40px var(--green-dim)' }}
+                        >
+                            Quero me inscrever <ArrowRight className="w-5 h-5" />
+                        </a>
+                    </div>
+                </FadeIn>
             </div>
         </section>
     );

@@ -11,48 +11,64 @@ export function Hero() {
             style={{
                 minHeight: '760px',
                 backgroundColor: 'var(--dark-pure)',
-                backgroundSize: 'cover',
+                backgroundImage: 'url(/images/hero/img_hero_v2.png)',
                 backgroundPosition: 'center',
+                backgroundSize: 'cover',
             }}
         >
             <style>{`
-                .hero-section { background-image: url(/images/hero/img_hero_v2.png); }
-                .hero-mobile-image { display: none; }
+                .hero-mobile-bg { display: none; }
                 @media (max-width: 767px) {
                     .hero-section {
-                        min-height: auto !important;
+                        min-height: 0 !important;
+                        align-items: flex-end !important;
                         background-image: none !important;
-                        background-color: var(--dark-pure) !important;
-                        padding-top: 0 !important;
-                        display: block !important;
                     }
-                    .hero-mobile-image {
+                    .hero-mobile-bg {
                         display: block !important;
-                        width: 100% !important;
-                        height: 380px !important;
-                        background-image: url(/images/hero/img_hero_v2.png) !important;
-                        background-position: top right !important;
-                        background-size: 220% auto !important;
+                        position: absolute !important;
+                        top: 0 !important;
+                        left: 0 !important;
+                        right: 0 !important;
+                        height: 780px !important;
+                        background-image: url(/images/hero/img_hero_mobile_v2.png) !important;
+                        background-position: top center !important;
+                        background-size: cover !important;
+                        z-index: 0 !important;
                     }
-                    .hero-overlay { display: none !important; }
+                    .hero-overlay-desktop { display: none !important; }
+                    .hero-overlay-mobile {
+                        display: block !important;
+                        height: 780px !important;
+                        bottom: auto !important;
+                    }
                     .hero-grid {
                         grid-template-columns: 1fr !important;
                         align-items: start !important;
                     }
                     .hero-col-text   { padding-bottom: 0 !important; }
                     .hero-col-form   { padding-bottom: 0 !important; }
-                    .hero-content    { padding-top: 32px !important; padding-bottom: 40px !important; }
+                    .hero-content    { padding-top:420px !important; padding-bottom: 25px !important; }
                 }
             `}</style>
 
-            {/* Imagem do Bruno no topo (somente mobile) */}
-            <div className="hero-mobile-image" />
+            {/* Imagem de fundo mobile (altura fixa, independente do conteúdo) */}
+            <div className="hero-mobile-bg" />
 
-            {/* Overlay de contraste (rede de segurança para o texto) */}
+            {/* Overlay de contraste desktop (esquerda mais escura) */}
             <div
-                className="absolute inset-0 z-0 hero-overlay"
+                className="absolute inset-0 z-0 hero-overlay-desktop"
                 style={{
                     background: 'linear-gradient(90deg, rgba(15,23,42,0.55) 0%, rgba(15,23,42,0.25) 45%, rgba(15,23,42,0) 65%)',
+                }}
+            />
+
+            {/* Overlay de contraste mobile (base mais escura, para o texto e formulário) */}
+            <div
+                className="absolute inset-x-0 top-0 z-0 hero-overlay-mobile"
+                style={{
+                    display: 'none',
+                    background: 'linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.35) 45%, rgba(15,23,42,0.92) 68%, rgba(15,23,42,0.98) 100%)',
                 }}
             />
 

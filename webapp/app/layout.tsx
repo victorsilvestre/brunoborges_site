@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   title: "Trader Bruno Borges",
   description: "Transforme sua vida com o Método TDS",
   icons: {
-    icon: "/images/logo/logo_icon-black-1.png",
-    shortcut: "/images/logo/logo_icon-black-1.png",
-    apple: "/images/logo/logo_icon-black-1.png",
+    icon: "/images/logo/logo_icon-black_new.png",
+    shortcut: "/images/logo/logo_icon-black_new.png",
+    apple: "/images/logo/logo_icon-black_new.png",
   },
 };
 
