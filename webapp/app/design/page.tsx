@@ -1,183 +1,200 @@
 import Image from "next/image";
 import { brandManifest as m } from "./manifest";
 import { ColorSwatch } from "./ColorSwatch";
+import { SideNav } from "./SideNav";
+import { MobileNav } from "./MobileNav";
 
-const GREEN = "#A2CB10";
-const BLACK = "#0C0D0E";
-const OFFWHITE = "#FFFBF7";
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
+function Eyebrow({ children }: { children: React.ReactNode }) {
     return (
-        <div className="font-serif text-sm text-black/40 mb-3">{children}</div>
+        <div
+            className="font-mono text-[11px] uppercase tracking-[0.15em] mb-3"
+            style={{ color: "var(--muted)" }}
+        >
+            {children}
+        </div>
     );
 }
 
-function Divider() {
-    return <div className="h-px w-full bg-black/10" />;
+function SectionHeading({ n, title }: { n: string; title: string }) {
+    return (
+        <div className="flex items-baseline gap-4 mb-6">
+            <span className="font-mono text-sm tabular-nums" style={{ color: "var(--accent-deep)" }}>
+                {n}
+            </span>
+            <h2
+                className="font-[family-name:var(--font-design-serif)] text-[clamp(2rem,4.5vw,3.25rem)] leading-none"
+                style={{ color: "var(--ink)" }}
+            >
+                {title}
+            </h2>
+        </div>
+    );
 }
 
 export default function DesignPage() {
     return (
         <main
             className="font-[family-name:var(--font-design-sans)]"
-            style={{ backgroundColor: OFFWHITE, color: BLACK }}
+            style={{ backgroundColor: "var(--paper)", color: "var(--ink)" }}
         >
-            {/* ---------- Utility bar ---------- */}
-            <div className="flex items-center justify-between px-6 md:px-12 py-3 text-xs font-mono border-b border-black/10">
-                <span className="uppercase tracking-[0.15em] opacity-60">
-                    Referência interna — não indexado
-                </span>
-                <div className="flex gap-4">
-                    <a href="/design/manifest.json" className="underline decoration-black/20 hover:decoration-black">
-                        manifest.json
-                    </a>
-                    <a href="/design/reference.md" className="underline decoration-black/20 hover:decoration-black">
-                        reference.md
-                    </a>
-                </div>
-            </div>
+            <SideNav />
+            <MobileNav />
 
-            {/* ---------- Cover ---------- */}
-            <section
-                className="relative flex flex-col justify-between px-6 md:px-16 py-16 md:py-24 min-h-[70vh]"
-                style={{ backgroundColor: GREEN, color: BLACK }}
-            >
-                <div className="flex justify-end">
-                    <span className="font-serif text-sm">{m.version}</span>
-                </div>
-                <div>
-                    <h1 className="font-[family-name:var(--font-design-serif)] font-normal leading-[0.95] text-[13vw] md:text-[9vw] tracking-tight">
+            <div className="lg:ml-[220px]">
+                {/* ---------- Capa ---------- */}
+                <section
+                    id="capa"
+                    className="scroll-mt-0 relative flex flex-col justify-between px-6 md:px-14 py-14 md:py-20 min-h-[88vh] lg:min-h-screen"
+                    style={{ backgroundColor: "var(--accent)", color: "var(--ink)" }}
+                >
+                    <div className="flex items-start justify-between">
+                        <span className="font-mono text-xs uppercase tracking-[0.15em] opacity-70">
+                            Manual de identidade visual
+                        </span>
+                        <span className="font-serif text-sm">{m.version}</span>
+                    </div>
+
+                    <h1 className="font-[family-name:var(--font-design-serif)] font-normal leading-[0.92] text-[13vw] md:text-[7.5vw]">
                         Brand<br />
                         <span className="italic">Guidelines</span>
                     </h1>
-                </div>
-                <div className="flex justify-end">
-                    <span className="font-[family-name:var(--font-design-serif)] text-3xl md:text-4xl leading-tight text-right">
-                        Bruno<br />Borges
-                    </span>
-                </div>
-            </section>
 
-            {/* ---------- Quem somos / Visão / Missão / Valores ---------- */}
-            <section className="px-6 md:px-16 py-20 md:py-28 grid md:grid-cols-[200px_1fr] gap-8 md:gap-16">
-                <SectionLabel>Quem somos</SectionLabel>
-                <p className="font-[family-name:var(--font-design-serif)] text-2xl md:text-4xl leading-snug max-w-3xl">
-                    {m.brand.quemSomos}
-                </p>
-            </section>
-            <Divider />
-            <section className="px-6 md:px-16 py-16 md:py-20 grid md:grid-cols-[200px_1fr] gap-8 md:gap-16">
-                <SectionLabel>Visão</SectionLabel>
-                <p className="text-lg md:text-2xl leading-relaxed max-w-3xl opacity-90">{m.brand.visao}</p>
-            </section>
-            <Divider />
-            <section className="px-6 md:px-16 py-16 md:py-20 grid md:grid-cols-[200px_1fr] gap-8 md:gap-16">
-                <SectionLabel>Missão</SectionLabel>
-                <p className="text-lg md:text-2xl leading-relaxed max-w-3xl opacity-90">{m.brand.missao}</p>
-            </section>
-            <Divider />
-            <section
-                className="px-6 md:px-16 py-16 md:py-20 grid md:grid-cols-[200px_1fr] gap-8 md:gap-16"
-                style={{ backgroundColor: BLACK, color: OFFWHITE }}
-            >
-                <div className="font-serif text-sm text-white/40 mb-3">Valores</div>
-                <ul className="flex flex-col gap-2">
-                    {m.brand.valores.map((v) => (
-                        <li key={v} className="font-[family-name:var(--font-design-serif)] text-2xl md:text-3xl">
-                            {v}
-                        </li>
-                    ))}
-                </ul>
-            </section>
+                    <div className="flex items-end justify-between gap-6">
+                        <p className="max-w-sm text-sm md:text-base opacity-80 leading-relaxed">
+                            Referência oficial de marca do Bruno Borges — cores, tipografia, logo e
+                            elementos gráficos para uso interno e por parceiros.
+                        </p>
+                        <span className="font-[family-name:var(--font-design-serif)] text-2xl md:text-3xl leading-tight text-right shrink-0">
+                            Bruno<br />Borges
+                        </span>
+                    </div>
+                </section>
 
-            {/* ---------- Logo ---------- */}
-            <section className="border-t border-black/10">
-                <div className="px-6 md:px-16 pt-20 pb-8">
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-50">01</span>
-                    <h2 className="font-[family-name:var(--font-design-serif)] text-6xl md:text-8xl mt-2">Logo</h2>
-                </div>
+                {/* ---------- Marca ---------- */}
+                <section id="marca" className="scroll-mt-8 px-6 md:px-14 py-20 md:py-28 border-t" style={{ borderColor: "var(--rule)" }}>
+                    <SectionHeading n="01" title="Marca" />
 
-                <div className="px-6 md:px-16 pb-16">
-                    <p className="max-w-2xl text-base md:text-lg opacity-80 mb-10">{m.logo.description}</p>
+                    <p className="font-[family-name:var(--font-design-serif)] text-[clamp(1.375rem,2.4vw,1.875rem)] leading-snug max-w-3xl mb-16">
+                        {m.brand.quemSomos}
+                    </p>
 
-                    <div className="mb-16 overflow-hidden">
-                        <Image
-                            src="/design/figma-exports/logo-showcase.png"
-                            alt="Logo Bruno Borges — símbolo e variações sobre fundo escuro"
-                            width={1024}
-                            height={576}
-                            className="w-full h-auto"
+                    <div className="grid md:grid-cols-3 gap-px" style={{ backgroundColor: "var(--rule)" }}>
+                        <div className="p-6 md:p-8" style={{ backgroundColor: "var(--paper)" }}>
+                            <Eyebrow>Visão</Eyebrow>
+                            <p className="text-[15px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                                {m.brand.visao}
+                            </p>
+                        </div>
+                        <div className="p-6 md:p-8" style={{ backgroundColor: "var(--paper)" }}>
+                            <Eyebrow>Missão</Eyebrow>
+                            <p className="text-[15px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                                {m.brand.missao}
+                            </p>
+                        </div>
+                        <div className="p-6 md:p-8" style={{ backgroundColor: "var(--ink)", color: "var(--paper)" }}>
+                            <div className="font-mono text-[11px] uppercase tracking-[0.15em] mb-3 opacity-60">
+                                Valores
+                            </div>
+                            <ul className="flex flex-col gap-1.5">
+                                {m.brand.valores.map((v) => (
+                                    <li key={v} className="text-[15px] leading-snug">
+                                        {v}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                {/* ---------- Logo ---------- */}
+                <section id="logo" className="scroll-mt-8 px-6 md:px-14 py-20 md:py-28 border-t" style={{ borderColor: "var(--rule)" }}>
+                    <SectionHeading n="02" title="Logo" />
+                    <p className="max-w-xl text-[15px] leading-relaxed mb-12" style={{ color: "var(--muted)" }}>
+                        {m.logo.description}
+                    </p>
+
+                    <div
+                        className="flex items-center justify-center px-8 py-16 mb-14"
+                        style={{ backgroundColor: "var(--ink)" }}
+                    >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src="/images/logo/logo-verde-fundo-escuro.svg"
+                            alt="Logo Bruno Borges — TRADER Bruno Borges, versão verde sobre fundo escuro"
+                            className="w-full max-w-md h-auto"
                         />
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-10 mb-16">
-                        <div className="flex flex-col gap-4">
-                            <span className="font-serif text-sm opacity-50">Fundo claro</span>
-                            <Image
-                                src="/images/logo/logo_traderbrunoborges_fundo-claro.png"
-                                alt="Logo Bruno Borges — versão fundo claro"
-                                width={444}
-                                height={165}
-                                className="w-full h-auto border border-black/10"
-                            />
+                    {m.logo.variants.map((group) => (
+                        <div key={group.layout} className="mb-14">
+                            <div className="flex items-baseline justify-between mb-3">
+                                <Eyebrow>{group.layout}</Eyebrow>
+                            </div>
+                            <p className="text-sm mb-4 max-w-lg" style={{ color: "var(--muted)" }}>
+                                {group.description}
+                            </p>
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-px" style={{ backgroundColor: "var(--rule)" }}>
+                                {group.items.map((item) => {
+                                    const pngPath = item.path.replace(/\.svg$/, ".png");
+                                    const fg = item.bg === "claro" ? "var(--ink)" : "var(--paper)";
+                                    return (
+                                        <div
+                                            key={item.path}
+                                            className="group relative flex flex-col items-center justify-center gap-3 p-6 min-h-[110px]"
+                                            style={{ backgroundColor: item.bg === "claro" ? "var(--paper)" : "var(--ink)" }}
+                                        >
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img
+                                                src={item.path}
+                                                alt={`Logo ${group.layout} — ${item.color}, fundo ${item.bg}`}
+                                                className="max-w-[85%] max-h-16 w-auto h-auto"
+                                            />
+                                            <div
+                                                className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                                            >
+                                                <a
+                                                    href={item.path}
+                                                    download
+                                                    className="font-mono text-[10px] uppercase tracking-[0.08em] underline underline-offset-2"
+                                                    style={{ color: fg }}
+                                                >
+                                                    SVG ↓
+                                                </a>
+                                                <span className="text-[10px] opacity-50" style={{ color: fg }}>
+                                                    ·
+                                                </span>
+                                                <a
+                                                    href={pngPath}
+                                                    download
+                                                    className="font-mono text-[10px] uppercase tracking-[0.08em] underline underline-offset-2"
+                                                    style={{ color: fg }}
+                                                >
+                                                    PNG ↓
+                                                </a>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         </div>
-                        <div className="flex flex-col gap-4 bg-black p-6" style={{ backgroundColor: BLACK }}>
-                            <span className="font-serif text-sm text-white/50">Fundo escuro</span>
-                            <Image
-                                src="/images/logo/logo_traderbrunoborges_fundo-escuro.png"
-                                alt="Logo Bruno Borges — versão fundo escuro"
-                                width={444}
-                                height={165}
-                                className="w-full h-auto"
-                            />
-                        </div>
-                    </div>
+                    ))}
 
-                    <div className="grid md:grid-cols-2 gap-10 mb-16">
+                    <div className="grid md:grid-cols-[1fr_1fr] gap-10 mb-16">
                         <div>
-                            <span className="font-serif text-sm opacity-50 block mb-3">Variações — fundo claro</span>
-                            <Image
-                                src="/design/figma-exports/logo-variacoes-fundo-claro.png"
-                                alt="Variações do logo em fundo claro"
-                                width={1024}
-                                height={576}
-                                className="w-full h-auto border border-black/10"
-                            />
-                        </div>
-                        <div>
-                            <span className="font-serif text-sm opacity-50 block mb-3">Variações — fundo escuro</span>
-                            <Image
-                                src="/design/figma-exports/logo-variacoes-fundo-escuro.png"
-                                alt="Variações do logo em fundo escuro"
-                                width={1024}
-                                height={576}
-                                className="w-full h-auto border border-black/10"
-                            />
-                        </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-10 mb-16">
-                        <div>
-                            <span className="font-serif text-sm opacity-50 block mb-3">Margem de segurança</span>
+                            <Eyebrow>Margem de segurança</Eyebrow>
                             <Image
                                 src="/design/figma-exports/margem-seguranca.png"
                                 alt="Margem de segurança do logo"
                                 width={1024}
                                 height={576}
-                                className="w-full h-auto border border-black/10 mb-3"
+                                className="w-full h-auto border mb-3"
+                                style={{ borderColor: "var(--rule)" }}
                             />
-                            <p className="text-sm opacity-70">{m.logo.safeArea}</p>
+                            <p className="text-sm" style={{ color: "var(--muted)" }}>{m.logo.safeArea}</p>
                         </div>
                         <div>
-                            <span className="font-serif text-sm opacity-50 block mb-3">Uso incorreto</span>
-                            <Image
-                                src="/design/figma-exports/uso-incorreto.png"
-                                alt="Exemplos de uso incorreto do logo"
-                                width={1024}
-                                height={576}
-                                className="w-full h-auto border border-black/10 mb-3"
-                            />
-                            <ul className="text-sm opacity-70 space-y-1">
+                            <Eyebrow>Uso incorreto</Eyebrow>
+                            <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm" style={{ color: "var(--muted)" }}>
                                 {m.logo.misuse.map((rule) => (
                                     <li key={rule} className="flex gap-2">
                                         <span style={{ color: "#A71619" }}>✕</span>
@@ -189,194 +206,188 @@ export default function DesignPage() {
                     </div>
 
                     <div>
-                        <span className="font-serif text-sm opacity-50 block mb-3">Arquivos para download</span>
-                        <div className="flex flex-wrap gap-3">
-                            {m.logo.files.map((f) => (
+                        <Eyebrow>Ícones</Eyebrow>
+                        <div className="flex flex-wrap gap-2">
+                            {m.logo.iconFiles.map((f) => (
                                 <a
                                     key={f.path}
                                     href={f.path}
                                     download
-                                    className="text-sm font-mono px-4 py-2 border border-black/20 hover:border-black hover:bg-black hover:text-[--offwhite] transition-colors"
-                                    style={{ ["--offwhite" as string]: OFFWHITE }}
+                                    className="download-chip text-[13px] font-mono px-3.5 py-2 border transition-colors"
+                                    style={{ borderColor: "var(--rule)" }}
                                 >
                                     {f.label} ↓
                                 </a>
                             ))}
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* ---------- Cores ---------- */}
-            <section className="border-t border-black/10">
-                <div className="px-6 md:px-16 pt-20 pb-8">
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-50">02</span>
-                    <h2 className="font-[family-name:var(--font-design-serif)] text-6xl md:text-8xl mt-2">Cores</h2>
-                </div>
-
-                <div className="px-6 md:px-16 pb-10">
-                    <p className="max-w-2xl text-base md:text-lg opacity-80">
-                        A paleta equilibra a energia do mercado com a maturidade da mentoria através de um
-                        contraste estratégico: o verde elétrico traz o dinamismo, o vermelho evoca seriedade
-                        premium. Preto, chumbo e off-white sustentam uma base imersiva e sóbria.
+                {/* ---------- Cores ---------- */}
+                <section id="cores" className="scroll-mt-8 px-6 md:px-14 py-20 md:py-28 border-t" style={{ borderColor: "var(--rule)" }}>
+                    <SectionHeading n="03" title="Cores" />
+                    <p className="max-w-xl text-[15px] leading-relaxed mb-12" style={{ color: "var(--muted)" }}>
+                        O verde elétrico traz o dinamismo do mercado; o vermelho evoca a seriedade premium
+                        da mentoria. Preto, chumbo e off-white sustentam a base sóbria sobre a qual o
+                        contraste das duas cores de assinatura se destaca.
                     </p>
-                </div>
 
-                <div className="px-6 md:px-16 pb-16">
-                    <span className="font-serif text-sm opacity-50 block mb-4">Primárias</span>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-16">
+                    <Eyebrow>Primárias</Eyebrow>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 mb-14">
                         {m.colors.primary.map((c) => (
-                            <ColorSwatch key={c.hex} hex={c.hex} label={c.name} sublabel={c.rgb} large />
+                            <ColorSwatch key={c.hex} hex={c.hex} label={c.name} sublabel={c.rgb} size="lg" />
                         ))}
                     </div>
 
-                    <span className="font-serif text-sm opacity-50 block mb-4">Secundárias</span>
-                    <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
+                    <Eyebrow>Secundárias</Eyebrow>
+                    <div className="grid grid-cols-4 md:grid-cols-8 gap-1.5">
                         {m.colors.secondary.map((c, i) => (
                             <ColorSwatch key={`${c.hex}-${i}`} hex={c.hex} />
                         ))}
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* ---------- Tipografia ---------- */}
-            <section className="border-t border-black/10">
-                <div className="px-6 md:px-16 pt-20 pb-8">
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-50">03</span>
-                    <h2 className="font-[family-name:var(--font-design-serif)] text-6xl md:text-8xl mt-2">Tipografia</h2>
-                </div>
+                {/* ---------- Tipografia ---------- */}
+                <section id="tipografia" className="scroll-mt-8 px-6 md:px-14 py-20 md:py-28 border-t" style={{ borderColor: "var(--rule)" }}>
+                    <SectionHeading n="04" title="Tipografia" />
 
-                <div className="px-6 md:px-16 pb-20 flex flex-col gap-16">
-                    <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-end border-b border-black/10 pb-10">
+                    <div className="grid md:grid-cols-2 gap-px mb-16" style={{ backgroundColor: "var(--rule)" }}>
+                        {[m.typography.primary, m.typography.secondary].map((t) => (
+                            <div key={t.family} className="p-6 md:p-8 flex flex-col justify-between min-h-[220px]" style={{ backgroundColor: "var(--paper)" }}>
+                                <div>
+                                    <Eyebrow>{t.role}</Eyebrow>
+                                    <a
+                                        href={t.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-sm hover:underline"
+                                        style={{ color: "var(--accent-deep)" }}
+                                    >
+                                        {t.family} — Google Fonts ↗
+                                    </a>
+                                </div>
+                                <p
+                                    className={
+                                        t === m.typography.primary
+                                            ? "font-[family-name:var(--font-design-serif)] text-[clamp(3rem,7vw,5rem)] leading-none mt-6"
+                                            : "font-[family-name:var(--font-design-sans)] font-black text-[clamp(3rem,7vw,5rem)] leading-none mt-6"
+                                    }
+                                >
+                                    Aa Bb
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="max-w-2xl flex flex-col gap-8">
+                        <div className="pb-6 border-b" style={{ borderColor: "var(--rule)" }}>
+                            <Eyebrow>Heading — Roboto Serif</Eyebrow>
+                            <p className="font-[family-name:var(--font-design-serif)] text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold leading-tight">
+                                Lorem ipsum dolor sit.
+                            </p>
+                        </div>
+                        <div className="pb-6 border-b" style={{ borderColor: "var(--rule)" }}>
+                            <Eyebrow>Subheading — Roboto Serif</Eyebrow>
+                            <p className="font-[family-name:var(--font-design-serif)] text-xl md:text-2xl">
+                                Lorem ipsum dolor sit amet, consectetur.
+                            </p>
+                        </div>
                         <div>
-                            <span className="font-serif text-sm opacity-50 block mb-2">{m.typography.primary.role}</span>
-                            <a
-                                href={m.typography.primary.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-sm underline decoration-black/20 hover:decoration-black"
+                            <Eyebrow>Body — Roboto</Eyebrow>
+                            <p className="text-[15px] md:text-base leading-relaxed max-w-[65ch]" style={{ color: "var(--muted)" }}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nulla porta,
+                                lacinia eros et, ullamcorper elit. Suspendisse tincidunt convallis leo ut
+                                ullamcorper elit.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* ---------- Elementos ---------- */}
+                <section id="elementos" className="scroll-mt-8 px-6 md:px-14 py-20 md:py-28 border-t" style={{ borderColor: "var(--rule)" }}>
+                    <SectionHeading n="05" title="Elementos" />
+                    <p className="max-w-xl text-[15px] leading-relaxed mb-10" style={{ color: "var(--muted)" }}>
+                        {m.graphicElement.description}
+                    </p>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-1.5">
+                        {m.graphicElement.gallery.map((g) => {
+                            const isDark = "dark" in g && g.dark;
+                            return (
+                            <div
+                                key={g.file}
+                                className="group relative overflow-hidden"
+                                style={{ backgroundColor: isDark ? "var(--ink)" : "var(--paper)" }}
                             >
-                                {m.typography.primary.family} — Google Fonts ↗
-                            </a>
-                        </div>
-                        <p className="font-[family-name:var(--font-design-serif)] text-6xl md:text-8xl leading-none">
-                            Aa Bb Cc
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-end border-b border-black/10 pb-10">
-                        <div>
-                            <span className="font-serif text-sm opacity-50 block mb-2">{m.typography.secondary.role}</span>
-                            <a
-                                href={m.typography.secondary.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-sm underline decoration-black/20 hover:decoration-black"
-                            >
-                                {m.typography.secondary.family} — Google Fonts ↗
-                            </a>
-                        </div>
-                        <p className="font-[family-name:var(--font-design-sans)] font-black text-6xl md:text-8xl leading-none">
-                            Aa Bb Cc
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-[1fr_2fr] gap-8">
-                        <div />
-                        <div className="flex flex-col gap-6">
-                            <div>
-                                <span className="font-serif text-xs opacity-40 block mb-1">Heading — Roboto Serif</span>
-                                <p className="font-[family-name:var(--font-design-serif)] text-4xl md:text-5xl font-black leading-tight">
-                                    Lorem ipsum dolor sit.
-                                </p>
+                                <Image
+                                    src={`/design/figma-exports/${g.file}`}
+                                    alt={g.label}
+                                    width={800}
+                                    height={520}
+                                    className="w-full h-auto"
+                                />
+                                <div
+                                    className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-2.5 py-1.5 text-[11px] font-mono"
+                                    style={{
+                                        color: isDark ? "var(--paper)" : "var(--ink)",
+                                        background: isDark
+                                            ? "linear-gradient(transparent, rgba(12,13,14,0.75))"
+                                            : "linear-gradient(transparent, rgba(255,251,247,0.85))",
+                                    }}
+                                >
+                                    <span>{g.label}</span>
+                                    <a
+                                        href={`/design/figma-exports/${g.file}`}
+                                        download
+                                        className="uppercase tracking-[0.08em] underline underline-offset-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                                    >
+                                        PNG ↓
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <span className="font-serif text-xs opacity-40 block mb-1">Subheading — Roboto Serif</span>
-                                <p className="font-[family-name:var(--font-design-serif)] text-2xl md:text-3xl">
-                                    Lorem ipsum dolor sit amet, consectetur.
-                                </p>
-                            </div>
-                            <div>
-                                <span className="font-serif text-xs opacity-40 block mb-1">Body — Roboto</span>
-                                <p className="text-base md:text-lg opacity-80 max-w-xl">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nulla porta,
-                                    lacinia eros et, ullamcorper elit. Suspendisse tincidunt convallis leo ut
-                                    ullamcorper elit.
-                                </p>
-                            </div>
-                        </div>
+                            );
+                        })}
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* ---------- Elementos ---------- */}
-            <section className="border-t border-black/10">
-                <div className="px-6 md:px-16 pt-20 pb-8">
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-50">04</span>
-                    <h2 className="font-[family-name:var(--font-design-serif)] text-6xl md:text-8xl mt-2">Elementos</h2>
-                </div>
-                <div className="px-6 md:px-16 pb-10">
-                    <p className="max-w-2xl text-base md:text-lg opacity-80">{m.graphicElement.description}</p>
-                </div>
-                <div className="grid md:grid-cols-2">
-                    <Image
-                        src="/design/figma-exports/grafismo-diagonal.png"
-                        alt="Grafismo de candlesticks — aplicação diagonal"
-                        width={1024}
-                        height={576}
-                        className="w-full h-auto"
-                    />
-                    <Image
-                        src="/design/figma-exports/cores-aplicadas-simbolo.png"
-                        alt="Cores aplicadas no símbolo"
-                        width={1024}
-                        height={576}
-                        className="w-full h-auto"
-                    />
-                </div>
-            </section>
+                {/* ---------- Aplicações ---------- */}
+                <section id="aplicacoes" className="scroll-mt-8 px-6 md:px-14 py-20 md:py-28 border-t" style={{ borderColor: "var(--rule)" }}>
+                    <SectionHeading n="06" title="Aplicações" />
+                    <div className="grid md:grid-cols-2 gap-1.5">
+                        <Image
+                            src="/design/figma-exports/aplicacao-hero.png"
+                            alt="Aplicação da marca — retrato editorial"
+                            width={1024}
+                            height={576}
+                            className="w-full h-auto"
+                        />
+                        <Image
+                            src="/design/figma-exports/aplicacao-posts.png"
+                            alt="Aplicação da marca — posts sociais"
+                            width={1024}
+                            height={576}
+                            className="w-full h-auto"
+                        />
+                    </div>
+                </section>
 
-            {/* ---------- Aplicações ---------- */}
-            <section className="border-t border-black/10">
-                <div className="px-6 md:px-16 pt-20 pb-8">
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-50">05</span>
-                    <h2 className="font-[family-name:var(--font-design-serif)] text-6xl md:text-8xl mt-2">Aplicações</h2>
-                </div>
-                <div className="grid md:grid-cols-2">
-                    <Image
-                        src="/design/figma-exports/aplicacao-hero.png"
-                        alt="Aplicação da marca — retrato editorial"
-                        width={1024}
-                        height={576}
-                        className="w-full h-auto"
-                    />
-                    <Image
-                        src="/design/figma-exports/aplicacao-posts.png"
-                        alt="Aplicação da marca — posts sociais"
-                        width={1024}
-                        height={576}
-                        className="w-full h-auto"
-                    />
-                </div>
-            </section>
-
-            {/* ---------- Footer ---------- */}
-            <footer
-                className="px-6 md:px-16 py-16 flex flex-col md:flex-row justify-between gap-6 text-sm"
-                style={{ backgroundColor: BLACK, color: OFFWHITE }}
-            >
-                <span className="opacity-50">
-                    Manual de identidade — {m.version} · sincronizado em {m.lastSynced}
-                </span>
-                <div className="flex gap-6 font-mono">
-                    <a href="/design/manifest.json" className="underline decoration-white/20 hover:decoration-white">
-                        manifest.json
-                    </a>
-                    <a href="/design/reference.md" className="underline decoration-white/20 hover:decoration-white">
-                        reference.md
-                    </a>
-                </div>
-            </footer>
+                {/* ---------- Footer ---------- */}
+                <footer
+                    className="px-6 md:px-14 py-10 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs border-t"
+                    style={{ borderColor: "var(--rule)", color: "var(--muted)" }}
+                >
+                    <span>
+                        Manual de identidade — {m.version} · sincronizado em {m.lastSynced}
+                    </span>
+                    <div className="flex gap-5 font-mono">
+                        <a href="/design/manifest.json" className="hover:underline">
+                            manifest.json
+                        </a>
+                        <a href="/design/reference.md" className="hover:underline">
+                            reference.md
+                        </a>
+                    </div>
+                </footer>
+            </div>
         </main>
     );
 }

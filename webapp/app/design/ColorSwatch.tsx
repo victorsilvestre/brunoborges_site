@@ -6,12 +6,12 @@ export function ColorSwatch({
     hex,
     label,
     sublabel,
-    large,
+    size = "sm",
 }: {
     hex: string;
     label?: string;
     sublabel?: string;
-    large?: boolean;
+    size?: "sm" | "lg";
 }) {
     const [copied, setCopied] = useState(false);
 
@@ -32,26 +32,35 @@ export function ColorSwatch({
         return (r * 299 + g * 587 + b * 114) / 1000 > 150;
     })();
 
+    const fg = isLight ? "#0C0D0E" : "#FFFBF7";
+
     return (
         <button
             onClick={handleCopy}
-            className="group relative flex flex-col justify-end overflow-hidden text-left transition-transform duration-200 hover:-translate-y-1 cursor-pointer"
+            className="group relative flex flex-col justify-end overflow-hidden text-left w-full transition-[transform,box-shadow] duration-150 hover:z-10 hover:shadow-[0_8px_24px_rgba(12,13,14,0.18)] cursor-pointer"
             style={{
                 backgroundColor: hex,
-                height: large ? "clamp(220px, 28vw, 340px)" : "clamp(120px, 14vw, 160px)",
-                color: isLight ? "#0C0D0E" : "#FFFBF7",
+                aspectRatio: size === "lg" ? "4 / 3" : "1 / 1",
+                color: fg,
             }}
         >
             <span
-                className="absolute inset-0 flex items-center justify-center text-xs font-medium uppercase tracking-[0.2em] opacity-0 transition-opacity duration-150 group-hover:opacity-100"
-                style={{ backgroundColor: isLight ? "rgba(12,13,14,0.08)" : "rgba(255,251,247,0.12)" }}
+                className="absolute top-2 right-2 font-mono text-[10px] uppercase tracking-[0.1em] opacity-0 transition-opacity duration-150 group-hover:opacity-70"
             >
-                {copied ? "Copiado!" : "Copiar hex"}
+                {copied ? "copiado" : "copiar"}
             </span>
-            <div className="p-4">
-                {label && <div className="font-serif text-sm font-medium">{label}</div>}
-                <div className="font-mono text-xs opacity-80">{hex}</div>
-                {sublabel && <div className="font-mono text-[11px] opacity-60">{sublabel}</div>}
+            <div className={size === "lg" ? "p-4" : "p-2.5"}>
+                {label && (
+                    <div className={size === "lg" ? "font-serif text-base mb-0.5" : "text-[11px] font-medium mb-0.5"}>
+                        {label}
+                    </div>
+                )}
+                <div className={size === "lg" ? "font-mono text-xs opacity-80" : "font-mono text-[10px] opacity-75"}>
+                    {hex}
+                </div>
+                {sublabel && size === "lg" && (
+                    <div className="font-mono text-[11px] opacity-60 mt-0.5">{sublabel}</div>
+                )}
             </div>
         </button>
     );

@@ -68,12 +68,6 @@ export const brandManifest = {
   logo: {
     description:
       "Monograma 'BB' formado pela sobreposição de duas letras B espelhadas, remetendo a candlesticks de um gráfico. Assinatura completa: 'TRADER Bruno Borges'.",
-    variations: [
-      "Símbolo isolado",
-      "Símbolo + TRADER Bruno Borges (empilhado)",
-      "Bruno [símbolo] Borges (símbolo substitui o BB central)",
-      "TRADER Bruno Borges (empilhado, compacto)",
-    ],
     safeArea: "Distância mínima absoluta = 1/2 da medida do símbolo 'BB' do logotipo, em todos os lados.",
     misuse: [
       "Não esticar ou distorcer",
@@ -83,11 +77,61 @@ export const brandManifest = {
       "Não usar combinações de baixo contraste",
       "Não girar ou mudar a posição do logotipo",
     ],
-    files: [
+    // Matriz completa: 4 layouts x 4 cores, cada arquivo já vem pareado com o
+    // fundo correto para essa cor (ex: branca só existe sobre fundo escuro).
+    variants: [
+      {
+        layout: "Completo",
+        description: "TRADER Bruno Borges — símbolo à esquerda, assinatura horizontal.",
+        items: [
+          { color: "Verde", bg: "claro", path: "/images/logo/logo-verde-fundo-claro.svg" },
+          { color: "Vermelha", bg: "claro", path: "/images/logo/logo-vermelha-fundo-claro.svg" },
+          { color: "Preta", bg: "claro", path: "/images/logo/logo-preta-fundo-claro.svg" },
+          { color: "Verde", bg: "escuro", path: "/images/logo/logo-verde-fundo-escuro.svg" },
+          { color: "Vermelha", bg: "escuro", path: "/images/logo/logo-vermelha-fundo-escuro.svg" },
+          { color: "Branca", bg: "escuro", path: "/images/logo/logo-branca-fundo-escuro.svg" },
+        ],
+      },
+      {
+        layout: "Nome",
+        description: "Bruno [símbolo] Borges — o monograma substitui o miolo do nome.",
+        items: [
+          { color: "Verde", bg: "claro", path: "/images/logo/logo-nome-verde-fundo-claro.svg" },
+          { color: "Vermelha", bg: "claro", path: "/images/logo/logo-nome-vermelha-fundo-claro.svg" },
+          { color: "Preta", bg: "claro", path: "/images/logo/logo-nome-preta-fundo-claro.svg" },
+          { color: "Verde", bg: "escuro", path: "/images/logo/logo-nome-verde-fundo-escuro.svg" },
+          { color: "Vermelha", bg: "escuro", path: "/images/logo/logo-nome-vermelha-fundo-escuro.svg" },
+          { color: "Branca", bg: "escuro", path: "/images/logo/logo-nome-branca-fundo-escuro.svg" },
+        ],
+      },
+      {
+        layout: "Reduzida horizontal",
+        description: "Versão compacta da assinatura completa, para espaços estreitos.",
+        items: [
+          { color: "Verde", bg: "claro", path: "/images/logo/logo-reduzida-horizontal-verde-fundo-claro.svg" },
+          { color: "Vermelha", bg: "claro", path: "/images/logo/logo-reduzida-horizontal-vermelha-fundo-claro.svg" },
+          { color: "Preta", bg: "claro", path: "/images/logo/logo-reduzida-horizontal-preta-fundo-claro.svg" },
+          { color: "Verde", bg: "escuro", path: "/images/logo/logo-reduzida-horizontal-verde-fundo-escuro.svg" },
+          { color: "Vermelha", bg: "escuro", path: "/images/logo/logo-reduzida-horizontal-vermelha-fundo-escuro.svg" },
+          { color: "Branca", bg: "escuro", path: "/images/logo/logo-reduzida-horizontal-branca-fundo-escuro.svg" },
+        ],
+      },
+      {
+        layout: "Reduzida vertical",
+        description: "TRADER Bruno Borges empilhado sob o símbolo, para formatos quadrados.",
+        items: [
+          { color: "Verde", bg: "claro", path: "/images/logo/logo-reduzida-vertical-verde-fundo-claro.svg" },
+          { color: "Vermelha", bg: "claro", path: "/images/logo/logo-reduzida-vertical-vermelha-fundo-claro.svg" },
+          { color: "Preta", bg: "claro", path: "/images/logo/logo-reduzida-vertical-preta-fundo-claro.svg" },
+          { color: "Verde", bg: "escuro", path: "/images/logo/logo-reduzida-vertical-verde-fundo-escuro.svg" },
+          { color: "Vermelha", bg: "escuro", path: "/images/logo/logo-reduzida-vertical-vermelha-fundo-escuro.svg" },
+          { color: "Branca", bg: "escuro", path: "/images/logo/logo-reduzida-vertical-branca-fundo-escuro.svg" },
+        ],
+      },
+    ],
+    iconFiles: [
       { label: "Ícone — fundo escuro", path: "/images/logo/logo_icon-white_new.png" },
       { label: "Ícone — fundo claro", path: "/images/logo/logo_icon-black_new.png" },
-      { label: "Logotipo completo — fundo claro", path: "/images/logo/logo_traderbrunoborges_fundo-claro.png" },
-      { label: "Logotipo completo — fundo escuro", path: "/images/logo/logo_traderbrunoborges_fundo-escuro.png" },
     ],
   },
 
@@ -95,6 +139,20 @@ export const brandManifest = {
     name: "Grafismo de candlesticks",
     description:
       "O ritmo dos candlesticks, a narrativa do gráfico. Grafismo de apoio que desconstrói a anatomia dos candlesticks de forma abstrata e geométrica, simulando o ritmo e a oscilação do mercado financeiro sem cair em clichês literais. Através da alternância de blocos, cria um padrão visual dinâmico e sofisticado — ideal para fundos de apresentações, postagens e transmissões ao vivo.",
+    gallery: [
+      { file: "grafismo-sequencia.png", label: "Sequência de candles", dark: true },
+      { file: "grafismo-sequencia-aplicado.png", label: "Sequência aplicada com grid", dark: true },
+      { file: "grafismo-candle-sequencia-vazado.png", label: "Sequência vazada (outline)", dark: true },
+      { file: "grafismo-onda-linhas-verde.png", label: "Onda de linhas — verde" },
+      { file: "grafismo-onda-linhas-vermelho.png", label: "Onda de linhas — vermelho" },
+      { file: "grafismo-blocos.png", label: "Blocos diagonais", dark: true },
+      { file: "grafismo-completo-lateral.png", label: "Composição lateral completa", dark: true },
+      { file: "grafismo-cortina-com-linhas.png", label: "Cortina com linhas de grade", dark: true },
+      { file: "grafismo-cortina-parcial-verde.png", label: "Cortina parcial — verde" },
+      { file: "grafismo-cortina-parcial-verde-fundo-escuro.png", label: "Cortina parcial — verde sobre escuro", dark: true },
+      { file: "grafismo-cortina-parcial-vermelho.png", label: "Cortina parcial — vermelho" },
+      { file: "grafismo-cortina-parcial-vermelho-fundo-escuro.png", label: "Cortina parcial — vermelho sobre escuro", dark: true },
+    ],
   },
 } as const;
 

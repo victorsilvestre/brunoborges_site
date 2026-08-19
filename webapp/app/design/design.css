@@ -1,0 +1,9 @@
+.download-chip {
+    background-color: transparent;
+    color: var(--ink);
+}
+
+.download-chip:hover {
+    background-color: var(--ink);
+    color: var(--paper);
+}

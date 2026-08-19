@@ -42,15 +42,20 @@ function toMarkdown(): string {
 
     lines.push("## Logo", "");
     lines.push(m.logo.description, "");
-    lines.push("**Variações**", "");
-    for (const v of m.logo.variations) lines.push(`- ${v}`);
-    lines.push("");
     lines.push(`**Margem de segurança:** ${m.logo.safeArea}`, "");
     lines.push("**Uso incorreto — evite:**", "");
     for (const rule of m.logo.misuse) lines.push(`- ${rule}`);
     lines.push("");
-    lines.push("**Arquivos**", "");
-    for (const f of m.logo.files) {
+    lines.push("**Variantes disponíveis (SVG)**", "");
+    for (const group of m.logo.variants) {
+        lines.push(`_${group.layout}_ — ${group.description}`, "");
+        for (const item of group.items) {
+            lines.push(`- [${item.color} / fundo ${item.bg}](${item.path})`);
+        }
+        lines.push("");
+    }
+    lines.push("**Ícones**", "");
+    for (const f of m.logo.iconFiles) {
         lines.push(`- [${f.label}](${f.path})`);
     }
     lines.push("");
@@ -58,6 +63,11 @@ function toMarkdown(): string {
     lines.push("## Elemento gráfico", "");
     lines.push(`**${m.graphicElement.name}**`, "");
     lines.push(m.graphicElement.description, "");
+    lines.push("");
+    lines.push("**Galeria**", "");
+    for (const g of m.graphicElement.gallery) {
+        lines.push(`- [${g.label}](/design/figma-exports/${g.file})`);
+    }
 
     return lines.join("\n");
 }
