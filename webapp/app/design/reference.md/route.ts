@@ -68,6 +68,13 @@ function toMarkdown(): string {
     for (const g of m.graphicElement.gallery) {
         lines.push(`- [${g.label}](/design/figma-exports/${g.file})`);
     }
+    lines.push("");
+
+    lines.push("## Fotos", "");
+    lines.push(m.photos.description, "");
+    for (const p of m.photos.gallery) {
+        lines.push(`- [${p.label}](/images/bruno/${p.file})`);
+    }
 
     return lines.join("\n");
 }

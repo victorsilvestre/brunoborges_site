@@ -349,9 +349,52 @@ export default function DesignPage() {
                     </div>
                 </section>
 
+                {/* ---------- Fotos ---------- */}
+                <section id="fotos" className="scroll-mt-8 px-6 md:px-14 py-20 md:py-28 border-t" style={{ borderColor: "var(--rule)" }}>
+                    <SectionHeading n="06" title="Fotos" />
+                    <p className="max-w-xl text-[15px] leading-relaxed mb-10" style={{ color: "var(--muted)" }}>
+                        {m.photos.description}
+                    </p>
+                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-1.5">
+                        {m.photos.gallery.map((p) => (
+                            <div
+                                key={p.file}
+                                className="group relative overflow-hidden"
+                                style={{ backgroundColor: "var(--ink)" }}
+                            >
+                                <Image
+                                    src={`/images/bruno/${p.file}`}
+                                    alt={p.label}
+                                    width={400}
+                                    height={520}
+                                    className="w-full h-auto"
+                                />
+                                <div
+                                    className="absolute inset-x-0 bottom-0 flex flex-col gap-1 px-2 py-1.5"
+                                    style={{
+                                        background: "linear-gradient(transparent, rgba(12,13,14,0.85))",
+                                    }}
+                                >
+                                    <span className="text-[10px] leading-tight" style={{ color: "var(--paper)" }}>
+                                        {p.label}
+                                    </span>
+                                    <a
+                                        href={`/images/bruno/${p.file}`}
+                                        download
+                                        className="text-[10px] font-mono uppercase tracking-[0.08em] underline underline-offset-2 opacity-0 group-hover:opacity-100 transition-opacity w-fit"
+                                        style={{ color: "var(--paper)" }}
+                                    >
+                                        PNG ↓
+                                    </a>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
                 {/* ---------- Aplicações ---------- */}
                 <section id="aplicacoes" className="scroll-mt-8 px-6 md:px-14 py-20 md:py-28 border-t" style={{ borderColor: "var(--rule)" }}>
-                    <SectionHeading n="06" title="Aplicações" />
+                    <SectionHeading n="07" title="Aplicações" />
                     <div className="grid md:grid-cols-2 gap-1.5">
                         <Image
                             src="/design/figma-exports/aplicacao-hero.png"
