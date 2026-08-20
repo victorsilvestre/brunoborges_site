@@ -1,14 +1,12 @@
 import { Metadata } from 'next';
 import { Hero } from "./components/Hero";
-import { AboutMentor } from "./components/AboutMentor";
-import { AboutEvent } from "./components/AboutEvent";
-import { ForWhom } from "./components/ForWhom";
-import { WhatYouWillLearn } from "./components/WhatYouWillLearn";
-import { HowToParticipate } from "./components/HowToParticipate";
 import { Schedule } from "./components/Schedule";
-import { SocialProof } from "../components/SocialProof";
+import { AboutEvent } from "./components/AboutEvent";
+import { WhatYouWillLearn } from "./components/WhatYouWillLearn";
+import { Testimonials } from "./components/Testimonials";
 import { FAQ } from "./components/FAQ";
 import { FinalCTA } from "./components/FinalCTA";
+import "./stitch.css";
 
 export const metadata: Metadata = {
     title: 'Maratona TDS | Trader Bruno Borges',
@@ -17,32 +15,18 @@ export const metadata: Metadata = {
 
 export default function MaratonaPage() {
     return (
-        <main className="bg-[var(--dark-base)] min-h-screen text-white selection:bg-red-500 selection:text-white">
+        <main className="maratona-stitch min-h-screen">
             <Hero />
-            <AboutMentor />
-            <AboutEvent />
-            <ForWhom />
-            <WhatYouWillLearn />
-            <HowToParticipate />
             <Schedule />
-            <SocialProof
-                title="Quem já Participou"
-                titleHighlight="Aprova!"
-                titleHighlightClass="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] to-[var(--green-pure)]"
-            />
+            <AboutEvent />
+            <WhatYouWillLearn />
+            <Testimonials />
             <FAQ />
             <FinalCTA />
 
-            {/* Footer premium minimalista */}
-            <footer className="py-12 flex flex-col items-center justify-center border-t border-[var(--white-10)] bg-black relative overflow-hidden">
-                <div className="absolute bottom-0 w-[500px] h-[1px] bg-gradient-to-r from-transparent via-[var(--gold-premium)] to-transparent opacity-30" />
-                <img
-                    src="/images/logo/logo_icon-white_new.png"
-                    alt="Trader Bruno Borges"
-                    className="h-10 w-10 object-contain opacity-40 mb-4"
-                />
-                <div className="text-[10px] uppercase tracking-[0.3em] text-[var(--white-20)] font-bold">
-                    &copy; {new Date().getFullYear()} — Excelência em Price Action
+            <footer className="bg-[var(--surface)] py-10 text-center text-[var(--text-muted)] text-sm border-t border-[var(--surface-bright)]">
+                <div className="container mx-auto px-4">
+                    <p>&copy; {new Date().getFullYear()} Trader de Sucesso. Todos os direitos reservados.</p>
                 </div>
             </footer>
         </main>

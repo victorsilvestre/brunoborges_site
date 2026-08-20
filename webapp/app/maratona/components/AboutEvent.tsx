@@ -1,73 +1,77 @@
 "use client";
 
-import { FadeIn } from "../../components/FadeIn";
-import { LineChart, BookOpen, TrendingUp, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export function AboutEvent() {
     return (
-        <section id="about" className="py-24 bg-[var(--dark-pure)] relative overflow-hidden border-b border-[var(--white-10)]">
-            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
-
-            {/* Glowing Orb */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] rounded-full pointer-events-none" style={{ background: 'var(--green-dim)' }} />
-
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="text-center mb-20">
-                    <FadeIn>
-                        <h2 className="text-[var(--white-20)] font-bold text-sm tracking-[0.2em] uppercase mb-4">
-                            Sobre o evento
+        <section className="py-24 bg-[var(--surface)] relative overflow-hidden">
+            <div className="absolute right-0 top-0 w-1/3 h-full bg-[var(--surface-container-low)] -skew-x-12 transform origin-top-right -z-10 hidden lg:block" />
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col-reverse lg:flex-row items-center gap-16 max-w-6xl mx-auto">
+                    {/* About Content */}
+                    <div className="w-full lg:w-7/12 space-y-6">
+                        <h2 className="text-3xl md:text-5xl font-display-stitch font-black leading-tight tracking-tight text-[var(--text-main)]">
+                            Pare de tentar adivinhar{" "}
+                            <span className="bg-[var(--primary)]/20 px-1 border-b-4 border-[var(--primary)]">
+                                pra que lado o mercado vai
+                            </span>
+                            .
                         </h2>
-                    </FadeIn>
-                    <FadeIn delay={0.1}>
-                        <h3 className="font-display font-black text-5xl md:text-6xl text-white uppercase leading-[0.95] tracking-tighter mb-6">
-                            O gráfico conversa com a gente.<br/>
-                            <span className="text-[var(--green-bull)]">Mas você precisa entender.</span>
-                        </h3>
-                    </FadeIn>
-                    <FadeIn delay={0.2}>
-                        <p className="text-base text-[var(--white-60)] font-light leading-relaxed max-w-2xl mx-auto">
-                            Durante 3 dias, eu vou ensinar para você um método operacional extremamente simples e mostrar na prática o que observo antes de entrar nas operações ao vivo.
-                            <br />
-                            <br />
-                            Você vai aprender comigo a ler o movimento do preço, entender o que o mercado está fazendo e, principalmente, identificar as melhores oportunidades para operar consistentemente tirar dinheiro do mercado.
-                        </p>
-                    </FadeIn>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                    <FadeIn delay={0.3}>
-                        <div className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
-                            <LineChart className="w-10 h-10 text-[var(--green-bull)] mb-6" />
-                            <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase">Do zero ao operacional</h3>
-                            <p className="text-[var(--white-60)] leading-relaxed text-lg">
-                                Não importa se você está começando agora ou já opera há anos. O conteúdo da Maratona foi pensado para quem quer parar de apanhar do mercado e começar a entender ele de verdade.
+                        <div className="space-y-4 text-[var(--text-muted)] text-lg">
+                            <p>
+                                Durante 3 dias, o Bruno vai mostrar na prática como ele utiliza Price Action puro, Fibonacci e leitura de contexto para fazer as suas operações.
+                            </p>
+                            <p>
+                                Não importa se você está começando agora ou se já opera há anos. Se você ainda busca mais clareza, consistência e confiança na leitura do gráfico, a Maratona é para você.
                             </p>
                         </div>
-                    </FadeIn>
-
-                    <FadeIn delay={0.4}>
-                        <div className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
-                            <BookOpen className="w-10 h-10 mb-6" style={{ color: 'var(--green-bull)' }} />
-                            <h3 className="text-2xl font-display font-bold text-white mb-4 uppercase">Direto no gráfico</h3>
-                            <p className="text-[var(--white-60)] leading-relaxed text-lg">
-                                Eu vou ensinar você a ler o mercado e iremos realizar diversas operações juntos. Você poderá acompanhar tudo da sua tela. As oportunidades, o preço de entrada, o lugar do stop, onde é o alvo, e o pensamento de um trader consistente para cada situação que o mercado fizer. 
-                            </p>
+                        {/* Stats Grid */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 mt-8">
+                            <div className="p-6 bg-[var(--surface-container)] rounded-xl border-l-4 border-[var(--primary)] shadow-sm">
+                                <div className="text-4xl font-display-stitch font-black text-[var(--text-main)] mb-1">+7</div>
+                                <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-bold font-display-stitch">Anos operando</div>
+                                <div className="text-xs text-[var(--text-muted)] opacity-70 mt-1">Mercado Real</div>
+                            </div>
+                            <div className="p-6 bg-[var(--surface-container)] rounded-xl border-l-4 border-[var(--primary)] shadow-sm">
+                                <div className="text-4xl font-display-stitch font-black text-[var(--text-main)] mb-1">+10</div>
+                                <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-bold font-display-stitch">Padrões autorais</div>
+                                <div className="text-xs text-[var(--text-muted)] opacity-70 mt-1">Validados na Prática</div>
+                            </div>
+                            <div className="p-6 bg-[var(--surface-container)] rounded-xl border-l-4 border-[var(--primary)] shadow-sm col-span-2 md:col-span-1">
+                                <div className="text-4xl font-display-stitch font-black text-[var(--text-main)] mb-1">+1.4k</div>
+                                <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-bold font-display-stitch">Traders formados</div>
+                                <div className="text-xs text-[var(--text-muted)] opacity-70 mt-1">Método TDS</div>
+                            </div>
                         </div>
-                    </FadeIn>
-                </div>
-
-                {/* CTA inscrição */}
-                <FadeIn delay={0.5}>
-                    <div className="mt-16 flex justify-center">
-                        <a
-                            href="#inscricao"
-                            className="inline-flex items-center gap-3 py-4 px-8 rounded-xl font-display font-bold text-sm uppercase tracking-wider text-white transition-all duration-300 hover:scale-105"
-                            style={{ background: 'linear-gradient(to right, var(--green-pure), var(--green-dark))', boxShadow: '0 0 40px var(--green-dim)' }}
-                        >
-                            Quero me inscrever <ArrowRight className="w-5 h-5" />
-                        </a>
+                        <div className="pt-8">
+                            <a
+                                href="#inscricao"
+                                className="inline-block bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-[var(--text-main)] font-display-stitch font-bold py-4 px-10 rounded-xl transition duration-300 text-lg uppercase tracking-wide shadow-[4px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[2px_2px_0px_rgba(0,0,0,0.1)] hover:translate-y-[2px] hover:translate-x-[2px]"
+                            >
+                                Quero me inscrever
+                            </a>
+                        </div>
                     </div>
-                </FadeIn>
+
+                    {/* About Image */}
+                    <div className="w-full lg:w-5/12 mx-auto relative">
+                        <div className="absolute top-4 -left-4 w-full h-full border-4 border-[var(--primary)] rounded-xl z-0 hidden md:block" />
+                        <div className="relative z-10 rounded-xl overflow-hidden shadow-xl border border-[var(--surface-bright)] transform md:-rotate-2 transition-transform hover:rotate-0 duration-300">
+                            {/* Painel com fundo sólido para ancorar a imagem recortada do Bruno */}
+                            <div className="relative w-full h-[420px] md:h-[520px] bg-gradient-to-b from-[var(--surface-container)] to-[var(--primary)]/15 overflow-hidden">
+                                <Image
+                                    src="/images/bruno/bruno_meio-corpo_camiseta-preta_neutro.png"
+                                    alt="Bruno Borges, Mentor TDS"
+                                    fill
+                                    className="object-contain object-bottom scale-100"
+                                />
+                            </div>
+                            <div className="absolute bottom-6 left-6 bg-[var(--surface)] text-[var(--text-main)] px-4 py-2 rounded font-display-stitch font-bold uppercase tracking-widest text-xs shadow-md border-l-4 border-[var(--primary)] flex items-center z-20">
+                                <span className="w-2 h-2 bg-[var(--primary)] rounded-full mr-2" /> Trader Bruno Borges • Mentor
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

@@ -1,267 +1,108 @@
-=========================================================
-CONTEÚDO DA PÁGINA "/maratona" — MARATONA TDS
-=========================================================
-(Extraído de webapp/app/maratona/ para facilitar edição de texto)
-
----------------------------------------------------------
-METADADOS DA PÁGINA (SEO)
----------------------------------------------------------
-Título (tab do navegador): Maratona TDS | Trader Bruno Borges
-Descrição (meta description): Participe da 16ª Maratona TDS Trader de Sucesso. Evento 100% online e gratuito. Aprenda Price Action, Gerenciamento e Estratégias diretamente no gráfico.
-
 
 ---------------------------------------------------------
 1. HERO (topo da página)
 ---------------------------------------------------------
-Título principal (H1):
-Em apenas 3 aulas você vai aprender a ler o gráfico do jeito que traders profissionais fazem.
+Título: 
+Aprenda a ler o gráfico do jeito certo e melhore os seus resultados.
 
 Parágrafo:
-Na Maratona Trader de Sucesso, vou mostrar na prática o operacional de desenvolvi em 7 anos operando no mercado real. O mesmo método que eu uso todos os dias com mais de 1.400 alunos.
+Inscreva-se gratuitamente na Maratona TDS que vai acontecer nos dias 15, 16 e 17 de setembro, e receba: 3 aulas ao vivo, as gravações, os resumões de cada aula, uma aula bônus e acesso ao grupo exclusivo. 
+Após a inscrição, você será redirecionado para o grupo exclusivo da Maratona.
 
-Tags/badges:
-- 15, 16 e 17/09
-- 100% Online e Gratuito
-
-Bloco do formulário:
-- Texto pequeno acima: Inscreva-se gratuitamente
-- Título do formulário: Aproveite os bônus e conteúdos exclusivos
+Formulário:
+- Título do formulário: Inscreva-se gratuitamente
 - Campos do formulário (todos obrigatórios):
   1. Nome completo — placeholder: "Seu nome"
   2. E-mail — placeholder: "seu@email.com"
   3. WhatsApp — placeholder: "(11) 99999-9999" (com máscara automática)
-- Botão: Quero Participar da 16ª Maratona TDS
+- Botão: Quero Participar de Graça
 
 
 ---------------------------------------------------------
-2. SOBRE O MENTOR (AboutMentor)
+2. SOBRE O EVENTO
 ---------------------------------------------------------
-Selo pequeno: Quem vai te ensinar
 
-Título (H2):
-Eu já estive
-Onde você está agora
+Título: Pare de tentar adivinhar pra que lado o mercado vai.
 
 Parágrafo 1:
-Trader Profissional com mais de 7 anos operando no mercado financeiro. Especialista em Price Action e leitura Candle a Candle sem indicadores.
+Durante 3 dias, o Bruno vai mostrar na prática como ele utiliza Price Action puro, Fibonacci e leitura de contexto para fazer as suas operações.
 
 Parágrafo 2:
-Criou padrões autorais como o "Preguiçoso", "Teimoso" "Responsivo" e "Leônidas" — ao todo, são mais de 10 padrões de Price Action validados por milhares de traders todos os dias.
+Não importa se você está começando agora ou se já opera há anos. Se você ainda busca mais clareza, consistência e confiança na leitura do gráfico, a Maratona é para você.
 
 Estatísticas (cards):
-- +7 — Anos operando — mercado real
-- +10 — Padrões autorais — testados na prática
-- +1,4k — Traders formados — método próprio
-
-
----------------------------------------------------------
-3. SOBRE O EVENTO (AboutEvent)
----------------------------------------------------------
-Selo pequeno: Sobre o evento
-
-Título (H3):
-O gráfico conversa com a gente.
-Mas você precisa entender.
-
-Parágrafo:
-Durante 3 dias, eu vou ensinar para você um método operacional extremamente simples e mostrar na prática o que observo antes de entrar nas operações ao vivo.
-
-Você vai aprender comigo a ler o movimento do preço, entender o que o mercado está fazendo e, principalmente, identificar as melhores oportunidades para operar consistentemente tirar dinheiro do mercado.
-
-Cards (2 colunas):
-[Card 1]
-Título: Do zero ao operacional
-Texto: Não importa se você está começando agora ou já opera há anos. O conteúdo da Maratona foi pensado para quem quer parar de apanhar do mercado e começar a entender ele de verdade.
-
-[Card 2]
-Título: Direto no gráfico
-Texto: Eu vou ensinar você a ler o mercado e iremos realizar diversas operações juntos. Você poderá acompanhar tudo da sua tela. As oportunidades, o preço de entrada, o lugar do stop, onde é o alvo, e o pensamento de um trader consistente para cada situação que o mercado fizer.
+- +7 — Anos operando — Mercado Real
+- +10 — Padrões autorais — Validados na Prática
+- +1,4k — Traders formados — Método Trader de Sucesso
 
 Botão CTA: Quero me inscrever
 
 
 ---------------------------------------------------------
-4. PARA QUEM É O EVENTO (ForWhom)
+3. O QUE VOCÊ VAI APRENDER
 ---------------------------------------------------------
-Selo pequeno: Público do Evento
+Título: Em apenas 3 dias você vai aprender:
 
-Título (H2):
-Esta Maratona
-é para você?
+[1] Leitura Candle a Candle
+Entenda o que o preço está fazendo.
 
-Cards de perfil (3 colunas):
+[2] Fibonacci
+Encontre regiões, entradas e alvos.
 
-[Card 1 — Iniciante]
-Tag: Iniciante
-Título: Você está começando agora
-Texto: Já tentou entender o mercado mas sente que falta uma base sólida? Na Maratona, você vai aprender a leitura do gráfico do jeito certo — do zero, sem pressupor nenhum conhecimento anterior. Sem atalhos que não funcionam. Sem linguagem complicada que afasta mais do que ensina. Sem indicadores milagrosos.
+[3] Contexto + Gerenciamento
+Saiba quando operar, e quando ficar de fora.
 
-[Card 2 — Intermediário]
-Tag: Intermediário
-Título: Você já opera, mas ainda não é consistente
-Texto: Conhece os conceitos, fez alguns cursos, mas na hora de operar ainda erra mais do que gostaria e não consegue fechar positivo no mês. A Maratona vai ajudar você a identificar o que está quebrando o seu operacional — seja leitura de contexto, gestão de risco ou disciplina na execução das operações. Não é sobre aprender mais conteúdo. É sobre aplicar o que já sabe de forma mais precisa.
+[4] Operacional na Prática
+Veja o Bruno aplicando tudo diretamente no gráfico.
 
-[Card 3 — Avançado]
-Tag: Avançado
-Título: É consistente, mas sabe que pode ir além
-Texto: Você já é consistente e consegue ganhar dinheiro no mercado de forma constante, mas sente que os seus resultados poderiam ser muito melhores. A Maratona vai ajudar você a refinar detalhes do operacional, aprimorar a leitura do gráfico e destravar o próximo nível de consistência e performance.
-
-Botão CTA: Faça a sua inscrição de graça
+Botão CTA: Eu quero aprender
 
 
 ---------------------------------------------------------
-5. O QUE VOCÊ VAI APRENDER (WhatYouWillLearn)
+4. CALENDÁRIO COMPLETO
 ---------------------------------------------------------
-Selo pequeno: Conteúdo Programático
-
-Título (H2):
-O que você vai
-Aprender
-
-Tópicos (5 cards):
-
-[1] Price Action
-Leitura pura do preço, sem indicadores. Você vai entender as obrigações de cada candle e por que o mercado se move desse jeito.
-
-[2] Gerenciamento
-Como proteger o seu capital e realizar as entradas. Sem gerenciamento, nenhuma estratégia funciona no longo prazo.
-
-[3] Estratégias
-Os padrões de Price Action que eu utilizo no mercado diariamente — testados e validados em todos os ativos do mercado financeiro por milhares de alunos.
-
-[4] Análise ao Vivo
-Acompanhe o gráfico e as operações sendo lidos em tempo real. Ver o método sendo aplicado na prática é a forma mais direta para melhorar os seus resultados.
-
-[5] Grupo Exclusivo
-Acesso ao grupo da Maratona no Telegram com bônus exclusivos, avisos de cada aula e conteúdos extras liberados antes, durante e após o evento.
-
-Bloco "Benefícios Exclusivos" (3 itens):
-
-[1] Gravação das Aulas
-Assista às aulas no seu tempo, reveja os pontos mais importantes e não perca nenhum detalhe.
-
-[2] Resumão de Cada Aula
-Receba o resumo estratégico de cada noite para acelerar o aprendizado e facilitar a aplicação.
-
-[3] Aula Bônus ao Vivo
-Uma aula exclusiva com operacional na prática, ao vivo, com visão real de mercado e execução comentada.
-
-
----------------------------------------------------------
-6. COMO PARTICIPAR (HowToParticipate)
----------------------------------------------------------
-Selo pequeno: É simples assim
-
-Título (H2):
-Como
-Participar?
-
-Passos (4 cards):
-
-[01] Preencha o formulário
-Rápido e simples — nome, e-mail e WhatsApp. É tudo que precisamos para garantir seu acesso.
-
-[02] Entre no grupo exclusivo
-Após o cadastro, você é direcionado para o grupo exclusivo da Maratona no Telegram.
-
-[03] Participe da Maratona
-Interaja, participe, pergunte e aproveite! Esse grupo também é seu e será um prazer ter você com a gente.
-
-[04] Tenha acesso aos bônus
-Link das gravações, resumões exclusivos e conteúdos extras liberados antes, durante e após o evento.
-
-Botão CTA: Quero me inscrever hoje na 16ª Maratona TDS
-
-
----------------------------------------------------------
-7. CALENDÁRIO COMPLETO (Schedule)
----------------------------------------------------------
-Título (H2):
-Calendário
-Completo
+Título: Calendário Completo
 
 [AULA 1 - TERÇA — 15/09 — 20HRS]
-Tópico: Como enxergar o que o gráfico está tentando mostrar
-Descrição: Antes de pensar em estratégias, entradas ou indicadores, você precisa aprender a interpretar o que está acontecendo no gráfico. Nessa aula, você vai entender a lógica por trás dos movimentos do preço, como os candles revelam a atuação do mercado e quais informações observar para deixar de operar no escuro e começar a tomar decisões com mais clareza.
-(url da gravação: vazio — aula ainda não liberada)
+Tópico: Aprenda a enxergar o que o gráfico está mostrando
+Descrição: Leitura Candle a Candle e as obrigações.
 
 [AULA 2 - QUARTA — 16/09 — 20HRS]
-Tópico: Utilizando apenas a Fibonacci para sair positivo
-Descrição: Você não precisa encher o gráfico de indicadores para encontrar boas oportunidades. Nessa aula, eu vou mostrar como utilizo apenas a Fibonacci para identificar regiões importantes, encontrar pontos de entrada, projetar alvos e controlar o risco das operações. Você vai aprender uma forma simples e objetiva de interpretar os movimentos do mercado e buscar mais consistência, sabendo exatamente onde prestar atenção antes de tomar uma decisão.
-(url da gravação: vazio — aula ainda não liberada)
+Tópico: Utilize a Fibonacci para encontrar as regiões certas
+Descrição: Regiões, entradas, alvos e gestão de risco.
 
 [AULA 3 - QUINTA — 17/09 — 20HRS]
-Tópico: Como alavancar seus resultados com Scalps
-Descrição: Operações rápidas não precisam ser operações apressadas. Nessa aula, você vai aprender a estruturar um scalp com contexto, confirmação e gerenciamento de risco. Vou mostrar o que observar antes da entrada, como conduzir a operação e, principalmente, como reconhecer os momentos em que ficar de fora é a melhor decisão para proteger o seu capital.
-(url da gravação: vazio — aula ainda não liberada)
+Tópico: Como utilizar Scalps para potencializar resultados
+Descrição: Contexto, confirmação, execução e gerenciamento.
 
-Botão CTA: Quero me inscrever na Maratona e receber todos os bônus
-
-OBS: quando uma aula tem "url" preenchida, o card muda de vermelho (bloqueado/cadeado fechado) para verde (liberado/cadeado aberto) e exibe o botão "Assistir Aula".
+Botão CTA: Quero assistir as aulas ao vivo
 
 
 ---------------------------------------------------------
-8. DEPOIMENTOS / PROVA SOCIAL (SocialProof)
+5. DEPOIMENTOS / PROVA SOCIAL
 ---------------------------------------------------------
-(Componente compartilhado — recebe título customizado pela página)
-
-Selo pequeno: Depoimentos
-Título (H3): Quem já Participou / Aprova! (destacado)
-
-Depoimentos (carrossel horizontal, 9 no total):
+Título: Depoimentos
 
 1) Debora Malta — Aluna TDS
-"Aula fantástica, com explicação focada nos detalhes e nas nossas dúvidas. Uma sensação libertadora de que é tudo muito simples se tiver disciplina e focar no SIMPLES sem inventar moda.
+"Aulas fantásticas, com explicações focadas nos detalhes e nas nossas dúvidas. 
+Uma sensação libertadora de que é tudo muito simples se tiver disciplina e focar no simples sem inventar moda. 
+Gratidão!"
 
-E o mais sensacional de tudo é vcs fazerem um intensivão em pleno sábado, o dia inteiro, para atualizarem os ex-alunos das novidades e melhorias do operacional. Isso não existe em nenhum lugar. Muito obrigada. Gratidão!"
-
-2) Carlos Lobo — Aluno TDS
-"Incrível essa experiência de poder participar de um super intensivo como esse...
-
-Realmente o nível foi elevado ao extremo, pois foi um sábado intenso, de muito aprendizado, novos conceitos e principal, nos preparando para um futuro brilhante dentro do trade.
-
-Obrigado Bruno e Fernanda por tanta competência no que fazem. Parabéns!"
-
-3) Anderson Rubinho — Aluno TDS
-"Parabéns Bruno, vc comprova a cada dia o seu comprometimento conosco que fizemos sua mentoria, sempre procurando ajudar... DEUS lhe abençoe sempre 🙏🙏"
-
-4) Bino — Aluno TDS
-"Meus mais sinceros agradecimentos, por toda a dedicação e paciência para nos repassar toda a riqueza de conhecimentos e aprendizado.
-
-Bruno e Fernanda são diferenciados, realmente desejam o progresso de todos os alunos, e não são simplesmente vendedores de curso!
-
+2) Bino — Aluno TDS
+"Meus mais sinceros agradecimentos, 
+por toda a dedicação e paciência para nos repassar toda a riqueza de conhecimentos e aprendizado. 
 Agradeço a Deus por fazer parte desta verdadeira família TDS."
 
-5) Claudinei Corrêa — Aluno TDS
-"Como sempre as aulas do Bruno são sempre Top demais. Tô vendo cruzamento de fibo em todo quanto é canto agora. KKK"
-
-6) Valtinho Mezari — Aluno TDS
-"Sem sombra de dúvidas, um mentor claro e preparado, explica com paciência. Tira as dúvidas tranquilo, faz vc sentir segurança no operacional que ele ensina.
-
-Parabéns Fernanda pelo suporte. E a Bruno Borges. Deus abençoe grandemente cada vez mais."
-
-7) Paulo Pires — Aluno TDS
-"Parabéns, como sempre aula top demais, dinheiro mais bem investido em mentoria que já fiz nos meus quase 6 anos de mercado.
-
-Parabéns a toda equipe e principalmente ao nosso mentor Bruno. O homem da bola de cristal. Kkkk"
-
-8) Andre Dias — Aluno TDS
-"Como sempre, o Bruno se supera a cada aula! Excepcional operacional!!!"
-
-9) Luiz Roberto — Aluno TDS
-"Obrigado a todos em especial à Fernanda e ao Bruno pela oportunidade do aprendizado e pela grandeza de compartilhar os seus conhecimentos e experiências!
-
-Abraços a todos e um ótimo final de semana!"
+3) Valtinho Mezari — Aluno TDS
+"Sem sombra de dúvidas, um mentor claro e preparado, explica com paciência. 
+Tira as dúvidas tranquilo, faz você sentir segurança no operacional que ele ensina. 
+Parabéns Bruno e Fernanda!"
 
 
 ---------------------------------------------------------
-9. PERGUNTAS FREQUENTES (FAQ)
+6. PERGUNTAS FREQUENTES
 ---------------------------------------------------------
-Selo pequeno: Dúvidas Frequentes
-
-Título (H2):
-Ainda tem
-dúvidas?
+Título: Dúvidas Frequentes
 
 P: A Maratona é gratuita?
 R: Sim, 100% gratuita. Não existe nenhuma cobrança para participar — nem antes, nem durante, nem depois do evento. O único passo necessário é entrar no grupo exclusivo no Telegram.
@@ -275,36 +116,18 @@ R: Tudo chega pelo grupo exclusivo no Telegram. Você recebe o aviso antes de ca
 P: Vou conseguir assistir mesmo se não puder ao vivo?
 R: Sim. As gravações de todas as aulas ficam disponíveis no grupo da Maratona. Você assiste no seu tempo, no ritmo que fizer sentido pra você.
 
-P: O que acontece depois que a Maratona termina?
-R: Você fica com o acesso ao material — gravações e resumões de cada aula. Além disso, quem participa da Maratona tem prioridade de informação sobre a próxima abertura da Mentoria Trader de Sucesso.
-
 
 ---------------------------------------------------------
-10. CHAMADA FINAL (FinalCTA)
+7. CHAMADA FINAL
 ---------------------------------------------------------
-Selo pequeno: Domine o Mercado
-
-Título (H3):
-Chegou a hora do seu sucesso no Day Trade
+Título: Faça a sua inscrição na Maratona Trader de Sucesso
 
 Parágrafo:
-A 16ª Maratona Trader de Sucesso será um evento 100% online e gratuito, onde vou compartilhar conteúdos práticos, visão de mercado e peças valiosas do meu operacional. Para garantir que você não perca nenhuma aula, entre no nosso grupo exclusivo.
+Aprenda um operacional extremamente simples, e tenha acesso à todos os bônus exclusivos dessa Maratona.
 
-Campos do formulário (todos obrigatórios):
+Formulário:
 1. Nome completo — placeholder: "Seu nome"
 2. E-mail — placeholder: "seu@email.com"
 3. WhatsApp — placeholder: "(11) 99999-9999" (com máscara automática)
 
-Botão do formulário: Garantir minha vaga na Maratona TDS
-
-
----------------------------------------------------------
-11. RODAPÉ (Footer)
----------------------------------------------------------
-Texto: © [ano atual] — Excelência em Price Action
-(logo: Trader Bruno Borges)
-
-
-=========================================================
-FIM DO DOCUMENTO
-=========================================================
+Botão do formulário: Garantir minha vaga

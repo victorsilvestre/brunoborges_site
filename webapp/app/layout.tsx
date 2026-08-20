@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/next';
 import { GoogleTagManager } from '@next/third-parties/google';
-import { Inter, Montserrat, Dancing_Script } from "next/font/google";
+import { Inter, Montserrat, Dancing_Script, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,6 +20,12 @@ const dancingScript = Dancing_Script({
   variable: "--font-dancing-script",
   subsets: ["latin"],
   weight: ["700"]
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "800"],
 });
 
 
@@ -41,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${montserrat.variable} ${dancingScript.variable} h-full antialiased`}
+      className={`${inter.variable} ${montserrat.variable} ${dancingScript.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <GoogleTagManager gtmId="GTM-557S97RM" />
       <body className="min-h-full flex flex-col">{children}<Analytics /></body>

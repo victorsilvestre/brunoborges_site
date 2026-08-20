@@ -1,0 +1,88 @@
+/* Tokens e utilitários exclusivos do novo layout /maratona (Google Stitch) */
+.maratona-stitch {
+    --primary: #a2cb10;
+    --primary-dark: #86a80d;
+    --surface: #ffffff;
+    --surface-dim: #f3f4f6;
+    --surface-bright: #e5e7eb;
+    --surface-container: #f9fafb;
+    --surface-container-low: #f3f4f6;
+    --text-main: #111827;
+    --text-muted: #4b5563;
+
+    background-color: var(--surface);
+    color: var(--text-main);
+    font-family: var(--font-jetbrains-mono), monospace;
+    -webkit-font-smoothing: antialiased;
+}
+
+.maratona-stitch .font-display-stitch {
+    font-family: var(--font-inter), sans-serif;
+}
+
+.maratona-stitch .hero-bg {
+    position: relative;
+    background-image: radial-gradient(var(--surface-bright) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+.maratona-stitch .hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, transparent, var(--surface) 95%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.maratona-stitch .pattern-dots-sm {
+    background-image: radial-gradient(var(--surface-bright) 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+.maratona-stitch .section-red {
+    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+}
+
+.maratona-stitch .section-red.pattern-dots-sm {
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.22) 1.5px, transparent 1.5px),
+        linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+    background-size: 20px 20px, 100% 100%;
+}
+
+.maratona-stitch .form-card {
+    /* Alinha o botão do LeadCaptureForm ao verde-lima de destaque da headline */
+    --green-pure: var(--primary);
+    --green-dark: var(--primary-dark);
+    --green-dim: rgba(162, 203, 16, 0.18);
+    --glow-green: 0 4px 16px rgba(162, 203, 16, 0.35);
+}
+
+.maratona-stitch .form-card :where(input, textarea) {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-bright);
+    color: var(--text-main);
+}
+.maratona-stitch .form-card :where(input, textarea):focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+    outline: none;
+}
+
+/* Desvanece a imagem do Hero apenas na base, integrando com o conteúdo abaixo */
+.maratona-stitch .hero-image-fade {
+    -webkit-mask-image: linear-gradient(to bottom, #000 20%, transparent 85%);
+    mask-image: linear-gradient(to bottom, #000 20%, transparent 85%);
+}
+
+/* Compacta o LeadCaptureForm dentro do Hero, sem alterar o componente compartilhado */
+.maratona-stitch .form-card form {
+    gap: 0.75rem;
+}
+.maratona-stitch .form-card :where(input, button) {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+.maratona-stitch .form-card label {
+    margin-bottom: 0.25rem;
+}

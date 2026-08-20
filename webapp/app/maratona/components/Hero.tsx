@@ -1,132 +1,66 @@
 "use client";
 
-import { Calendar } from "lucide-react";
-import { FadeIn } from "../../components/FadeIn";
+import Image from "next/image";
 import { LeadCaptureForm } from "../../components/LeadCaptureForm";
 
 export function Hero() {
     return (
-        <section
-            className="relative flex items-center overflow-hidden hero-section"
-            style={{
-                minHeight: '760px',
-                backgroundColor: 'var(--dark-pure)',
-                backgroundImage: 'url(/images/hero/img_hero_v2.png)',
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-            }}
-        >
-            <style>{`
-                .hero-mobile-bg { display: none; }
-                @media (max-width: 767px) {
-                    .hero-section {
-                        min-height: 0 !important;
-                        align-items: flex-end !important;
-                        background-image: none !important;
-                    }
-                    .hero-mobile-bg {
-                        display: block !important;
-                        position: absolute !important;
-                        top: 0 !important;
-                        left: 0 !important;
-                        right: 0 !important;
-                        height: 780px !important;
-                        background-image: url(/images/hero/img_hero_mobile_v2.png) !important;
-                        background-position: top center !important;
-                        background-size: cover !important;
-                        z-index: 0 !important;
-                    }
-                    .hero-overlay-desktop { display: none !important; }
-                    .hero-overlay-mobile {
-                        display: block !important;
-                        height: 780px !important;
-                        bottom: auto !important;
-                    }
-                    .hero-grid {
-                        grid-template-columns: 1fr !important;
-                        align-items: start !important;
-                    }
-                    .hero-col-text   { padding-bottom: 0 !important; }
-                    .hero-col-form   { padding-bottom: 0 !important; }
-                    .hero-content    { padding-top:420px !important; padding-bottom: 25px !important; }
-                }
-            `}</style>
+        <section className="relative pb-16 overflow-hidden hero-bg">
+            {/* Imagem de fundo do Hero — largura total, desvanecendo radialmente nas bordas (mais forte na base) */}
+            <div className="hero-image-fade absolute inset-x-0 top-0 h-[420px] lg:h-[640px]" aria-hidden="true">
+                <Image
+                    src="/images/hero/img-hero-maratona-v4.png"
+                    alt=""
+                    fill
+                    priority
+                    className="object-cover object-[75%_25%]"
+                />
+            </div>
 
-            {/* Imagem de fundo mobile (altura fixa, independente do conteúdo) */}
-            <div className="hero-mobile-bg" />
+            <div className="container mx-auto px-4 relative">
+                {/* Grid de sobreposição: espaçador do tamanho da imagem + conteúdo alinhado à base, sobrepondo metade da imagem */}
+                <div className="grid max-w-7xl mx-auto">
+                    <div className="col-start-1 row-start-1 h-[420px] lg:h-[640px]" aria-hidden="true" />
 
-            {/* Overlay de contraste desktop (esquerda mais escura) */}
-            <div
-                className="absolute inset-0 z-0 hero-overlay-desktop"
-                style={{
-                    background: 'linear-gradient(90deg, rgba(15,23,42,0.55) 0%, rgba(15,23,42,0.25) 45%, rgba(15,23,42,0) 65%)',
-                }}
-            />
-
-            {/* Overlay de contraste mobile (base mais escura, para o texto e formulário) */}
-            <div
-                className="absolute inset-x-0 top-0 z-0 hero-overlay-mobile"
-                style={{
-                    display: 'none',
-                    background: 'linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.35) 45%, rgba(15,23,42,0.92) 68%, rgba(15,23,42,0.98) 100%)',
-                }}
-            />
-
-            <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-14 hero-content">
-                <div
-                    className="grid hero-grid"
-                    style={{
-                        gridTemplateColumns: 'minmax(0, 560px) 1fr',
-                        alignItems: 'center',
-                        gap: '24px',
-                    }}
-                >
-                    {/* Coluna 1: Texto + Tags */}
-                    <div className="hero-col-text">
-                        <FadeIn delay={0.1}>
-                            <h1 className="font-display font-black leading-[1.05] tracking-tight mb-4 text-white" style={{ fontSize: 'clamp(2.5rem, 3.2vw, 3.25rem)' }}>
-                                Em apenas 3 aulas você vai aprender a {" "}
-                                <span style={{ color: 'var(--red-pure)' }}>ler o gráfico do jeito que </span>
-                                <span style={{ color: 'var(--red-pure)' }}>traders profissionais </span>
-                                fazem.
-                            </h1>
-                        </FadeIn>
-                        <FadeIn delay={0.2}>
-                            <p className="text-base text-white/70 mb-5 leading-relaxed">
-                                Na Maratona Trader de Sucesso, vou mostrar na prática o operacional de desenvolvi em 7 anos operando no mercado real. O mesmo método que eu uso todos os dias com mais de 1.400 alunos.
-                            </p>
-                        </FadeIn>
-                        <FadeIn delay={0.25}>
-                            <div className="flex flex-wrap items-center gap-3 hero-tags mb-6">
-                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 border border-white/15 backdrop-blur-sm">
-                                    <Calendar className="w-4 h-4" style={{ color: 'var(--red-pure)' }} />
-                                    <span className="text-sm font-bold tracking-wider text-white">15, 16 e 17/09</span>
-                                </div>
-                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 border border-white/15 backdrop-blur-sm">
-                                    <span className="text-sm font-bold tracking-wider text-white">100% Online e Gratuito</span>
-                                </div>
-                            </div>
-                        </FadeIn>
-
-                        {/* Formulário */}
-                        <FadeIn delay={0.3}>
-                            <div id="inscricao">
-                                <p className="text-xs font-bold tracking-widest uppercase text-white/60 mb-1">Inscreva-se gratuitamente</p>
-                                <p className="font-display font-black text-xl text-white mb-5 leading-snug">
-                                    Aproveite os bônus e conteúdos exclusivos
+                    {/* Conteúdo — mesma célula do espaçador, alinhado à base: metade sobrepõe a imagem, metade continua abaixo dela */}
+                    <div className="col-start-1 row-start-1 self-end relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-x-8 items-end">
+                            {/* Hero Content */}
+                            <div className="w-full lg:col-span-8 flex flex-col space-y-6 relative z-20 pt-55 lg:pt-0">
+                                <h1 className="text-4xl lg:text-5xl font-display-stitch font-black leading-tight tracking-tight text-[var(--text-main)]">
+                                    Aprenda a{" "}
+                                    <span className="bg-[var(--primary)] text-[var(--text-main)] px-2 py-1 transform -skew-x-6 inline-block">
+                                        ler o gráfico
+                                    </span>{" "}
+                                    do jeito certo e melhore os seus resultados.
+                                </h1>
+                                <p className="text-sm font-display-stitch font-bold uppercase tracking-wider text-[var(--primary-dark)]">
+                                    15, 16 e 17 de setembro • às 20h • online e gratuito
                                 </p>
-                                <LeadCaptureForm
-                                    source="maratona-set-2026"
-                                    redirectTo="/maratona-grupo"
-                                    buttonLabel="Quero Participar da 16ª Maratona TDS"
-                                    variant="dark"
-                                />
+                                <p className="text-lg text-[var(--text-muted)] leading-relaxed">
+                                    3 aulas ao vivo para você aprender a interpretar o gráfico, entender o contexto e operar com mais clareza. Faça a sua inscrição e tenha acesso as aulas, as gravações, aos resumões e a aula bônus.
+                                </p>
                             </div>
-                        </FadeIn>
-                    </div>
 
-                    {/* Coluna 2: vazia — o Bruno já faz parte da imagem de fundo */}
-                    <div aria-hidden="true" />
+                            {/* Opt-in Form */}
+                            <div className="w-full lg:col-span-4 relative z-20">
+                                <div id="inscricao" className="form-card bg-[var(--surface)] p-6 rounded-xl border border-[var(--surface-bright)] shadow-md relative overflow-visible max-w-md lg:max-w-full lg:ml-auto">
+                                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-[var(--primary)] rounded-br-full z-0" />
+                                    <h3 className="text-lg font-display-stitch font-bold mb-3 text-center relative z-10 text-[var(--text-main)]">
+                                        Inscreva-se gratuitamente
+                                    </h3>
+                                    <div className="relative z-10">
+                                        <LeadCaptureForm
+                                            source="maratona-set-2026"
+                                            redirectTo="/maratona-grupo"
+                                            buttonLabel="Quero Participar de Graça"
+                                            variant="light"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
