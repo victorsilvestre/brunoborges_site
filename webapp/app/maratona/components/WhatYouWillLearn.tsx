@@ -9,7 +9,7 @@ export function WhatYouWillLearn() {
     ];
 
     return (
-        <section className="py-24 section-red text-white relative pattern-dots-sm">
+        <section className="py-12 section-red text-white relative pattern-dots-sm">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-5xl mx-auto text-center mb-16">
                     <h2 className="text-4xl md:text-6xl font-display-stitch font-black mb-6 tracking-tight">

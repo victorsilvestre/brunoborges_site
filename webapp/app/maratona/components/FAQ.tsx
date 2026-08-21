@@ -21,7 +21,7 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section className="py-24 bg-[var(--surface)]">
+        <section className="py-12 bg-[var(--surface)]">
             <div className="container mx-auto px-4 max-w-4xl">
                 <h2 className="text-3xl md:text-5xl font-display-stitch font-black text-center mb-16 uppercase tracking-tight text-[var(--text-main)]">
                     <span className="text-[var(--primary)] mr-2 bg-[var(--primary)]/10 px-2 rounded">?</span> Dúvidas Frequentes
@@ -35,7 +35,7 @@ export function FAQ() {
                             <h3 className="text-xl font-display-stitch font-bold mb-3 flex items-start text-[var(--text-main)]">
                                 <span className="text-[var(--primary)] mr-3 text-2xl leading-none">•</span> {faq.question}
                             </h3>
-                            <p className="text-[var(--text-muted)] md:ml-7 text-sm leading-relaxed">{faq.answer}</p>
+                            <p className="text-[var(--text-muted)] md:ml-7 text-sm leading-snug">{faq.answer}</p>
                         </div>
                     ))}
                 </div>

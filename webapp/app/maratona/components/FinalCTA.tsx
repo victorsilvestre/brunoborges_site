@@ -4,7 +4,7 @@ import { LeadCaptureForm } from "../../components/LeadCaptureForm";
 
 export function FinalCTA() {
     return (
-        <section className="py-24 bg-[var(--surface-container)] relative overflow-hidden border-t border-[var(--surface-bright)]">
+        <section className="py-12 bg-[var(--surface-container)] relative overflow-hidden border-t border-[var(--surface-bright)]">
             <div className="absolute inset-0 bg-[var(--primary)]/5 pattern-dots-sm" />
             <div className="absolute -right-20 -top-20 w-64 h-64 bg-[var(--primary)] rounded-full opacity-10 blur-3xl" />
             <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-[var(--primary)] rounded-full opacity-10 blur-3xl" />

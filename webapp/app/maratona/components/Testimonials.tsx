@@ -29,7 +29,7 @@ export function Testimonials() {
     ];
 
     return (
-        <section className="py-24 bg-[var(--surface-container)] border-b border-[var(--surface-bright)]">
+        <section className="py-12 bg-[var(--surface-container)] border-b border-[var(--surface-bright)]">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-5xl font-display-stitch font-black text-center mb-16 uppercase tracking-tight text-[var(--text-main)]">
                     <span className="text-[var(--primary)] mr-2">/</span> Depoimentos
@@ -46,7 +46,7 @@ export function Testimonials() {
                             <div className="text-[var(--primary)] mb-6 relative z-10">
                                 <QuoteIcon />
                             </div>
-                            <p className="text-[var(--text-main)] text-sm leading-relaxed mb-8 italic grow relative z-10">
+                            <p className="text-[var(--text-main)] text-sm leading-snug mb-8 italic grow relative z-10">
                                 &ldquo;{t.quote}&rdquo;
                             </p>
                             <div className="mt-auto border-t border-[var(--surface-bright)] pt-4 relative z-10">

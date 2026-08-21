@@ -23,7 +23,7 @@ export function Schedule() {
     ];
 
     return (
-        <section className="py-24 bg-[var(--surface-container-low)] border-y border-[var(--surface-bright)] relative overflow-hidden">
+        <section className="py-12 bg-[var(--surface-container-low)] border-y border-[var(--surface-bright)] relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <h2 className="text-3xl md:text-5xl font-display-stitch font-black text-center mb-16 uppercase tracking-tight text-[var(--text-main)]">
                     <span className="text-[var(--primary)] mr-2">/</span> Calendário Completo

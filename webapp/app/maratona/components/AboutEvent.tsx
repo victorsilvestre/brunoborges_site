@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function AboutEvent() {
     return (
-        <section className="py-24 bg-[var(--surface)] relative overflow-hidden">
+        <section className="py-12 bg-[var(--surface)] relative overflow-hidden">
             <div className="absolute right-0 top-0 w-1/3 h-full bg-[var(--surface-container-low)] -skew-x-12 transform origin-top-right -z-10 hidden lg:block" />
             <div className="container mx-auto px-4">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-16 max-w-6xl mx-auto">

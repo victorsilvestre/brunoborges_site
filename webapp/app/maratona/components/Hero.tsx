@@ -5,7 +5,7 @@ import { LeadCaptureForm } from "../../components/LeadCaptureForm";
 
 export function Hero() {
     return (
-        <section className="relative pb-16 overflow-hidden hero-bg">
+        <section className="relative pb-8 overflow-hidden hero-bg">
             {/* Imagem de fundo do Hero — largura total, desvanecendo radialmente nas bordas (mais forte na base) */}
             <div className="hero-image-fade absolute inset-x-0 top-0 h-[420px] lg:h-[640px]" aria-hidden="true">
                 <Image
@@ -37,7 +37,7 @@ export function Hero() {
                                 <p className="text-sm font-display-stitch font-bold uppercase tracking-wider text-[var(--primary-dark)]">
                                     15, 16 e 17 de setembro • às 20h • online e gratuito
                                 </p>
-                                <p className="text-lg text-[var(--text-muted)] leading-relaxed">
+                                <p className="text-lg text-[var(--text-muted)] leading-snug">
                                     3 aulas ao vivo para você aprender a interpretar o gráfico, entender o contexto e operar com mais clareza. Faça a sua inscrição e tenha acesso as aulas, as gravações, aos resumões e a aula bônus.
                                 </p>
                             </div>
