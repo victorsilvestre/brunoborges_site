@@ -4,7 +4,7 @@ export function WhatYouWillLearn() {
     const items = [
         { n: "01", title: "Leitura Candle a Candle", description: "Entenda o que o preço está fazendo." },
         { n: "02", title: "Fibonacci", description: "Encontre regiões, entradas e alvos." },
-        { n: "03", title: "Contexto + Gerenciamento", description: "Saiba quando operar, e quando ficar de fora." },
+        { n: "03", title: "Contexto + Gerenciamento", description: "Saiba quando operar e quando ficar de fora." },
         { n: "04", title: "Operacional na Prática", description: "Veja o Bruno aplicando tudo diretamente no gráfico." },
     ];
 

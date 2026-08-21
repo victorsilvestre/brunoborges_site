@@ -16,7 +16,7 @@ export function FinalCTA() {
                     </span>
                 </h2>
                 <p className="text-lg text-[var(--text-muted)] mb-12 mt-8">
-                    Aprenda um operacional extremamente simples, e tenha acesso à todos os bônus exclusivos dessa Maratona.
+                    Aprenda um operacional extremamente simples, e tenha acesso a todos os bônus exclusivos dessa Maratona.
                 </p>
                 <div className="form-card bg-[var(--surface)] p-10 rounded-xl border-2 border-[var(--surface-bright)] shadow-2xl max-w-2xl mx-auto text-left relative">
                     <div className="absolute top-0 right-0 w-8 h-8 bg-[var(--primary)]/20 border-l border-b border-[var(--surface-bright)]" />

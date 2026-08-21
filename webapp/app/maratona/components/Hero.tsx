@@ -38,7 +38,7 @@ export function Hero() {
                                     15, 16 e 17 de setembro • às 20h • online e gratuito
                                 </p>
                                 <p className="text-lg text-[var(--text-muted)] leading-snug">
-                                    3 aulas ao vivo para você aprender a interpretar o gráfico, entender o contexto e operar com mais clareza. Faça a sua inscrição e tenha acesso as aulas, as gravações, aos resumões e a aula bônus.
+                                    3 aulas ao vivo para você aprender a interpretar o gráfico, entender o contexto e operar com mais clareza. Faça a sua inscrição e tenha acesso às aulas, às gravações, aos resumões e à aula bônus.
                                 </p>
                             </div>
 
