@@ -1,0 +1,66 @@
+/* Tokens isolados da página /mentoria — paleta "White Edition" (TradingView/Bloomberg).
+   Não compartilha variáveis com globals.css para não afetar as demais rotas. */
+.mentoria-page {
+  --m-surface: #FFFFFF;
+  --m-subtle: #F8FAFC;
+  --m-muted: #F1F5F9;
+  --m-border: #E2E8F0;
+  --m-dark: #0F172A;
+  --m-body: #334155;
+  --m-caption: #64748B;
+
+  --m-bull: #16A34A;
+  --m-bull-light: #22C55E;
+  --m-bull-bg: #F0FDF4;
+  --m-bull-border: #BBF7D0;
+
+  --m-bear: #DC2626;
+  --m-bear-light: #EF4444;
+  --m-bear-bg: #FEF2F2;
+  --m-bear-border: #FECACA;
+
+  --m-terminal-blue: #0284C7;
+  --m-terminal-sky: #E0F2FE;
+
+  --m-font-display: var(--font-mentoria-display), sans-serif;
+  --m-font-sans: var(--font-mentoria-sans), sans-serif;
+  --m-font-mono: var(--font-mentoria-mono), monospace;
+
+  background-color: var(--m-surface);
+  color: var(--m-body);
+  font-family: var(--m-font-sans);
+}
+
+.mentoria-page ::selection {
+  background-color: var(--m-bull);
+  color: #ffffff;
+}
+
+.mentoria-page .grid-lines {
+  background-size: 24px 24px;
+  background-image:
+    linear-gradient(to right, var(--m-muted) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--m-muted) 1px, transparent 1px);
+}
+
+.mentoria-page .tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.mentoria-page .faq-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ease;
+}
+
+.mentoria-page .faq-content.is-open {
+  max-height: 600px;
+}
+
+.mentoria-page .icon-arrow {
+  transition: transform 0.2s ease;
+}
+
+.mentoria-page .icon-arrow.rotate-180 {
+  transform: rotate(180deg);
+}
