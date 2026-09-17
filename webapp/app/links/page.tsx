@@ -42,7 +42,7 @@ const links = [
     },
     {
         label: "Mentoria Trader de Sucesso",
-        url: "https://traderbrunoborges.com.br/mentoria-tds",
+        url: "/mentoria",
         icon: GlobeSvg,
         highlight: true,
     },

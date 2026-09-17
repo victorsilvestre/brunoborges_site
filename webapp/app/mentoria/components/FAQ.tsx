@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5561981125128?text=" + encodeURIComponent("Olá! Queria mais informações sobre a Mentoria Trader de Sucesso.");
+const WHATSAPP_URL = "https://wa.me/5562982612893?text=" + encodeURIComponent("Olá! Queria mais informações sobre a Mentoria Trader de Sucesso.");
 
 const faqs = [
     {

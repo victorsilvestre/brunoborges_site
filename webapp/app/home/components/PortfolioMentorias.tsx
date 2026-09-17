@@ -99,7 +99,7 @@ export function PortfolioMentorias() {
 
                 {/* CTA */}
                 <Link
-                  href="/mentoria-tds"
+                  href="/mentoria"
                   className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all shadow-[0_0_30px_rgba(0,191,99,0.3)] hover:shadow-[0_0_50px_rgba(0,191,99,0.5)]"
                 >
                   Conheça a Mentoria Trader de Sucesso
@@ -160,7 +160,7 @@ export function PortfolioMentorias() {
 
                 {/* CTA */}
                 <Link
-                  href="/mentoria-tds"
+                  href="/mentoria"
                   className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--red-bear)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--red-hover)] transition-all shadow-[0_0_30px_rgba(241,20,20,0.2)] hover:shadow-[0_0_50px_rgba(241,20,20,0.35)]"
                 >
                   Ver Próximos Intensivões
