@@ -4,10 +4,7 @@ export function PurchaseFooter() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col items-center md:items-start gap-1">
                     <p className="text-sm text-[var(--m-body)]">
-                        © Trader Bruno Borges — Excelência em Price Action. Todos os direitos reservados.
-                    </p>
-                    <p className="font-[family-name:var(--m-font-mono)] text-[10px] text-[var(--m-caption)] uppercase tracking-wider">
-                        Mentoria Trader de Sucesso (TDS) • Ambiente Seguro do Aluno • Protocolo 2026
+                        © Trader Bruno Borges - Direitos Reservados
                     </p>
                 </div>
                 <div className="flex items-center gap-5 font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-wider text-[var(--m-caption)]">

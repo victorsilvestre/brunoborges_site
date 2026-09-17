@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { PurchaseHero } from "../components/PurchaseHero";
-import { NextSteps } from "../components/NextSteps";
-import { WelcomeVideo } from "../components/WelcomeVideo";
-import { PreparationChecklist } from "../components/PreparationChecklist";
-import { Roadmap } from "../components/Roadmap";
-import { SupportCenter } from "../components/SupportCenter";
-import { PurchaseFooter } from "../components/PurchaseFooter";
+import { PurchaseHero } from "./components/PurchaseHero";
+import { NextSteps } from "./components/NextSteps";
+import { WelcomeVideo } from "./components/WelcomeVideo";
+import { PreparationChecklist } from "./components/PreparationChecklist";
+import { Roadmap } from "./components/Roadmap";
+import { SupportCenter } from "./components/SupportCenter";
+import { PurchaseFooter } from "./components/PurchaseFooter";
 
 export const metadata: Metadata = {
     title: "Matrícula Confirmada | Mentoria TDS — Bruno Borges",
-    description: "Sua vaga na Mentoria Trader de Sucesso está confirmada. Acesse os próximos passos.",
+    description: "Bem-vindo à Mentoria Trader de Sucesso. Sua vaga está confirmada — veja os próximos passos para começar.",
 };
 
 export default function CompraRealizadaPage() {
