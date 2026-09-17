@@ -16,7 +16,7 @@ export function BottomCTA() {
                 </div>
 
                 <a className="inline-flex flex-shrink-0 h-11 px-5 bg-[var(--m-bull)] hover:bg-[var(--m-bull-light)] text-white font-[family-name:var(--m-font-mono)] text-[11px] uppercase tracking-wider font-bold rounded items-center justify-center gap-2 transition-all shadow-lg group" href="#inscricao">
-                    <span>Garantir Minha Vaga Agora</span>
+                    <span>Garantir Minha Vaga</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
 

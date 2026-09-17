@@ -1,6 +1,5 @@
 import { Hero } from "./components/Hero";
 import { Diagnostic } from "./components/Diagnostic";
-import { MethodMetrics } from "./components/MethodMetrics";
 import { CurriculumContent } from "./components/CurriculumContent";
 import { LearningPillars } from "./components/LearningPillars";
 import { MentorAndProof } from "./components/MentorAndProof";
@@ -19,9 +18,8 @@ export default function MentoriaPage() {
         <main className="w-full bg-[var(--m-surface)]">
             <Hero />
             <Diagnostic />
-            <MethodMetrics />
-            <CurriculumContent />
             <LearningPillars />
+            <CurriculumContent />
             <MentorAndProof />
             <Offer />
             <FAQ />
