@@ -41,7 +41,7 @@ export function Diagnostic() {
                     <h2 className="font-[family-name:var(--m-font-display)] text-3xl sm:text-4xl lg:text-5xl text-[var(--m-dark)] font-bold tracking-tight">
                         Você não precisa de mais um setup. <span className="text-[var(--m-bear)] border-b-2 border-[var(--m-bear)]/30">Precisa aprender a ler o mercado.</span>
                     </h2>
-                    <p className="mt-4 text-base sm:text-lg text-[var(--m-body)] leading-relaxed">
+                    <p className="mt-3 sm:mt-4 text-base sm:text-lg text-[var(--m-body)] leading-relaxed">
                         Muitos traders passam anos acumulando cursos, estratégias e indicadores, mas continuam inseguros quando precisam tomar uma decisão sozinhos diante do gráfico. O problema nem sempre está na falta de conteúdo. Muitas vezes, está na falta de uma base capaz de conectar tudo o que você já aprendeu.
                     </p>
                 </div>
@@ -74,7 +74,7 @@ export function Diagnostic() {
                 <div className="mt-10 p-6 sm:p-8 bg-[var(--m-dark)] text-white rounded-lg border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-6 shadow">
                     <div className="flex items-center gap-4">
                         <span className="text-[var(--m-bull)] text-2xl font-[family-name:var(--m-font-mono)]">⚡</span>
-                        <p className="font-[family-name:var(--m-font-display)] text-lg sm:text-xl text-slate-100 font-medium leading-relaxed">
+                        <p className="font-[family-name:var(--m-font-display)] text-lg sm:text-xl text-slate-100 font-medium leading-snug sm:leading-relaxed mb-4 sm:mb-0">
                             A Mentoria Trader de Sucesso foi criada para transformar o conhecimento do mercado em um processo de leitura, análise, execução e evolução pessoal do trader.
                         </p>
                     </div>

@@ -70,7 +70,7 @@ export function CurriculumContent() {
                     <h2 className="font-[family-name:var(--m-font-display)] text-3xl sm:text-4xl lg:text-5xl text-[var(--m-dark)] font-bold tracking-tight">
                         Do básico da leitura do gráfico à aplicação completa do Método TDS.
                     </h2>
-                    <p className="mt-4 text-base sm:text-lg text-[var(--m-body)] leading-relaxed">
+                    <p className="mt-3 sm:mt-4 text-base sm:text-lg text-[var(--m-body)] leading-relaxed">
                         Durante a Mentoria, você terá contato com mais de 20 conteúdos voltados à leitura, construção, aplicação e gestão do seu operacional. Tudo começa pelos fundamentos do Método TDS. Depois, você passa a conectar essas bases a diferentes estratégias, contextos e formas de atuação no mercado.
                     </p>
                 </div>
@@ -78,12 +78,12 @@ export function CurriculumContent() {
                 {/* SUB-BLOCO A: A base do Método TDS */}
                 <div className="mb-16">
                     <div className="flex items-center gap-3 mb-2">
-                        <span className="w-3 h-3 bg-[var(--m-bull)] rounded-sm" />
+                        <span className="hidden sm:block w-3 h-3 bg-[var(--m-bull)] rounded-sm" />
                         <h3 className="font-[family-name:var(--m-font-display)] text-2xl sm:text-3xl text-[var(--m-dark)] font-bold">
                             Primeiro, você constrói a base.
                         </h3>
                     </div>
-                    <p className="font-[family-name:var(--m-font-mono)] text-xs text-[var(--m-caption)] uppercase mb-6 tracking-wide">
+                    <p className="font-[family-name:var(--m-font-mono)] text-xs text-[var(--m-caption)] uppercase mb-4 sm:mb-6 tracking-wide">
                         Esses são os fundamentos que sustentam todo o restante da Mentoria.
                     </p>
 
@@ -109,12 +109,12 @@ export function CurriculumContent() {
                 {/* SUB-BLOCO B: Aplicação do Método / 16 setups */}
                 <div className="mb-14">
                     <div className="flex items-center gap-3 mb-2">
-                        <span className="w-3 h-3 bg-[var(--m-dark)] rounded-sm" />
+                        <span className="hidden sm:block w-3 h-3 bg-[var(--m-dark)] rounded-sm" />
                         <h3 className="font-[family-name:var(--m-font-display)] text-2xl sm:text-3xl text-[var(--m-dark)] font-bold">
                             Depois da base, começa a aplicação.
                         </h3>
                     </div>
-                    <p className="font-[family-name:var(--m-font-mono)] text-xs text-[var(--m-caption)] uppercase mb-6 tracking-wide">
+                    <p className="font-[family-name:var(--m-font-mono)] text-xs text-[var(--m-caption)] uppercase mb-4 sm:mb-6 tracking-wide">
                         Com os fundamentos construídos, você começa a conectar as peças do Método TDS e aplicá-las em diferentes situações encontradas no mercado.
                     </p>
 
@@ -140,12 +140,12 @@ export function CurriculumContent() {
                         <h3 className="font-[family-name:var(--m-font-display)] text-2xl sm:text-3xl text-[var(--m-dark)] font-bold mb-3 leading-tight">
                             Não é sobre decorar 20 estratégias. É sobre aprender a enxergar o mercado da forma certa.
                         </h3>
-                        <p className="text-base sm:text-lg text-[var(--m-body)] leading-relaxed mb-6">
+                        <p className="text-base sm:text-lg text-[var(--m-body)] leading-relaxed mb-4 sm:mb-6">
                             Você não precisa operar todas as abordagens apresentadas. O objetivo é que, ao dominar a base de leitura, você tenha repertório e discernimento técnico para escolher os estilos e contextos com os quais mais se identifica — executando com frieza, critério e alta precisão.
                         </p>
-                        <a className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[var(--m-bull)] hover:bg-[var(--m-bull-light)] text-white font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-wider font-bold rounded transition-all shadow-md group" href="#inscricao">
+                        <a className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-4 sm:px-7 py-3.5 bg-[var(--m-bull)] hover:bg-[var(--m-bull-light)] text-white font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-normal sm:tracking-wider font-bold rounded transition-all shadow-md group whitespace-nowrap" href="#inscricao">
                             <span>Quero fazer parte da Mentoria</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
                         </a>
                     </div>
                 </div>

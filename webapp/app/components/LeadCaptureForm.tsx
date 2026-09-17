@@ -10,6 +10,7 @@ interface LeadCaptureFormProps {
   redirectTo: string;
   buttonLabel?: string;
   variant?: 'dark' | 'light';
+  successMessage?: string;
 }
 
 function applyWhatsappMask(value: string): string {
@@ -34,6 +35,7 @@ export function LeadCaptureForm({
   redirectTo,
   buttonLabel = 'Quero Participar da Maratona',
   variant = 'dark',
+  successMessage,
 }: LeadCaptureFormProps) {
   const router = useRouter();
   const [nome, setNome] = useState('');
@@ -83,7 +85,9 @@ export function LeadCaptureForm({
       }
 
       if (data.feedback?.type === 'success' && !redirectTo) {
-        setFeedback(data.feedback);
+        setFeedback(
+          successMessage ? { ...data.feedback, message: successMessage } : data.feedback
+        );
         return;
       }
 

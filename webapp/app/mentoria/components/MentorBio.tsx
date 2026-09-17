@@ -46,18 +46,18 @@ export function MentorBio() {
                 </div>
 
                 {/* Metric Ticker Cards */}
-                <div className="grid grid-cols-3 gap-3 pt-3 border-t border-[var(--m-border)]">
-                    <div className="p-4 bg-white border border-[var(--m-border)] rounded-lg">
-                        <div className="font-[family-name:var(--m-font-display)] text-2xl sm:text-3xl font-bold text-[var(--m-dark)]">7+ ANOS</div>
-                        <div className="font-[family-name:var(--m-font-mono)] text-[10px] text-[var(--m-caption)] uppercase mt-1">No Mercado Vivo</div>
+                <div className="grid grid-cols-3 gap-1.5 sm:gap-3 pt-3 border-t border-[var(--m-border)]">
+                    <div className="p-2 sm:p-4 bg-white border border-[var(--m-border)] rounded-lg">
+                        <div className="font-[family-name:var(--m-font-display)] text-lg sm:text-3xl font-bold text-[var(--m-dark)] whitespace-nowrap">7+ ANOS</div>
+                        <div className="font-[family-name:var(--m-font-mono)] text-[8px] sm:text-[10px] text-[var(--m-caption)] uppercase mt-0.5 sm:mt-1 leading-tight">No Mercado Vivo</div>
                     </div>
-                    <div className="p-4 bg-white border border-[var(--m-border)] rounded-lg">
-                        <div className="font-[family-name:var(--m-font-display)] text-2xl sm:text-3xl font-bold text-[var(--m-bull)] tabular-nums">+1.400</div>
-                        <div className="font-[family-name:var(--m-font-mono)] text-[10px] text-[var(--m-caption)] uppercase mt-1">Alunos Formados</div>
+                    <div className="p-2 sm:p-4 bg-white border border-[var(--m-border)] rounded-lg">
+                        <div className="font-[family-name:var(--m-font-display)] text-lg sm:text-3xl font-bold text-[var(--m-bull)] tabular-nums whitespace-nowrap">+1.400</div>
+                        <div className="font-[family-name:var(--m-font-mono)] text-[8px] sm:text-[10px] text-[var(--m-caption)] uppercase mt-0.5 sm:mt-1 leading-tight">Alunos Formados</div>
                     </div>
-                    <div className="p-4 bg-white border border-[var(--m-border)] rounded-lg">
-                        <div className="font-[family-name:var(--m-font-display)] text-2xl sm:text-3xl font-bold text-[var(--m-dark)]">5 SETUPS</div>
-                        <div className="font-[family-name:var(--m-font-mono)] text-[10px] text-[var(--m-caption)] uppercase mt-1">Autorais Validados</div>
+                    <div className="p-2 sm:p-4 bg-white border border-[var(--m-border)] rounded-lg">
+                        <div className="font-[family-name:var(--m-font-display)] text-lg sm:text-3xl font-bold text-[var(--m-dark)] whitespace-nowrap">5 SETUPS</div>
+                        <div className="font-[family-name:var(--m-font-mono)] text-[8px] sm:text-[10px] text-[var(--m-caption)] uppercase mt-0.5 sm:mt-1 leading-tight">Autorais</div>
                     </div>
                 </div>
             </div>

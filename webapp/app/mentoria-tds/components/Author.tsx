@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FadeIn } from "../../components/FadeIn";
 import { INSCRICOES_ABERTAS } from "../config";
 
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+const HOTMART_URL = "https://pay.hotmart.com/U107643974N";
 
 export function Author() {
     return (

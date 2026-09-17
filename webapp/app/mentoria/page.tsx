@@ -7,8 +7,14 @@ import { MentorAndProof } from "./components/MentorAndProof";
 import { Offer } from "./components/Offer";
 import { FAQ } from "./components/FAQ";
 import { BottomCTA } from "./components/BottomCTA";
+import { ClosedRegistrations } from "./components/ClosedRegistrations";
+import { INSCRICOES_ABERTAS } from "./config";
 
 export default function MentoriaPage() {
+    if (!INSCRICOES_ABERTAS) {
+        return <ClosedRegistrations />;
+    }
+
     return (
         <main className="w-full bg-[var(--m-surface)]">
             <Hero />

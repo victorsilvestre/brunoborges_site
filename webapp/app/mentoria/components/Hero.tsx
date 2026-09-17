@@ -11,7 +11,7 @@ export function Hero() {
                         <span className="px-2 py-0.5 bg-[var(--m-bull-bg)] border border-[var(--m-bull-border)] text-[var(--m-bull)] font-bold rounded">Inscrições Abertas</span>
                         <span className="uppercase tracking-wide text-[var(--m-dark)] font-bold">Mentoria Trader de Sucesso</span>
                     </div>
-                    <div className="text-[var(--m-caption)] flex items-center gap-2">
+                    <div className="hidden sm:flex text-[var(--m-caption)] items-center gap-2">
                         <span>MÉTODO VALIDADO</span>
                         <span>{"//"}</span>
                         <span className="text-[var(--m-dark)] font-medium">ÍNDICE &amp; DÓLAR &amp; NASDAQ &amp; OURO</span>
@@ -22,7 +22,7 @@ export function Hero() {
                     {/* Left Column: Copy & Actions */}
                     <div className="lg:col-span-7 flex flex-col items-start">
                         {/* Candlestick Mini Icon + Headline */}
-                        <div className="flex items-center gap-2 mb-4">
+                        <div className="hidden sm:flex items-center gap-2 mb-4">
                             <svg className="w-5 h-6 text-[var(--m-bull)]" fill="none" viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
                                 <line stroke="currentColor" strokeWidth="2" x1="10" x2="10" y1="0" y2="24" />
                                 <rect fill="currentColor" height="12" width="8" x="6" y="6" />
@@ -34,39 +34,39 @@ export function Hero() {
                             Pare de tentar adivinhar o lado do mercado. <span className="text-[var(--m-bull)] bg-[var(--m-bull-bg)] px-2 py-0.5 rounded border border-[var(--m-bull-border)] inline-block">Aprenda a ler o que o gráfico está mostrando.</span>
                         </h1>
 
-                        <p className="text-base sm:text-lg text-[var(--m-body)] leading-relaxed mb-8 pl-4 border-l-2 border-[var(--m-bull)]">
+                        <p className="text-base sm:text-lg text-[var(--m-body)] leading-relaxed mb-4 sm:mb-8 pl-4 border-l-2 border-[var(--m-bull)]">
                             Uma mentoria ao vivo de Price Action para quem quer construir uma leitura própria do mercado, entender o comportamento do preço e desenvolver um operacional com um método que já formou mais de 1.400 traders de sucesso.
                         </p>
 
                         {/* 4 Stat Pill Blocks */}
-                        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-y border-[var(--m-border)] mb-8 bg-[var(--m-subtle)] rounded-lg">
-                            <div className="p-3 border-r border-[var(--m-border)]">
-                                <div className="flex items-center gap-1.5 text-[var(--m-bull)] mb-1">
-                                    <CalendarDays className="w-[18px] h-[18px]" />
-                                    <span className="text-[10px] font-[family-name:var(--m-font-mono)] text-[var(--m-caption)]">DURAÇÃO</span>
+                        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-3 py-1.5 sm:py-4 border-y border-[var(--m-border)] mb-4 sm:mb-8 bg-[var(--m-subtle)] rounded-lg">
+                            <div className="p-1.5 sm:p-3 border-r border-[var(--m-border)]">
+                                <div className="flex items-center gap-1.5 text-[var(--m-bull)] mb-0.5 sm:mb-1">
+                                    <CalendarDays className="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px]" />
+                                    <span className="text-[9px] sm:text-[10px] font-[family-name:var(--m-font-mono)] text-[var(--m-caption)]">DURAÇÃO</span>
                                 </div>
-                                <div className="font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-tight text-[var(--m-dark)] font-bold">60 dias de mentoria</div>
+                                <div className="font-[family-name:var(--m-font-mono)] text-[11px] sm:text-xs uppercase tracking-tight text-[var(--m-dark)] font-bold">60 dias de mentoria</div>
                             </div>
-                            <div className="p-3 sm:border-r border-[var(--m-border)]">
-                                <div className="flex items-center gap-1.5 text-[var(--m-bull)] mb-1">
-                                    <Video className="w-[18px] h-[18px]" />
-                                    <span className="text-[10px] font-[family-name:var(--m-font-mono)] text-[var(--m-caption)]">FREQUÊNCIA</span>
+                            <div className="p-1.5 sm:p-3 sm:border-r border-[var(--m-border)]">
+                                <div className="flex items-center gap-1.5 text-[var(--m-bull)] mb-0.5 sm:mb-1">
+                                    <Video className="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px]" />
+                                    <span className="text-[9px] sm:text-[10px] font-[family-name:var(--m-font-mono)] text-[var(--m-caption)]">FREQUÊNCIA</span>
                                 </div>
-                                <div className="font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-tight text-[var(--m-dark)] font-bold">3 aulas ao vivo/sem</div>
+                                <div className="font-[family-name:var(--m-font-mono)] text-[11px] sm:text-xs uppercase tracking-tight text-[var(--m-dark)] font-bold">3 aulas ao vivo/sem</div>
                             </div>
-                            <div className="p-3 border-r border-[var(--m-border)]">
-                                <div className="flex items-center gap-1.5 text-[var(--m-bull)] mb-1">
-                                    <Timer className="w-[18px] h-[18px]" />
-                                    <span className="text-[10px] font-[family-name:var(--m-font-mono)] text-[var(--m-caption)]">CARGA</span>
+                            <div className="p-1.5 sm:p-3 border-r border-[var(--m-border)]">
+                                <div className="flex items-center gap-1.5 text-[var(--m-bull)] mb-0.5 sm:mb-1">
+                                    <Timer className="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px]" />
+                                    <span className="text-[9px] sm:text-[10px] font-[family-name:var(--m-font-mono)] text-[var(--m-caption)]">CARGA</span>
                                 </div>
-                                <div className="font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-tight text-[var(--m-dark)] font-bold">+100h de conteúdo</div>
+                                <div className="font-[family-name:var(--m-font-mono)] text-[11px] sm:text-xs uppercase tracking-tight text-[var(--m-dark)] font-bold">+100h de conteúdo</div>
                             </div>
-                            <div className="p-3">
-                                <div className="flex items-center gap-1.5 text-[var(--m-bull)] mb-1">
-                                    <InfinityIcon className="w-[18px] h-[18px]" />
-                                    <span className="text-[10px] font-[family-name:var(--m-font-mono)] text-[var(--m-caption)]">ACESSO</span>
+                            <div className="p-1.5 sm:p-3">
+                                <div className="flex items-center gap-1.5 text-[var(--m-bull)] mb-0.5 sm:mb-1">
+                                    <InfinityIcon className="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px]" />
+                                    <span className="text-[9px] sm:text-[10px] font-[family-name:var(--m-font-mono)] text-[var(--m-caption)]">ACESSO</span>
                                 </div>
-                                <div className="font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-tight text-[var(--m-dark)] font-bold">Acesso vitalício</div>
+                                <div className="font-[family-name:var(--m-font-mono)] text-[11px] sm:text-xs uppercase tracking-tight text-[var(--m-dark)] font-bold">Acesso vitalício</div>
                             </div>
                         </div>
 
@@ -80,7 +80,7 @@ export function Hero() {
                                 <span>Quero fazer parte da Mentoria TDS</span>
                                 <ArrowRight className="w-[18px] h-[18px] group-hover:translate-x-1 transition-transform" />
                             </a>
-                            <div className="flex items-center gap-2 text-[var(--m-dark)] font-[family-name:var(--m-font-mono)] text-xs px-3.5 py-3 border border-[var(--m-border)] rounded bg-white">
+                            <div className="hidden sm:flex items-center gap-2 text-[var(--m-dark)] font-[family-name:var(--m-font-mono)] text-xs px-3.5 py-3 border border-[var(--m-border)] rounded bg-white">
                                 <BadgeCheck className="text-[var(--m-bull)] w-[18px] h-[18px]" />
                                 <span className="font-semibold">Método 100% Validado</span>
                             </div>

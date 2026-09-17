@@ -11,7 +11,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const HOTMART_URL = "https://pay.hotmart.com/O105700075J";
+const HOTMART_URL = "https://pay.hotmart.com/U107643974N";
 import { FadeIn } from "../../components/FadeIn";
 import { INSCRICOES_ABERTAS } from "../config";
 

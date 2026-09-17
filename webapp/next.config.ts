@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
             },
         ],
     },
+    async redirects() {
+        return [
+            {
+                source: "/mentoria-tds",
+                destination: "/mentoria",
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;

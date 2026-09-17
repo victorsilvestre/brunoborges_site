@@ -47,7 +47,7 @@ export function LearningPillars() {
                     <h2 className="font-[family-name:var(--m-font-display)] text-3xl sm:text-4xl lg:text-5xl text-[var(--m-dark)] font-bold tracking-tight">
                         Você aprende estudando o método e vendo como ele se comporta na prática.
                     </h2>
-                    <p className="mt-4 text-base sm:text-lg text-[var(--m-body)] leading-relaxed">
+                    <p className="mt-3 sm:mt-4 text-base sm:text-lg text-[var(--m-body)] leading-relaxed">
                         A Mentoria TDS combina conteúdo estruturado, acompanhamento e contato constante com situações reais de mercado para que o aprendizado não fique apenas na teoria.
                     </p>
                 </div>
@@ -57,21 +57,26 @@ export function LearningPillars() {
                     {pillars.map((p) => (
                         <div key={p.tag} className="bg-[var(--m-subtle)] p-8 rounded-lg border border-[var(--m-border)] flex flex-col justify-between relative hover:border-[var(--m-bull)] transition-all">
                             {p.badge && (
-                                <div className="absolute top-4 right-4 bg-[var(--m-bull)] text-white font-[family-name:var(--m-font-mono)] text-[9px] uppercase tracking-wider font-bold px-2 py-0.5 rounded">
+                                <div className="hidden sm:block absolute top-4 right-4 bg-[var(--m-bull)] text-white font-[family-name:var(--m-font-mono)] text-[9px] uppercase tracking-wider font-bold px-2 py-0.5 rounded">
                                     Bônus Exclusivo
                                 </div>
                             )}
                             <div>
                                 <div className="flex items-center justify-between mb-4">
                                     <span className="font-[family-name:var(--m-font-mono)] text-xs font-bold text-[var(--m-bull)] bg-[var(--m-bull-bg)] border border-[var(--m-bull-border)] px-2 py-0.5 rounded">{p.tag}</span>
-                                    <span className="font-[family-name:var(--m-font-mono)] text-xs text-[var(--m-caption)]">{p.num}</span>
+                                    <span className="hidden sm:inline font-[family-name:var(--m-font-mono)] text-xs text-[var(--m-caption)]">{p.num}</span>
+                                    {p.badge && (
+                                        <span className="sm:hidden bg-[var(--m-bull)] text-white font-[family-name:var(--m-font-mono)] text-[9px] uppercase tracking-wider font-bold px-2 py-0.5 rounded">
+                                            Bônus Exclusivo
+                                        </span>
+                                    )}
                                 </div>
-                                <h3 className="font-[family-name:var(--m-font-display)] text-2xl font-bold text-[var(--m-dark)] mb-3 uppercase tracking-tight">{p.title}</h3>
-                                <p className="text-sm text-[var(--m-body)] leading-relaxed mb-6">
+                                <h3 className="font-[family-name:var(--m-font-display)] text-2xl font-bold text-[var(--m-dark)] mb-2 sm:mb-3 uppercase tracking-tight">{p.title}</h3>
+                                <p className="text-sm text-[var(--m-body)] leading-relaxed">
                                     {p.body}
                                 </p>
                             </div>
-                            <div className="pt-4 border-t border-[var(--m-border)] flex items-center gap-2 text-[var(--m-dark)] font-[family-name:var(--m-font-mono)] text-xs uppercase font-semibold">
+                            <div className="mt-4 sm:mt-0 pt-4 border-t border-[var(--m-border)] flex items-center gap-2 text-[var(--m-dark)] font-[family-name:var(--m-font-mono)] text-xs uppercase font-semibold">
                                 <CheckCircle2 className="text-[var(--m-bull)] w-[18px] h-[18px]" />
                                 <span>{p.footer}</span>
                             </div>
@@ -81,7 +86,7 @@ export function LearningPillars() {
 
                 {/* Footnote */}
                 <div className="mt-12 text-center max-w-3xl mx-auto">
-                    <p className="font-[family-name:var(--m-font-display)] text-xl sm:text-2xl text-[var(--m-body)] mb-8">
+                    <p className="font-[family-name:var(--m-font-display)] text-xl sm:text-2xl text-[var(--m-body)] mb-4 sm:mb-8">
                         O objetivo não é fazer você depender do mentor. <span className="text-[var(--m-dark)] font-bold underline decoration-[var(--m-bull)]">É ensinar você a construir uma leitura própria do mercado seguindo um método validado.</span>
                     </p>
                     <a className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[var(--m-bull)] hover:bg-[var(--m-bull-light)] text-white font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-wider font-bold rounded transition-all shadow-md group" href="#inscricao">

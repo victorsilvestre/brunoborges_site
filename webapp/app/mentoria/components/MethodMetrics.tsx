@@ -69,7 +69,7 @@ export function MethodMetrics() {
                     <h2 className="font-[family-name:var(--m-font-display)] text-3xl sm:text-4xl lg:text-5xl text-[var(--m-dark)] font-bold tracking-tight">
                         60 dias para mudar a forma como você enxerga o gráfico.
                     </h2>
-                    <p className="mt-4 text-base sm:text-lg text-[var(--m-body)] leading-relaxed">
+                    <p className="mt-3 sm:mt-4 text-base sm:text-lg text-[var(--m-body)] leading-relaxed">
                         Na Mentoria Trader de Sucesso, você aprende diretamente com Bruno Borges a construir e aplicar o Método TDS. São dois meses de aulas ao vivo, estudo de mercado, replays, análises, aplicação prática e acompanhamento para desenvolver aquilo que sustenta todo o operacional: a capacidade de interpretar o preço com clareza.
                     </p>
                 </div>
@@ -107,7 +107,7 @@ export function MethodMetrics() {
                 {/* Analytical Synthesis Card */}
                 <div className="mt-12 p-8 bg-[var(--m-subtle)] border border-[var(--m-border)] rounded-lg text-center max-w-4xl mx-auto">
                     <span className="font-[family-name:var(--m-font-mono)] text-xs font-bold text-[var(--m-bull)] uppercase tracking-wider block mb-2">AO FINAL DA MENTORIA</span>
-                    <p className="font-[family-name:var(--m-font-display)] text-xl sm:text-2xl text-[var(--m-dark)] font-medium leading-relaxed mb-8">
+                    <p className="font-[family-name:var(--m-font-display)] text-xl sm:text-2xl text-[var(--m-dark)] font-medium leading-snug sm:leading-relaxed mb-4 sm:mb-8">
                         o objetivo é que você tenha muito mais clareza para abrir o gráfico, entender o que o mercado está mostrando e tomar decisões com base em uma leitura construída por você — sem depender de achismos, indicadores milagrosos ou da análise de outras pessoas.
                     </p>
                     <a className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[var(--m-bull)] hover:bg-[var(--m-bull-light)] text-white font-[family-name:var(--m-font-mono)] text-xs uppercase tracking-wider font-bold rounded transition-all shadow-md group" href="#inscricao">
