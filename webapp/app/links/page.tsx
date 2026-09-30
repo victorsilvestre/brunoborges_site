@@ -48,7 +48,7 @@ const links = [
     },
     {
         label: "Lista de Espera Mentoria TDS",
-        url: "https://t.me/+MSL99oO7pmcyMWQx",
+        url: "/mentoria/inscricoesencerradas",
         icon: Send,
         highlight: false,
     },

@@ -5,13 +5,17 @@ import { Calendar, Zap, ArrowRight, Users } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
 
 // Defina null se não houver próxima maratona agendada
-const proximaMaratona = {
-    numero: "16ª",
-    data: "15, 16 e 17/09",
-    diaSemana: "Terça a Quinta",
-    horario: "20h00 (horário de Brasília)",
-    inscricaoUrl: "/maratona",
+type ProximaMaratona = {
+    numero: string;
+    data: string;
+    diaSemana: string;
+    horario: string;
+    inscricaoUrl: string;
 };
+
+// Exemplo do formato: { numero: "16ª", data: "15, 16 e 17/09", diaSemana: "Terça a Quinta",
+// horario: "20h00 (horário de Brasília)", inscricaoUrl: "/maratona" }
+const proximaMaratona = null as ProximaMaratona | null;
 
 const stats = [
     { icon: Zap, label: "Entrada liberada", desc: "100% online e gratuita" },

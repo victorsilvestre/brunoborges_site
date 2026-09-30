@@ -1,13 +1,10 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { INSCRICOES_ABERTAS } from './app/mentoria/config';
 
-// A maratona acabou: enquanto as inscrições da mentoria estiverem abertas,
-// manda quem cair em /maratona direto para /mentoria.
+// Não há maratona no ar: /maratona sempre manda para /mentoria
+// (página de vendas ou lista de espera, conforme INSCRICOES_ABERTAS).
 export function middleware(request: NextRequest) {
-    if (INSCRICOES_ABERTAS) {
-        return NextResponse.redirect(new URL('/mentoria', request.url));
-    }
+    return NextResponse.redirect(new URL('/mentoria', request.url));
 }
 
 export const config = {
