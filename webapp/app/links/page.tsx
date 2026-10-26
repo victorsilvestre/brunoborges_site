@@ -38,43 +38,49 @@ const links = [
         label: "Site Oficial",
         url: "https://traderbrunoborges.com.br",
         icon: GlobeSvg,
-        highlight: false,
+        variant: "default",
     },
     {
         label: "Mentoria Trader de Sucesso",
         url: "/mentoria",
         icon: GlobeSvg,
-        highlight: true,
+        variant: "primary",
+    },
+    {
+        label: "Kit de Execução Scalp 40P",
+        url: "/scalp40p",
+        icon: GlobeSvg,
+        variant: "featured",
     },
     {
         label: "Lista de Espera Mentoria TDS",
         url: "/mentoria/inscricoesencerradas",
         icon: Send,
-        highlight: false,
+        variant: "default",
     },
     {
         label: "Conheça a Maratona",
         url: "https://traderbrunoborges.com.br/maratona",
         icon: GlobeSvg,
-        highlight: false,
+        variant: "default",
     },
     {
         label: "Grupo Exclusivo Maratona",
         url: "https://t.me/+KneI8WDXEEJmNWY5",
         icon: Send,
-        highlight: false,
+        variant: "default",
     },
     {
         label: "YouTube",
         url: "https://www.youtube.com/@traderbrunoborges",
         icon: YoutubeSvg,
-        highlight: false,
+        variant: "default",
     },
     {
         label: "Instagram",
         url: "https://www.instagram.com/trader_brunoborges/",
         icon: InstagramSvg,
-        highlight: false,
+        variant: "default",
     },
 ];
 
@@ -155,17 +161,19 @@ export default function LinksPage() {
                                     relative flex items-center gap-3 w-full px-5 py-[14px] rounded-lg
                                     font-display font-bold text-sm uppercase tracking-wider
                                     transition-all duration-200 overflow-hidden group
-                                    ${link.highlight
+                                    ${link.variant === "primary"
                                         ? "bg-[var(--green-bull)] text-white shadow-[0_0_24px_rgba(0,191,99,0.35)] hover:bg-[var(--green-dark)] hover:shadow-[0_0_32px_rgba(0,191,99,0.5)]"
+                                        : link.variant === "featured"
+                                        ? "bg-black/50 backdrop-blur-sm border border-[var(--green-bull)]/70 text-white shadow-[0_0_16px_rgba(0,191,99,0.18)] hover:border-[var(--green-bull)] hover:bg-black/60"
                                         : "bg-black/40 backdrop-blur-sm border border-[var(--green-bull)]/20 text-white hover:border-[var(--green-bull)]/60 hover:bg-black/60"
                                     }
                                 `}
                             >
                                 {/* Subtle shimmer on hover for non-highlight */}
-                                {!link.highlight && (
+                                {link.variant !== "primary" && (
                                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[var(--green-bull)]/5 to-transparent" />
                                 )}
-                                <Icon className="w-4 h-4 shrink-0 opacity-70" />
+                                <Icon className={`w-4 h-4 shrink-0 ${link.variant === "featured" ? "text-[var(--green-bull)]" : "opacity-70"}`} />
                                 <span className="relative">{link.label}</span>
                             </motion.a>
                         );
