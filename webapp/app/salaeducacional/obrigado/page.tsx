@@ -2,7 +2,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
-import { LiveStatus } from "../LiveStatus";
 import { MEMBROS_URL, SESSAO, SUPORTE_EMAIL } from "../config";
 
 export const metadata: Metadata = {
@@ -35,35 +34,38 @@ export default function SalaEducacionalObrigadoPage() {
               height="36"
             />
           </Link>
-          <LiveStatus variant="chip" />
         </div>
       </header>
 
       <main id="conteudo">
-        <section className="ob-hero">
-          <div className="wrap">
-            <span className="ob-seal" aria-hidden="true">
-              <Check strokeWidth={3} />
-            </span>
+        <section className="hero ob-hero">
+          <div className="hero-copy">
             <h1>
               Sua vaga na sala <em>já está liberada.</em>
             </h1>
-            <p className="ob-lead">
+            <p className="hero-lead">
               Siga o passo a passo abaixo para entrar na área de membros e abrir
               a sessão ao vivo. A sala acontece todo dia útil, das{" "}
               {SESSAO.inicio} às {SESSAO.fim}.
             </p>
-            <a
-              className="cta cta-ink"
-              href={MEMBROS_URL}
-              target="_blank"
-              rel="noopener"
-            >
-              Acessar a área de membros {seta}
-            </a>
-            <p className="ob-micro">
-              No login, use o mesmo e-mail utilizado na compra.
-            </p>
+            <div className="hero-actions">
+              <a
+                className="cta"
+                href={MEMBROS_URL}
+                target="_blank"
+                rel="noopener"
+              >
+                Acessar a área de membros {seta}
+              </a>
+              <span className="hero-note">
+                No login, use o mesmo e-mail utilizado na compra.
+              </span>
+            </div>
+          </div>
+          <div className="hero-photo ob-panel" aria-hidden="true">
+            <span className="ob-seal">
+              <Check strokeWidth={3} />
+            </span>
           </div>
         </section>
 
@@ -166,6 +168,30 @@ export default function SalaEducacionalObrigadoPage() {
                     <strong>Sala Educacional</strong> aparece na sua lista de
                     compras. Clique nele para abrir.
                   </p>
+                  <div className="ob-shots two ob-shots-4">
+                    <figure>
+                      <img
+                        src="/salaeducacional/obrigado-passo-4.webp"
+                        alt="Página Minhas compras da área de membros, com o produto Sala Educacional na lista."
+                        width="1306"
+                        height="367"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption>Em “Minhas compras”, clique em Sala Educacional.</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        src="/salaeducacional/obrigado-passo-5.webp"
+                        alt="Lista Todos os conteúdos do produto, com o módulo Sala Educacional ao lado do módulo Comece Por Aqui."
+                        width="663"
+                        height="315"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption>Abra o módulo “Sala Educacional”.</figcaption>
+                    </figure>
+                  </div>
                 </div>
               </li>
 
@@ -179,6 +205,19 @@ export default function SalaEducacionalObrigadoPage() {
                     É nessa aula que fica o link de acesso à sala. Clique nele e
                     você será redirecionado direto para o <strong>Zoom</strong>.
                   </p>
+                  <div className="ob-shots ob-shots-wide">
+                  <figure>
+                    <img
+                      src="/salaeducacional/obrigado-passo-6.webp"
+                      alt="Aula Encontro Ao Vivo aberta, com uma seta vermelha no link de acesso ao Zoom e um círculo vermelho na aula, na lista lateral."
+                      width="1844"
+                      height="590"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>Abra a aula e clique no link de acesso.</figcaption>
+                  </figure>
+                  </div>
                 </div>
               </li>
 
@@ -199,8 +238,8 @@ export default function SalaEducacionalObrigadoPage() {
           </div>
         </section>
 
-        <section className="ob-final">
-          <div className="wrap ob-final-in">
+        <section className="section finale ob-final">
+          <div className="wrap finale-grid">
             <div>
               <h2>
                 Comece já. <em>Bons trades!</em>
@@ -209,20 +248,21 @@ export default function SalaEducacionalObrigadoPage() {
                 O Método TDS ao vivo está a um clique de distância. Entre agora
                 e acompanhe a próxima sessão.
               </p>
-              <a
-                className="cta cta-ink"
-                href={MEMBROS_URL}
-                target="_blank"
-                rel="noopener"
-              >
-                Ir para a área de membros {seta}
-              </a>
-              <p className="ob-micro">
+              <div className="finale-actions">
+                <a
+                  className="cta cta-ink"
+                  href={MEMBROS_URL}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Ir para a área de membros {seta}
+                </a>
+              </div>
+              <p className="finale-note">
                 Algum problema com o acesso? Fale com a gente em{" "}
                 <a href={`mailto:${SUPORTE_EMAIL}`}>{SUPORTE_EMAIL}</a>
               </p>
             </div>
-            <LiveStatus variant="panel" />
           </div>
         </section>
       </main>
