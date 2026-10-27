@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Star, Award, Lock } from "lucide-react";
+import { ArrowRight, CheckCircle2, Star, Award, Target, Gift } from "lucide-react";
 import { FadeIn } from "../../components/FadeIn";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ export function PortfolioMentorias() {
       {/* Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-[var(--green-bull)]/8 blur-[150px] rounded-full" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[var(--red-bear)]/6 blur-[150px] rounded-full" />
+        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[var(--green-dark)]/10 blur-[150px] rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -24,7 +24,7 @@ export function PortfolioMentorias() {
             <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[var(--green-border)] bg-[var(--green-dim)] backdrop-blur-md mb-8">
               <Award className="w-4 h-4 text-[var(--green-bull)]" />
               <span className="text-xs font-bold tracking-widest uppercase text-[var(--green-bull)]">
-                Aprendizado
+                Produtos
               </span>
             </div>
           </FadeIn>
@@ -40,45 +40,97 @@ export function PortfolioMentorias() {
 
           <FadeIn delay={0.2}>
             <p className="text-xl lg:text-2xl text-[var(--white-40)] font-light leading-relaxed">
-              Comece pela mentoria em grupo e evolua seu aprendizado.
+              Da Maratona gratuita à Mentoria completa: escolha por onde começar.
             </p>
           </FadeIn>
         </div>
 
-        {/* Mentorias Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {/* Card A: Mentoria TDS */}
-          <FadeIn delay={0.3}>
+        {/* Produtos Grid */}
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
+          {/* Card A: Maratona (gratuita) — superfície clara, porta de entrada */}
+          <FadeIn delay={0.3} className="h-full">
             <motion.div
               whileHover={{ y: -12 }}
-              className="group relative bg-gradient-to-br from-[var(--dark-elevated)] to-[var(--dark-surface)] border-2 border-[var(--green-bull)]/40 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(0,191,99,0.3)] transition-all"
+              className="group relative h-full flex flex-col bg-white border-2 border-[#BFEBD3] rounded-3xl p-8 overflow-hidden shadow-[0_24px_70px_rgba(0,191,99,0.28)] hover:shadow-[0_0_80px_rgba(0,191,99,0.5)] transition-all"
             >
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--green-bull)]/10 via-transparent to-transparent opacity-50" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--green-bull)]/20 to-transparent rounded-bl-[100px]" />
 
-              {/* Badge */}
-              <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--green-bull)]/20 border border-[var(--green-bull)]/40 mb-6">
+              <div className="relative z-10 self-start inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#E3F7EC] border border-[#9FDDBB] mb-6">
+                <Gift className="w-4 h-4 text-[#007A40]" />
+                <span className="text-xs font-bold tracking-widest uppercase text-[#007A40]">
+                  100% Gratuito
+                </span>
+              </div>
+
+              <div className="relative z-10 flex flex-col flex-1">
+                <h3 className="font-display font-black text-3xl lg:text-4xl uppercase leading-[1.05] lg:min-h-[3.15em] mb-4 text-[#06301B]">
+                  <span className="text-[#009E52]">Maratona</span>{" "}
+                  Trader de Sucesso
+                </h3>
+
+                <p className="text-base text-[#3F5A4B] mb-8 leading-relaxed lg:min-h-[4.9rem]">
+                  Em 3 aulas online e gratuitas, aprenda a ler o gráfico como
+                  traders profissionais e conheça o método na prática.
+                </p>
+
+                <ul className="space-y-3 mb-10">
+                  {[
+                    "3 aulas ao vivo, 100% online",
+                    "Operacional direto no gráfico",
+                    "Do zero ao operacional",
+                    "Leitura de Price Action sem indicadores",
+                    "Bônus e conteúdos exclusivos",
+                    "Grupo exclusivo dos participantes",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#009E52] flex-shrink-0" />
+                      <span className="text-[#0B3220] text-sm font-medium">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/maratona"
+                  className="group/btn mt-auto w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[#007A40] text-white font-display font-black uppercase tracking-wider hover:bg-[#006333] transition-all shadow-[0_10px_30px_rgba(0,122,64,0.3)]"
+                >
+                  Quero Participar
+                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </motion.div>
+          </FadeIn>
+
+          {/* Card B: Mentoria TDS — produto principal, verde da marca */}
+          <FadeIn delay={0.4} className="h-full">
+            <motion.div
+              whileHover={{ y: -12 }}
+              className="group relative h-full flex flex-col bg-gradient-to-b from-[#007F44] to-[#00552C] border-2 border-[#4FE39A]/50 rounded-3xl p-8 overflow-hidden shadow-[0_0_50px_rgba(0,191,99,0.25)] hover:shadow-[0_0_70px_rgba(0,191,99,0.45)] transition-all"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-white/15 to-transparent rounded-bl-[100px]" />
+
+              <div className="relative z-10 self-start inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/40 mb-6">
                 <Star
-                  className="w-4 h-4 text-[var(--green-bull)]"
+                  className="w-4 h-4 text-white"
                   fill="currentColor"
                 />
-                <span className="text-xs font-bold tracking-widest uppercase text-[var(--green-bull)]">
+                <span className="text-xs font-bold tracking-widest uppercase text-white">
                   Produto Principal
                 </span>
               </div>
 
-              <div className="relative z-10">
-                <h3 className="font-display font-black text-3xl lg:text-4xl uppercase text-white mb-4">
+              <div className="relative z-10 flex flex-col flex-1">
+                <h3 className="font-display font-black text-3xl lg:text-4xl uppercase leading-[1.05] lg:min-h-[3.15em] mb-4 text-white">
                   Mentoria Trader de Sucesso
                 </h3>
 
-                <p className="text-base text-[var(--white-60)] mb-8 leading-relaxed">
+                <p className="text-base text-white/90 mb-8 leading-relaxed lg:min-h-[4.9rem]">
                   O programa completo para você dominar Price Action,
                   gerenciamento de risco e os setups autorais do zero ao
                   profissional.
                 </p>
 
-                {/* Features */}
                 <ul className="space-y-3 mb-10">
                   {[
                     "Aulas ao vivo + gravadas",
@@ -89,180 +141,74 @@ export function PortfolioMentorias() {
                     "30 dias de Sala Educacional Ao Vivo",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[var(--green-bull)] flex-shrink-0" />
-                      <span className="text-[var(--white-80)] text-sm">
+                      <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0" />
+                      <span className="text-white text-sm font-medium">
                         {feature}
                       </span>
                     </li>
                   ))}
                 </ul>
 
-                {/* CTA */}
                 <Link
                   href="/mentoria"
-                  className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all shadow-[0_0_30px_rgba(0,191,99,0.3)] hover:shadow-[0_0_50px_rgba(0,191,99,0.5)]"
+                  className="group/btn mt-auto w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-white text-[#00552C] font-display font-black uppercase tracking-wider hover:bg-[#E3F7EC] transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:shadow-[0_0_50px_rgba(255,255,255,0.35)]"
                 >
-                  Conheça a Mentoria Trader de Sucesso
+                  Conheça a Mentoria
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
+            </motion.div>
+          </FadeIn>
 
-              {/* Decorative Corner */}
+          {/* Card C: Kit Scalp 40P — verde-lima/oliva da própria página do produto */}
+          <FadeIn delay={0.5} className="h-full">
+            <motion.div
+              whileHover={{ y: -12 }}
+              className="group relative h-full flex flex-col bg-gradient-to-br from-[#0B2417] to-[#050F09] border-2 border-[var(--green-bull)]/45 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(0,191,99,0.3)] transition-all"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--green-bull)]/20 to-transparent rounded-bl-[100px]" />
-            </motion.div>
-          </FadeIn>
 
-          {/* Card B: Intensivão */}
-          <FadeIn delay={0.4}>
-            <motion.div
-              whileHover={{ y: -12 }}
-              className="group relative bg-gradient-to-br from-[var(--dark-elevated)] to-[var(--dark-surface)] border-2 border-[var(--red-bear)]/30 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(241,20,20,0.2)] transition-all"
-            >
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--red-bear)]/8 via-transparent to-transparent opacity-50" />
-
-              {/* Badge */}
-              <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--red-dim)] border border-[var(--red-border)] mb-6">
-                <Lock className="w-4 h-4 text-[var(--red-bear)]" />
-                <span className="text-xs font-bold tracking-widest uppercase text-[var(--red-bear)]">
-                  Exclusivo Ex-Alunos TDS
+              <div className="relative z-10 self-start inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--green-dim)] border border-[var(--green-border)] mb-6">
+                <Target className="w-4 h-4 text-[var(--green-bull)]" />
+                <span className="text-xs font-bold tracking-widest uppercase text-[var(--green-bull)]">
+                  Estratégia Pronta
                 </span>
               </div>
 
-              <div className="relative z-10">
-                <h3 className="font-display font-black text-3xl lg:text-4xl uppercase text-white mb-4">
-                  Intensivão Trader de Sucesso
+              <div className="relative z-10 flex flex-col flex-1">
+                <h3 className="font-display font-black text-3xl lg:text-4xl uppercase leading-[1.05] lg:min-h-[3.15em] mb-4 text-white">
+                  Kit de Execução Scalp 40P
                 </h3>
 
-                <p className="text-base text-[var(--white-60)] mb-8 leading-relaxed">
-                  Imersões de 4 a 6 horas em aspectos específicos do
-                  operacional. Divulgados com antecedência na comunidade.
+                <p className="text-base text-[#9DB8A8] mb-8 leading-relaxed lg:min-h-[4.9rem]">
+                  Um processo passo a passo para aplicar a Estratégia Scalp 40P
+                  no gráfico, com todas as ferramentas necessárias.
                 </p>
 
-                {/* Features */}
                 <ul className="space-y-3 mb-10">
                   {[
-                    "Duração de 4h a 6h por sessão",
-                    "Temas específicos do operacional",
-                    "Conteúdo aprofundado e focado",
-                    "Gravação disponível após o evento",
-                    "Operacional aplicado na prática",
-                    "Melhore suas operações",
-                  ].map((feature) => (
-                    <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[var(--red-bear)] flex-shrink-0" />
-                      <span className="text-[var(--white-80)] text-sm">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
-                <Link
-                  href="/mentoria"
-                  className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--red-bear)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--red-hover)] transition-all shadow-[0_0_30px_rgba(241,20,20,0.2)] hover:shadow-[0_0_50px_rgba(241,20,20,0.35)]"
-                >
-                  Ver Próximos Intensivões
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
-
-                {/* Requirement Note */}
-                {/* <div className="mt-6 p-4 rounded-xl bg-[var(--slate-tech)]/5 border border-[var(--slate-tech)]/20">
-                  <p className="text-sm text-[var(--slate-tech)] text-center">
-                    <Lock className="w-4 h-4 inline mr-2" />
-                    <strong>Requisito:</strong> Ser aluno ativo da Mentoria TDS
-                  </p>
-                </div> */}
-              </div>
-
-              {/* Decorative Corner */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--red-bear)]/15 to-transparent rounded-bl-[100px]" />
-            </motion.div>
-          </FadeIn>
-
-          {/* Card C: Mentoria Individual */}
-          <FadeIn delay={0.5}>
-            <motion.div
-              whileHover={{ y: -12 }}
-              className="group relative bg-gradient-to-br from-black via-[var(--dark-elevated)] to-black border-2 border-[var(--green-bull)]/50 rounded-3xl p-8 overflow-hidden shadow-2xl hover:shadow-[0_0_60px_rgba(0,191,99,0.3)] transition-all"
-            >
-              {/* Premium Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--green-bull)]/10 via-transparent to-transparent" />
-
-              {/* Exclusive Badge */}
-              <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--green-bull)] mb-6">
-                <Lock className="w-4 h-4 text-white" />
-                <span className="text-xs font-bold tracking-widest uppercase text-white">
-                  Exclusivo Ex-Alunos TDS
-                </span>
-              </div>
-
-              <div className="relative z-10">
-                <h3 className="font-display font-black text-3xl lg:text-4xl uppercase mb-2">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--green-dark)] to-[var(--green-bull)]">
-                    Mentoria
-                  </span>
-                  <br />
-                  <span className="text-white">Individual</span>
-                </h3>
-
-                <p className="text-base text-[var(--white-60)] mb-8 leading-relaxed">
-                  Acompanhamento personalizado 1:1 para quem já passou pela
-                  Mentoria TDS e quer levar suas operações ao próximo nível.
-                </p>
-
-                {/* Exclusive Features */}
-                <ul className="space-y-3 mb-10">
-                  {[
-                    "Sessões 1:1 com o Bruno",
-                    "Análise personalizada de trades",
-                    "Estratégias avançadas exclusivas",
-                    "Acesso prioritário a novos conteúdos",
-                    "Suporte exclusivo via Telegram",
-                    "Acompanhamento de performance",
+                    "Tela operacional pronta para o Profit",
+                    "Guia de Execução 40P",
+                    "Mapa de Decisão 40P",
+                    "Checklist e Diário de Execução 40P",
+                    "Vídeos bônus de explicação e uso",
+                    "Ambiente organizado exclusivo",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[var(--green-bull)] flex-shrink-0" />
-                      <span className="text-[var(--white-80)] text-sm">
-                        {feature}
-                      </span>
+                      <span className="text-[#DCEBE2] text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                {/* Premium CTA */}
-                <div className="relative">
-                  <div className="absolute inset-0 bg-[var(--green-bull)] rounded-xl blur-xl opacity-30" />
-                  <a
-                    href="https://t.me/+MSL99oO7pmcyMWQx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/btn relative w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-black uppercase tracking-wider hover:bg-[var(--green-dark)] transition-all shadow-[0_0_30px_rgba(0,191,99,0.3)] hover:shadow-[0_0_50px_rgba(0,191,99,0.5)]"
-                  >
-                    Solicitar Acesso
-                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                  </a>
-                </div>
-
-                {/* Requirement Note */}
-                {/* <div className="mt-6 p-4 rounded-xl bg-[var(--gold-premium)]/5 border border-[var(--gold-premium)]/20">
-                  <p className="text-sm text-[var(--gold-premium)] text-center">
-                    <Lock className="w-4 h-4 inline mr-2" />
-                    <strong>Requisito:</strong> Ter concluído a Mentoria TDS
-                  </p>
-                </div> */}
+                <Link
+                  href="/scalp40p"
+                  className="group/btn mt-auto w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[var(--green-bull)] text-[#04210F] font-display font-black uppercase tracking-wider hover:bg-[#12D97A] transition-all shadow-[0_0_30px_rgba(0,191,99,0.25)] hover:shadow-[0_0_50px_rgba(0,191,99,0.45)]"
+                >
+                  Conheça o Kit
+                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
               </div>
-
-              {/* Premium Corner Decoration */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-[var(--green-bull)]/20 to-transparent rounded-bl-[120px]" />
-
-              {/* Animated Ring */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-                className="absolute -top-20 -right-20 w-64 h-64 border-2 border-dashed border-[var(--green-bull)]/10 rounded-full"
-              />
             </motion.div>
           </FadeIn>
         </div>

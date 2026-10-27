@@ -80,7 +80,7 @@ export function Header() {
                             href="#mentorias"
                             className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors"
                         >
-                            Cursos
+                            Produtos
                         </a>
                     </nav>
 
@@ -119,7 +119,7 @@ export function Header() {
                         <a href="#metodologia" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Metodologia</a>
                         <a href="#eventos" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Eventos</a>
                         <a href="#conteudo" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Conteúdo</a>
-                        <a href="#mentorias" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Cursos</a>
+                        <a href="#mentorias" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-semibold tracking-wider uppercase text-[var(--white-80)] hover:text-white transition-colors">Produtos</a>
                         <a
                             href="https://t.me/+MSL99oO7pmcyMWQx"
                             target="_blank"
