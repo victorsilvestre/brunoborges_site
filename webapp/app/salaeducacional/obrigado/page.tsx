@@ -230,28 +230,32 @@ export default function SalaEducacionalObrigadoPage() {
       <footer className="footer">
         <div className="wrap">
           <div className="footer-top">
-            <img
-              src="/images/logo/logo-reduzida-horizontal-branca-fundo-escuro.svg"
-              alt="Trader Bruno Borges"
-              width="180"
-              height="36"
-            />
+            <div className="footer-brand">
+              <img
+                src="/images/logo/logo-reduzida-horizontal-branca-fundo-escuro.svg"
+                alt="Trader Bruno Borges"
+                width="180"
+                height="36"
+              />
+              <p>
+                Conteúdo educacional. Não constitui recomendação individual de
+                investimento. Trading envolve risco de perda. Depoimentos e
+                resultados não garantem resultados futuros. A sala não compartilha
+                ordens nem emite recomendações de compra ou venda.
+              </p>
+            </div>
             <div className="footer-links">
               <span>
                 Dúvidas sobre compra e acesso?{" "}
                 <a href={`mailto:${SUPORTE_EMAIL}`}>{SUPORTE_EMAIL}</a>
               </span>
+              <div className="footer-legal">
+                <Link href="/termos-de-uso">Termos de uso</Link>
+                <Link href="/politicas-de-privacidade">
+                  Política de privacidade
+                </Link>
+              </div>
             </div>
-          </div>
-          <p>
-            Conteúdo educacional. Não constitui recomendação individual de
-            investimento. Trading envolve risco de perda. Depoimentos e
-            resultados não garantem resultados futuros. A sala não compartilha
-            ordens nem emite recomendações de compra ou venda.
-          </p>
-          <div className="footer-legal">
-            <Link href="/termos-de-uso">Termos de uso</Link>
-            <Link href="/politicas-de-privacidade">Política de privacidade</Link>
           </div>
         </div>
       </footer>

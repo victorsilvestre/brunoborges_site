@@ -116,7 +116,6 @@ html:has(.sala-page) {
 }
 .sala-page .topbar,
 .sala-page .pain,
-.sala-page .results,
 .sala-page .plans,
 .sala-page .footer {
   --focus: var(--lime-bright);
@@ -403,7 +402,7 @@ html:has(.sala-page) {
   max-width: 18ch;
   line-height: 1.12;
 }
-.sala-page .hero-copy mark {
+.sala-page mark {
   padding: 0 0.12em;
   margin-inline: -0.04em;
   border-radius: 6px;
@@ -411,6 +410,13 @@ html:has(.sala-page) {
   background: linear-gradient(var(--lime), var(--lime)) no-repeat left / 100% 100%;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+/* Sobre fundo verde o marca-texto some: inverte para tinta com texto lime. */
+.sala-page .pull mark {
+  color: var(--lime-bright);
+  background: linear-gradient(var(--ink), var(--ink)) no-repeat left / 100% 100%;
+}
+.sala-page .hero-copy mark {
   animation: sala-sweep 0.9s 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 @keyframes sala-sweep {
@@ -553,30 +559,34 @@ html:has(.sala-page) {
 }
 
 /* Virada */
-.sala-page .turn-grid {
+.sala-page .turn-head {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(32px, 6vw, 96px);
-  align-items: start;
+  gap: clamp(24px, 6vw, 96px);
+  align-items: end;
 }
 .sala-page .turn-lead {
-  max-width: 40ch;
-  margin-top: 28px;
+  max-width: 44ch;
   font-size: clamp(17px, 1.4vw, 19px);
   color: var(--muted);
 }
+.sala-page .facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 56px);
+  margin-top: clamp(32px, 5vw, 56px);
+}
 .sala-page .facts li {
-  padding: 26px 0;
+  padding-top: 18px;
   border-top: 2px solid var(--ink);
   color: var(--muted);
-}
-.sala-page .facts li:last-child {
-  border-bottom: 2px solid var(--ink);
+  font-size: 16px;
+  line-height: 1.5;
 }
 .sala-page .facts strong {
   display: block;
   margin-bottom: 6px;
-  font: 600 clamp(20px, 1.9vw, 24px) / 1.25 var(--display);
+  font: 600 clamp(18px, 1.6vw, 20px) / 1.25 var(--display);
   letter-spacing: -0.015em;
   color: var(--ink);
 }
@@ -587,7 +597,7 @@ html:has(.sala-page) {
   background: var(--soft);
 }
 .sala-page .pull p {
-  max-width: 28ch;
+  max-width: 44ch;
   font: 500 clamp(22px, 2.6vw, 34px) / 1.25 var(--display);
   letter-spacing: -0.025em;
   color: var(--lime-ink);
@@ -602,50 +612,60 @@ html:has(.sala-page) {
 }
 
 /* Um dia na sala */
-.sala-page .day {
-  background: var(--surface);
-  border-block: 1px solid var(--line);
+.sala-page .day-block {
+  margin-top: clamp(48px, 7vw, 88px);
 }
 .sala-page .day-list {
-  margin-top: 44px;
-  border-top: 2px solid var(--ink);
+  --day-gap: clamp(24px, 4vw, 56px);
+  --day-pad: clamp(20px, 2.2vw, 28px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--day-gap);
 }
 .sala-page .day-list > li {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.34fr) 1fr;
-  gap: 16px 48px;
-  padding: 36px 0;
-  border-bottom: 2px solid var(--ink);
+  position: relative;
+  padding: var(--day-pad);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--surface);
 }
-.sala-page .day-time {
-  font: 600 clamp(32px, 3.8vw, 52px) / 1 var(--display);
-  letter-spacing: -0.035em;
-  font-variant-numeric: lining-nums tabular-nums;
-}
-.sala-page .day-time::after {
+/* Conector tracejado do passo 1 ao 2 e do 2 ao 3, na altura da etiqueta. */
+.sala-page .day-list > li:not(:last-child)::after {
   content: "";
-  display: block;
-  width: 56px;
-  height: 6px;
-  margin-top: 16px;
-  border-radius: 3px;
+  position: absolute;
+  top: calc(var(--day-pad) + 13px - 1px);
+  left: calc(100% + 2px);
+  width: var(--day-gap);
+  border-top: 2px dashed var(--ink);
+}
+.sala-page .day-step {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
   background: var(--lime);
+  font: 700 13px/1.4 var(--body);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 .sala-page .day-list h3 {
-  font-size: clamp(22px, 2.2vw, 28px);
+  font-size: clamp(20px, 1.9vw, 24px);
 }
 .sala-page .day-list p {
-  max-width: 52ch;
-  margin-top: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--muted);
 }
 .sala-page .day-list blockquote {
-  max-width: 50ch;
-  margin-top: 22px;
-  font: italic 400 19px/1.45 var(--display);
+  margin-top: 18px;
+  padding-left: 14px;
+  border-left: 3px solid var(--lime);
+  font: italic 400 16px/1.45 var(--display);
   color: var(--lime-ink);
 }
 .sala-page .day-list blockquote cite {
+  margin-top: 8px;
   font-family: var(--body);
   color: var(--muted);
 }
@@ -657,67 +677,72 @@ html:has(.sala-page) {
 .sala-page .shift h2 em {
   color: var(--ink);
 }
-.sala-page .shift .shift-head,
-.sala-page .shift .shift-before,
 .sala-page .shift .duo cite {
   color: var(--on-lime-muted);
 }
-.sala-page .shift .shift-row {
-  border-top-color: var(--ink);
-}
-.sala-page .shift .shift-after svg {
-  background: var(--ink);
-  color: var(--lime-bright);
-}
-.sala-page .shift-table {
+.sala-page .shift-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.4vw, 28px);
   margin-top: 44px;
 }
-.sala-page .shift-head,
-.sala-page .shift-row {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 32px;
-  align-items: center;
+.sala-page .shift-col {
+  padding: clamp(24px, 3vw, 40px);
+  border-radius: var(--radius);
 }
-.sala-page .shift-head {
-  padding-bottom: 14px;
-  font: 700 12px/1.4 var(--body);
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--muted);
+.sala-page .shift-col h3 {
+  margin-bottom: 14px;
+  font: 600 clamp(22px, 2.2vw, 28px) / 1.2 var(--display);
+  letter-spacing: -0.02em;
 }
-.sala-page .shift-row {
-  padding: 22px 0;
-  border-top: 1.5px solid var(--ink);
-}
-.sala-page .shift-before {
-  font-size: 19px;
-  color: var(--muted);
-}
-.sala-page .shift-after {
+.sala-page .shift-col li {
   display: flex;
   align-items: center;
   gap: 14px;
-  font: 600 clamp(18px, 1.8vw, 22px) / 1.3 var(--display);
+  min-height: 64px;
+  padding: 8px 0;
+}
+.sala-page .shift-col svg {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 50%;
+}
+.sala-page .shift-before {
+  background: rgb(12 13 14 / 9%);
+  color: var(--on-lime-muted);
+}
+.sala-page .shift-before li {
+  font-size: 18px;
+}
+.sala-page .shift-before svg {
+  border: 1.5px solid currentColor;
+}
+.sala-page .shift-after {
+  background: var(--ink);
+  color: var(--on-ink);
+  box-shadow: 0 28px 48px -28px rgb(12 13 14 / 55%);
+}
+.sala-page .shift-after h3 {
+  color: var(--lime-bright);
+}
+.sala-page .shift-after li {
+  font: 600 clamp(18px, 1.7vw, 21px) / 1.3 var(--display);
   letter-spacing: -0.015em;
 }
 .sala-page .shift-after svg {
-  flex: none;
-  width: 36px;
-  height: 36px;
-  padding: 8px;
-  border-radius: 50%;
-  background: var(--lime);
+  background: var(--lime-bright);
   color: var(--ink);
 }
 .sala-page .duo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(24px, 4vw, 56px);
   margin-top: 48px;
 }
-.sala-page .duo blockquote,
-.sala-page .results-quote {
+.sala-page .duo blockquote {
   font: italic 400 clamp(18px, 1.7vw, 21px) / 1.45 var(--display);
 }
 .sala-page .duo cite {
@@ -725,134 +750,76 @@ html:has(.sala-page) {
   font-family: var(--body);
 }
 
-/* Resultado */
-.sala-page .results {
-  background: var(--ink);
-  color: var(--on-ink);
-}
-.sala-page .results h2 em {
-  color: var(--lime-bright);
-}
-.sala-page .results-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(32px, 6vw, 88px);
-  align-items: start;
-}
-.sala-page .results-lead {
-  margin: 32px 0 20px;
-  font: 500 clamp(20px, 2vw, 26px) / 1.3 var(--display);
-  letter-spacing: -0.015em;
-}
-.sala-page .results-lead strong {
-  color: var(--lime-bright);
-  font-weight: 600;
-  font-variant-numeric: lining-nums tabular-nums;
-}
-.sala-page .results-grid > div:first-child > p:not(.results-lead) {
-  max-width: 50ch;
-  color: var(--on-ink-muted);
-}
-.sala-page .results-quote {
-  max-width: 36ch;
-  margin-top: 32px;
-  color: var(--on-ink);
-}
-.sala-page .results-quote cite {
-  color: var(--lime-bright);
-  font-family: var(--body);
-}
-.sala-page .bars {
-  padding: clamp(24px, 3.5vw, 40px);
-  border: 1px solid rgb(245 243 239 / 18%);
-  border-radius: var(--radius);
-  background: var(--ink-2);
-}
-.sala-page .bars-title {
-  margin-bottom: 28px;
-  font: 600 20px/1.3 var(--display);
-  color: var(--on-ink);
-}
-.sala-page .bar + .bar {
-  margin-top: 22px;
-}
-.sala-page .bar-label {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 8px;
-  font-size: 16px;
-  font-variant-numeric: tabular-nums;
-}
-.sala-page .bar-label strong {
-  font-family: var(--display);
-  font-size: 18px;
-  font-weight: 600;
-}
-.sala-page .bar-track {
-  height: 14px;
-  border-radius: 7px;
-  background: rgb(245 243 239 / 12%);
-  overflow: hidden;
-}
-.sala-page .bar-track span {
-  display: block;
-  height: 100%;
-  border-radius: 7px;
-  background: var(--lime-bright);
-}
-.sala-page .bar.is-neg .bar-track span {
-  background: #8a877f;
-}
-.sala-page .bar.is-neg .bar-label {
-  color: var(--on-ink-muted);
-}
-.sala-page .bars .fine {
-  margin-top: 32px;
-  color: var(--on-ink-muted);
-}
-
 /* Depoimentos */
 .sala-page .voices-grid {
-  columns: 3 300px;
-  column-gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
   margin-top: 44px;
 }
-.sala-page .voices-grid figure {
-  break-inside: avoid;
-  margin: 0 0 32px;
-  padding-top: 20px;
-  border-top: 3px solid var(--ink);
-}
-.sala-page .voices-grid blockquote {
-  font: 400 clamp(17px, 1.5vw, 19px) / 1.5 var(--display);
-}
-.sala-page .voices-grid figcaption {
-  margin-top: 16px;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--lime-ink);
-}
-.sala-page .voices-grid figure:nth-child(2),
-.sala-page .voices-grid figure:nth-child(8) {
-  padding: 28px;
-  border-top: 0;
+.sala-page .voice {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(24px, 2.6vw, 36px);
+  border: 2px solid var(--ink);
   border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+}
+.sala-page .voice blockquote {
+  font: 400 clamp(16px, 1.25vw, 17px) / 1.55 var(--display);
+}
+.sala-page .voice figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 28px;
+}
+.sala-page .voice figcaption strong {
+  display: block;
+  font: 700 15px / 1.25 var(--body);
+  letter-spacing: 0.02em;
+}
+.sala-page .voice figcaption small {
+  display: block;
+  font: 400 13px / 1.3 var(--body);
+  color: var(--muted);
+}
+.sala-page .voice-avatar {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   background: var(--lime);
+  color: var(--ink);
+  font: 600 18px / 1 var(--display);
 }
-.sala-page .voices-grid figure:nth-child(5) {
-  padding: 28px;
-  border-top: 0;
-  border-radius: var(--radius);
+.sala-page .voice-ink {
   background: var(--ink);
   color: var(--on-ink);
 }
-.sala-page .voices-grid figure:nth-child(2) figcaption,
-.sala-page .voices-grid figure:nth-child(8) figcaption {
-  color: var(--ink);
+.sala-page .voice-ink strong {
+  color: var(--lime-bright);
 }
-.sala-page .voices-grid figure:nth-child(5) figcaption {
+.sala-page .voice-ink small {
+  color: var(--on-ink-muted);
+}
+.sala-page .voice-ink .voice-avatar {
+  background: var(--lime-bright);
+}
+.sala-page .voice-lime {
+  border-color: var(--lime);
+  background: var(--lime);
+}
+.sala-page .voice-lime small {
+  color: var(--on-lime-muted);
+}
+.sala-page .voice-lime .voice-avatar {
+  background: var(--ink);
   color: var(--lime-bright);
 }
 
@@ -1185,18 +1152,18 @@ html:has(.sala-page) {
 }
 .sala-page .finale-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: clamp(24px, 5vw, 72px);
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 0.8fr);
+  gap: clamp(24px, 4vw, 56px);
   align-items: end;
 }
 .sala-page .finale-grid > div {
   padding-bottom: var(--space);
 }
 .sala-page .finale-grid h2 {
-  max-width: 17ch;
+  max-width: 34ch;
 }
 .sala-page .finale-grid p {
-  max-width: 44ch;
+  max-width: 52ch;
   margin-top: 24px;
   font-size: clamp(17px, 1.4vw, 19px);
   color: var(--on-lime-muted);
@@ -1225,16 +1192,15 @@ html:has(.sala-page) {
   line-height: 1.7;
 }
 .sala-page .footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px 48px;
-  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 32px clamp(32px, 6vw, 96px);
 }
-.sala-page .footer-top img {
+.sala-page .footer-brand img {
   width: auto;
   height: 32px;
+  margin-bottom: 24px;
 }
 .sala-page .footer-links {
   display: flex;
@@ -1245,17 +1211,54 @@ html:has(.sala-page) {
   color: var(--on-ink);
 }
 .sala-page .footer p {
-  max-width: 100ch;
+  max-width: 78ch;
+  font-size: 12.5px;
+  line-height: 1.65;
 }
 .sala-page .footer-legal {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
-  margin-top: 20px;
+  gap: 4px 24px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgb(245 243 239 / 16%);
 }
 
 /* Responsivo */
 @media (max-width: 960px) {
+  .sala-page .footer-top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  /* Depoimentos viram carrossel: a seção não estica no celular. */
+  .sala-page .voices-grid {
+    display: flex;
+    gap: 16px;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 4px var(--gutter) 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: thin;
+    scrollbar-color: var(--ink) transparent;
+  }
+  .sala-page .voice {
+    flex: 0 0 min(84%, 360px);
+    scroll-snap-align: start;
+  }
+  .sala-page .day-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sala-page .day-list > li:not(:last-child)::after {
+    top: calc(100% + 2px);
+    left: calc(var(--day-pad) + 40px);
+    width: 0;
+    height: var(--day-gap);
+    border-top: 0;
+    border-left: 2px dashed var(--ink);
+  }
+  .sala-page .shift-board {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .sala-page .hero {
     grid-template-columns: var(--gutter) minmax(0, 1fr) var(--gutter);
   }
@@ -1280,8 +1283,8 @@ html:has(.sala-page) {
     margin-top: 28px;
   }
   .sala-page .pain-grid,
-  .sala-page .turn-grid,
-  .sala-page .results-grid,
+  .sala-page .turn-head,
+  .sala-page .facts,
   .sala-page .author-grid,
   .sala-page .faq-grid,
   .sala-page .finale-grid,
@@ -1327,16 +1330,6 @@ html:has(.sala-page) {
   .sala-page .topbar-cta {
     padding: 0 14px;
     font-size: 14px;
-  }
-  .sala-page .day-list > li {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .sala-page .shift-head {
-    display: none;
-  }
-  .sala-page .shift-row {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 10px;
   }
   .sala-page .plans-include ul,
   .sala-page .steps-list {

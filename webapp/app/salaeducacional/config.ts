@@ -2,9 +2,9 @@ export const MEMBROS_URL = "https://alunos.traderbrunoborges.com.br";
 export const SUPORTE_EMAIL = "suporte@traderbrunoborges.com.br";
 
 export const SESSAO = {
-  inicio: "8h45",
+  inicio: "8h30",
   fim: "10h15",
-  inicioMin: 8 * 60 + 45,
+  inicioMin: 8 * 60 + 30,
   fimMin: 10 * 60 + 15,
 } as const;
 
@@ -18,7 +18,7 @@ export const PLANOS = {
   trimestral: {
     nome: "Trimestral",
     preco: "497,00",
-    periodo: "por trimestre",
+    periodo: "à vista, por trimestre",
     equivalenteMes: "165,67",
     economia: "192,70",
     parcelas: "3x de R$ 177,36",

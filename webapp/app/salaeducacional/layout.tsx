@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Roboto, Roboto_Serif } from "next/font/google";
+import { SESSAO } from "./config";
 import "./salaeducacional.css";
 
 const robotoSerif = Roboto_Serif({
@@ -16,8 +17,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-const description =
-  "Sala Educacional do Trader Bruno Borges: acompanhe o Método TDS ao vivo, todo dia útil das 8h45 às 10h15. Exclusiva para alunos da Mentoria Trader de Sucesso.";
+const description = `Sala Educacional do Trader Bruno Borges: acompanhe o Método TDS ao vivo, todo dia útil das ${SESSAO.inicio} às ${SESSAO.fim}. Exclusiva para alunos da Mentoria Trader de Sucesso.`;
 
 export const metadata: Metadata = {
   title: "Sala Educacional | Trader Bruno Borges",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { descreverProximaSala, ehFeriado, temSala } from "./calendario";
 import { SESSAO } from "./config";
 
 type Estado = "live" | "soon" | "closed" | "static";
@@ -26,6 +27,9 @@ function ler(agora: Date): Leitura {
   const partes = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Sao_Paulo",
     weekday: "short",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
     hour: "2-digit",
     minute: "2-digit",
     hourCycle: "h23",
@@ -36,7 +40,13 @@ function ler(agora: Date): Leitura {
   const dia = pega("weekday");
   const relogio = `${pega("hour")}:${pega("minute")}`;
   const minutos = Number(pega("hour")) * 60 + Number(pega("minute"));
-  const util = ["Mon", "Tue", "Wed", "Thu", "Fri"].includes(dia);
+  const hoje = {
+    ano: Number(pega("year")),
+    mes: Number(pega("month")),
+    dia: Number(pega("day")),
+  };
+  const util = temSala(hoje);
+  const feriado = ehFeriado(hoje) && dia !== "Sat" && dia !== "Sun";
 
   if (util && minutos >= SESSAO.inicioMin && minutos < SESSAO.fimMin) {
     return {
@@ -56,12 +66,11 @@ function ler(agora: Date): Leitura {
       linha: 0,
     };
   }
-  const proximo =
-    dia === "Fri" || dia === "Sat" || dia === "Sun" ? "segunda" : "amanhã";
+  const proxima = `Próxima: ${descreverProximaSala(hoje)}, ${SESSAO.inicio}`;
   return {
     estado: "closed",
-    titulo: "Sessão encerrada",
-    detalhe: `Próxima: ${proximo}, ${SESSAO.inicio}`,
+    titulo: feriado ? "Sem sala hoje" : "Aula encerrada",
+    detalhe: feriado ? `Feriado. ${proxima}` : proxima,
     relogio,
     linha: util ? 2 : -1,
   };
@@ -69,7 +78,7 @@ function ler(agora: Date): Leitura {
 
 const LINHAS = [
   { hora: SESSAO.inicio, nome: "Pré-abertura" },
-  { hora: "Pregão", nome: "Análise ao vivo" },
+  { hora: "9h", nome: "Estudo ao vivo" },
   { hora: SESSAO.fim, nome: "Encerramento" },
 ];
 

@@ -1,4 +1,5 @@
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { SESSAO } from "../../salaeducacional/config";
 
 const pillars = [
   {
@@ -13,8 +14,8 @@ const pillars = [
     tag: "Bônus Exclusivo",
     num: "02.",
     title: "SALA EDUCACIONAL",
-    body: "Durante 30 dias, acompanhe Bruno das 8h45 às 10h15 analisando o mercado ao vivo e mostrando, em cenários reais de abertura e volatilidade, os conceitos estudados na Mentoria — reforçando a prática da leitura em tempo real.",
-    footer: "Segunda a Sexta, 8h45 às 10h15",
+    body: `Durante 30 dias, acompanhe Bruno das ${SESSAO.inicio} às ${SESSAO.fim} analisando o mercado ao vivo e mostrando, em cenários reais de abertura e volatilidade, os conceitos estudados na Mentoria — reforçando a prática da leitura em tempo real.`,
+    footer: `Segunda a Sexta, ${SESSAO.inicio} às ${SESSAO.fim}`,
     badge: false,
   },
   {

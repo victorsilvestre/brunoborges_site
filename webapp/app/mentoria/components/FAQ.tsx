@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, MessageCircle } from "lucide-react";
+import { SESSAO } from "../../salaeducacional/config";
 
 const WHATSAPP_URL =
   "https://wa.me/5562982612893?text=" +
@@ -24,7 +25,7 @@ const faqs = [
   },
   {
     q: "4. O que é a Sala Educacional e como ela me ajuda a operar de verdade?",
-    a: "É um bônus exclusivo de 30 dias em que você acompanha Bruno Borges ao vivo, das 8h45 às 10h15, com o mercado aberto. O foco não é receber calls ou sinais prontos — é ver o raciocínio de Price Action sendo aplicado em tempo real, no candle se formando, para você treinar a própria leitura em vez de depender da leitura de outra pessoa.",
+    a: `É um bônus exclusivo de 30 dias em que você acompanha Bruno Borges ao vivo, das ${SESSAO.inicio} às ${SESSAO.fim}, com o mercado aberto. O foco não é receber calls ou sinais prontos — é ver o raciocínio de Price Action sendo aplicado em tempo real, no candle se formando, para você treinar a própria leitura em vez de depender da leitura de outra pessoa.`,
   },
   {
     q: "5. O suporte para tirar dúvidas é direto com o Bruno ou com uma equipe?",

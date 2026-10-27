@@ -31,58 +31,42 @@ const mudancas = [
   },
 ];
 
-const faixas = [
-  { rotulo: "Até R$ 500", pct: 60.8 },
-  { rotulo: "R$ 500 a R$ 1.000", pct: 16 },
-  { rotulo: "R$ 1.000 a R$ 2.500", pct: 6.4 },
-  { rotulo: "Acima de R$ 2.500", pct: 4 },
-  { rotulo: "Negativo", pct: 12.8, negativo: true },
-];
-
 const depoimentos = [
   {
+    tom: "plain",
     texto:
-      "A sala é simplesmente ESPETACULAR, ela traz uma esperança enorme. Eu estou no mercado há 5 anos patinando, achava que não era mais pra mim, mas depois que iniciei a mentoria do Bruno e começamos a operar juntos na Sala, tudo clareou.",
+      "Eu estou no mercado há 5 anos patinando, achava que não era mais pra mim, mas depois que iniciei a mentoria do Bruno e começamos a operar juntos na Sala, tudo clareou.",
     autor: "Nadson",
   },
   {
-    texto:
-      "No fundo eu era uma torcedora. Hoje sinto que estou crescendo e a cada dia mais confiante. Voltei a operar na conta real assim que a sala começou e estou consistente desde então.",
-    autor: "Elienai",
-  },
-  {
-    texto:
-      "Já fiz 10 mentorias e participei de várias salas ao vivo. Nenhuma das anteriores entregou algo tão concreto, conciso e sem dubiedade.",
-    autor: "Abraão",
-  },
-  {
-    texto:
-      "Mesmo tendo feito a mentoria, ainda tinha dificuldade por falta de confiança. Com a Sala Educacional, venho conseguindo realizar as operações na hora certa.",
-    autor: "Elizandro",
-  },
-  {
+    tom: "ink",
     texto:
       "Me deu plena confiança de ir com uma operação até o alvo. A minha maior dificuldade era no comportamento: acreditar que vai até o alvo.",
     autor: "Mariluna",
   },
   {
+    tom: "lime",
     texto:
-      "Minha assinatura já seria anual na sala, sem saber nem o valor. Já estou há mais de 1 ano no curso fazendo todos, e essa sala veio como mais uma bomba.",
-    autor: "Felipe",
+      "Já fiz 10 mentorias e participei de várias salas ao vivo. Nenhuma das anteriores entregou algo tão concreto, conciso e sem dubiedade.",
+    autor: "Abraão",
   },
   {
-    texto:
-      "A sala é de grande importância para nós alunos: o que aprendemos na mentoria é extremamente mostrado ao vivo, sem enganação.",
-    autor: "Fagnner",
-  },
-  {
+    tom: "ink",
     texto:
       "Hoje consigo chegar na frente do gráfico e já enxergar o que pode ser feito. Era o que eu buscava: saber as possibilidades antes mesmo de acontecer.",
     autor: "Traderlinsvan",
   },
   {
-    texto: "Com as orientações do Bruno, tudo fica mais calmo e tranquilo.",
-    autor: "Oguimo",
+    tom: "lime",
+    texto:
+      "A sala é de grande importância para nós alunos: o que aprendemos na mentoria é extremamente mostrado ao vivo, sem enganação.",
+    autor: "Fagnner",
+  },
+  {
+    tom: "plain",
+    texto:
+      "Minha assinatura já seria anual na sala, sem saber nem o valor. Já estou há mais de 1 ano no curso fazendo todos, e essa sala veio como mais uma bomba.",
+    autor: "Felipe",
   },
 ];
 
@@ -101,30 +85,31 @@ const naoParaVoce = [
 ];
 
 const inclusos = [
-  "Sala ao vivo todo dia útil, das 8h45 às 10h15",
-  "Análise de pré-abertura com o Método TDS",
+  `Sala ao vivo todo dia útil, das ${SESSAO.inicio} às ${SESSAO.fim}`,
+  "Pré-abertura e marcações com o Método TDS",
   "Acompanhamento do pregão, com o raciocínio explicado",
-  "Ambiente silencioso, e o Bruno responde as dúvidas em tempo real",
-  "Acesso pela aula “Encontro Ao Vivo”, na área de membros",
-  "Garantia de 7 dias e cancelamento quando quiser",
+  "Ambiente silencioso, e dúvidas respondidas na hora",
 ];
 
 const passos = [
   {
     titulo: "Assine o plano.",
-    texto: "Pagamento pela Hotmart. A liberação acontece após a aprovação.",
+    texto:
+      "Pagamento seguro. A liberação acontece após a aprovação. É rápido e simples.",
   },
   {
-    titulo: "Entre na área de membros.",
-    texto: "Use o mesmo e-mail da compra em alunos.traderbrunoborges.com.br.",
+    titulo: "Área de membros.",
+    texto:
+      "Acesse o site exclusivo e utilize o mesmo e-mail da compra em alunos.traderbrunoborges.com.br.",
   },
   {
-    titulo: "Abra a aula “Encontro Ao Vivo”.",
-    texto: "É onde fica o link de acesso à sala.",
+    titulo: "“Encontro Ao Vivo”.",
+    texto:
+      "No módulo Sala Educacional, você verá a aula Encontro ao Vivo. É lá onde fica o link de acesso à Sala.",
   },
   {
-    titulo: "Clique e entre no Zoom.",
-    texto: "Você será redirecionado direto para a sessão, às 8h45.",
+    titulo: "Entre no Zoom.",
+    texto: `Após clicar no link, você será redirecionado direto para a aula ao vivo, às ${SESSAO.inicio}. Bons trades!`,
   },
 ];
 
@@ -139,11 +124,11 @@ const faqs = [
   },
   {
     q: "Qual a diferença entre o plano mensal e o trimestral?",
-    a: `O acesso é o mesmo. No trimestral você paga R$ ${PLANOS.trimestral.preco} a cada três meses, o equivalente a R$ ${PLANOS.trimestral.equivalenteMes} por mês, uma economia de R$ ${PLANOS.trimestral.economia} frente a três meses do plano mensal. O mensal custa R$ ${PLANOS.mensal.preco} e renova todo mês.`,
+    a: `O acesso é o mesmo. No trimestral você paga R$ ${PLANOS.trimestral.preco} à vista a cada três meses, o equivalente a R$ ${PLANOS.trimestral.equivalenteMes} por mês dividindo em três meses, uma economia de R$ ${PLANOS.trimestral.economia} frente a três meses do plano mensal. O mensal custa R$ ${PLANOS.mensal.preco} e renova todo mês.`,
   },
   {
     q: "Como funciona o pagamento? É recorrente?",
-    a: "Sim. Os dois planos são assinaturas recorrentes: o mensal renova todo mês e o trimestral, a cada três meses, sempre automaticamente. Você paga com cartão, Pix Automático, Apple Pay ou PayPal. O trimestral também pode ser parcelado no cartão, com acréscimo.",
+    a: "Sim. Os dois planos são assinaturas recorrentes: o mensal renova todo mês e o trimestral, a cada três meses, sempre automaticamente. Você pode pagar com cartão ou Pix Automático. O trimestral também pode ser parcelado no cartão, com acréscimo.",
   },
   {
     q: "Posso cancelar quando quiser?",
@@ -151,11 +136,11 @@ const faqs = [
   },
   {
     q: "E se eu não puder assistir todo dia?",
-    a: "A sala acontece todos os dias úteis, das 8h45 às 10h15. Você não precisa estar em todas as sessões, mas quanto mais constante a presença, mais rápida a evolução. A repetição é o que consolida a leitura.",
+    a: `A sala acontece todos os dias úteis, das ${SESSAO.inicio} às ${SESSAO.fim}. Você não precisa estar em todas as sessões, mas quanto mais constante a presença, mais rápida a evolução. A repetição é o que consolida a leitura.`,
   },
   {
     q: "A sala dá calls ou mostra as ordens do Bruno?",
-    a: "Não. O Bruno mostra o raciocínio, a leitura e as decisões, mas não compartilha ordens nem dá sinais de entrada. A proposta é você aprender a decidir, não copiar.",
+    a: "Não. O Bruno mostra o raciocínio, a leitura e as decisões, mas não compartilha ordens nem dá sinais de entrada. A ideia é que você aprenda a utilizar o Método TDS, não copiar.",
   },
   {
     q: "A Sala substitui a Mentoria?",
@@ -163,7 +148,7 @@ const faqs = [
   },
   {
     q: "E se eu entrar e não gostar?",
-    a: "Você tem 7 dias de garantia em qualquer um dos planos. Participe das sessões, veja o Bruno aplicar o Método ao vivo e, se sentir que não é para você, solicite o reembolso integral, sem questionamentos.",
+    a: "Você tem 7 dias de garantia em qualquer um dos planos. Participe da Sala, veja o Bruno aplicar o Método ao vivo e, se sentir que não é para você, solicite o reembolso integral, sem questionamentos.",
   },
 ];
 
@@ -178,7 +163,11 @@ export default function SalaEducacionalPage() {
 
       <header className="topbar">
         <div className="wrap topbar-in">
-          <a className="topbar-logo" href="#inicio" aria-label="Trader Bruno Borges">
+          <a
+            className="topbar-logo"
+            href="#inicio"
+            aria-label="Trader Bruno Borges"
+          >
             <img
               src="/images/logo/logo-reduzida-horizontal-branca-fundo-escuro.svg"
               alt="Trader Bruno Borges"
@@ -198,13 +187,14 @@ export default function SalaEducacionalPage() {
         <section className="hero" id="inicio">
           <div className="hero-copy">
             <h1>
-              Você aprendeu o método. Agora{" "}
-              <mark>execute ao vivo</mark>.
+              Você aprendeu o método. Agora,{" "}
+              <mark>é hora de executar ao vivo</mark>.
             </h1>
             <p className="hero-lead">
-              A Sala Educacional é o pregão ao vivo com o Bruno, todo dia útil,
-              das {SESSAO.inicio} às {SESSAO.fim}. Você acompanha a leitura, o
-              raciocínio e cada decisão com o mercado aberto.
+              A Sala Educacional é a análise do pregão ao vivo com o Bruno, todo
+              dia útil, das {SESSAO.inicio} às {SESSAO.fim}. Você acompanha a
+              leitura, o raciocínio e cada detalhe que um trader consistente
+              observa para sair positivo no mercado.
             </p>
             <div className="hero-actions">
               <a className="cta" href="#planos">
@@ -243,6 +233,10 @@ export default function SalaEducacionalPage() {
                   vivo, <strong>78,7%</strong> deles com tranquilidade.
                 </p>
                 <p>
+                  <strong>87,2%</strong> dos alunos tiveram resultado positivo
+                  no período, e <strong>26,4%</strong> extraíram mais de R$ 500.
+                </p>
+                <p>
                   A nota média de satisfação geral foi <strong>9,79</strong>, e{" "}
                   <strong>9,90</strong> para recomendar a um amigo.
                 </p>
@@ -264,21 +258,23 @@ export default function SalaEducacionalPage() {
           <div className="wrap pain-grid">
             <div className="pain-copy">
               <h2>
-                Você não trava por falta de técnica.{" "}
-                <em>Trava por falta de prática ao vivo.</em>
+                Você não trava por falta de conhecimento.{" "}
+                <em>Você trava na Hora "H" por falta de prática ao vivo.</em>
               </h2>
               <p>
                 Você fez a Mentoria. Conhece o Método. Mas há algo que nenhuma
-                aula gravada substitui: o mercado aberto, o relógio correndo e a
-                decisão precisando ser tomada agora.
+                aula substitui: o mercado ao vivo na sua frente, o relógio
+                correndo e a decisão precisando ser tomada agora.
               </p>
               <ul className="thoughts">
-                <li>“Entro agora ou espero alguém confirmar?”</li>
-                <li>“Entrei fora do setup. De novo.”</li>
-                <li>“Saí cedo e o gráfico foi até o alvo sem mim.”</li>
+                <li>“Entro agora ou espero confirmar”</li>
+                <li>“Mais uma vez entrei fora do meu setup”</li>
+                <li>“Fui mão de alface de novo”</li>
+                <li>“O mercado foi direto sem mim”</li>
               </ul>
               <p className="pain-close">
-                É exatamente aí que a Sala Educacional trabalha com você.
+                É exatamente pra isso que a Sala Educacional foi criada: Ajudar
+                você a evoluir o seu operacional todos os dias.
               </p>
             </div>
             <figure className="pain-photo">
@@ -293,17 +289,18 @@ export default function SalaEducacionalPage() {
           </div>
         </section>
 
-        {/* 4. Virada */}
+        {/* 4. Virada + um dia na sala */}
         <section className="section turn" id="sala">
-          <div className="wrap turn-grid">
-            <div>
+          <div className="wrap">
+            <div className="turn-head">
               <h2>
-                A sala é o estágio que <em>faltava.</em>
+                A sala é o estágio que <em>faltava</em> pra sua evolução.
               </h2>
               <p className="turn-lead">
-                Na Mentoria você aprendeu a teoria. Na sala, você entra no
-                pregão ao lado de quem aplica o Método todos os dias, com o
-                mercado aberto.
+                Na Mentoria você viu o Bruno ensinando e aplicando o
+                conhecimento direto no Replay. Na sala, você entra pro pregão ao
+                lado de quem utiliza o <mark>Método TDS</mark> todos os dias,
+                com o mercado ao vivo.
               </p>
             </div>
             <ul className="facts">
@@ -313,73 +310,70 @@ export default function SalaEducacionalPage() {
                 pré-abertura e o acompanhamento do pregão.
               </li>
               <li>
-                <strong>Sem calls e sem ordens.</strong>
-                O Bruno mostra o raciocínio, não a entrada. Você aprende a
-                decidir, não a copiar.
+                <strong>Sem calls e sem ordens na tela.</strong>O Bruno mostra o
+                raciocínio, não a entrada. Você aprende a decidir, não a copiar.
               </li>
               <li>
                 <strong>Todos mutados.</strong>
-                Foco total no gráfico. As dúvidas são respondidas em tempo real.
+                Após retirar as dúvidas todos são mutados para o início do
+                pregão. Foco total no gráfico.
               </li>
             </ul>
-          </div>
-          <div className="wrap">
             <blockquote className="pull">
               <p>
-                A sala funciona como um estágio: o curso foi a formação, na sala
-                temos a aplicação supervisionada.
+                A sala funciona como um estágio: o curso foi a formação teórica,
+                na sala temos a aplicação prática supervisionada.
               </p>
-              <cite>Kelcardosojh, aluno</cite>
+              <cite>Kel Cardoso, aluno TDS</cite>
             </blockquote>
-          </div>
-        </section>
-
-        {/* 5. Um dia na sala */}
-        <section className="section day" id="rotina">
-          <div className="wrap">
-            <h2>Um dia na sala.</h2>
-            <ol className="day-list">
-              <li>
-                <span className="day-time">{SESSAO.inicio}</span>
-                <div>
+            <div className="day-block" id="rotina">
+              <h3 className="sr-only">Um dia na sala</h3>
+              <ol className="day-list">
+                <li>
+                  <span className="day-step">Passo 1</span>
                   <h3>Pré-abertura</h3>
                   <p>
-                    O Bruno lê o gráfico e apresenta os cenários prováveis. Você
-                    chega ao pregão com contexto, não com esperança.
+                    O Bruno lê o gráfico do dia anterior, realiza as marcações
+                    do Método TDS e apresenta os cenários prováveis. Você chega
+                    para operar com mais clareza e um contexto refinado.
                   </p>
                   <blockquote>
                     “O pré-mercado te dá clareza do que pode acontecer e ajuda a
                     tomar decisões mais rápidas.”
-                    <cite>Ferreiracnilton</cite>
+                    <cite>Nilton</cite>
                   </blockquote>
-                </div>
-              </li>
-              <li>
-                <span className="day-time">Pregão</span>
-                <div>
+                </li>
+                <li>
+                  <span className="day-step">Passo 2</span>
                   <h3>Análise ao vivo</h3>
                   <p>
-                    Cada decisão explicada no gráfico, enquanto acontece. Você
-                    acompanha, absorve e compara com o seu próprio plano.
+                    O Bruno faz a leitura do gráfico candle a candle, suas
+                    obrigações, regiões e setups possíveis. Cada decisão é
+                    explicada. Você acompanha, aprende e evolui todos os dias.
                   </p>
                   <blockquote>
-                    “O fato de ninguém poder falar é o principal, e o Bruno
-                    responde as dúvidas em tempo real.”
+                    “O fato de ninguém poder falar (durante o pregão) é o
+                    principal, e o Bruno responde as dúvidas (do chat) em tempo
+                    real.”
                     <cite>Granderei</cite>
                   </blockquote>
-                </div>
-              </li>
-              <li>
-                <span className="day-time">{SESSAO.fim}</span>
-                <div>
+                </li>
+                <li>
+                  <span className="day-step">Passo 3</span>
                   <h3>Encerramento</h3>
                   <p>
-                    A sessão fecha com o dia lido do começo ao fim e o raciocínio
-                    fresco para levar aos seus estudos e backtests.
+                    A Sala Educacional finaliza por volta das {SESSAO.fim}, com
+                    a releitura do mercado até o momento de fechamento e os
+                    cenários possíveis para os próximos candles.
                   </p>
-                </div>
-              </li>
-            </ol>
+                  <blockquote>
+                    “Voltei a operar na conta real assim que a sala começou e
+                    estou consistente desde então.”
+                    <cite>Elienai</cite>
+                  </blockquote>
+                </li>
+              </ol>
+            </div>
           </div>
         </section>
 
@@ -387,27 +381,35 @@ export default function SalaEducacionalPage() {
         <section className="section shift" id="mudanca">
           <div className="wrap">
             <h2>
-              O que muda quando você para de estudar e{" "}
-              <em>começa a executar.</em>
+              O que muda quando você <em>passa a praticar ao vivo.</em>
             </h2>
-            <div className="shift-table" role="table" aria-label="Antes e depois da sala">
-              <div className="shift-head" role="row">
-                <span role="columnheader">Antes</span>
-                <span role="columnheader">Depois</span>
+            <div
+              className="shift-board"
+              role="group"
+              aria-label="Antes e depois da sala"
+            >
+              <div className="shift-col shift-before">
+                <h3>Antes</h3>
+                <ul>
+                  {mudancas.map((m) => (
+                    <li key={m.antes}>
+                      <Minus aria-hidden="true" strokeWidth={2.25} />
+                      {m.antes}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              {mudancas.map((m) => (
-                <div className="shift-row" role="row" key={m.antes}>
-                  <span role="cell" className="shift-before">
-                    <span className="sr-only">Antes: </span>
-                    {m.antes}
-                  </span>
-                  <span role="cell" className="shift-after">
-                    <ArrowRight aria-hidden="true" strokeWidth={2} />
-                    <span className="sr-only">Depois: </span>
-                    {m.depois}
-                  </span>
-                </div>
-              ))}
+              <div className="shift-col shift-after">
+                <h3>Depois</h3>
+                <ul>
+                  {mudancas.map((m) => (
+                    <li key={m.depois}>
+                      <Check aria-hidden="true" strokeWidth={2.5} />
+                      {m.depois}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="duo">
               <blockquote>
@@ -421,53 +423,11 @@ export default function SalaEducacionalPage() {
                 evoluindo.”
                 <cite>Reni</cite>
               </blockquote>
-            </div>
-          </div>
-        </section>
-
-        {/* 7. Resultado financeiro */}
-        <section className="section results" id="resultados">
-          <div className="wrap results-grid">
-            <div>
-              <h2>
-                O mercado recompensa quem <em>executa o próprio plano.</em>
-              </h2>
-              <p className="results-lead">
-                <strong>87,2%</strong> dos alunos tiveram resultado positivo no
-                período, e <strong>26,4%</strong> extraíram mais de R$ 500.
-              </p>
-              <p>
-                Os 12,8% que ficaram no negativo relatam principalmente
-                ansiedade e entradas fora do setup. São falhas de
-                comportamento, e é nesse ponto que a sala trabalha: você vê, dia
-                após dia, como o Bruno espera o setup antes de agir.
-              </p>
-              <blockquote className="results-quote">
+              <blockquote>
                 “Consegui reverter o negativo e passar a fechar os dias no
                 positivo.”
                 <cite>Italo</cite>
               </blockquote>
-            </div>
-            <div className="bars" aria-label="Resultado financeiro por faixa">
-              <h3 className="bars-title">Resultado financeiro por faixa</h3>
-              {faixas.map((f) => (
-                <div
-                  className={`bar${f.negativo ? " is-neg" : ""}`}
-                  key={f.rotulo}
-                >
-                  <div className="bar-label">
-                    <span>{f.rotulo}</span>
-                    <strong>{String(f.pct).replace(".", ",")}%</strong>
-                  </div>
-                  <div className="bar-track">
-                    <span style={{ width: `${f.pct}%` }} />
-                  </div>
-                </div>
-              ))}
-              <p className="fine">
-                Resultados individuais não garantem resultados futuros. Trading
-                envolve risco de perda.
-              </p>
             </div>
           </div>
         </section>
@@ -476,13 +436,26 @@ export default function SalaEducacionalPage() {
         <section className="section voices" id="depoimentos">
           <div className="wrap">
             <h2>
-              Nas palavras de <em>quem está na sala.</em>
+              Nas palavras de <em>quem viveu a sala.</em>
             </h2>
-            <div className="voices-grid">
+            <div
+              className="voices-grid"
+              role="region"
+              aria-label="Depoimentos de alunos"
+              tabIndex={0}
+            >
               {depoimentos.map((d) => (
-                <figure key={d.autor}>
+                <figure key={d.autor} className={`voice voice-${d.tom}`}>
                   <blockquote>{d.texto}</blockquote>
-                  <figcaption>{d.autor}, aluno</figcaption>
+                  <figcaption>
+                    <span className="voice-avatar" aria-hidden="true">
+                      {d.autor.charAt(0)}
+                    </span>
+                    <span>
+                      <strong>{d.autor}</strong>
+                      <small>aluno</small>
+                    </span>
+                  </figcaption>
                 </figure>
               ))}
             </div>
@@ -532,8 +505,8 @@ export default function SalaEducacionalPage() {
           <div className="wrap author-grid">
             <figure className="author-photo">
               <img
-                src="/salaeducacional/bruno-bio.webp"
-                alt="Bruno Borges sorrindo, de terno cinza."
+                src="/salaeducacional/bruno-autor.webp"
+                alt="Bruno Borges sorrindo, de camiseta preta e braços cruzados."
                 width="900"
                 height="1333"
                 loading="lazy"
@@ -552,9 +525,10 @@ export default function SalaEducacionalPage() {
                 <strong>mais de 1,4 mil alunos</strong>.
               </p>
               <p>
-                Na sala, ele não mostra um resultado pronto: mostra o processo.
-                Você vê como ele lê o mercado, quando decide esperar e por que
-                age quando age.
+                Na sala, ele não mostra um resultado pronto: mostra o processo
+                passo a passo. Você vê como ele lê o mercado, o que observa de
+                importante, quando decide esperar e por que ele executa as suas
+                operações.
               </p>
             </div>
           </div>
@@ -567,8 +541,9 @@ export default function SalaEducacionalPage() {
               Assinou, <em>entrou.</em>
             </h2>
             <p className="plans-lead">
-              Escolha como entrar na sala. O acesso é liberado após a aprovação
-              do pagamento, sem data de início e sem fila.
+              Escolha o plano que deseja para entrar na Sala Educacional do
+              Método TDS. O acesso é liberado imediatamente, logo após a
+              aprovação do pagamento. Assine, e entre já!
             </p>
 
             <div className="plans-grid">
@@ -596,10 +571,13 @@ export default function SalaEducacionalPage() {
                 </p>
                 <p className="plan-per">{PLANOS.trimestral.periodo}</p>
                 <p className="plan-detail">
-                  <strong>R$ {PLANOS.trimestral.equivalenteMes} por mês.</strong>{" "}
-                  Você economiza R$ {PLANOS.trimestral.economia} frente a três
-                  meses do plano mensal. Parcele em até{" "}
-                  {PLANOS.trimestral.parcelas} no cartão, com acréscimo.
+                  Dividido em 3 meses, são R$ {PLANOS.trimestral.equivalenteMes}{" "}
+                  por mês.{" "}
+                  <strong>
+                    Você economiza R$ {PLANOS.trimestral.economia}.
+                  </strong>{" "}
+                  Prefere parcelar? São até {PLANOS.trimestral.parcelas} no
+                  cartão.
                 </p>
                 <a className="cta cta-ink" href={PLANOS.trimestral.url}>
                   Assinar o plano trimestral {seta}
@@ -622,15 +600,14 @@ export default function SalaEducacionalPage() {
             <div className="guarantee">
               <h3>Garantia incondicional de 7 dias.</h3>
               <p>
-                Participe ao vivo, veja o Bruno aplicar o Método e sinta por
-                conta própria o que a sala entrega. Se em 7 dias não sentir que
-                valeu, 100% do valor é devolvido, sem perguntas e sem
+                Participe da Sala, veja o Bruno utilizar o Método TDS ao vivo e
+                perceba a evolução no seu operacional. Se em 7 dias não achar
+                que valeu, 100% do valor é devolvido, sem perguntas e sem
                 burocracia.
               </p>
             </div>
             <p className="fine plans-fine">
-              Pagamento por cartão, Pix Automático, Apple Pay ou PayPal, em
-              ambiente seguro da Hotmart.
+              Pagamento realizado em ambiente seguro.
             </p>
           </div>
         </section>
@@ -677,11 +654,12 @@ export default function SalaEducacionalPage() {
             <div>
               <h2>
                 Mais um pregão sozinho, ou ao lado de{" "}
-                <em>quem executa?</em>
+                <em>quem sabe o que está fazendo?</em>
               </h2>
               <p>
-                A sala abre às {SESSAO.inicio} em cada dia útil. A diferença é
-                onde você vai estar quando ela abrir.
+                A Sala Educacional abre todos os dias úteis.
+                <br />
+                Onde você vai estar quando ela abrir amanhã?
               </p>
               <div className="finale-actions">
                 <a className="cta cta-ink" href={PLANOS.trimestral.url}>
@@ -711,12 +689,21 @@ export default function SalaEducacionalPage() {
       <footer className="footer">
         <div className="wrap">
           <div className="footer-top">
-            <img
-              src="/images/logo/logo-reduzida-horizontal-branca-fundo-escuro.svg"
-              alt="Trader Bruno Borges"
-              width="180"
-              height="36"
-            />
+            <div className="footer-brand">
+              <img
+                src="/images/logo/logo-reduzida-horizontal-branca-fundo-escuro.svg"
+                alt="Trader Bruno Borges"
+                width="180"
+                height="36"
+              />
+              <p>
+                Conteúdo educacional. Não constitui recomendação individual de
+                investimento. Trading envolve risco de perda. Depoimentos e
+                resultados não garantem resultados futuros. A Sala Educacional é um
+                projeto de estudo e aprendizado. Não compartilhamos ordens e nem emitimos
+                recomendações de compra ou venda de ativos financeiros.
+              </p>
+            </div>
             <div className="footer-links">
               <span>
                 Dúvidas sobre compra e acesso?{" "}
@@ -728,17 +715,13 @@ export default function SalaEducacionalPage() {
                   Acesse a área de membros ↗
                 </a>
               </span>
+              <div className="footer-legal">
+                <Link href="/termos-de-uso">Termos de uso</Link>
+                <Link href="/politicas-de-privacidade">
+                  Política de privacidade
+                </Link>
+              </div>
             </div>
-          </div>
-          <p>
-            Conteúdo educacional. Não constitui recomendação individual de
-            investimento. Trading envolve risco de perda. Depoimentos e
-            resultados não garantem resultados futuros. A sala não compartilha
-            ordens nem emite recomendações de compra ou venda.
-          </p>
-          <div className="footer-legal">
-            <Link href="/termos-de-uso">Termos de uso</Link>
-            <Link href="/politicas-de-privacidade">Política de privacidade</Link>
           </div>
         </div>
       </footer>
