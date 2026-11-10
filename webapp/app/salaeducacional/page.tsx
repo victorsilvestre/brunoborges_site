@@ -599,12 +599,14 @@ export default function SalaEducacionalPage() {
                 <p className="plan-per">{PLANOS.trimestralBF.periodo}</p>
                 <p className="plan-detail">
                   Só R$ {PLANOS.trimestralBF.equivalenteMes} por mês.{" "}
+                  Metade do preço de três meses no mensal:{" "}
                   <strong>
-                    Metade do preço de três meses no mensal: você economiza R${" "}
+                    você economiza R${" "}
                     {PLANOS.trimestralBF.economiaVsMensal}.
                   </strong>{" "}
-                  Prefere parcelar? São {PLANOS.trimestralBF.parcelas} no
-                  cartão. O preço de Black Friday fica garantido enquanto a assinatura estiver ativa. Oferta válida até {PLANOS.trimestralBF.validade}.
+                  <br/><br/>Prefere parcelar? 
+                  <br/>São {PLANOS.trimestralBF.parcelas} no cartão. 
+                  <br/><br/>O preço de Black Friday fica garantido enquanto a assinatura estiver ativa. Oferta válida até {PLANOS.trimestralBF.validade}.
                 </p>
                 <a className="cta cta-bf" href={PLANOS.trimestralBF.url}>
                   Garantir o desconto de Black Friday {seta}
