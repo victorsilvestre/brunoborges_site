@@ -132,7 +132,7 @@ const faqs = [
   },
   {
     q: "Posso cancelar quando quiser?",
-    a: "Sim, sem burocracia. Você pode cancelar a assinatura quando quiser, nos dois planos.",
+    a: "Sim, sem burocracia. Você pode cancelar a assinatura quando quiser, em qualquer plano.",
   },
   {
     q: "E se eu não puder assistir todo dia?",
@@ -583,10 +583,37 @@ export default function SalaEducacionalPage() {
                   Assinar o plano trimestral {seta}
                 </a>
               </article>
+
+              <article className="plan plan-bf">
+                <span className="plan-ribbon" aria-hidden="true">
+                  Black Friday
+                </span>
+                <h3>{PLANOS.trimestralBF.nome}</h3>
+                <p className="plan-was">
+                  De <s>R$ {PLANOS.trimestralBF.precoDe}</s> por
+                </p>
+                <p className="plan-price">
+                  <span className="plan-cur">R$</span>
+                  {PLANOS.trimestralBF.preco}
+                </p>
+                <p className="plan-per">{PLANOS.trimestralBF.periodo}</p>
+                <p className="plan-detail">
+                  Só R$ {PLANOS.trimestralBF.equivalenteMes} por mês.{" "}
+                  <strong>
+                    Metade do preço de três meses no mensal: você economiza R${" "}
+                    {PLANOS.trimestralBF.economiaVsMensal}.
+                  </strong>{" "}
+                  Prefere parcelar? São {PLANOS.trimestralBF.parcelas} no
+                  cartão. Oferta válida até {PLANOS.trimestralBF.validade}.
+                </p>
+                <a className="cta cta-bf" href={PLANOS.trimestralBF.url}>
+                  Garantir o desconto de Black Friday {seta}
+                </a>
+              </article>
             </div>
 
             <div className="plans-include">
-              <h3>Os dois planos incluem:</h3>
+              <h3>Todos os planos incluem:</h3>
               <ul>
                 {inclusos.map((t) => (
                   <li key={t}>
@@ -670,7 +697,7 @@ export default function SalaEducacionalPage() {
                 </a>
               </div>
               <p className="finale-note">
-                Garantia de 7 dias nos dois planos. Cancele quando quiser.
+                Garantia de 7 dias em todos os planos. Cancele quando quiser.
               </p>
             </div>
             <figure className="finale-photo">
