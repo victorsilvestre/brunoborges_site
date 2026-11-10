@@ -128,7 +128,7 @@ const faqs = [
   },
   {
     q: "Como funciona o pagamento? É recorrente?",
-    a: "Sim. Os dois planos são assinaturas recorrentes: o mensal renova todo mês e o trimestral, a cada três meses, sempre automaticamente. Você pode pagar com cartão ou Pix Automático. O trimestral também pode ser parcelado no cartão, com acréscimo.",
+    a: "Sim. Os dois planos são assinaturas recorrentes: o mensal renova todo mês e o trimestral, a cada três meses, sempre automaticamente. Você pode pagar com cartão ou Pix Automático. O trimestral também pode ser parcelado no cartão, com acréscimo. No trimestral de Black Friday, o preço promocional é mantido a cada renovação, enquanto a assinatura estiver ativa.",
   },
   {
     q: "Posso cancelar quando quiser?",
@@ -563,7 +563,7 @@ export default function SalaEducacionalPage() {
               </article>
 
               <article className="plan plan-quarter">
-                <span className="plan-flag">Melhor preço</span>
+                <span className="plan-flag">Lançamento</span>
                 <h3>{PLANOS.trimestral.nome}</h3>
                 <p className="plan-price">
                   <span className="plan-cur">R$</span>
@@ -604,7 +604,7 @@ export default function SalaEducacionalPage() {
                     {PLANOS.trimestralBF.economiaVsMensal}.
                   </strong>{" "}
                   Prefere parcelar? São {PLANOS.trimestralBF.parcelas} no
-                  cartão. Oferta válida até {PLANOS.trimestralBF.validade}.
+                  cartão. O preço de Black Friday fica garantido enquanto a assinatura estiver ativa. Oferta válida até {PLANOS.trimestralBF.validade}.
                 </p>
                 <a className="cta cta-bf" href={PLANOS.trimestralBF.url}>
                   Garantir o desconto de Black Friday {seta}
