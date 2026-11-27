@@ -32,7 +32,7 @@ export function Testimonials() {
         <section className="py-12 bg-[var(--surface-container)] border-b border-[var(--surface-bright)]">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-5xl font-display-stitch font-black text-center mb-16 uppercase tracking-tight text-[var(--text-main)]">
-                    <span className="text-[var(--primary)] mr-2">/</span> Depoimentos
+                    Depoimentos
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {testimonials.map((t, i) => (

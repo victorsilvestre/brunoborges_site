@@ -34,6 +34,18 @@
     pointer-events: none;
 }
 
+/* Hero no desktop (texto ao lado da imagem): imagem bem visível, com névoa branca só na faixa final para a transição.
+   No mobile/tablet o texto fica sobre a imagem, então o degradê original continua para garantir a leitura. */
+@media (min-width: 1024px) {
+    .maratona-stitch .hero-bg-soft::before {
+        background: linear-gradient(to bottom, transparent 82%, var(--surface) 100%);
+    }
+    .maratona-stitch .hero-bg-soft .hero-image-fade {
+        -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
+    }
+}
+
 .maratona-stitch .pattern-dots-sm {
     background-image: radial-gradient(var(--surface-bright) 1px, transparent 1px);
     background-size: 16px 16px;

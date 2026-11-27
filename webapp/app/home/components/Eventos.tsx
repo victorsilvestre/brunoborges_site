@@ -13,9 +13,9 @@ type ProximaMaratona = {
     inscricaoUrl: string;
 };
 
-// Exemplo do formato: { numero: "17ª", data: "5, 6 e 7/01", diaSemana: "Terça a Quinta",
+// Exemplo do formato: { numero: "17ª", data: "5, 6, 7 e 8/01", diaSemana: "Terça a Sexta",
 // horario: "20h00 (horário de Brasília)", inscricaoUrl: "/maratona" }
-const proximaMaratona = { numero: "17ª", data: "5, 6 e 7/01", diaSemana: "Terça a Quinta", horario: "20h00 (horário de Brasília)", inscricaoUrl: "/maratona" } as ProximaMaratona | null;
+const proximaMaratona = { numero: "17ª", data: "5, 6, 7 e 8/01", diaSemana: "Terça a Sexta", horario: "20h00 (horário de Brasília)", inscricaoUrl: "/maratona" } as ProximaMaratona | null;
 
 const stats = [
     { icon: Zap, label: "Entrada liberada", desc: "100% online e gratuita" },
@@ -71,7 +71,7 @@ export function Eventos() {
                                 Evento online e{" "}
                                 <span className="text-white font-medium">100% gratuito</span>{" "}
                                 onde Bruno Borges ensina Price Action na prática. 
-                                Ao todo, <span className="text-white font-medium">são três dias de imersão e conteúdo de mentoria ao vivo,</span>{" "}
+                                Ao todo, <span className="text-white font-medium">são quatro dias de imersão e conteúdo de mentoria ao vivo,</span>{" "}
                                 para que você possa conhecer algumas peças valiosas do operacional. 
                             </p>
                         </FadeIn>

@@ -3,26 +3,26 @@
 export function Schedule() {
     const classes = [
         {
-            label: "AULA 1 - TERÇA — 05/01 — 20HRS",
+            label: "AULA 1 — TERÇA — 05/01 — 20H",
             title: "Conheça e aplique o operacional lucrativo mais simples de Day Trade",
             description: "",
             highlight: false,
         },
         {
-            label: "AULA 2 - QUARTA — 06/01 — 20HRS",
+            label: "AULA 2 — QUARTA — 06/01 — 20H",
             title: "Utilize a melhor região para fazer entradas no mercado",
             description: "",
             highlight: true,
         },
         {
-            label: "AULA 3 - QUINTA — 07/01 — 20HRS",
-            title: "Aumente a sua mão do jeito certo e veja seus resultados evoluírem",
+            label: "AULA 3 — QUINTA — 07/01 — 20H",
+            title: "Aumente a sua mão do jeito certo e veja os seus resultados evoluírem",
             description: "",
             highlight: false,
         },
         {
-            label: "AULA 4 - BÔNUS",
-            title: "Bônus Exclusivo Surpresa",
+            label: "AULA 4 — SEXTA — 08/01 — 20H",
+            title: "Conteúdo surpresa: inscreva-se na Maratona para descobrir.",
             description: "",
             highlight: false,
         },
@@ -32,7 +32,7 @@ export function Schedule() {
         <section className="py-12 bg-[var(--surface-container-low)] border-y border-[var(--surface-bright)] relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <h2 className="text-3xl md:text-5xl font-display-stitch font-black text-center mb-16 uppercase tracking-tight text-[var(--text-main)]">
-                    <span className="text-[var(--primary)] mr-2">/</span> Calendário Completo
+                    Calendário Completo
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                     {classes.map((item, i) => (
@@ -67,14 +67,6 @@ export function Schedule() {
                             {item.description && <p className="text-[var(--text-muted)] text-sm mt-auto">{item.description}</p>}
                         </div>
                     ))}
-                </div>
-                <div className="text-center mt-20">
-                    <a
-                        href="#inscricao"
-                        className="inline-block bg-[var(--surface)] hover:bg-[var(--surface-dim)] text-[var(--text-main)] border-2 border-[var(--text-main)] font-display-stitch font-bold py-4 px-10 rounded-xl transition duration-300 text-lg uppercase tracking-wide shadow-[4px_4px_0px_rgba(162,203,16,1)] hover:shadow-[2px_2px_0px_rgba(162,203,16,1)] hover:translate-y-[2px] hover:translate-x-[2px]"
-                    >
-                        Quero assistir as aulas ao vivo
-                    </a>
                 </div>
             </div>
         </section>

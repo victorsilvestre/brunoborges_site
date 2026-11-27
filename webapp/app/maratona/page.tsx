@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Hero } from "./components/Hero";
 import { Schedule } from "./components/Schedule";
 import { AboutEvent } from "./components/AboutEvent";
-import { WhatYouWillLearn } from "./components/WhatYouWillLearn";
+import { Benefits } from "./components/Benefits";
 import { Testimonials } from "./components/Testimonials";
 import { FAQ } from "./components/FAQ";
 import { FinalCTA } from "./components/FinalCTA";
@@ -10,7 +10,7 @@ import "./stitch.css";
 
 export const metadata: Metadata = {
     title: 'Maratona TDS | Trader Bruno Borges',
-    description: 'Participe da 17ª Maratona TDS Trader de Sucesso. Evento 100% online e gratuito. Aprenda Price Action, Gerenciamento e Estratégias diretamente no gráfico.',
+    description: 'Participe da 17ª Maratona TDS Trader de Sucesso, de 5 a 8 de janeiro. Evento 100% online e gratuito, com aulas ao vivo, o Resumão e um tira-dúvidas exclusivo com o Bruno.',
 };
 
 export default function MaratonaPage() {
@@ -19,7 +19,7 @@ export default function MaratonaPage() {
             <Hero />
             <Schedule />
             <AboutEvent />
-            <WhatYouWillLearn />
+            <Benefits />
             <Testimonials />
             <FAQ />
             <FinalCTA />

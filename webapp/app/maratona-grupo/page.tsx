@@ -74,10 +74,11 @@ export default function MaratonaGrupoPage() {
 
                     <ul className="relative z-10 w-full text-left flex flex-col gap-2.5">
                         {[
-                            'Aulas gravadas',
-                            'Materiais complementares',
+                            'Links das aulas ao vivo',
+                            'Resumão da Maratona',
+                            'Link do tira-dúvidas com o Bruno',
                             'Avisos importantes',
-                            'Conteúdos Bônus Exclusivos',
+                            'Conteúdos bônus exclusivos',
                         ].map((item) => (
                             <li key={item} className="flex items-start gap-3">
                                 <span className="text-[var(--primary-dark)] font-bold text-base leading-none mt-0.5">✓</span>

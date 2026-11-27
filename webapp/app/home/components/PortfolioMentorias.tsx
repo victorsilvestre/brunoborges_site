@@ -69,13 +69,13 @@ export function PortfolioMentorias() {
                 </h3>
 
                 <p className="text-base text-[#3F5A4B] mb-8 leading-relaxed lg:min-h-[4.9rem]">
-                  Em 3 aulas online e gratuitas, aprenda a ler o gráfico como
+                  Em 4 aulas online e gratuitas, aprenda a ler o gráfico como
                   traders profissionais e conheça o método na prática.
                 </p>
 
                 <ul className="space-y-3 mb-10">
                   {[
-                    "3 aulas ao vivo, 100% online",
+                    "4 aulas ao vivo, 100% online",
                     "Operacional direto no gráfico",
                     "Do zero ao operacional",
                     "Leitura de Price Action sem indicadores",

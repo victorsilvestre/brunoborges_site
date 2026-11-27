@@ -19,7 +19,7 @@ export function AboutEvent() {
                         </h2>
                         <div className="space-y-4 text-[var(--text-muted)] text-lg">
                             <p>
-                                Durante 3 dias, o Bruno vai mostrar na prática o operacional lucrativo mais simples de Day Trade, como escolher a melhor região para fazer as suas entradas e como aumentar a sua mão do jeito certo para os seus resultados evoluírem.
+                                Durante 4 dias, o Bruno vai mostrar na prática o operacional lucrativo mais simples de Day Trade, como escolher a melhor região para fazer as suas entradas e como aumentar a sua mão do jeito certo para os seus resultados evoluírem.
                             </p>
                             <p>
                                 Não importa se você está começando agora ou se já opera há anos. Se você ainda busca mais clareza, consistência e confiança na leitura do gráfico, a Maratona é para você.
@@ -42,14 +42,6 @@ export function AboutEvent() {
                                 <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-bold font-display-stitch">Traders formados</div>
                                 <div className="text-xs text-[var(--text-muted)] opacity-70 mt-1">Método TDS</div>
                             </div>
-                        </div>
-                        <div className="pt-8">
-                            <a
-                                href="#inscricao"
-                                className="inline-block bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-[var(--text-main)] font-display-stitch font-bold py-4 px-10 rounded-xl transition duration-300 text-lg uppercase tracking-wide shadow-[4px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[2px_2px_0px_rgba(0,0,0,0.1)] hover:translate-y-[2px] hover:translate-x-[2px]"
-                            >
-                                Quero me inscrever
-                            </a>
                         </div>
                     </div>
 

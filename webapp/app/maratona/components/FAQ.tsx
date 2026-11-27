@@ -11,11 +11,19 @@ const faqs = [
     },
     {
         question: "Como vou receber os links das aulas?",
-        answer: "Tudo chega pelo grupo exclusivo no Telegram. Você recebe o aviso antes de cada aula, o link para assistir ao vivo e o acesso às gravações no dia seguinte.",
+        answer: "Tudo chega pelo grupo exclusivo no Telegram. Você recebe o aviso antes de cada aula, o link para assistir ao vivo e, depois, o link do tira-dúvidas com o Bruno.",
     },
     {
-        question: "Vou conseguir assistir mesmo se não puder ao vivo?",
-        answer: "Sim. As gravações de todas as aulas ficam disponíveis no grupo da Maratona. Você assiste no seu tempo, no ritmo que fizer sentido pra você.",
+        question: "As aulas vão ser gravadas?",
+        answer: "Não. Nesta edição as aulas acontecem só ao vivo, por isso reserve os horários (de 5 a 8 de janeiro, às 20h). Depois da Maratona, todos os inscritos que estiverem no grupo recebem o Resumão, uma apostila com o conteúdo.",
+    },
+    {
+        question: "Como funciona o tira-dúvidas com o Bruno?",
+        answer: "Na segunda-feira, 11/01, logo após a Live de Sucesso (20h30), o Bruno abre uma sala no Zoom exclusiva para quem se inscreveu na Maratona. O link chega pelo grupo do Telegram, e você pode participar ativamente: tirar dúvidas, falar sobre o mercado e perguntar sobre o método.",
+    },
+    {
+        question: "Quando recebo o Resumão?",
+        answer: "O Resumão é produzido depois da Maratona e enviado no grupo do Telegram para todos os inscritos que entrarem nele. Assim que o material fica pronto, a gente envia.",
     },
 ];
 
@@ -24,7 +32,7 @@ export function FAQ() {
         <section className="py-12 bg-[var(--surface)]">
             <div className="container mx-auto px-4 max-w-4xl">
                 <h2 className="text-3xl md:text-5xl font-display-stitch font-black text-center mb-16 uppercase tracking-tight text-[var(--text-main)]">
-                    <span className="text-[var(--primary)] mr-2 bg-[var(--primary)]/10 px-2 rounded">?</span> Dúvidas Frequentes
+                    Dúvidas Frequentes
                 </h2>
                 <div className="space-y-6">
                     {faqs.map((faq, i) => (
