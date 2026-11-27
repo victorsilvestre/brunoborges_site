@@ -13,9 +13,9 @@ type ProximaMaratona = {
     inscricaoUrl: string;
 };
 
-// Exemplo do formato: { numero: "16ª", data: "15, 16 e 17/09", diaSemana: "Terça a Quinta",
+// Exemplo do formato: { numero: "17ª", data: "5, 6 e 7/01", diaSemana: "Terça a Quinta",
 // horario: "20h00 (horário de Brasília)", inscricaoUrl: "/maratona" }
-const proximaMaratona = null as ProximaMaratona | null;
+const proximaMaratona = { numero: "17ª", data: "5, 6 e 7/01", diaSemana: "Terça a Quinta", horario: "20h00 (horário de Brasília)", inscricaoUrl: "/maratona" } as ProximaMaratona | null;
 
 const stats = [
     { icon: Zap, label: "Entrada liberada", desc: "100% online e gratuita" },
@@ -108,7 +108,7 @@ export function Eventos() {
                                     whileTap={{ scale: 0.98 }}
                                     className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--green-bull)] text-white font-display font-bold uppercase text-sm tracking-wider hover:bg-[var(--green-dark)] transition-colors shadow-[var(--glow-green)]"
                                 >
-                                    Quero me inscrever na 16ª Maratona TDS
+                                    Quero me inscrever na {proximaMaratona.numero} Maratona TDS
                                     <ArrowRight className="w-4 h-4" />
                                 </motion.a>
                             </FadeIn>

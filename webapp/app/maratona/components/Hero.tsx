@@ -35,7 +35,7 @@ export function Hero() {
                                     do jeito certo e melhore os seus resultados.
                                 </h1>
                                 <p className="text-sm font-display-stitch font-bold uppercase tracking-wider text-[var(--primary-dark)]">
-                                    15, 16 e 17 de setembro • às 20h • online e gratuito
+                                    5, 6 e 7 de janeiro • às 20h • online e gratuito
                                 </p>
                                 <p className="text-lg text-[var(--text-muted)] leading-snug">
                                     3 aulas ao vivo para você aprender a interpretar o gráfico, entender o contexto e operar com mais clareza. Faça a sua inscrição e tenha acesso às aulas, às gravações, aos resumões e à aula bônus.
@@ -51,7 +51,7 @@ export function Hero() {
                                     </h3>
                                     <div className="relative z-10">
                                         <LeadCaptureForm
-                                            source="maratona-set-2026"
+                                            source="maratona-jan-2027"
                                             redirectTo="/maratona-grupo"
                                             buttonLabel="Quero Participar de Graça"
                                             variant="light"

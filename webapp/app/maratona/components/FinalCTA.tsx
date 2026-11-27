@@ -23,7 +23,7 @@ export function FinalCTA() {
                     <div className="absolute bottom-0 left-0 w-8 h-8 bg-[var(--primary)]/20 border-r border-t border-[var(--surface-bright)]" />
                     <div className="relative z-10">
                         <LeadCaptureForm
-                            source="maratona-set-2026"
+                            source="maratona-jan-2027"
                             redirectTo="/maratona-grupo"
                             buttonLabel="Garantir minha vaga"
                             variant="light"

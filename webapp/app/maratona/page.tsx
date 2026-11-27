@@ -10,7 +10,7 @@ import "./stitch.css";
 
 export const metadata: Metadata = {
     title: 'Maratona TDS | Trader Bruno Borges',
-    description: 'Participe da 16ª Maratona TDS Trader de Sucesso. Evento 100% online e gratuito. Aprenda Price Action, Gerenciamento e Estratégias diretamente no gráfico.',
+    description: 'Participe da 17ª Maratona TDS Trader de Sucesso. Evento 100% online e gratuito. Aprenda Price Action, Gerenciamento e Estratégias diretamente no gráfico.',
 };
 
 export default function MaratonaPage() {

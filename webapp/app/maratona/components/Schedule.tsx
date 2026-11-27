@@ -3,21 +3,27 @@
 export function Schedule() {
     const classes = [
         {
-            label: "AULA 1 - TERÇA — 15/09 — 20HRS",
-            title: "Aprenda a enxergar o que o gráfico está mostrando",
-            description: "Leitura Candle a Candle e as obrigações.",
+            label: "AULA 1 - TERÇA — 05/01 — 20HRS",
+            title: "Conheça e aplique o operacional lucrativo mais simples de Day Trade",
+            description: "",
             highlight: false,
         },
         {
-            label: "AULA 2 - QUARTA — 16/09 — 20HRS",
-            title: "Utilize a Fibonacci para encontrar as regiões certas",
-            description: "Regiões, entradas, alvos e gestão de risco.",
+            label: "AULA 2 - QUARTA — 06/01 — 20HRS",
+            title: "Utilize a melhor região para fazer entradas no mercado",
+            description: "",
             highlight: true,
         },
         {
-            label: "AULA 3 - QUINTA — 17/09 — 20HRS",
-            title: "Como utilizar Scalps para potencializar resultados",
-            description: "Contexto, confirmação, execução e gerenciamento.",
+            label: "AULA 3 - QUINTA — 07/01 — 20HRS",
+            title: "Aumente a sua mão do jeito certo e veja seus resultados evoluírem",
+            description: "",
+            highlight: false,
+        },
+        {
+            label: "AULA 4 - BÔNUS",
+            title: "Bônus Exclusivo Surpresa",
+            description: "",
             highlight: false,
         },
     ];
@@ -28,7 +34,7 @@ export function Schedule() {
                 <h2 className="text-3xl md:text-5xl font-display-stitch font-black text-center mb-16 uppercase tracking-tight text-[var(--text-main)]">
                     <span className="text-[var(--primary)] mr-2">/</span> Calendário Completo
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                     {classes.map((item, i) => (
                         <div
                             key={i}
@@ -58,7 +64,7 @@ export function Schedule() {
                             <h3 className="text-xl font-display-stitch font-bold mb-4 text-[var(--text-main)]">
                                 {item.title}
                             </h3>
-                            <p className="text-[var(--text-muted)] text-sm mt-auto">{item.description}</p>
+                            {item.description && <p className="text-[var(--text-muted)] text-sm mt-auto">{item.description}</p>}
                         </div>
                     ))}
                 </div>

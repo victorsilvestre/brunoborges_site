@@ -19,7 +19,7 @@ export function AboutEvent() {
                         </h2>
                         <div className="space-y-4 text-[var(--text-muted)] text-lg">
                             <p>
-                                Durante 3 dias, o Bruno vai mostrar na prática como ele utiliza Price Action puro, Fibonacci e leitura de contexto para fazer as suas operações.
+                                Durante 3 dias, o Bruno vai mostrar na prática o operacional lucrativo mais simples de Day Trade, como escolher a melhor região para fazer as suas entradas e como aumentar a sua mão do jeito certo para os seus resultados evoluírem.
                             </p>
                             <p>
                                 Não importa se você está começando agora ou se já opera há anos. Se você ainda busca mais clareza, consistência e confiança na leitura do gráfico, a Maratona é para você.

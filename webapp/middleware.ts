@@ -1,10 +1,14 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// Não há maratona no ar: /maratona sempre manda para /mentoria
-// (página de vendas ou lista de espera, conforme INSCRICOES_ABERTAS).
+// true  = /maratona redireciona para /mentoria (sem maratona no ar)
+// false = /maratona fica acessível (maratona no ar)
+const MARATONA_REDIRECT = false;
+
 export function middleware(request: NextRequest) {
-    return NextResponse.redirect(new URL('/mentoria', request.url));
+    if (MARATONA_REDIRECT) {
+        return NextResponse.redirect(new URL('/mentoria', request.url));
+    }
 }
 
 export const config = {
